@@ -1,0 +1,38 @@
+{
+  "id": "bundlers",
+  "title": "Vite and webpack",
+  "kind": "technology",
+  "order": 292,
+  "family": "javascript",
+  "description": "Conventions for Vite and webpack.",
+  "rules": [
+    {
+      "id": "bundlers-env-prefix",
+      "title": "Public env prefix",
+      "text": "Expose only prefixed variables (VITE_) to client code and never put secrets in them.",
+      "recommended": true
+    },
+    {
+      "id": "bundlers-code-split",
+      "title": "Code splitting",
+      "text": "Split routes and heavy modules with dynamic import.",
+      "recommended": true
+    },
+    {
+      "id": "bundlers-aliases",
+      "title": "Path aliases",
+      "text": "Use configured path aliases consistently in code, tsconfig and the bundler."
+    },
+    {
+      "id": "bundlers-analyze",
+      "title": "Analyze bundles",
+      "text": "Analyze the bundle before and after adding a large dependency."
+    },
+    {
+      "id": "bundlers-assets",
+      "title": "Hashed assets",
+      "text": "Emit content-hashed asset filenames for long-term caching.",
+      "recommended": true
+    }
+  ]
+}

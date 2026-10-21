@@ -1,0 +1,33 @@
+{
+  "id": "rspec",
+  "title": "RSpec",
+  "kind": "technology",
+  "order": 391,
+  "family": "ruby",
+  "description": "Conventions for RSpec.",
+  "rules": [
+    {
+      "id": "rspec-describe",
+      "title": "Describe behavior",
+      "text": "Structure specs with describe and context and name examples by behavior.",
+      "recommended": true
+    },
+    {
+      "id": "rspec-factories",
+      "title": "FactoryBot",
+      "text": "Build data with FactoryBot and prefer build over create when persistence is not needed.",
+      "recommended": true
+    },
+    {
+      "id": "rspec-let",
+      "title": "Avoid let overuse",
+      "text": "Keep let and shared setup small so each example is understandable in isolation."
+    },
+    {
+      "id": "rspec-request-specs",
+      "title": "Request specs over controller specs",
+      "text": "Test endpoints with request specs.",
+      "recommended": true
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "storybook",
+  "title": "Storybook",
+  "kind": "technology",
+  "order": 293,
+  "family": "javascript",
+  "description": "Conventions for Storybook.",
+  "rules": [
+    {
+      "id": "storybook-csf",
+      "title": "CSF stories",
+      "text": "Write stories in Component Story Format with typed args.",
+      "recommended": true
+    },
+    {
+      "id": "storybook-states",
+      "title": "Story per state",
+      "text": "Add a story for each meaningful state, including loading, empty and error.",
+      "recommended": true
+    },
+    {
+      "id": "storybook-play",
+      "title": "Interaction tests",
+      "text": "Cover behavior with play functions and run the test runner in CI."
+    },
+    {
+      "id": "storybook-a11y-addon",
+      "title": "A11y addon",
+      "text": "Keep the accessibility addon clean for every story."
+    }
+  ]
+}

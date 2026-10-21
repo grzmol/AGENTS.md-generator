@@ -52,6 +52,63 @@
       "id": "security-owasp",
       "title": "Follow OWASP guidance",
       "text": "Follow OWASP Top 10 and ASVS guidance when handling web input, sessions and authentication."
+    },
+    {
+      "id": "security-xss",
+      "title": "Output encoding",
+      "text": "Encode output for its context and avoid injecting raw HTML; sanitize rich text with a vetted library.",
+      "recommended": true
+    },
+    {
+      "id": "security-csrf",
+      "title": "CSRF protection",
+      "text": "Protect state-changing browser requests with CSRF tokens or SameSite cookies.",
+      "recommended": true
+    },
+    {
+      "id": "security-cors",
+      "title": "Strict CORS",
+      "text": "Configure CORS with explicit origins; never reflect arbitrary origins with credentials.",
+      "recommended": true
+    },
+    {
+      "id": "security-headers",
+      "title": "Security headers",
+      "text": "Set security headers such as Content-Security-Policy, X-Content-Type-Options and Strict-Transport-Security."
+    },
+    {
+      "id": "security-session",
+      "title": "Safe sessions",
+      "text": "Use HttpOnly, Secure, SameSite cookies and rotate session identifiers on login.",
+      "recommended": true
+    },
+    {
+      "id": "security-ssrf",
+      "title": "Guard outbound requests",
+      "text": "Validate and allow-list URLs before fetching user-supplied addresses to prevent SSRF.",
+      "recommended": true
+    },
+    {
+      "id": "security-uploads",
+      "title": "Safe file uploads",
+      "text": "Validate upload type, size and name, and store uploads outside the web root."
+    },
+    {
+      "id": "security-password",
+      "title": "Password hashing",
+      "text": "Hash passwords with Argon2id, scrypt or bcrypt; never use fast hashes.",
+      "recommended": true
+    },
+    {
+      "id": "security-timing",
+      "title": "Constant-time comparison",
+      "text": "Compare secrets and tokens in constant time."
+    },
+    {
+      "id": "security-scan",
+      "title": "Secret scanning",
+      "text": "Run secret scanning in CI and rotate any credential that has been exposed.",
+      "recommended": true
     }
   ]
 }

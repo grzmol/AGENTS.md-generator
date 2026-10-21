@@ -28,6 +28,28 @@
       "title": "No secrets in logs",
       "text": "Never echo secrets and avoid pull_request_target with untrusted code.",
       "recommended": true
+    },
+    {
+      "id": "github-actions-reusable",
+      "title": "Reusable workflows",
+      "text": "Share logic through reusable workflows and composite actions."
+    },
+    {
+      "id": "github-actions-timeouts",
+      "title": "Job timeouts",
+      "text": "Set timeout-minutes on every job.",
+      "recommended": true
+    },
+    {
+      "id": "github-actions-oidc",
+      "title": "OIDC for cloud auth",
+      "text": "Authenticate to clouds with OIDC instead of stored long-lived keys.",
+      "recommended": true
+    },
+    {
+      "id": "github-actions-matrix",
+      "title": "Matrix builds",
+      "text": "Test supported versions with a build matrix."
     }
   ]
 }

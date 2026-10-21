@@ -1,0 +1,45 @@
+{
+  "id": "auth",
+  "title": "Authentication and sessions",
+  "kind": "technology",
+  "order": 760,
+  "family": "web",
+  "description": "Conventions for Authentication and sessions.",
+  "rules": [
+    {
+      "id": "auth-no-rolling",
+      "title": "Use a vetted auth solution",
+      "text": "Use a vetted identity provider or library instead of building authentication from scratch.",
+      "recommended": true
+    },
+    {
+      "id": "auth-mfa",
+      "title": "Support MFA",
+      "text": "Support multi-factor authentication for privileged accounts."
+    },
+    {
+      "id": "auth-jwt",
+      "title": "JWT discipline",
+      "text": "Keep JWTs short-lived, verify signature, issuer and audience, and never store sensitive data in them.",
+      "recommended": true
+    },
+    {
+      "id": "auth-refresh",
+      "title": "Rotate refresh tokens",
+      "text": "Rotate refresh tokens and revoke them on logout and password change.",
+      "recommended": true
+    },
+    {
+      "id": "auth-rate-limit-login",
+      "title": "Throttle login",
+      "text": "Rate limit login and password reset endpoints and avoid user enumeration in responses.",
+      "recommended": true
+    },
+    {
+      "id": "auth-oauth",
+      "title": "OAuth with PKCE",
+      "text": "Use the authorization code flow with PKCE and validate the state parameter.",
+      "recommended": true
+    }
+  ]
+}

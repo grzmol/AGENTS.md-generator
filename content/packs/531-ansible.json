@@ -1,0 +1,34 @@
+{
+  "id": "ansible",
+  "title": "Ansible",
+  "kind": "technology",
+  "order": 531,
+  "family": "devops",
+  "description": "Conventions for Ansible.",
+  "rules": [
+    {
+      "id": "ansible-idempotent",
+      "title": "Idempotent tasks",
+      "text": "Write idempotent tasks with modules, not shell commands, and use changed_when when shell is unavoidable.",
+      "recommended": true
+    },
+    {
+      "id": "ansible-vault",
+      "title": "Ansible Vault",
+      "text": "Encrypt secrets with Ansible Vault.",
+      "recommended": true
+    },
+    {
+      "id": "ansible-roles",
+      "title": "Roles",
+      "text": "Organize reusable logic into roles with documented variables.",
+      "recommended": true
+    },
+    {
+      "id": "ansible-lint",
+      "title": "ansible-lint",
+      "text": "Keep ansible-lint clean and name every task.",
+      "recommended": true
+    }
+  ]
+}

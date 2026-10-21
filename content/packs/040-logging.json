@@ -52,6 +52,39 @@
       "title": "Log errors with context",
       "text": "Log errors once, at the boundary that handles them, with enough context to reproduce.",
       "recommended": true
+    },
+    {
+      "id": "logging-timestamp-utc",
+      "title": "UTC ISO timestamps",
+      "text": "Log timestamps in UTC using ISO 8601.",
+      "recommended": true
+    },
+    {
+      "id": "logging-message-static",
+      "title": "Static messages, dynamic fields",
+      "text": "Keep log messages static and put variable data in structured fields.",
+      "recommended": true
+    },
+    {
+      "id": "logging-no-loops",
+      "title": "Avoid noisy logging",
+      "text": "Do not log inside tight loops or at info level for every request detail.",
+      "recommended": true
+    },
+    {
+      "id": "logging-stderr",
+      "title": "Log to stdout or stderr",
+      "text": "Write logs to stdout or stderr and let the platform ship them; do not manage log files in the app."
+    },
+    {
+      "id": "logging-audit",
+      "title": "Audit trail",
+      "text": "Record security-relevant actions (login, permission change, deletion) in a separate audit log."
+    },
+    {
+      "id": "logging-sampling",
+      "title": "Sample high-volume logs",
+      "text": "Sample or rate limit high-volume debug logs in production."
     }
   ]
 }

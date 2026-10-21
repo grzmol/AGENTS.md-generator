@@ -1,0 +1,72 @@
+{
+  "id": "api-design",
+  "title": "API design",
+  "kind": "general",
+  "order": 140,
+  "description": "HTTP and service interfaces.",
+  "rules": [
+    {
+      "id": "api-design-resources",
+      "title": "Resource-oriented URLs",
+      "text": "Model APIs around plural nouns (/orders/{id}) and use HTTP methods for actions instead of verbs in paths.",
+      "recommended": true
+    },
+    {
+      "id": "api-design-status-codes",
+      "title": "Correct status codes",
+      "text": "Return accurate status codes: 2xx for success, 4xx for caller mistakes, 5xx for server faults.",
+      "recommended": true
+    },
+    {
+      "id": "api-design-error-shape",
+      "title": "Consistent error body",
+      "text": "Return errors in one consistent shape with a machine-readable code, a human message and a request ID.",
+      "recommended": true
+    },
+    {
+      "id": "api-design-versioning",
+      "title": "Version breaking changes",
+      "text": "Never change a published API incompatibly; add a new version or a new field instead.",
+      "recommended": true
+    },
+    {
+      "id": "api-design-pagination",
+      "title": "Cursor pagination",
+      "text": "Paginate list endpoints with cursors or limit and offset, and bound the maximum page size.",
+      "recommended": true
+    },
+    {
+      "id": "api-design-idempotency",
+      "title": "Idempotent writes",
+      "text": "Make retried writes safe with idempotency keys or naturally idempotent operations."
+    },
+    {
+      "id": "api-design-openapi",
+      "title": "Keep the OpenAPI spec",
+      "text": "Keep the OpenAPI schema as the source of truth and update it in the same change as the endpoint."
+    },
+    {
+      "id": "api-design-validation",
+      "title": "Validate against the schema",
+      "text": "Validate requests and responses against the declared schema and reject unknown fields where appropriate.",
+      "recommended": true
+    },
+    {
+      "id": "api-design-rate-limit",
+      "title": "Rate limiting",
+      "text": "Apply rate limits to public and expensive endpoints and return 429 with a Retry-After header."
+    },
+    {
+      "id": "api-design-naming",
+      "title": "Consistent field naming",
+      "text": "Use one casing for JSON fields across the API and ISO 8601 UTC timestamps.",
+      "recommended": true
+    },
+    {
+      "id": "api-design-no-leak",
+      "title": "Do not leak internals",
+      "text": "Do not expose database IDs, stack traces or internal error text through the API.",
+      "recommended": true
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "phpunit",
+  "title": "PHPUnit and Pest",
+  "kind": "technology",
+  "order": 382,
+  "family": "php",
+  "description": "Conventions for PHPUnit and Pest.",
+  "rules": [
+    {
+      "id": "phpunit-feature-tests",
+      "title": "Feature tests for HTTP",
+      "text": "Cover routes with feature tests and use factories for data.",
+      "recommended": true
+    },
+    {
+      "id": "phpunit-refresh",
+      "title": "Refresh the database",
+      "text": "Use database refresh traits so tests are isolated.",
+      "recommended": true
+    },
+    {
+      "id": "phpunit-faking",
+      "title": "Fake framework services",
+      "text": "Fake queues, mail and storage with framework fakes.",
+      "recommended": true
+    }
+  ]
+}

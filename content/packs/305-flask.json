@@ -1,0 +1,34 @@
+{
+  "id": "flask",
+  "title": "Flask",
+  "kind": "technology",
+  "order": 305,
+  "family": "python",
+  "description": "Conventions for Flask.",
+  "rules": [
+    {
+      "id": "flask-factory",
+      "title": "Application factory",
+      "text": "Create the app with a factory function and register blueprints inside it.",
+      "recommended": true
+    },
+    {
+      "id": "flask-blueprints",
+      "title": "Blueprints per domain",
+      "text": "Split routes into blueprints by domain.",
+      "recommended": true
+    },
+    {
+      "id": "flask-config",
+      "title": "Config classes",
+      "text": "Load configuration from environment-specific config objects and never hardcode SECRET_KEY.",
+      "recommended": true
+    },
+    {
+      "id": "flask-validation",
+      "title": "Validate input",
+      "text": "Validate request data with a schema library (marshmallow or pydantic).",
+      "recommended": true
+    }
+  ]
+}

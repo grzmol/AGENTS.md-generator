@@ -28,6 +28,22 @@
       "id": "kotlin-ktlint",
       "title": "ktlint or detekt",
       "text": "Keep ktlint and detekt clean."
+    },
+    {
+      "id": "kotlin-sealed",
+      "title": "Sealed hierarchies",
+      "text": "Model closed variants with sealed classes and use exhaustive when.",
+      "recommended": true
+    },
+    {
+      "id": "kotlin-extension",
+      "title": "Extension functions",
+      "text": "Use extension functions for utilities and keep them close to their domain."
+    },
+    {
+      "id": "kotlin-flow",
+      "title": "Flow for streams",
+      "text": "Use Flow for asynchronous streams and collect lifecycle-aware on Android."
     }
   ]
 }

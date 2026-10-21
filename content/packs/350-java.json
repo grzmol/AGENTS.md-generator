@@ -34,6 +34,41 @@
       "id": "java-optional",
       "title": "Optional for return values",
       "text": "Use Optional only for return values, never for fields or parameters."
+    },
+    {
+      "id": "java-streams",
+      "title": "Streams with care",
+      "text": "Use streams for transformations but fall back to loops when they hurt readability."
+    },
+    {
+      "id": "java-transactions",
+      "title": "Transactional boundaries",
+      "text": "Place @Transactional on service methods and keep transactions short.",
+      "recommended": true
+    },
+    {
+      "id": "java-config-props",
+      "title": "Typed configuration",
+      "text": "Bind configuration with @ConfigurationProperties instead of scattered @Value.",
+      "recommended": true
+    },
+    {
+      "id": "java-dto-entities",
+      "title": "Do not expose entities",
+      "text": "Do not return JPA entities from APIs; map to DTOs.",
+      "recommended": true
+    },
+    {
+      "id": "java-lazy",
+      "title": "Avoid lazy loading surprises",
+      "text": "Fetch associations explicitly and avoid open-session-in-view.",
+      "recommended": true
+    },
+    {
+      "id": "java-logging",
+      "title": "SLF4J logging",
+      "text": "Log through SLF4J with parameterized messages.",
+      "recommended": true
     }
   ]
 }

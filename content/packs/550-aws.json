@@ -1,0 +1,44 @@
+{
+  "id": "aws",
+  "title": "AWS",
+  "kind": "technology",
+  "order": 550,
+  "family": "cloud",
+  "description": "Conventions for AWS.",
+  "rules": [
+    {
+      "id": "aws-iam",
+      "title": "Least-privilege IAM",
+      "text": "Grant least-privilege IAM policies scoped to specific resources and actions.",
+      "recommended": true
+    },
+    {
+      "id": "aws-no-keys",
+      "title": "Roles, not access keys",
+      "text": "Use IAM roles and short-lived credentials; never create long-lived access keys for workloads.",
+      "recommended": true
+    },
+    {
+      "id": "aws-encryption",
+      "title": "Encrypt by default",
+      "text": "Enable encryption at rest and block public access on S3 buckets.",
+      "recommended": true
+    },
+    {
+      "id": "aws-tags",
+      "title": "Tag resources",
+      "text": "Tag resources with owner, environment and cost center."
+    },
+    {
+      "id": "aws-iac",
+      "title": "Infrastructure as code only",
+      "text": "Create and change resources through infrastructure as code, not the console.",
+      "recommended": true
+    },
+    {
+      "id": "aws-multi-az",
+      "title": "Design for failure",
+      "text": "Run production workloads across multiple availability zones."
+    }
+  ]
+}

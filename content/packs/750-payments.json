@@ -1,0 +1,40 @@
+{
+  "id": "payments",
+  "title": "Payments and Stripe",
+  "kind": "technology",
+  "order": 750,
+  "family": "web",
+  "description": "Conventions for Payments and Stripe.",
+  "rules": [
+    {
+      "id": "payments-no-card-data",
+      "title": "Never handle raw card data",
+      "text": "Never store or log raw card data; use hosted fields or checkout so card numbers never touch your servers.",
+      "recommended": true
+    },
+    {
+      "id": "payments-webhooks",
+      "title": "Verify webhooks",
+      "text": "Verify webhook signatures and process events idempotently, since they can arrive twice or out of order.",
+      "recommended": true
+    },
+    {
+      "id": "payments-source-of-truth",
+      "title": "Provider as source of truth",
+      "text": "Fulfill orders from verified webhook events, not from client redirects.",
+      "recommended": true
+    },
+    {
+      "id": "payments-idempotency-keys",
+      "title": "Idempotency keys",
+      "text": "Send idempotency keys on every payment-creating request.",
+      "recommended": true
+    },
+    {
+      "id": "payments-money",
+      "title": "Integers for money",
+      "text": "Represent money as integer minor units with an explicit currency, never as floats.",
+      "recommended": true
+    }
+  ]
+}

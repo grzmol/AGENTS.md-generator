@@ -34,6 +34,29 @@
       "title": "No blocking calls",
       "text": "Do not use synchronous filesystem or crypto calls in request handlers.",
       "recommended": true
+    },
+    {
+      "id": "nodejs-streams",
+      "title": "Use streams for large data",
+      "text": "Use streams for large files instead of loading them into memory.",
+      "recommended": true
+    },
+    {
+      "id": "nodejs-signals",
+      "title": "Handle unhandled rejections",
+      "text": "Treat unhandled rejections and uncaught exceptions as fatal and exit so the supervisor restarts the process.",
+      "recommended": true
+    },
+    {
+      "id": "nodejs-no-blocking-loop",
+      "title": "Keep the event loop free",
+      "text": "Move CPU-heavy work to worker threads or separate services.",
+      "recommended": true
+    },
+    {
+      "id": "nodejs-env-file",
+      "title": "Use --env-file",
+      "text": "Load local env with --env-file or the platform; do not commit .env."
     }
   ]
 }

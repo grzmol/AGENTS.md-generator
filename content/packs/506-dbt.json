@@ -1,0 +1,39 @@
+{
+  "id": "dbt",
+  "title": "dbt and analytics engineering",
+  "kind": "technology",
+  "order": 506,
+  "family": "data",
+  "description": "Conventions for dbt and analytics engineering.",
+  "rules": [
+    {
+      "id": "dbt-layers",
+      "title": "Staging, intermediate, marts",
+      "text": "Layer models as staging, intermediate and marts with one-to-one staging per source table.",
+      "recommended": true
+    },
+    {
+      "id": "dbt-tests",
+      "title": "Test every model",
+      "text": "Add unique, not_null and relationship tests to every key.",
+      "recommended": true
+    },
+    {
+      "id": "dbt-ref",
+      "title": "Use ref and source",
+      "text": "Reference models with ref() and raw tables with source(), never hardcoded names.",
+      "recommended": true
+    },
+    {
+      "id": "dbt-incremental",
+      "title": "Incremental models carefully",
+      "text": "Use incremental models for large tables with a reliable unique key."
+    },
+    {
+      "id": "dbt-docs",
+      "title": "Document models",
+      "text": "Describe models and columns in schema files.",
+      "recommended": true
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "nuxt",
+  "title": "Nuxt",
+  "kind": "technology",
+  "order": 283,
+  "family": "javascript",
+  "description": "Conventions for Nuxt.",
+  "rules": [
+    {
+      "id": "nuxt-auto-imports",
+      "title": "Use auto-imports",
+      "text": "Rely on Nuxt auto-imports for composables and components instead of manual imports.",
+      "recommended": true
+    },
+    {
+      "id": "nuxt-use-fetch",
+      "title": "useFetch for data",
+      "text": "Fetch data with useFetch or useAsyncData so it runs once on the server and hydrates on the client.",
+      "recommended": true
+    },
+    {
+      "id": "nuxt-runtime-config",
+      "title": "Runtime config for secrets",
+      "text": "Keep secrets in runtimeConfig private keys and only public keys in runtimeConfig.public.",
+      "recommended": true
+    },
+    {
+      "id": "nuxt-server-routes",
+      "title": "Server routes",
+      "text": "Put backend logic in server/api handlers with validated input.",
+      "recommended": true
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "sqlite",
+  "title": "SQLite",
+  "kind": "technology",
+  "order": 505,
+  "family": "data",
+  "description": "Conventions for SQLite.",
+  "rules": [
+    {
+      "id": "sqlite-wal",
+      "title": "WAL mode",
+      "text": "Enable WAL mode and a busy timeout for concurrent access.",
+      "recommended": true
+    },
+    {
+      "id": "sqlite-foreign-keys",
+      "title": "Enable foreign keys",
+      "text": "Enable PRAGMA foreign_keys on every connection.",
+      "recommended": true
+    },
+    {
+      "id": "sqlite-single-writer",
+      "title": "One writer",
+      "text": "Serialize writes through one connection or a short transaction queue."
+    }
+  ]
+}

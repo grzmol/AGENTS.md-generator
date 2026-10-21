@@ -28,6 +28,29 @@
       "title": "Safe areas",
       "text": "Respect safe areas and keyboard avoidance on every screen.",
       "recommended": true
+    },
+    {
+      "id": "react-native-hermes",
+      "title": "Measure on devices",
+      "text": "Profile on real devices and avoid inline functions and styles in hot lists."
+    },
+    {
+      "id": "react-native-navigation",
+      "title": "Typed navigation",
+      "text": "Type navigation params and keep screens decoupled through the navigator.",
+      "recommended": true
+    },
+    {
+      "id": "react-native-storage",
+      "title": "Secure storage",
+      "text": "Store tokens in secure storage, not AsyncStorage.",
+      "recommended": true
+    },
+    {
+      "id": "react-native-updates",
+      "title": "Respect native versions",
+      "text": "Check library compatibility with the React Native and Expo SDK version before upgrading.",
+      "recommended": true
     }
   ]
 }

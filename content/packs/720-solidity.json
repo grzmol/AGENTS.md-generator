@@ -1,0 +1,45 @@
+{
+  "id": "solidity",
+  "title": "Solidity and smart contracts",
+  "kind": "technology",
+  "order": 720,
+  "family": "web3",
+  "description": "Conventions for Solidity and smart contracts.",
+  "rules": [
+    {
+      "id": "solidity-cei",
+      "title": "Checks-effects-interactions",
+      "text": "Follow checks-effects-interactions and use reentrancy guards around external calls.",
+      "recommended": true
+    },
+    {
+      "id": "solidity-audited-libs",
+      "title": "Audited libraries",
+      "text": "Build on audited libraries such as OpenZeppelin instead of custom implementations.",
+      "recommended": true
+    },
+    {
+      "id": "solidity-access",
+      "title": "Explicit access control",
+      "text": "Restrict privileged functions with explicit access control and emit events for state changes.",
+      "recommended": true
+    },
+    {
+      "id": "solidity-overflow",
+      "title": "Safe arithmetic",
+      "text": "Use the compiler checked arithmetic and be deliberate with unchecked blocks.",
+      "recommended": true
+    },
+    {
+      "id": "solidity-tests",
+      "title": "Fuzz and invariant tests",
+      "text": "Cover contracts with unit, fuzz and invariant tests and run static analysis such as Slither.",
+      "recommended": true
+    },
+    {
+      "id": "solidity-upgrade",
+      "title": "Upgradeability with care",
+      "text": "Avoid upgradeable proxies unless required, and document storage layout rules when used."
+    }
+  ]
+}

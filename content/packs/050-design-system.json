@@ -49,6 +49,50 @@
       "id": "design-system-i18n",
       "title": "No hardcoded user-facing strings",
       "text": "Keep user-facing strings in translation files, not inline in components."
+    },
+    {
+      "id": "design-system-spacing-scale",
+      "title": "Spacing scale",
+      "text": "Use the spacing scale for margins and padding; no one-off pixel values.",
+      "recommended": true
+    },
+    {
+      "id": "design-system-type-scale",
+      "title": "Type scale",
+      "text": "Use the typography scale for sizes and weights.",
+      "recommended": true
+    },
+    {
+      "id": "design-system-icons",
+      "title": "One icon set",
+      "text": "Use the project icon set and keep sizes consistent."
+    },
+    {
+      "id": "design-system-variants",
+      "title": "Variants over forks",
+      "text": "Add a variant or prop to an existing component instead of copying it.",
+      "recommended": true
+    },
+    {
+      "id": "design-system-docs-components",
+      "title": "Document components",
+      "text": "Document new shared components with usage examples in the component catalog."
+    },
+    {
+      "id": "design-system-storybook",
+      "title": "Stories for shared components",
+      "text": "Add a story for each state of a shared component."
+    },
+    {
+      "id": "design-system-content-width",
+      "title": "Readable line length",
+      "text": "Limit running text to about 60 to 80 characters per line."
+    },
+    {
+      "id": "design-system-theme-tokens",
+      "title": "Semantic color tokens",
+      "text": "Use semantic color tokens (text-primary, surface) instead of palette values in components.",
+      "recommended": true
     }
   ]
 }

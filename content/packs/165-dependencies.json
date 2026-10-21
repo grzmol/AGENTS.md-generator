@@ -1,0 +1,49 @@
+{
+  "id": "dependencies",
+  "title": "Dependencies",
+  "kind": "general",
+  "order": 165,
+  "description": "Adding and upgrading packages.",
+  "rules": [
+    {
+      "id": "dependencies-justify",
+      "title": "Justify new packages",
+      "text": "Before adding a dependency, check maintenance, license, size and whether the standard library already covers it.",
+      "recommended": true
+    },
+    {
+      "id": "dependencies-lockfile",
+      "title": "Commit lockfiles",
+      "text": "Commit lockfiles and install with the frozen or locked flag in CI.",
+      "recommended": true
+    },
+    {
+      "id": "dependencies-license",
+      "title": "Check licenses",
+      "text": "Only add dependencies with licenses compatible with the project.",
+      "recommended": true
+    },
+    {
+      "id": "dependencies-upgrades",
+      "title": "Upgrade in small steps",
+      "text": "Upgrade one major dependency per change and read its migration notes.",
+      "recommended": true
+    },
+    {
+      "id": "dependencies-audit",
+      "title": "Audit regularly",
+      "text": "Run the ecosystem audit tool and do not ignore high severity findings without a recorded reason."
+    },
+    {
+      "id": "dependencies-pin-tools",
+      "title": "Pin toolchain versions",
+      "text": "Pin runtime and toolchain versions in version files (.nvmrc, .tool-versions, rust-toolchain).",
+      "recommended": true
+    },
+    {
+      "id": "dependencies-no-vendoring",
+      "title": "Do not copy library code",
+      "text": "Do not copy third-party code into the repository; depend on it properly."
+    }
+  ]
+}

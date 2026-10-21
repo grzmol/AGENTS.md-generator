@@ -52,6 +52,39 @@
       "title": "Specific exceptions",
       "text": "Catch specific exceptions, never bare except.",
       "recommended": true
+    },
+    {
+      "id": "python-f-strings",
+      "title": "f-strings",
+      "text": "Use f-strings for formatting, but not for building SQL or log messages with sensitive data."
+    },
+    {
+      "id": "python-comprehensions",
+      "title": "Readable comprehensions",
+      "text": "Use comprehensions for simple transforms and loops when logic is complex."
+    },
+    {
+      "id": "python-mutable-defaults",
+      "title": "No mutable defaults",
+      "text": "Never use mutable default arguments.",
+      "recommended": true
+    },
+    {
+      "id": "python-logging-module",
+      "title": "logging module",
+      "text": "Use the logging module with a module-level logger, not print.",
+      "recommended": true
+    },
+    {
+      "id": "python-protocols",
+      "title": "Protocols for interfaces",
+      "text": "Use Protocol or ABC to define interfaces and keep concrete types out of signatures."
+    },
+    {
+      "id": "python-async-io",
+      "title": "asyncio discipline",
+      "text": "Do not mix blocking calls into async code; use asyncio.to_thread for unavoidable blocking work.",
+      "recommended": true
     }
   ]
 }

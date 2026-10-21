@@ -34,6 +34,39 @@
       "title": "Explicit transactions",
       "text": "Wrap multi-statement changes in transactions and keep them short.",
       "recommended": true
+    },
+    {
+      "id": "postgresql-timestamptz",
+      "title": "timestamptz",
+      "text": "Use timestamptz for time values and store them in UTC.",
+      "recommended": true
+    },
+    {
+      "id": "postgresql-uuid",
+      "title": "Key types",
+      "text": "Use a consistent primary key type across tables (bigint identity or UUID v7)."
+    },
+    {
+      "id": "postgresql-concurrent-index",
+      "title": "Concurrent indexes",
+      "text": "Create indexes on large tables with CREATE INDEX CONCURRENTLY.",
+      "recommended": true
+    },
+    {
+      "id": "postgresql-rls",
+      "title": "Row-level security",
+      "text": "Consider row-level security for multi-tenant data."
+    },
+    {
+      "id": "postgresql-pooling",
+      "title": "Connection pooling",
+      "text": "Use a connection pool and size it to the database limits.",
+      "recommended": true
+    },
+    {
+      "id": "postgresql-jsonb",
+      "title": "jsonb sparingly",
+      "text": "Use jsonb for truly flexible attributes, not as a replacement for relational columns."
     }
   ]
 }

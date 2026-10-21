@@ -34,6 +34,35 @@
       "id": "django-drf",
       "title": "Serializers for validation",
       "text": "Validate API input with serializers, not manual request parsing."
+    },
+    {
+      "id": "django-custom-user",
+      "title": "Custom user model",
+      "text": "Start projects with a custom user model.",
+      "recommended": true
+    },
+    {
+      "id": "django-csrf",
+      "title": "Keep CSRF enabled",
+      "text": "Keep CSRF middleware on and use the csrf_token tag in forms.",
+      "recommended": true
+    },
+    {
+      "id": "django-queries",
+      "title": "Use QuerySet methods",
+      "text": "Filter in the database with QuerySet methods rather than in Python loops.",
+      "recommended": true
+    },
+    {
+      "id": "django-signals",
+      "title": "Use signals sparingly",
+      "text": "Avoid signals for core logic; call services explicitly."
+    },
+    {
+      "id": "django-tests",
+      "title": "Django test tools",
+      "text": "Use pytest-django or TestCase with factories and test the API layer.",
+      "recommended": true
     }
   ]
 }

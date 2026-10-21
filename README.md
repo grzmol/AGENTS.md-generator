@@ -18,6 +18,8 @@ Stack: Svelte 5, Vite, TypeScript, Vitest.
 
 ## Content
 
+Currently 817 rules in 117 packs and 40 presets.
+
 Rules live in `content/packs/*.json` and presets in `content/presets/*.json`. Adding a rule is a one-file change.
 
 A rule has `id` (prefixed with its pack id), `title`, `text` (one imperative line), optional `recommended`, optional `group` (rules sharing a group in one pack are mutually exclusive and render as radios) and optional `url` for skills.

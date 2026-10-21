@@ -43,6 +43,52 @@
       "id": "architecture-adr",
       "title": "Record decisions",
       "text": "Record significant architectural decisions in docs/adr before implementing them."
+    },
+    {
+      "id": "architecture-dependency-direction",
+      "title": "Inward dependencies",
+      "text": "Keep dependencies pointing inward: domain code must not import framework or infrastructure code.",
+      "recommended": true
+    },
+    {
+      "id": "architecture-composition",
+      "title": "Composition over inheritance",
+      "text": "Prefer composition and small interfaces over deep inheritance trees.",
+      "recommended": true
+    },
+    {
+      "id": "architecture-single-source",
+      "title": "Single source of truth",
+      "text": "Keep one source of truth for each piece of data and derive the rest.",
+      "recommended": true
+    },
+    {
+      "id": "architecture-yagni",
+      "title": "Build only what is needed",
+      "text": "Implement only what the task requires; no speculative options or extension points.",
+      "recommended": true
+    },
+    {
+      "id": "architecture-feature-folders",
+      "title": "Group by feature",
+      "text": "Group code by feature or domain rather than by technical type when the project already does so."
+    },
+    {
+      "id": "architecture-public-surface",
+      "title": "Small public surface",
+      "text": "Export the minimum from each module and keep helpers private.",
+      "recommended": true
+    },
+    {
+      "id": "architecture-idempotent-jobs",
+      "title": "Idempotent background jobs",
+      "text": "Write background jobs so they can be retried or run twice safely.",
+      "recommended": true
+    },
+    {
+      "id": "architecture-boring",
+      "title": "Prefer boring solutions",
+      "text": "Prefer proven simple solutions over clever or novel ones."
     }
   ]
 }

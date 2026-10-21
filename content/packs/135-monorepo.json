@@ -1,0 +1,53 @@
+{
+  "id": "monorepo",
+  "title": "Monorepo",
+  "kind": "general",
+  "order": 135,
+  "description": "Working in multi-package repositories.",
+  "rules": [
+    {
+      "id": "monorepo-scope",
+      "title": "Work in the owning package",
+      "text": "Make changes inside the package that owns the behavior and run commands scoped to that package.",
+      "recommended": true
+    },
+    {
+      "id": "monorepo-filter",
+      "title": "Filter commands by package",
+      "text": "Use the workspace filter (pnpm --filter, nx, turbo, cargo -p) to build and test only affected packages.",
+      "recommended": true
+    },
+    {
+      "id": "monorepo-boundaries",
+      "title": "Do not import across packages by path",
+      "text": "Depend on other packages through their published entry points, never through relative paths into their sources.",
+      "recommended": true
+    },
+    {
+      "id": "monorepo-shared-deps",
+      "title": "Single version per dependency",
+      "text": "Keep one version of each shared dependency across the workspace and update it everywhere at once.",
+      "recommended": true
+    },
+    {
+      "id": "monorepo-split-prs",
+      "title": "Split independently deployed parts",
+      "text": "Split changes to independently deployed services or layers into separate pull requests and land producers before consumers."
+    },
+    {
+      "id": "monorepo-changesets",
+      "title": "Record changes for release",
+      "text": "Add a changeset or changelog entry for every user-visible change to a published package."
+    },
+    {
+      "id": "monorepo-root-tasks",
+      "title": "Root scripts for cross-cutting tasks",
+      "text": "Run lint, typecheck and test from the repository root for cross-package changes."
+    },
+    {
+      "id": "monorepo-ownership",
+      "title": "Respect CODEOWNERS",
+      "text": "Check CODEOWNERS before editing files owned by other teams and keep such changes minimal."
+    }
+  ]
+}

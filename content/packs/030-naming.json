@@ -64,6 +64,40 @@
       "title": "Behavior-based test names",
       "text": "Name tests after the behavior they verify, for example \"returns an error when the token is expired\".",
       "recommended": true
+    },
+    {
+      "id": "naming-no-hungarian",
+      "title": "No type prefixes",
+      "text": "Do not encode types in names (strName, IUser) unless the language idiom requires it."
+    },
+    {
+      "id": "naming-verbs",
+      "title": "Verb names for functions",
+      "text": "Name functions with verbs and values with nouns.",
+      "recommended": true
+    },
+    {
+      "id": "naming-plural",
+      "title": "Plural collections",
+      "text": "Name collections in the plural and single items in the singular.",
+      "recommended": true
+    },
+    {
+      "id": "naming-units",
+      "title": "Units in names",
+      "text": "Include units in names when not obvious, such as timeoutMs or sizeBytes.",
+      "recommended": true
+    },
+    {
+      "id": "naming-domain",
+      "title": "Use domain vocabulary",
+      "text": "Use the domain terms from the product and docs consistently instead of inventing synonyms.",
+      "recommended": true
+    },
+    {
+      "id": "naming-avoid-negatives",
+      "title": "Avoid negated names",
+      "text": "Avoid negated boolean names such as isNotReady."
     }
   ]
 }

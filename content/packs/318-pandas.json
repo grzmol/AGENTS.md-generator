@@ -1,0 +1,39 @@
+{
+  "id": "pandas",
+  "title": "pandas and data analysis",
+  "kind": "technology",
+  "order": 318,
+  "family": "python",
+  "description": "Conventions for pandas and data analysis.",
+  "rules": [
+    {
+      "id": "pandas-vectorize",
+      "title": "Vectorize",
+      "text": "Use vectorized operations instead of iterating rows with iterrows or apply.",
+      "recommended": true
+    },
+    {
+      "id": "pandas-copy",
+      "title": "Avoid chained assignment",
+      "text": "Use .loc for assignment and avoid chained indexing.",
+      "recommended": true
+    },
+    {
+      "id": "pandas-dtypes",
+      "title": "Explicit dtypes",
+      "text": "Specify dtypes when reading data and validate schemas at load time.",
+      "recommended": true
+    },
+    {
+      "id": "pandas-reproducible",
+      "title": "Reproducible analysis",
+      "text": "Fix random seeds, pin library versions and keep raw data immutable.",
+      "recommended": true
+    },
+    {
+      "id": "pandas-parquet",
+      "title": "Columnar storage",
+      "text": "Store intermediate data as Parquet instead of CSV."
+    }
+  ]
+}

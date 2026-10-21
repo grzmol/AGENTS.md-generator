@@ -1,0 +1,39 @@
+{
+  "id": "tanstack-query",
+  "title": "TanStack Query",
+  "kind": "technology",
+  "order": 287,
+  "family": "javascript",
+  "description": "Conventions for TanStack Query.",
+  "rules": [
+    {
+      "id": "tanstack-query-keys",
+      "title": "Structured query keys",
+      "text": "Use structured query keys from a central factory and include every input that affects the result.",
+      "recommended": true
+    },
+    {
+      "id": "tanstack-query-invalidate",
+      "title": "Invalidate after mutation",
+      "text": "Invalidate or update affected queries after a mutation.",
+      "recommended": true
+    },
+    {
+      "id": "tanstack-query-no-copy",
+      "title": "Do not copy into state",
+      "text": "Do not copy query data into local state; read it from the query.",
+      "recommended": true
+    },
+    {
+      "id": "tanstack-query-stale",
+      "title": "Tune staleTime",
+      "text": "Set staleTime deliberately per query instead of relying on defaults."
+    },
+    {
+      "id": "tanstack-query-error-states",
+      "title": "Handle all states",
+      "text": "Render loading, error and empty states for every query.",
+      "recommended": true
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "jupyter",
+  "title": "Jupyter notebooks",
+  "kind": "technology",
+  "order": 319,
+  "family": "python",
+  "description": "Conventions for Jupyter notebooks.",
+  "rules": [
+    {
+      "id": "jupyter-clean",
+      "title": "Clean outputs before commit",
+      "text": "Clear outputs before committing and keep notebooks runnable top to bottom.",
+      "recommended": true
+    },
+    {
+      "id": "jupyter-extract",
+      "title": "Move logic to modules",
+      "text": "Move reusable logic from notebooks into tested Python modules.",
+      "recommended": true
+    },
+    {
+      "id": "jupyter-paths",
+      "title": "Relative paths",
+      "text": "Use paths relative to the project root, never absolute local paths.",
+      "recommended": true
+    },
+    {
+      "id": "jupyter-secrets",
+      "title": "No secrets in notebooks",
+      "text": "Never store credentials or tokens in notebook cells or outputs.",
+      "recommended": true
+    }
+  ]
+}

@@ -34,6 +34,35 @@
       "id": "docker-healthcheck",
       "title": "Health checks",
       "text": "Define health checks and handle SIGTERM for graceful stop."
+    },
+    {
+      "id": "docker-pin-base",
+      "title": "Pin base images",
+      "text": "Pin base images to a version or digest and rebuild regularly for patches.",
+      "recommended": true
+    },
+    {
+      "id": "docker-no-secrets",
+      "title": "No secrets in images",
+      "text": "Never bake secrets into images or build args; use build secrets or runtime injection.",
+      "recommended": true
+    },
+    {
+      "id": "docker-one-process",
+      "title": "One concern per container",
+      "text": "Run one main process per container.",
+      "recommended": true
+    },
+    {
+      "id": "docker-compose",
+      "title": "Compose for local dev",
+      "text": "Define local dependencies in docker compose with named volumes and healthchecks."
+    },
+    {
+      "id": "docker-exec-form",
+      "title": "Exec form entrypoints",
+      "text": "Use the exec form for ENTRYPOINT and CMD so signals reach the process.",
+      "recommended": true
     }
   ]
 }

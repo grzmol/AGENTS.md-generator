@@ -1,0 +1,44 @@
+{
+  "id": "i18n",
+  "title": "Internationalization",
+  "kind": "general",
+  "order": 155,
+  "description": "Translations and locale handling.",
+  "rules": [
+    {
+      "id": "i18n-externalize",
+      "title": "Externalize strings",
+      "text": "Keep user-facing strings in message catalogs with stable keys.",
+      "recommended": true
+    },
+    {
+      "id": "i18n-icu",
+      "title": "ICU message format",
+      "text": "Use ICU message syntax for plurals and gender instead of string concatenation.",
+      "recommended": true
+    },
+    {
+      "id": "i18n-locale-formats",
+      "title": "Locale-aware formatting",
+      "text": "Format dates, numbers and currencies with Intl or the platform locale APIs.",
+      "recommended": true
+    },
+    {
+      "id": "i18n-utf8",
+      "title": "UTF-8 everywhere",
+      "text": "Use UTF-8 for storage, transport and files.",
+      "recommended": true
+    },
+    {
+      "id": "i18n-rtl",
+      "title": "Support right-to-left",
+      "text": "Use logical CSS properties so layouts work in right-to-left languages."
+    },
+    {
+      "id": "i18n-no-concat",
+      "title": "No sentence assembly",
+      "text": "Never assemble translated sentences from fragments.",
+      "recommended": true
+    }
+  ]
+}

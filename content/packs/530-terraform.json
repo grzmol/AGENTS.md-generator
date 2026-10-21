@@ -29,6 +29,30 @@
       "title": "Remote state",
       "text": "Use remote state with locking and never commit state files or secrets.",
       "recommended": true
+    },
+    {
+      "id": "terraform-pin-providers",
+      "title": "Pin providers",
+      "text": "Pin provider and module versions and commit the lock file.",
+      "recommended": true
+    },
+    {
+      "id": "terraform-workspaces",
+      "title": "Separate environments",
+      "text": "Separate environments with distinct state and variable files.",
+      "recommended": true
+    },
+    {
+      "id": "terraform-no-hardcode",
+      "title": "No hardcoded ids",
+      "text": "Reference resources and data sources rather than hardcoding IDs and ARNs.",
+      "recommended": true
+    },
+    {
+      "id": "terraform-sensitive",
+      "title": "Mark sensitive outputs",
+      "text": "Mark sensitive variables and outputs as sensitive.",
+      "recommended": true
     }
   ]
 }

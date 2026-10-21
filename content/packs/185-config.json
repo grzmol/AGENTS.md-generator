@@ -1,0 +1,44 @@
+{
+  "id": "config",
+  "title": "Configuration",
+  "kind": "general",
+  "order": 185,
+  "description": "Environment and settings.",
+  "sources": [
+    {
+      "name": "The Twelve-Factor App",
+      "url": "https://12factor.net"
+    }
+  ],
+  "rules": [
+    {
+      "id": "config-env",
+      "title": "Config from the environment",
+      "text": "Read configuration from environment variables with typed parsing and sensible defaults.",
+      "recommended": true
+    },
+    {
+      "id": "config-example",
+      "title": "Provide .env.example",
+      "text": "Document every variable in .env.example without real values.",
+      "recommended": true
+    },
+    {
+      "id": "config-validate",
+      "title": "Validate at startup",
+      "text": "Validate configuration once at startup and fail with a clear message.",
+      "recommended": true
+    },
+    {
+      "id": "config-no-env-branching",
+      "title": "No environment branching in code",
+      "text": "Avoid branching on environment names in code; inject behavior through configuration."
+    },
+    {
+      "id": "config-defaults-safe",
+      "title": "Safe defaults",
+      "text": "Default to the secure, least-privileged and non-destructive option.",
+      "recommended": true
+    }
+  ]
+}

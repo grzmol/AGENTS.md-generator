@@ -29,6 +29,29 @@
       "title": "Pin image tags",
       "text": "Pin images by version or digest, never :latest.",
       "recommended": true
+    },
+    {
+      "id": "kubernetes-pdb",
+      "title": "Disruption budgets",
+      "text": "Define PodDisruptionBudgets and multiple replicas for important services."
+    },
+    {
+      "id": "kubernetes-security-context",
+      "title": "Restrictive security context",
+      "text": "Run as non-root with a read-only root filesystem and dropped capabilities.",
+      "recommended": true
+    },
+    {
+      "id": "kubernetes-namespaces",
+      "title": "Namespaces and RBAC",
+      "text": "Isolate workloads with namespaces and minimal RBAC.",
+      "recommended": true
+    },
+    {
+      "id": "kubernetes-declarative",
+      "title": "Declarative changes",
+      "text": "Change cluster state through manifests in git, not kubectl edit.",
+      "recommended": true
     }
   ]
 }

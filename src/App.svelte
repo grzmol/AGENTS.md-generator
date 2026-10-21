@@ -14,6 +14,7 @@
   let format = $state<ExportFormat>('agents')
   let query = $state('')
   let kindFilter = $state<PackKind | 'all'>('all')
+  let family = $state('')
   let status = $state('')
   let mobileTab = $state<'build' | 'preview'>('build')
 
@@ -24,6 +25,9 @@
     { id: 'skills', label: 'Skills' }
   ]
 
+  const families = [...new Set(packs.map((pack) => pack.family).filter((value): value is string => !!value))].sort()
+  const totalRules = packs.reduce((sum, pack) => sum + pack.rules.length, 0)
+
   const output = $derived(generate(packs, selected, project, format))
   const lines = $derived(lineCount(output))
   const tokens = $derived(estimateTokens(output))
@@ -32,6 +36,7 @@
   const visiblePacks = $derived(
     packs
       .filter((pack) => kindFilter === 'all' || pack.kind === kindFilter)
+      .filter((pack) => !family || pack.kind !== 'technology' || pack.family === family)
       .map((pack) => {
         const needle = query.trim().toLowerCase()
         if (!needle) return pack
@@ -112,7 +117,7 @@
   <div class="wrap top-inner">
     <div>
       <h1>AGENTS.md Generator</h1>
-      <p class="muted">Pick conventions and skills, get a ready-to-commit instruction file for AI coding agents.</p>
+      <p class="muted">Pick conventions and skills, get a ready-to-commit instruction file for AI coding agents. {totalRules} rules in {packs.length} packs.</p>
     </div>
     <nav class="tabs mobile-only" aria-label="View">
       <button class:active={mobileTab === 'build'} onclick={() => (mobileTab = 'build')}>Build</button>
@@ -148,6 +153,12 @@
 
     <div class="toolbar">
       <input type="search" bind:value={query} placeholder="Search rules" aria-label="Search rules" />
+      <select bind:value={family} aria-label="Technology family">
+        <option value="">All technology families</option>
+        {#each families as item (item)}
+          <option value={item}>{item}</option>
+        {/each}
+      </select>
       <div class="chips" role="group" aria-label="Filter by type">
         {#each kinds as kind (kind.id)}
           <button class="chip" class:active={kindFilter === kind.id} aria-pressed={kindFilter === kind.id} onclick={() => (kindFilter = kind.id)}>{kind.label}</button>
@@ -161,11 +172,11 @@
 
     {#each visiblePacks as pack (pack.id)}
       {@const full = packs.find((candidate) => candidate.id === pack.id)!}
-      <fieldset class="card pack">
-        <legend>
+      <details class="card pack" open={query.trim() !== '' || pack.kind === 'general'}>
+        <summary>
           <span class="pack-title">{pack.title}</span>
-          <span class="badge">{countIn(full)}/{full.rules.length}</span>
-        </legend>
+          <span class="badge" class:badge-on={countIn(full) > 0}>{countIn(full)}/{full.rules.length}</span>
+        </summary>
         {#if pack.description}<p class="muted small">{pack.description}</p>{/if}
         <div class="pack-actions">
           <button class="link" onclick={() => selectRecommended(full)}>Recommended</button>
@@ -201,7 +212,7 @@
             {#each pack.sources as source, index (source.url)}{index > 0 ? ', ' : ' '}<a href={source.url} target="_blank" rel="noreferrer">{source.name}</a>{/each}
           </p>
         {/if}
-      </fieldset>
+      </details>
     {:else}
       <p class="muted">No rules match your search.</p>
     {/each}

@@ -35,6 +35,23 @@
       "title": "HTTPException with codes",
       "text": "Raise HTTPException with accurate status codes and consistent error bodies.",
       "recommended": true
+    },
+    {
+      "id": "fastapi-lifespan",
+      "title": "Lifespan events",
+      "text": "Create and close shared resources in the lifespan handler.",
+      "recommended": true
+    },
+    {
+      "id": "fastapi-status-codes",
+      "title": "Declare status codes",
+      "text": "Set status_code on routes and document error responses.",
+      "recommended": true
+    },
+    {
+      "id": "fastapi-background",
+      "title": "Background tasks sparingly",
+      "text": "Use BackgroundTasks only for short work; use a queue for anything important."
     }
   ]
 }

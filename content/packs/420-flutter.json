@@ -29,6 +29,29 @@
       "title": "One state solution",
       "text": "Use a single state management approach consistently across the app.",
       "recommended": true
+    },
+    {
+      "id": "flutter-keys",
+      "title": "Keys for lists",
+      "text": "Provide keys for stateful items in dynamic lists.",
+      "recommended": true
+    },
+    {
+      "id": "flutter-async-gaps",
+      "title": "Check mounted after await",
+      "text": "Check context.mounted after awaits before using BuildContext.",
+      "recommended": true
+    },
+    {
+      "id": "flutter-theme",
+      "title": "Theme over hardcoding",
+      "text": "Take colors and text styles from Theme instead of hardcoding them.",
+      "recommended": true
+    },
+    {
+      "id": "flutter-golden",
+      "title": "Widget and golden tests",
+      "text": "Cover widgets with widget tests and golden tests for visual states."
     }
   ]
 }

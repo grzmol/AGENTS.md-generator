@@ -72,6 +72,52 @@
       "title": "LF line endings",
       "text": "Use LF line endings.",
       "recommended": true
+    },
+    {
+      "id": "formatting-trailing-comma",
+      "title": "Trailing commas",
+      "text": "Use trailing commas in multiline literals and argument lists."
+    },
+    {
+      "id": "formatting-quotes-single",
+      "title": "Single quotes",
+      "text": "Use single quotes for strings unless the string contains a single quote.",
+      "group": "quotes"
+    },
+    {
+      "id": "formatting-quotes-double",
+      "title": "Double quotes",
+      "text": "Use double quotes for strings.",
+      "group": "quotes"
+    },
+    {
+      "id": "formatting-semi-always",
+      "title": "Semicolons",
+      "text": "Terminate statements with semicolons.",
+      "group": "semi"
+    },
+    {
+      "id": "formatting-semi-never",
+      "title": "No semicolons",
+      "text": "Omit optional semicolons.",
+      "group": "semi"
+    },
+    {
+      "id": "formatting-import-order",
+      "title": "Ordered imports",
+      "text": "Keep imports grouped (standard library, third party, local) and sorted by the formatter.",
+      "recommended": true
+    },
+    {
+      "id": "formatting-blank-lines",
+      "title": "No consecutive blank lines",
+      "text": "Do not leave more than one consecutive blank line."
+    },
+    {
+      "id": "formatting-editorconfig",
+      "title": "Respect .editorconfig",
+      "text": "Honor .editorconfig and the repository formatter configuration over personal preferences.",
+      "recommended": true
     }
   ]
 }

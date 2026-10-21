@@ -1,0 +1,69 @@
+{
+  "id": "llm-apps",
+  "title": "LLM-powered applications",
+  "kind": "technology",
+  "order": 700,
+  "family": "ai",
+  "description": "Conventions for LLM-powered applications.",
+  "rules": [
+    {
+      "id": "llm-apps-untrusted",
+      "title": "Treat model output as untrusted",
+      "text": "Treat model output as untrusted input: validate and sanitize it before rendering, executing or storing.",
+      "recommended": true
+    },
+    {
+      "id": "llm-apps-injection",
+      "title": "Defend against prompt injection",
+      "text": "Keep untrusted content separate from instructions and never give a model with untrusted input access to secrets or destructive tools.",
+      "recommended": true
+    },
+    {
+      "id": "llm-apps-structured",
+      "title": "Structured outputs",
+      "text": "Request structured output with a schema and validate it, with a repair or retry path.",
+      "recommended": true
+    },
+    {
+      "id": "llm-apps-evals",
+      "title": "Evals for prompts",
+      "text": "Keep an evaluation set and run it before changing prompts or models.",
+      "recommended": true
+    },
+    {
+      "id": "llm-apps-versioned-prompts",
+      "title": "Prompts as code",
+      "text": "Store prompts in version control as templates, not as strings scattered through the code.",
+      "recommended": true
+    },
+    {
+      "id": "llm-apps-cost",
+      "title": "Track cost and latency",
+      "text": "Log token usage, latency and cost per request and set budgets and timeouts.",
+      "recommended": true
+    },
+    {
+      "id": "llm-apps-fallback",
+      "title": "Handle failures",
+      "text": "Handle rate limits, timeouts and refusals with retries, backoff and a graceful fallback.",
+      "recommended": true
+    },
+    {
+      "id": "llm-apps-model-config",
+      "title": "Configurable models",
+      "text": "Make model names and parameters configuration, not hardcoded constants.",
+      "recommended": true
+    },
+    {
+      "id": "llm-apps-pii",
+      "title": "Minimize data sent",
+      "text": "Send the minimum data to external model providers and redact personal data first.",
+      "recommended": true
+    },
+    {
+      "id": "llm-apps-streaming",
+      "title": "Stream long responses",
+      "text": "Stream long responses to the UI and handle partial output and cancellation."
+    }
+  ]
+}

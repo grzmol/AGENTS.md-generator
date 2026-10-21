@@ -1,0 +1,44 @@
+{
+  "id": "bash",
+  "title": "Shell scripts",
+  "kind": "technology",
+  "order": 337,
+  "family": "systems",
+  "description": "Conventions for Shell scripts.",
+  "rules": [
+    {
+      "id": "bash-strict",
+      "title": "Strict mode",
+      "text": "Start scripts with set -euo pipefail.",
+      "recommended": true
+    },
+    {
+      "id": "bash-quote",
+      "title": "Quote variables",
+      "text": "Quote all variable expansions.",
+      "recommended": true
+    },
+    {
+      "id": "bash-shellcheck",
+      "title": "ShellCheck",
+      "text": "Keep scripts clean under ShellCheck.",
+      "recommended": true
+    },
+    {
+      "id": "bash-posix",
+      "title": "Choose the shell deliberately",
+      "text": "Declare the interpreter in the shebang and avoid bashisms in sh scripts."
+    },
+    {
+      "id": "bash-trap",
+      "title": "Clean up with trap",
+      "text": "Clean up temporary files with a trap on EXIT.",
+      "recommended": true
+    },
+    {
+      "id": "bash-small",
+      "title": "Switch language when large",
+      "text": "Rewrite scripts that grow past a hundred lines or need real data structures in a proper language."
+    }
+  ]
+}

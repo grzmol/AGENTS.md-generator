@@ -80,6 +80,64 @@
       "title": "Only explain why",
       "text": "Add comments only to explain why something is done, never what the code does.",
       "group": "agent-comments"
+    },
+    {
+      "id": "agent-behavior-investigate",
+      "title": "Investigate before changing",
+      "text": "Read the relevant code and tests before proposing a change; do not edit files you have not read.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-root-cause",
+      "title": "Fix root causes",
+      "text": "Fix the root cause rather than suppressing the symptom with a workaround or silenced warning.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-no-suppress",
+      "title": "No lint suppression",
+      "text": "Do not add lint or type suppressions to get a clean run; fix the underlying issue.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-incremental",
+      "title": "Work incrementally",
+      "text": "Make one logical change at a time and keep the code building between steps."
+    },
+    {
+      "id": "agent-behavior-honest",
+      "title": "Report honestly",
+      "text": "Report failing tests, skipped steps and unverified claims plainly; never claim success without evidence.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-no-guess-api",
+      "title": "Check APIs before using them",
+      "text": "Verify library APIs in the installed version or its docs before using them; do not invent functions.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-backward",
+      "title": "Preserve behavior",
+      "text": "Do not change public behavior, file formats or APIs unless the task asks for it.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-hardcode",
+      "title": "No special-casing tests",
+      "text": "Never hardcode values or special-case inputs to satisfy a test.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-language",
+      "title": "Match the language",
+      "text": "Write code, comments and commit messages in English."
+    },
+    {
+      "id": "agent-behavior-time-box",
+      "title": "Stop and ask when stuck",
+      "text": "If an approach fails twice, stop and ask instead of trying increasingly invasive workarounds.",
+      "recommended": true
     }
   ]
 }

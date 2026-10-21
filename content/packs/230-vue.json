@@ -29,6 +29,28 @@
       "title": "Keys on v-for",
       "text": "Always provide a stable :key with v-for and never combine v-if with v-for.",
       "recommended": true
+    },
+    {
+      "id": "vue-composables",
+      "title": "Extract composables",
+      "text": "Extract reusable stateful logic into composables named useX.",
+      "recommended": true
+    },
+    {
+      "id": "vue-reactivity",
+      "title": "Mind reactivity",
+      "text": "Use ref and computed correctly and never destructure reactive objects without toRefs.",
+      "recommended": true
+    },
+    {
+      "id": "vue-v-model",
+      "title": "Typed v-model",
+      "text": "Use defineModel for two-way bindings."
+    },
+    {
+      "id": "vue-router",
+      "title": "Typed router usage",
+      "text": "Use named routes and lazy-loaded route components."
     }
   ]
 }

@@ -28,6 +28,23 @@
       "title": "Responsive and state variants",
       "text": "Use responsive, dark and state variants instead of custom media queries.",
       "recommended": true
+    },
+    {
+      "id": "tailwind-no-dynamic",
+      "title": "No dynamic class names",
+      "text": "Do not build class names by string concatenation; use complete class strings so the compiler sees them.",
+      "recommended": true
+    },
+    {
+      "id": "tailwind-cn",
+      "title": "Merge classes safely",
+      "text": "Merge conditional classes with a helper like clsx and tailwind-merge."
+    },
+    {
+      "id": "tailwind-components",
+      "title": "Extract repeated markup",
+      "text": "Extract repeated utility groups into components, not into custom CSS.",
+      "recommended": true
     }
   ]
 }

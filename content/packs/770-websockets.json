@@ -1,0 +1,40 @@
+{
+  "id": "websockets",
+  "title": "WebSockets and realtime",
+  "kind": "technology",
+  "order": 770,
+  "family": "web",
+  "description": "Conventions for WebSockets and realtime.",
+  "rules": [
+    {
+      "id": "websockets-auth",
+      "title": "Authenticate connections",
+      "text": "Authenticate on connect and authorize each subscription or message.",
+      "recommended": true
+    },
+    {
+      "id": "websockets-reconnect",
+      "title": "Reconnect with backoff",
+      "text": "Reconnect with exponential backoff and resync state after reconnecting.",
+      "recommended": true
+    },
+    {
+      "id": "websockets-heartbeat",
+      "title": "Heartbeats",
+      "text": "Send heartbeats and close dead connections.",
+      "recommended": true
+    },
+    {
+      "id": "websockets-backpressure",
+      "title": "Handle backpressure",
+      "text": "Bound per-connection queues and drop or disconnect slow consumers.",
+      "recommended": true
+    },
+    {
+      "id": "websockets-schema",
+      "title": "Versioned messages",
+      "text": "Define a typed, versioned message schema.",
+      "recommended": true
+    }
+  ]
+}

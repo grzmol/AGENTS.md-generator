@@ -39,6 +39,43 @@
       "title": "Avoid non-null assertions",
       "text": "Avoid non-null assertions (!) and unchecked type assertions (as).",
       "recommended": true
+    },
+    {
+      "id": "typescript-readonly",
+      "title": "Readonly by default",
+      "text": "Use readonly and as const for data that should not change."
+    },
+    {
+      "id": "typescript-discriminated",
+      "title": "Discriminated unions",
+      "text": "Model variants with discriminated unions and exhaustive switch checks.",
+      "recommended": true
+    },
+    {
+      "id": "typescript-satisfies",
+      "title": "satisfies over assertions",
+      "text": "Use satisfies to check shapes without widening types, instead of as."
+    },
+    {
+      "id": "typescript-return-types",
+      "title": "Explicit exported return types",
+      "text": "Declare return types on exported functions."
+    },
+    {
+      "id": "typescript-no-ts-ignore",
+      "title": "No ts-ignore",
+      "text": "Do not use @ts-ignore; use @ts-expect-error with a reason only when unavoidable.",
+      "recommended": true
+    },
+    {
+      "id": "typescript-noUnchecked",
+      "title": "Checked indexed access",
+      "text": "Enable noUncheckedIndexedAccess and handle undefined from index lookups."
+    },
+    {
+      "id": "typescript-esm",
+      "title": "Explicit module settings",
+      "text": "Keep module and moduleResolution consistent with the runtime and bundler."
     }
   ]
 }

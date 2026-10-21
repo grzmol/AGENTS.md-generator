@@ -1,0 +1,101 @@
+{
+  "id": "workflow",
+  "title": "Workflow and tooling",
+  "kind": "general",
+  "order": 130,
+  "description": "How to run, verify and navigate the project.",
+  "sources": [
+    {
+      "name": "Patterns paraphrased from public AGENTS.md files of getsentry/sentry, apache/airflow and vercel/next.js",
+      "url": "https://agents.md"
+    }
+  ],
+  "rules": [
+    {
+      "id": "workflow-project-scripts",
+      "title": "Use project scripts",
+      "text": "Run tools through the project scripts (npm run, make, task) instead of invoking underlying binaries directly, so flags and environments match CI.",
+      "recommended": true
+    },
+    {
+      "id": "workflow-single-entry",
+      "title": "One lint entrypoint",
+      "text": "Run the single aggregate check command (for example pre-commit or a lint script) before finishing; fix every failure and re-run until it passes.",
+      "recommended": true
+    },
+    {
+      "id": "workflow-targeted-tests",
+      "title": "Run targeted tests first",
+      "text": "Run the specific test files related to your change first, and run the full suite only before handing off.",
+      "recommended": true
+    },
+    {
+      "id": "workflow-read-readme",
+      "title": "Read local READMEs",
+      "text": "Before editing a directory, read the README and any nested AGENTS.md that applies to it.",
+      "recommended": true
+    },
+    {
+      "id": "workflow-nested",
+      "title": "Nested instruction files",
+      "text": "Put area-specific instructions in nested AGENTS.md files and keep the root file to repository-wide guidance."
+    },
+    {
+      "id": "workflow-temp-scripts",
+      "title": "Keep scratch files out of the repo",
+      "text": "Put throwaway scripts and experiment output in a gitignored scratch directory and delete them when done.",
+      "recommended": true
+    },
+    {
+      "id": "workflow-container",
+      "title": "Use the dev container",
+      "text": "When the project provides a dev container or wrapper (docker compose, breeze, devbox), run tests and tooling inside it, not on the host."
+    },
+    {
+      "id": "workflow-rebuild",
+      "title": "Rebuild after switching branches",
+      "text": "After switching branches or pulling dependency changes, reinstall and rebuild before running tests.",
+      "recommended": true
+    },
+    {
+      "id": "workflow-ci-failures",
+      "title": "Reproduce CI failures locally",
+      "text": "When CI fails, find the exact failing job and command, reproduce it locally, then fix the cause instead of re-running blindly.",
+      "recommended": true
+    },
+    {
+      "id": "workflow-background",
+      "title": "Clean up background processes",
+      "text": "Stop any dev servers or watchers you started once you are done.",
+      "recommended": true
+    },
+    {
+      "id": "workflow-dev-logs",
+      "title": "Read dev server logs",
+      "text": "When debugging, read the dev server and test logs rather than guessing at runtime behavior."
+    },
+    {
+      "id": "workflow-destructive",
+      "title": "Confirm destructive commands",
+      "text": "Ask before running destructive or irreversible commands such as dropping databases, deleting branches, rm -rf or force operations.",
+      "recommended": true
+    },
+    {
+      "id": "workflow-reuse-tools",
+      "title": "Prefer repository helpers",
+      "text": "Prefer existing scripts, generators and templates in the repo over writing new ad hoc tooling.",
+      "recommended": true
+    },
+    {
+      "id": "workflow-scaffold",
+      "title": "Use generators for new files",
+      "text": "Create new tests, components and migrations with the project generator when one exists, so conventions are applied automatically."
+    },
+    {
+      "id": "workflow-docs-skills",
+      "title": "Use project skills",
+      "text": "When the repository documents skills or runbooks for a task (migrations, releases, dependency bumps), follow them instead of improvising.",
+      "recommended": true
+    }
+  ]
+}

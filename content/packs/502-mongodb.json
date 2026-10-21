@@ -1,0 +1,33 @@
+{
+  "id": "mongodb",
+  "title": "MongoDB",
+  "kind": "technology",
+  "order": 502,
+  "family": "data",
+  "description": "Conventions for MongoDB.",
+  "rules": [
+    {
+      "id": "mongodb-model-access",
+      "title": "Model for access patterns",
+      "text": "Design documents around read patterns and embed data that is read together.",
+      "recommended": true
+    },
+    {
+      "id": "mongodb-indexes",
+      "title": "Index queries",
+      "text": "Index every query filter and sort, and check explain output.",
+      "recommended": true
+    },
+    {
+      "id": "mongodb-unbounded",
+      "title": "No unbounded arrays",
+      "text": "Avoid unbounded array growth inside documents.",
+      "recommended": true
+    },
+    {
+      "id": "mongodb-validation",
+      "title": "Schema validation",
+      "text": "Enforce a JSON Schema validator on collections."
+    }
+  ]
+}

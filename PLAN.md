@@ -225,13 +225,13 @@ Szacunek: MVP w 3-4 tygodnie pracy jednej osoby, z czego większość to content
 1. Stack: Svelte 5 + Vite + TypeScript.
 2. Język UI: tylko angielski.
 3. Licencja: kod MIT, treść katalogu (oryginalne sformułowania) CC0. Treści na licencjach copyleft (np. OWASP CC BY-SA) tylko linkowane, nie kopiowane.
-4. Pierwsza fala technologii: lista z sekcji 6.2 (zaimplementowane 27 paczek, 225 reguł, 12 presetów).
+4. Pierwsza fala technologii: lista z sekcji 6.2 (zaimplementowane 117 paczek, 817 reguł, 40 presetów).
 5. Eksport `CLAUDE.md`, `.mdc` i Copilot wchodzi do MVP (zaimplementowane).
 6. Domena: domyślna `grzmol.github.io/AGENTS.md-generator`.
 
 ## 12. Status wdrożenia
 
-Zrobione: etapy 0, 1 i większość 2-4 w wersji MVP (szkielet, silnik, UI, presety, eksporty, CI i deploy Pages, testy treści). Do zrobienia: harvest pipeline i rozbudowa katalogu do 600+ reguł, tryb monorepo, licznik rzeczywistych tokenów, Lighthouse CI.
+Zrobione: etapy 0, 1 i większość 2-4 w wersji MVP (szkielet, silnik, UI, presety, eksporty, CI i deploy Pages, testy treści). Katalog rozbudowany do 817 reguł na podstawie wzorców z publicznych plików AGENTS.md (Sentry, Airflow, Next.js), oficjalnych przewodników i wiedzy własnej, w całości parafrazowanych. Do zrobienia: automatyczny harvest pipeline, tryb wielu plików w monorepo, licznik rzeczywistych tokenów, Lighthouse CI.
 
 ## 13. Następny krok
 

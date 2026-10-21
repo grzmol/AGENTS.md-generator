@@ -1,0 +1,43 @@
+{
+  "id": "privacy",
+  "title": "Data privacy",
+  "kind": "general",
+  "order": 170,
+  "description": "Personal and customer data.",
+  "rules": [
+    {
+      "id": "privacy-no-pii",
+      "title": "No real personal data in code",
+      "text": "Never put real customer or personal data in code, tests, fixtures, commits or pull requests; use synthetic examples such as user@example.com.",
+      "recommended": true
+    },
+    {
+      "id": "privacy-minimize",
+      "title": "Collect minimal data",
+      "text": "Collect and store only the personal data a feature needs.",
+      "recommended": true
+    },
+    {
+      "id": "privacy-retention",
+      "title": "Define retention",
+      "text": "Define retention and deletion for every store of personal data."
+    },
+    {
+      "id": "privacy-encrypt",
+      "title": "Encrypt sensitive data",
+      "text": "Encrypt sensitive data in transit and at rest.",
+      "recommended": true
+    },
+    {
+      "id": "privacy-consent",
+      "title": "Honor consent",
+      "text": "Check consent and opt-out settings before analytics or marketing processing."
+    },
+    {
+      "id": "privacy-test-data",
+      "title": "Synthetic test data",
+      "text": "Generate test data with factories; never copy production data into non-production environments.",
+      "recommended": true
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "pytorch",
+  "title": "PyTorch and ML",
+  "kind": "technology",
+  "order": 321,
+  "family": "python",
+  "description": "Conventions for PyTorch and ML.",
+  "rules": [
+    {
+      "id": "pytorch-seeds",
+      "title": "Seed everything",
+      "text": "Set seeds for Python, NumPy and PyTorch and log them with each run.",
+      "recommended": true
+    },
+    {
+      "id": "pytorch-device",
+      "title": "Device-agnostic code",
+      "text": "Write device-agnostic code and move tensors and models explicitly.",
+      "recommended": true
+    },
+    {
+      "id": "pytorch-eval",
+      "title": "eval and no_grad",
+      "text": "Call model.eval() and use torch.no_grad() or inference_mode for inference.",
+      "recommended": true
+    },
+    {
+      "id": "pytorch-config",
+      "title": "Config-driven experiments",
+      "text": "Drive experiments from config files and track metrics and artifacts in an experiment tracker.",
+      "recommended": true
+    },
+    {
+      "id": "pytorch-split",
+      "title": "No data leakage",
+      "text": "Split data before any preprocessing fit and never tune on the test set.",
+      "recommended": true
+    }
+  ]
+}

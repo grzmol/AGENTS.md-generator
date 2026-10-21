@@ -1,0 +1,66 @@
+{
+  "id": "a11y",
+  "title": "Accessibility",
+  "kind": "general",
+  "order": 150,
+  "description": "Inclusive interfaces.",
+  "sources": [
+    {
+      "name": "WCAG 2.1",
+      "url": "https://www.w3.org/TR/WCAG21/"
+    }
+  ],
+  "rules": [
+    {
+      "id": "a11y-semantic",
+      "title": "Semantic HTML first",
+      "text": "Use native elements (button, a, nav, label) before ARIA; add ARIA only to fill gaps.",
+      "recommended": true
+    },
+    {
+      "id": "a11y-keyboard",
+      "title": "Full keyboard support",
+      "text": "Every interactive control must be reachable and operable by keyboard with a visible focus indicator.",
+      "recommended": true
+    },
+    {
+      "id": "a11y-alt",
+      "title": "Text alternatives",
+      "text": "Give meaningful images alt text and mark decorative images with empty alt.",
+      "recommended": true
+    },
+    {
+      "id": "a11y-contrast",
+      "title": "Color contrast",
+      "text": "Meet 4.5:1 contrast for text and 3:1 for UI components, and never rely on color alone.",
+      "recommended": true
+    },
+    {
+      "id": "a11y-forms",
+      "title": "Labelled forms",
+      "text": "Associate every input with a label and expose errors in text linked with aria-describedby.",
+      "recommended": true
+    },
+    {
+      "id": "a11y-focus",
+      "title": "Manage focus",
+      "text": "Move focus into dialogs and back on close, and keep a logical tab order.",
+      "recommended": true
+    },
+    {
+      "id": "a11y-live",
+      "title": "Announce dynamic changes",
+      "text": "Announce asynchronous updates with aria-live regions."
+    },
+    {
+      "id": "a11y-axe",
+      "title": "Automated a11y checks",
+      "text": "Run automated accessibility checks (axe, Lighthouse) in tests or CI."
+    },
+    {
+      "id": "a11y-targets",
+      "title": "Touch target size",
+      "text": "Keep touch targets at least 44 by 44 CSS pixels."
+    }
+  ]
+}

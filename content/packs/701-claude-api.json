@@ -1,0 +1,50 @@
+{
+  "id": "claude-api",
+  "title": "Anthropic Claude API",
+  "kind": "technology",
+  "order": 701,
+  "family": "ai",
+  "description": "Conventions for Anthropic Claude API.",
+  "sources": [
+    {
+      "name": "Anthropic documentation",
+      "url": "https://docs.anthropic.com"
+    }
+  ],
+  "rules": [
+    {
+      "id": "claude-api-sdk",
+      "title": "Use the official SDK",
+      "text": "Use the official Anthropic SDK and read the API key from the environment.",
+      "recommended": true
+    },
+    {
+      "id": "claude-api-model-ids",
+      "title": "Check current model ids",
+      "text": "Look up current model identifiers in the official documentation instead of guessing them, and keep them in configuration.",
+      "recommended": true
+    },
+    {
+      "id": "claude-api-caching",
+      "title": "Prompt caching",
+      "text": "Put stable content first and use prompt caching for large repeated prefixes."
+    },
+    {
+      "id": "claude-api-tools",
+      "title": "Tool use loops",
+      "text": "Validate tool inputs, return clear tool errors to the model and cap the number of loop iterations.",
+      "recommended": true
+    },
+    {
+      "id": "claude-api-stop-reason",
+      "title": "Handle stop reasons",
+      "text": "Check stop_reason and handle max_tokens truncation and tool_use turns explicitly.",
+      "recommended": true
+    },
+    {
+      "id": "claude-api-system-prompt",
+      "title": "System prompt for role and rules",
+      "text": "Put role, rules and output format in the system prompt and task data in user messages."
+    }
+  ]
+}

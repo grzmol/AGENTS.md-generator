@@ -34,6 +34,30 @@
       "title": "RuboCop",
       "text": "Keep RuboCop clean.",
       "recommended": true
+    },
+    {
+      "id": "rails-callbacks",
+      "title": "Limit callbacks",
+      "text": "Avoid model callbacks for business logic; call services explicitly.",
+      "recommended": true
+    },
+    {
+      "id": "rails-jobs",
+      "title": "Background jobs",
+      "text": "Run slow work in Active Job with idempotent jobs.",
+      "recommended": true
+    },
+    {
+      "id": "rails-migrations",
+      "title": "Safe migrations",
+      "text": "Write reversible migrations and use strong_migrations rules for zero-downtime changes.",
+      "recommended": true
+    },
+    {
+      "id": "rails-credentials",
+      "title": "Encrypted credentials",
+      "text": "Store secrets in encrypted credentials or environment variables.",
+      "recommended": true
     }
   ]
 }

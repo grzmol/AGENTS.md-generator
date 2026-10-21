@@ -1,0 +1,52 @@
+{
+  "id": "wordpress",
+  "title": "WordPress",
+  "kind": "technology",
+  "order": 381,
+  "family": "php",
+  "description": "Conventions for WordPress.",
+  "sources": [
+    {
+      "name": "WordPress Coding Standards",
+      "url": "https://developer.wordpress.org/coding-standards/"
+    }
+  ],
+  "rules": [
+    {
+      "id": "wordpress-escape",
+      "title": "Escape output",
+      "text": "Escape output late with esc_html, esc_attr and esc_url, and sanitize input on entry.",
+      "recommended": true
+    },
+    {
+      "id": "wordpress-nonces",
+      "title": "Nonces and capabilities",
+      "text": "Verify nonces and current_user_can for every state-changing action.",
+      "recommended": true
+    },
+    {
+      "id": "wordpress-prefix",
+      "title": "Prefix globals",
+      "text": "Prefix functions, hooks and options or use namespaces to avoid collisions.",
+      "recommended": true
+    },
+    {
+      "id": "wordpress-hooks",
+      "title": "Use hooks, not core edits",
+      "text": "Extend through actions and filters; never edit core files.",
+      "recommended": true
+    },
+    {
+      "id": "wordpress-wpcs",
+      "title": "WordPress coding standards",
+      "text": "Follow the WordPress Coding Standards with PHPCS.",
+      "recommended": true
+    },
+    {
+      "id": "wordpress-prepare",
+      "title": "wpdb prepare",
+      "text": "Use $wpdb->prepare for every query with variable input.",
+      "recommended": true
+    }
+  ]
+}

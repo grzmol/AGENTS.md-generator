@@ -1,0 +1,43 @@
+{
+  "id": "cli-design",
+  "title": "CLI design",
+  "kind": "general",
+  "order": 190,
+  "description": "Command-line tools.",
+  "rules": [
+    {
+      "id": "cli-design-exit-codes",
+      "title": "Meaningful exit codes",
+      "text": "Exit with 0 on success and a non-zero code on failure.",
+      "recommended": true
+    },
+    {
+      "id": "cli-design-stdout-stderr",
+      "title": "Output streams",
+      "text": "Write results to stdout and diagnostics to stderr.",
+      "recommended": true
+    },
+    {
+      "id": "cli-design-help",
+      "title": "Helpful --help",
+      "text": "Provide --help with usage examples for every command.",
+      "recommended": true
+    },
+    {
+      "id": "cli-design-machine-output",
+      "title": "Machine-readable output",
+      "text": "Offer a --json flag for scripted use and keep default output human friendly."
+    },
+    {
+      "id": "cli-design-non-interactive",
+      "title": "Non-interactive mode",
+      "text": "Support non-interactive use with flags and never block on prompts in CI.",
+      "recommended": true
+    },
+    {
+      "id": "cli-design-dry-run",
+      "title": "Dry run for destructive actions",
+      "text": "Offer --dry-run and require confirmation for destructive actions."
+    }
+  ]
+}

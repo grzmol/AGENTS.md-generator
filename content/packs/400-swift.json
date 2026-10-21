@@ -29,6 +29,30 @@
       "title": "No force unwraps",
       "text": "Avoid force unwraps and force try; handle optionals with guard let.",
       "recommended": true
+    },
+    {
+      "id": "swift-value-types",
+      "title": "Prefer value types",
+      "text": "Prefer structs and enums over classes unless identity is needed.",
+      "recommended": true
+    },
+    {
+      "id": "swift-weak-self",
+      "title": "Avoid retain cycles",
+      "text": "Use [weak self] in escaping closures that may outlive the owner.",
+      "recommended": true
+    },
+    {
+      "id": "swift-swiftlint",
+      "title": "SwiftLint and swift-format",
+      "text": "Keep SwiftLint and swift-format clean.",
+      "recommended": true
+    },
+    {
+      "id": "swift-main-actor",
+      "title": "MainActor for UI",
+      "text": "Mark UI-touching code @MainActor and keep heavy work off the main thread.",
+      "recommended": true
     }
   ]
 }

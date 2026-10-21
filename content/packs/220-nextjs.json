@@ -34,6 +34,35 @@
       "id": "nextjs-images",
       "title": "next/image and next/font",
       "text": "Use next/image and next/font for images and fonts."
+    },
+    {
+      "id": "nextjs-metadata",
+      "title": "Metadata API",
+      "text": "Define page metadata with the Metadata API.",
+      "recommended": true
+    },
+    {
+      "id": "nextjs-server-actions",
+      "title": "Validate server actions",
+      "text": "Treat server actions as public endpoints: validate input and check authorization inside them.",
+      "recommended": true
+    },
+    {
+      "id": "nextjs-caching",
+      "title": "Be explicit about caching",
+      "text": "Set caching and revalidation explicitly for each fetch and route.",
+      "recommended": true
+    },
+    {
+      "id": "nextjs-loading-ui",
+      "title": "loading.tsx and error.tsx",
+      "text": "Provide loading.tsx and error.tsx for route segments that fetch data."
+    },
+    {
+      "id": "nextjs-route-handlers",
+      "title": "Typed route handlers",
+      "text": "Validate route handler input and return typed JSON with correct status codes.",
+      "recommended": true
     }
   ]
 }

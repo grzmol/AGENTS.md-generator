@@ -1,0 +1,40 @@
+{
+  "id": "browser-extension",
+  "title": "Browser extensions",
+  "kind": "technology",
+  "order": 740,
+  "family": "web",
+  "description": "Conventions for Browser extensions.",
+  "rules": [
+    {
+      "id": "browser-extension-mv3",
+      "title": "Manifest V3",
+      "text": "Target Manifest V3 with service workers and no remotely hosted code.",
+      "recommended": true
+    },
+    {
+      "id": "browser-extension-permissions",
+      "title": "Minimal permissions",
+      "text": "Request the minimum permissions and host patterns, and prefer optional permissions.",
+      "recommended": true
+    },
+    {
+      "id": "browser-extension-messaging",
+      "title": "Validate messages",
+      "text": "Validate the sender and payload of every runtime message.",
+      "recommended": true
+    },
+    {
+      "id": "browser-extension-storage",
+      "title": "Persist state in storage",
+      "text": "Persist state in chrome.storage because service workers can be terminated at any time.",
+      "recommended": true
+    },
+    {
+      "id": "browser-extension-csp",
+      "title": "No inline scripts",
+      "text": "Avoid inline scripts and eval to satisfy the extension content security policy.",
+      "recommended": true
+    }
+  ]
+}

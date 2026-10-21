@@ -1,0 +1,46 @@
+{
+  "id": "data-engineering",
+  "title": "Data pipelines and SQL",
+  "kind": "technology",
+  "order": 511,
+  "family": "data",
+  "description": "Conventions for Data pipelines and SQL.",
+  "rules": [
+    {
+      "id": "data-engineering-idempotent-loads",
+      "title": "Idempotent loads",
+      "text": "Make loads idempotent with upserts or partition overwrites so reruns are safe.",
+      "recommended": true
+    },
+    {
+      "id": "data-engineering-schema-contracts",
+      "title": "Schema contracts",
+      "text": "Validate incoming schemas and fail loudly on unexpected changes.",
+      "recommended": true
+    },
+    {
+      "id": "data-engineering-partition",
+      "title": "Partition and cluster",
+      "text": "Partition large tables by a date column and filter on it in queries.",
+      "recommended": true
+    },
+    {
+      "id": "data-engineering-no-select-star",
+      "title": "No SELECT star",
+      "text": "List columns explicitly instead of SELECT * in production queries.",
+      "recommended": true
+    },
+    {
+      "id": "data-engineering-cte",
+      "title": "Readable SQL",
+      "text": "Structure complex SQL with named CTEs and consistent keyword casing.",
+      "recommended": true
+    },
+    {
+      "id": "data-engineering-quality",
+      "title": "Data quality checks",
+      "text": "Add row count, null and freshness checks at pipeline boundaries.",
+      "recommended": true
+    }
+  ]
+}
