@@ -1,0 +1,39 @@
+{
+  "id": "dotnet",
+  "title": "C# and .NET",
+  "kind": "technology",
+  "order": 370,
+  "family": "dotnet",
+  "description": "Conventions for C# and .NET.",
+  "rules": [
+    {
+      "id": "dotnet-nullable",
+      "title": "Nullable reference types",
+      "text": "Enable nullable reference types and treat warnings as errors.",
+      "recommended": true
+    },
+    {
+      "id": "dotnet-async",
+      "title": "Async all the way",
+      "text": "Use async/await end to end, never .Result or .Wait(), and pass CancellationToken.",
+      "recommended": true
+    },
+    {
+      "id": "dotnet-di",
+      "title": "Built-in dependency injection",
+      "text": "Use constructor injection with the built-in DI container.",
+      "recommended": true
+    },
+    {
+      "id": "dotnet-records",
+      "title": "Records for DTOs",
+      "text": "Use records for immutable data transfer objects."
+    },
+    {
+      "id": "dotnet-options",
+      "title": "Options pattern",
+      "text": "Bind configuration with the options pattern and validate it on startup.",
+      "recommended": true
+    }
+  ]
+}

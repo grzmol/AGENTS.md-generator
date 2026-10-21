@@ -1,0 +1,34 @@
+{
+  "id": "vue",
+  "title": "Vue",
+  "kind": "technology",
+  "order": 230,
+  "family": "javascript",
+  "description": "Conventions for Vue.",
+  "rules": [
+    {
+      "id": "vue-composition",
+      "title": "Composition API",
+      "text": "Use the Composition API with <script setup> and TypeScript.",
+      "recommended": true
+    },
+    {
+      "id": "vue-props",
+      "title": "Typed props and emits",
+      "text": "Declare typed props and emits with defineProps and defineEmits.",
+      "recommended": true
+    },
+    {
+      "id": "vue-pinia",
+      "title": "Pinia for shared state",
+      "text": "Use Pinia for shared state; keep local state in components.",
+      "recommended": true
+    },
+    {
+      "id": "vue-v-for-key",
+      "title": "Keys on v-for",
+      "text": "Always provide a stable :key with v-for and never combine v-if with v-for.",
+      "recommended": true
+    }
+  ]
+}

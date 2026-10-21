@@ -1,0 +1,33 @@
+{
+  "id": "tailwind",
+  "title": "Tailwind CSS",
+  "kind": "technology",
+  "order": 270,
+  "family": "javascript",
+  "description": "Conventions for Tailwind CSS.",
+  "rules": [
+    {
+      "id": "tailwind-utilities",
+      "title": "Utilities first",
+      "text": "Style with utility classes; extract components rather than long @apply blocks.",
+      "recommended": true
+    },
+    {
+      "id": "tailwind-theme",
+      "title": "Theme tokens",
+      "text": "Define colors, spacing and fonts in the Tailwind theme and use them instead of arbitrary values.",
+      "recommended": true
+    },
+    {
+      "id": "tailwind-order",
+      "title": "Class ordering",
+      "text": "Keep utility classes in the order enforced by the Prettier Tailwind plugin."
+    },
+    {
+      "id": "tailwind-variants",
+      "title": "Responsive and state variants",
+      "text": "Use responsive, dark and state variants instead of custom media queries.",
+      "recommended": true
+    }
+  ]
+}

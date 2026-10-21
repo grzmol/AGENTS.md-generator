@@ -1,0 +1,54 @@
+{
+  "id": "design-system",
+  "title": "Design system and UI",
+  "kind": "general",
+  "order": 50,
+  "description": "UI consistency and accessibility.",
+  "rules": [
+    {
+      "id": "design-system-tokens",
+      "title": "Use design tokens",
+      "text": "Use design tokens for colors, spacing, typography and radii; never hardcode them.",
+      "recommended": true
+    },
+    {
+      "id": "design-system-reuse",
+      "title": "Reuse components",
+      "text": "Reuse existing components before creating new ones; extend variants instead of duplicating.",
+      "recommended": true
+    },
+    {
+      "id": "design-system-a11y",
+      "title": "WCAG 2.1 AA",
+      "text": "Meet WCAG 2.1 AA: semantic HTML, visible focus, keyboard operability, sufficient contrast, labelled controls.",
+      "recommended": true
+    },
+    {
+      "id": "design-system-responsive",
+      "title": "Mobile-first responsive",
+      "text": "Design mobile-first and verify layouts at phone, tablet and desktop widths.",
+      "recommended": true
+    },
+    {
+      "id": "design-system-dark-mode",
+      "title": "Support dark mode",
+      "text": "Support light and dark themes through tokens, not per-component overrides."
+    },
+    {
+      "id": "design-system-states",
+      "title": "Cover all UI states",
+      "text": "Handle loading, empty, error and disabled states for every data-driven view.",
+      "recommended": true
+    },
+    {
+      "id": "design-system-motion",
+      "title": "Respect reduced motion",
+      "text": "Respect prefers-reduced-motion and keep animations short and purposeful."
+    },
+    {
+      "id": "design-system-i18n",
+      "title": "No hardcoded user-facing strings",
+      "text": "Keep user-facing strings in translation files, not inline in components."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "swift",
+  "title": "Swift and SwiftUI",
+  "kind": "technology",
+  "order": 400,
+  "family": "mobile",
+  "description": "Conventions for Swift and SwiftUI.",
+  "rules": [
+    {
+      "id": "swift-swiftui",
+      "title": "SwiftUI first",
+      "text": "Build new UI in SwiftUI with small composable views.",
+      "recommended": true
+    },
+    {
+      "id": "swift-observation",
+      "title": "Observation framework",
+      "text": "Use @Observable and @State/@Bindable appropriately; keep views free of business logic.",
+      "recommended": true
+    },
+    {
+      "id": "swift-concurrency",
+      "title": "Swift concurrency",
+      "text": "Use async/await and actors instead of completion handlers and manual locks.",
+      "recommended": true
+    },
+    {
+      "id": "swift-optionals",
+      "title": "No force unwraps",
+      "text": "Avoid force unwraps and force try; handle optionals with guard let.",
+      "recommended": true
+    }
+  ]
+}

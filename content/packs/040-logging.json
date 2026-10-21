@@ -1,0 +1,57 @@
+{
+  "id": "logging",
+  "title": "Logging",
+  "kind": "general",
+  "order": 40,
+  "description": "Log format and hygiene.",
+  "rules": [
+    {
+      "id": "logging-json",
+      "title": "Structured JSON logs",
+      "text": "Emit logs as structured JSON, one object per line, with timestamp, level, message and context fields.",
+      "recommended": true,
+      "group": "log-format"
+    },
+    {
+      "id": "logging-logfmt",
+      "title": "logfmt logs",
+      "text": "Emit logs in logfmt (key=value pairs), one event per line.",
+      "group": "log-format"
+    },
+    {
+      "id": "logging-plain",
+      "title": "Plain text logs",
+      "text": "Emit human-readable plain text logs with timestamp and level.",
+      "group": "log-format"
+    },
+    {
+      "id": "logging-levels",
+      "title": "Use log levels correctly",
+      "text": "Use levels consistently: error for failures needing action, warn for recoverable problems, info for lifecycle events, debug for diagnostics.",
+      "recommended": true
+    },
+    {
+      "id": "logging-no-secrets",
+      "title": "Never log secrets or PII",
+      "text": "Never log secrets, tokens, passwords or personal data; redact before logging.",
+      "recommended": true
+    },
+    {
+      "id": "logging-correlation",
+      "title": "Correlation IDs",
+      "text": "Attach a request or correlation ID to every log line in a request scope."
+    },
+    {
+      "id": "logging-no-console",
+      "title": "No leftover debug output",
+      "text": "Remove debug prints and console.log calls before finishing; use the project logger.",
+      "recommended": true
+    },
+    {
+      "id": "logging-context",
+      "title": "Log errors with context",
+      "text": "Log errors once, at the boundary that handles them, with enough context to reproduce.",
+      "recommended": true
+    }
+  ]
+}

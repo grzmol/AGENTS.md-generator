@@ -1,0 +1,48 @@
+{
+  "id": "architecture",
+  "title": "Architecture and code quality",
+  "kind": "general",
+  "order": 100,
+  "description": "Structure and maintainability.",
+  "rules": [
+    {
+      "id": "architecture-boundaries",
+      "title": "Respect module boundaries",
+      "text": "Respect module boundaries; depend on public interfaces, not internals of other modules.",
+      "recommended": true
+    },
+    {
+      "id": "architecture-small-functions",
+      "title": "Small focused functions",
+      "text": "Keep functions small and single-purpose; extract when a function mixes levels of abstraction.",
+      "recommended": true
+    },
+    {
+      "id": "architecture-no-premature",
+      "title": "Avoid premature abstraction",
+      "text": "Prefer a little duplication over a premature abstraction; abstract after the third repetition.",
+      "recommended": true
+    },
+    {
+      "id": "architecture-pure",
+      "title": "Separate pure logic from I/O",
+      "text": "Keep business logic pure and push I/O to the edges so it is easy to test."
+    },
+    {
+      "id": "architecture-immutable",
+      "title": "Prefer immutability",
+      "text": "Prefer immutable data and avoid mutating function arguments."
+    },
+    {
+      "id": "architecture-dead-code",
+      "title": "Remove dead code",
+      "text": "Delete unused code and commented-out code instead of leaving it behind.",
+      "recommended": true
+    },
+    {
+      "id": "architecture-adr",
+      "title": "Record decisions",
+      "text": "Record significant architectural decisions in docs/adr before implementing them."
+    }
+  ]
+}

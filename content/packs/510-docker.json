@@ -1,0 +1,39 @@
+{
+  "id": "docker",
+  "title": "Docker",
+  "kind": "technology",
+  "order": 510,
+  "family": "devops",
+  "description": "Conventions for Docker.",
+  "rules": [
+    {
+      "id": "docker-multistage",
+      "title": "Multi-stage builds",
+      "text": "Use multi-stage builds and slim base images with pinned versions.",
+      "recommended": true
+    },
+    {
+      "id": "docker-non-root",
+      "title": "Run as non-root",
+      "text": "Run containers as a non-root user.",
+      "recommended": true
+    },
+    {
+      "id": "docker-cache",
+      "title": "Layer caching",
+      "text": "Order Dockerfile instructions for layer caching: dependencies before source.",
+      "recommended": true
+    },
+    {
+      "id": "docker-dockerignore",
+      "title": ".dockerignore",
+      "text": "Maintain a .dockerignore to keep secrets and build context small.",
+      "recommended": true
+    },
+    {
+      "id": "docker-healthcheck",
+      "title": "Health checks",
+      "text": "Define health checks and handle SIGTERM for graceful stop."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "performance",
+  "title": "Performance",
+  "kind": "general",
+  "order": 110,
+  "description": "Efficiency guidelines.",
+  "rules": [
+    {
+      "id": "performance-measure",
+      "title": "Measure first",
+      "text": "Measure before optimizing; do not trade readability for unmeasured gains.",
+      "recommended": true
+    },
+    {
+      "id": "performance-n-plus-one",
+      "title": "Avoid N+1 queries",
+      "text": "Avoid N+1 queries; batch or join database access.",
+      "recommended": true
+    },
+    {
+      "id": "performance-pagination",
+      "title": "Paginate large results",
+      "text": "Paginate or stream large result sets instead of loading everything into memory.",
+      "recommended": true
+    },
+    {
+      "id": "performance-lazy",
+      "title": "Lazy-load heavy code",
+      "text": "Lazy-load heavy modules and assets that are not needed on first render."
+    }
+  ]
+}

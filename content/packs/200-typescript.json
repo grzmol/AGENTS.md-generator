@@ -1,0 +1,44 @@
+{
+  "id": "typescript",
+  "title": "TypeScript",
+  "kind": "technology",
+  "order": 200,
+  "family": "javascript",
+  "description": "Conventions for TypeScript.",
+  "rules": [
+    {
+      "id": "typescript-strict",
+      "title": "Strict mode",
+      "text": "Enable \"strict\" in tsconfig and keep it on.",
+      "recommended": true
+    },
+    {
+      "id": "typescript-no-any",
+      "title": "No any",
+      "text": "Do not use any; use unknown and narrow, or model the type properly.",
+      "recommended": true
+    },
+    {
+      "id": "typescript-type-imports",
+      "title": "Type-only imports",
+      "text": "Use \"import type\" for type-only imports."
+    },
+    {
+      "id": "typescript-no-enum",
+      "title": "Prefer unions over enums",
+      "text": "Prefer string literal unions over enums."
+    },
+    {
+      "id": "typescript-zod",
+      "title": "Validate external data",
+      "text": "Validate untrusted data at runtime with a schema library instead of casting.",
+      "recommended": true
+    },
+    {
+      "id": "typescript-no-non-null",
+      "title": "Avoid non-null assertions",
+      "text": "Avoid non-null assertions (!) and unchecked type assertions (as).",
+      "recommended": true
+    }
+  ]
+}

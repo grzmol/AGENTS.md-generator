@@ -1,0 +1,39 @@
+{
+  "id": "laravel",
+  "title": "PHP and Laravel",
+  "kind": "technology",
+  "order": 380,
+  "family": "php",
+  "description": "Conventions for PHP and Laravel.",
+  "rules": [
+    {
+      "id": "laravel-psr",
+      "title": "PSR-12 and strict types",
+      "text": "Follow PSR-12 and declare strict_types=1 in every file.",
+      "recommended": true
+    },
+    {
+      "id": "laravel-form-requests",
+      "title": "Form requests",
+      "text": "Validate input in Form Request classes, not controllers.",
+      "recommended": true
+    },
+    {
+      "id": "laravel-eloquent",
+      "title": "Eager loading",
+      "text": "Eager load relations with with() to avoid N+1 queries.",
+      "recommended": true
+    },
+    {
+      "id": "laravel-mass-assignment",
+      "title": "Guard mass assignment",
+      "text": "Define $fillable explicitly and never pass raw request data to create().",
+      "recommended": true
+    },
+    {
+      "id": "laravel-pint",
+      "title": "Laravel Pint",
+      "text": "Format code with Laravel Pint."
+    }
+  ]
+}

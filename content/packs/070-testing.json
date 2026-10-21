@@ -1,0 +1,55 @@
+{
+  "id": "testing",
+  "title": "Testing",
+  "kind": "general",
+  "order": 70,
+  "description": "Test strategy and discipline.",
+  "rules": [
+    {
+      "id": "testing-add-tests",
+      "title": "Add tests with changes",
+      "text": "Add or update tests for every behavior change and bug fix.",
+      "recommended": true
+    },
+    {
+      "id": "testing-regression",
+      "title": "Reproduce bugs first",
+      "text": "For bug fixes, write a failing test that reproduces the bug before fixing it.",
+      "recommended": true
+    },
+    {
+      "id": "testing-pyramid",
+      "title": "Test pyramid",
+      "text": "Prefer many fast unit tests, fewer integration tests and a small number of end-to-end tests.",
+      "recommended": true
+    },
+    {
+      "id": "testing-no-mock-overuse",
+      "title": "Mock only boundaries",
+      "text": "Mock only external boundaries (network, clock, filesystem); use real collaborators otherwise.",
+      "recommended": true
+    },
+    {
+      "id": "testing-deterministic",
+      "title": "Deterministic tests",
+      "text": "Keep tests deterministic: no real time, randomness or network without control.",
+      "recommended": true
+    },
+    {
+      "id": "testing-tdd",
+      "title": "Test-driven development",
+      "text": "Work test-first: write a failing test, make it pass, then refactor."
+    },
+    {
+      "id": "testing-coverage",
+      "title": "Coverage threshold",
+      "text": "Do not lower the coverage threshold; new code should be covered."
+    },
+    {
+      "id": "testing-isolated",
+      "title": "Independent tests",
+      "text": "Keep tests independent; no shared mutable state or required execution order.",
+      "recommended": true
+    }
+  ]
+}

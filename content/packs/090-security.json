@@ -1,0 +1,57 @@
+{
+  "id": "security",
+  "title": "Security",
+  "kind": "general",
+  "order": 90,
+  "description": "Baseline secure coding.",
+  "sources": [
+    {
+      "name": "OWASP Cheat Sheet Series",
+      "url": "https://cheatsheetseries.owasp.org",
+      "license": "CC BY-SA 4.0 (linked, not copied)"
+    }
+  ],
+  "rules": [
+    {
+      "id": "security-secrets",
+      "title": "Secrets in env or vault",
+      "text": "Load secrets from environment variables or a secret manager; never hardcode them.",
+      "recommended": true
+    },
+    {
+      "id": "security-injection",
+      "title": "Prevent injection",
+      "text": "Use parameterized queries and safe APIs; never build SQL, shell commands or HTML by string concatenation with user input.",
+      "recommended": true
+    },
+    {
+      "id": "security-authz",
+      "title": "Check authorization server-side",
+      "text": "Enforce authentication and authorization on the server for every protected operation.",
+      "recommended": true
+    },
+    {
+      "id": "security-deps",
+      "title": "Vet dependencies",
+      "text": "Pin dependency versions, commit lockfiles and review new packages before adding them.",
+      "recommended": true
+    },
+    {
+      "id": "security-least-privilege",
+      "title": "Least privilege",
+      "text": "Grant the minimum permissions needed for tokens, service accounts and containers.",
+      "recommended": true
+    },
+    {
+      "id": "security-crypto",
+      "title": "Use vetted crypto",
+      "text": "Use well-reviewed cryptographic libraries; never invent your own algorithms or store plain passwords.",
+      "recommended": true
+    },
+    {
+      "id": "security-owasp",
+      "title": "Follow OWASP guidance",
+      "text": "Follow OWASP Top 10 and ASVS guidance when handling web input, sessions and authentication."
+    }
+  ]
+}

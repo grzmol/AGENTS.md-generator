@@ -1,0 +1,62 @@
+{
+  "id": "git",
+  "title": "Git and pull requests",
+  "kind": "general",
+  "order": 80,
+  "description": "Version control workflow.",
+  "sources": [
+    {
+      "name": "Conventional Commits",
+      "url": "https://www.conventionalcommits.org"
+    }
+  ],
+  "rules": [
+    {
+      "id": "git-conventional",
+      "title": "Conventional Commits",
+      "text": "Write commit messages in Conventional Commits format (feat:, fix:, docs:, refactor:, test:, chore:).",
+      "recommended": true
+    },
+    {
+      "id": "git-small-prs",
+      "title": "Small pull requests",
+      "text": "Keep pull requests small and focused on one change.",
+      "recommended": true
+    },
+    {
+      "id": "git-imperative",
+      "title": "Imperative commit subjects",
+      "text": "Write commit subjects in the imperative mood, 72 characters or fewer.",
+      "recommended": true
+    },
+    {
+      "id": "git-no-force",
+      "title": "No force push",
+      "text": "Never force-push to shared branches and never rewrite published history.",
+      "recommended": true
+    },
+    {
+      "id": "git-branch-names",
+      "title": "Branch naming",
+      "text": "Name branches type/short-description, for example feat/add-login."
+    },
+    {
+      "id": "git-checks",
+      "title": "Run checks before commit",
+      "text": "Run lint, type check and tests before committing.",
+      "recommended": true
+    },
+    {
+      "id": "git-no-secrets-commit",
+      "title": "No secrets in commits",
+      "text": "Never commit secrets, build output or large binaries.",
+      "recommended": true
+    },
+    {
+      "id": "git-pr-description",
+      "title": "Explain the why in PRs",
+      "text": "Describe motivation, approach and testing in the pull request description.",
+      "recommended": true
+    }
+  ]
+}

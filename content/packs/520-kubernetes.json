@@ -1,0 +1,34 @@
+{
+  "id": "kubernetes",
+  "title": "Kubernetes",
+  "kind": "technology",
+  "order": 520,
+  "family": "devops",
+  "description": "Conventions for Kubernetes.",
+  "rules": [
+    {
+      "id": "kubernetes-limits",
+      "title": "Requests and limits",
+      "text": "Set resource requests and limits on every container.",
+      "recommended": true
+    },
+    {
+      "id": "kubernetes-probes",
+      "title": "Probes",
+      "text": "Define readiness and liveness probes.",
+      "recommended": true
+    },
+    {
+      "id": "kubernetes-config",
+      "title": "ConfigMaps and Secrets",
+      "text": "Keep configuration in ConfigMaps and Secrets, not in images.",
+      "recommended": true
+    },
+    {
+      "id": "kubernetes-pin",
+      "title": "Pin image tags",
+      "text": "Pin images by version or digest, never :latest.",
+      "recommended": true
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "fastapi",
+  "title": "FastAPI",
+  "kind": "technology",
+  "order": 310,
+  "family": "python",
+  "description": "Conventions for FastAPI.",
+  "rules": [
+    {
+      "id": "fastapi-pydantic",
+      "title": "Pydantic models",
+      "text": "Define request and response bodies as Pydantic models and set response_model.",
+      "recommended": true
+    },
+    {
+      "id": "fastapi-depends",
+      "title": "Dependency injection",
+      "text": "Use Depends for database sessions, auth and settings.",
+      "recommended": true
+    },
+    {
+      "id": "fastapi-async",
+      "title": "Do not block the event loop",
+      "text": "Use async def only with non-blocking calls; run blocking work in a threadpool.",
+      "recommended": true
+    },
+    {
+      "id": "fastapi-routers",
+      "title": "APIRouter modules",
+      "text": "Split endpoints into APIRouter modules by domain.",
+      "recommended": true
+    },
+    {
+      "id": "fastapi-errors",
+      "title": "HTTPException with codes",
+      "text": "Raise HTTPException with accurate status codes and consistent error bodies.",
+      "recommended": true
+    }
+  ]
+}

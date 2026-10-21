@@ -1,0 +1,45 @@
+{
+  "id": "react",
+  "title": "React",
+  "kind": "technology",
+  "order": 210,
+  "family": "javascript",
+  "description": "Conventions for React.",
+  "rules": [
+    {
+      "id": "react-function",
+      "title": "Function components and hooks",
+      "text": "Use function components and hooks; do not write class components.",
+      "recommended": true
+    },
+    {
+      "id": "react-hooks-rules",
+      "title": "Rules of hooks",
+      "text": "Follow the Rules of Hooks and keep effect dependency arrays exhaustive.",
+      "recommended": true
+    },
+    {
+      "id": "react-derived",
+      "title": "Derive state",
+      "text": "Derive values during render instead of duplicating them in state or syncing them with effects.",
+      "recommended": true
+    },
+    {
+      "id": "react-keys",
+      "title": "Stable keys",
+      "text": "Use stable unique keys for lists, never array indexes for dynamic lists.",
+      "recommended": true
+    },
+    {
+      "id": "react-colocate",
+      "title": "Colocate state",
+      "text": "Keep state as close as possible to where it is used."
+    },
+    {
+      "id": "react-rtl",
+      "title": "Test with Testing Library",
+      "text": "Test components through user-visible behavior with React Testing Library, not implementation details.",
+      "recommended": true
+    }
+  ]
+}

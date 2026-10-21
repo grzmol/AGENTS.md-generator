@@ -1,0 +1,33 @@
+{
+  "id": "github-actions",
+  "title": "GitHub Actions",
+  "kind": "technology",
+  "order": 540,
+  "family": "devops",
+  "description": "Conventions for GitHub Actions.",
+  "rules": [
+    {
+      "id": "github-actions-pin",
+      "title": "Pin actions",
+      "text": "Pin third-party actions to a full commit SHA.",
+      "recommended": true
+    },
+    {
+      "id": "github-actions-permissions",
+      "title": "Least-privilege permissions",
+      "text": "Set explicit minimal permissions on the GITHUB_TOKEN per workflow.",
+      "recommended": true
+    },
+    {
+      "id": "github-actions-cache",
+      "title": "Cache dependencies",
+      "text": "Cache dependencies and cancel superseded runs with concurrency groups."
+    },
+    {
+      "id": "github-actions-secrets",
+      "title": "No secrets in logs",
+      "text": "Never echo secrets and avoid pull_request_target with untrusted code.",
+      "recommended": true
+    }
+  ]
+}

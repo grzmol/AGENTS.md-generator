@@ -1,0 +1,34 @@
+{
+  "id": "flutter",
+  "title": "Flutter and Dart",
+  "kind": "technology",
+  "order": 420,
+  "family": "mobile",
+  "description": "Conventions for Flutter and Dart.",
+  "rules": [
+    {
+      "id": "flutter-const",
+      "title": "const constructors",
+      "text": "Use const constructors and widgets wherever possible.",
+      "recommended": true
+    },
+    {
+      "id": "flutter-small-widgets",
+      "title": "Small widgets",
+      "text": "Split large build methods into small widgets, not helper methods.",
+      "recommended": true
+    },
+    {
+      "id": "flutter-analysis",
+      "title": "dart analyze and format",
+      "text": "Keep dart analyze clean and format with dart format.",
+      "recommended": true
+    },
+    {
+      "id": "flutter-state",
+      "title": "One state solution",
+      "text": "Use a single state management approach consistently across the app.",
+      "recommended": true
+    }
+  ]
+}

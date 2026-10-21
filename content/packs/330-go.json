@@ -1,0 +1,52 @@
+{
+  "id": "go",
+  "title": "Go",
+  "kind": "technology",
+  "order": 330,
+  "family": "systems",
+  "description": "Conventions for Go.",
+  "sources": [
+    {
+      "name": "Effective Go",
+      "url": "https://go.dev/doc/effective_go"
+    }
+  ],
+  "rules": [
+    {
+      "id": "go-gofmt",
+      "title": "gofmt and go vet",
+      "text": "Format with gofmt and keep go vet and staticcheck clean.",
+      "recommended": true
+    },
+    {
+      "id": "go-errors",
+      "title": "Wrap errors",
+      "text": "Return errors, wrap them with fmt.Errorf(\"...: %w\", err) and check them with errors.Is and errors.As.",
+      "recommended": true
+    },
+    {
+      "id": "go-context",
+      "title": "Pass context",
+      "text": "Pass context.Context as the first parameter to functions that do I/O.",
+      "recommended": true
+    },
+    {
+      "id": "go-interfaces",
+      "title": "Small interfaces",
+      "text": "Define small interfaces at the consumer side; accept interfaces, return structs.",
+      "recommended": true
+    },
+    {
+      "id": "go-table-tests",
+      "title": "Table-driven tests",
+      "text": "Write table-driven tests with t.Run subtests.",
+      "recommended": true
+    },
+    {
+      "id": "go-goroutines",
+      "title": "Own goroutine lifetimes",
+      "text": "Never start a goroutine without a clear way for it to stop.",
+      "recommended": true
+    }
+  ]
+}

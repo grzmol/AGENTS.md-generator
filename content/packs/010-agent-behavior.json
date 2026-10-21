@@ -1,0 +1,85 @@
+{
+  "id": "agent-behavior",
+  "title": "Agent behavior",
+  "kind": "general",
+  "order": 10,
+  "description": "How the agent should work with you.",
+  "sources": [
+    {
+      "name": "agents.md",
+      "url": "https://agents.md"
+    }
+  ],
+  "rules": [
+    {
+      "id": "agent-behavior-plan",
+      "title": "Plan before large changes",
+      "text": "For changes touching more than three files, outline the plan and wait for confirmation before editing.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-ask",
+      "title": "Ask when ambiguous",
+      "text": "Ask a clarifying question when requirements are ambiguous instead of guessing.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-small-diffs",
+      "title": "Small focused diffs",
+      "text": "Keep diffs small and focused on the request; do not refactor unrelated code.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-verify",
+      "title": "Verify before done",
+      "text": "Run the relevant tests, linter and type checker before reporting a task as done, and report failures honestly.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-no-delete-tests",
+      "title": "Never weaken tests",
+      "text": "Never delete, skip or loosen a failing test to make it pass; fix the cause.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-deps",
+      "title": "No new dependencies without approval",
+      "text": "Do not add new dependencies without explicit approval; prefer the standard library and existing packages.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-generated",
+      "title": "Do not edit generated files",
+      "text": "Do not edit generated or vendored files; change the source and regenerate.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-edit-existing",
+      "title": "Prefer editing existing files",
+      "text": "Prefer editing existing files over creating new ones, and follow the structure already in the repository."
+    },
+    {
+      "id": "agent-behavior-secrets",
+      "title": "Never touch secrets",
+      "text": "Never read, print or commit secrets, .env files or credentials.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-concise",
+      "title": "Concise explanations",
+      "text": "Keep explanations brief; state what changed and why, not a tour of the code."
+    },
+    {
+      "id": "agent-behavior-no-comments",
+      "title": "No code comments",
+      "text": "Do not add comments to code; make names and structure self-explanatory.",
+      "group": "agent-comments"
+    },
+    {
+      "id": "agent-behavior-why-comments",
+      "title": "Only explain why",
+      "text": "Add comments only to explain why something is done, never what the code does.",
+      "group": "agent-comments"
+    }
+  ]
+}

@@ -221,15 +221,19 @@ Szacunek: MVP w 3-4 tygodnie pracy jednej osoby, z czego większość to content
 | Praca nad contentem przerasta czas | Zacząć od 12 technologii, resztę oddać społeczności |
 | Ścieżka `/repo-name/` na Pages psuje zasoby | Ustawić `base` w Vite, test na preview |
 
-**Decyzje do potwierdzenia:**
-1. Stack: Vite+Preact (rekomendowane) czy Astro?
-2. Język UI: PL+EN czy tylko EN?
-3. Licencja katalogu: CC0 czy MIT?
-4. Pierwsza fala technologii: czy lista z 6.2 jest właściwa?
-5. Czy eksport `CLAUDE.md` i `.mdc` wchodzi do MVP, czy dopiero etap 4?
-6. Domena: domyślny `grzmol.github.io/AGENTS.md-generator` czy własna?
+**Decyzje (potwierdzone):**
+1. Stack: Svelte 5 + Vite + TypeScript.
+2. Język UI: tylko angielski.
+3. Licencja: kod MIT, treść katalogu (oryginalne sformułowania) CC0. Treści na licencjach copyleft (np. OWASP CC BY-SA) tylko linkowane, nie kopiowane.
+4. Pierwsza fala technologii: lista z sekcji 6.2 (zaimplementowane 27 paczek, 225 reguł, 12 presetów).
+5. Eksport `CLAUDE.md`, `.mdc` i Copilot wchodzi do MVP (zaimplementowane).
+6. Domena: domyślna `grzmol.github.io/AGENTS.md-generator`.
 
-## 12. Następny krok
+## 12. Status wdrożenia
+
+Zrobione: etapy 0, 1 i większość 2-4 w wersji MVP (szkielet, silnik, UI, presety, eksporty, CI i deploy Pages, testy treści). Do zrobienia: harvest pipeline i rozbudowa katalogu do 600+ reguł, tryb monorepo, licznik rzeczywistych tokenów, Lighthouse CI.
+
+## 13. Następny krok
 
 Po zatwierdzeniu decyzji z sekcji 11: etap 0 (szkielet repo, CI, JSON Schema, pierwsze 20 reguł) i równolegle skrypt harvest na 5-10 repozytoriach referencyjnych, aby zmierzyć realny koszt redakcji contentu.
 

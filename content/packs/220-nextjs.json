@@ -1,0 +1,39 @@
+{
+  "id": "nextjs",
+  "title": "Next.js",
+  "kind": "technology",
+  "order": 220,
+  "family": "javascript",
+  "description": "Conventions for Next.js.",
+  "rules": [
+    {
+      "id": "nextjs-app-router",
+      "title": "App Router",
+      "text": "Use the App Router; keep components server components by default.",
+      "recommended": true
+    },
+    {
+      "id": "nextjs-use-client",
+      "title": "Minimize client components",
+      "text": "Add \"use client\" only to the smallest components that need interactivity or browser APIs.",
+      "recommended": true
+    },
+    {
+      "id": "nextjs-data-fetching",
+      "title": "Fetch on the server",
+      "text": "Fetch data in server components or route handlers, not in client effects.",
+      "recommended": true
+    },
+    {
+      "id": "nextjs-env",
+      "title": "Env var exposure",
+      "text": "Expose only NEXT_PUBLIC_ variables to the browser and never put secrets in them.",
+      "recommended": true
+    },
+    {
+      "id": "nextjs-images",
+      "title": "next/image and next/font",
+      "text": "Use next/image and next/font for images and fonts."
+    }
+  ]
+}

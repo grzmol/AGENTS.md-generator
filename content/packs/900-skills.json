@@ -1,0 +1,45 @@
+{
+  "id": "skills",
+  "title": "Skills and tools",
+  "kind": "skills",
+  "order": 900,
+  "description": "Skills agents can load for specialized work.",
+  "sources": [
+    {
+      "name": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills"
+    }
+  ],
+  "rules": [
+    {
+      "id": "skills-frontend-design",
+      "title": "frontend-design skill",
+      "text": "Use the frontend-design skill for building distinctive, production-grade web interfaces.",
+      "url": "https://github.com/anthropics/skills"
+    },
+    {
+      "id": "skills-webapp-testing",
+      "title": "webapp-testing skill",
+      "text": "Use the webapp-testing skill to verify web apps in a real browser with Playwright.",
+      "url": "https://github.com/anthropics/skills"
+    },
+    {
+      "id": "skills-mcp-builder",
+      "title": "mcp-builder skill",
+      "text": "Use the mcp-builder skill when creating Model Context Protocol servers.",
+      "url": "https://github.com/anthropics/skills"
+    },
+    {
+      "id": "skills-skill-creator",
+      "title": "skill-creator skill",
+      "text": "Use the skill-creator skill when authoring new skills.",
+      "url": "https://github.com/anthropics/skills"
+    },
+    {
+      "id": "skills-context7",
+      "title": "Context7 docs lookup",
+      "text": "Look up current library documentation with the Context7 MCP server before using unfamiliar or recently changed APIs.",
+      "url": "https://context7.com"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "formatting",
+  "title": "Indentation and formatting",
+  "kind": "general",
+  "order": 20,
+  "description": "Whitespace and layout.",
+  "sources": [
+    {
+      "name": "EditorConfig",
+      "url": "https://editorconfig.org"
+    }
+  ],
+  "rules": [
+    {
+      "id": "formatting-tabs",
+      "title": "Tabs",
+      "text": "Indent with tabs.",
+      "group": "indent"
+    },
+    {
+      "id": "formatting-spaces-2",
+      "title": "2 spaces",
+      "text": "Indent with 2 spaces.",
+      "recommended": true,
+      "group": "indent"
+    },
+    {
+      "id": "formatting-spaces-4",
+      "title": "4 spaces",
+      "text": "Indent with 4 spaces.",
+      "group": "indent"
+    },
+    {
+      "id": "formatting-width-80",
+      "title": "80 columns",
+      "text": "Keep lines at 80 characters or fewer.",
+      "group": "width"
+    },
+    {
+      "id": "formatting-width-100",
+      "title": "100 columns",
+      "text": "Keep lines at 100 characters or fewer.",
+      "recommended": true,
+      "group": "width"
+    },
+    {
+      "id": "formatting-width-120",
+      "title": "120 columns",
+      "text": "Keep lines at 120 characters or fewer.",
+      "group": "width"
+    },
+    {
+      "id": "formatting-formatter",
+      "title": "Use the project formatter",
+      "text": "Format code with the project formatter instead of hand-formatting; do not mix formatting changes with logic changes.",
+      "recommended": true
+    },
+    {
+      "id": "formatting-final-newline",
+      "title": "Final newline",
+      "text": "End every file with a single newline and strip trailing whitespace.",
+      "recommended": true
+    },
+    {
+      "id": "formatting-match-style",
+      "title": "Match existing style",
+      "text": "Match the style of the surrounding code when it conflicts with a general preference.",
+      "recommended": true
+    },
+    {
+      "id": "formatting-lf",
+      "title": "LF line endings",
+      "text": "Use LF line endings.",
+      "recommended": true
+    }
+  ]
+}

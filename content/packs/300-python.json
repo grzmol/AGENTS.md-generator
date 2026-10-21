@@ -1,0 +1,57 @@
+{
+  "id": "python",
+  "title": "Python",
+  "kind": "technology",
+  "order": 300,
+  "family": "python",
+  "description": "Conventions for Python.",
+  "sources": [
+    {
+      "name": "PEP 8",
+      "url": "https://peps.python.org/pep-0008/"
+    }
+  ],
+  "rules": [
+    {
+      "id": "python-pep8",
+      "title": "PEP 8 with Ruff",
+      "text": "Follow PEP 8 and use Ruff for linting and formatting.",
+      "recommended": true
+    },
+    {
+      "id": "python-typing",
+      "title": "Type hints",
+      "text": "Add type hints to all function signatures and run mypy or pyright.",
+      "recommended": true
+    },
+    {
+      "id": "python-pathlib",
+      "title": "pathlib",
+      "text": "Use pathlib for filesystem paths and context managers for resources.",
+      "recommended": true
+    },
+    {
+      "id": "python-dataclasses",
+      "title": "Dataclasses or Pydantic",
+      "text": "Model structured data with dataclasses or Pydantic, not loose dicts.",
+      "recommended": true
+    },
+    {
+      "id": "python-uv",
+      "title": "uv for environments",
+      "text": "Manage dependencies and virtual environments with uv and commit the lockfile."
+    },
+    {
+      "id": "python-pytest",
+      "title": "pytest",
+      "text": "Write tests with pytest, using fixtures and parametrize instead of loops.",
+      "recommended": true
+    },
+    {
+      "id": "python-exceptions",
+      "title": "Specific exceptions",
+      "text": "Catch specific exceptions, never bare except.",
+      "recommended": true
+    }
+  ]
+}

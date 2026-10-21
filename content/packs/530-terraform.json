@@ -1,0 +1,34 @@
+{
+  "id": "terraform",
+  "title": "Terraform",
+  "kind": "technology",
+  "order": 530,
+  "family": "devops",
+  "description": "Conventions for Terraform.",
+  "rules": [
+    {
+      "id": "terraform-fmt",
+      "title": "fmt and validate",
+      "text": "Run terraform fmt and terraform validate before committing.",
+      "recommended": true
+    },
+    {
+      "id": "terraform-plan",
+      "title": "Plan before apply",
+      "text": "Never apply without reviewing a plan; do not run apply against production from an agent.",
+      "recommended": true
+    },
+    {
+      "id": "terraform-modules",
+      "title": "Modules and variables",
+      "text": "Use modules and typed variables with descriptions; avoid hardcoded values.",
+      "recommended": true
+    },
+    {
+      "id": "terraform-state",
+      "title": "Remote state",
+      "text": "Use remote state with locking and never commit state files or secrets.",
+      "recommended": true
+    }
+  ]
+}

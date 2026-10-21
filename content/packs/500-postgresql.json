@@ -1,0 +1,39 @@
+{
+  "id": "postgresql",
+  "title": "PostgreSQL and SQL",
+  "kind": "technology",
+  "order": 500,
+  "family": "data",
+  "description": "Conventions for PostgreSQL and SQL.",
+  "rules": [
+    {
+      "id": "postgresql-migrations",
+      "title": "Migrations only",
+      "text": "Change the schema only through versioned migrations that can run on production data.",
+      "recommended": true
+    },
+    {
+      "id": "postgresql-indexes",
+      "title": "Index foreign keys and filters",
+      "text": "Index foreign keys and frequently filtered columns, and check query plans with EXPLAIN.",
+      "recommended": true
+    },
+    {
+      "id": "postgresql-constraints",
+      "title": "Enforce constraints in the database",
+      "text": "Enforce NOT NULL, UNIQUE, CHECK and foreign key constraints in the schema.",
+      "recommended": true
+    },
+    {
+      "id": "postgresql-naming",
+      "title": "snake_case plural tables",
+      "text": "Name tables and columns in snake_case, with plural table names."
+    },
+    {
+      "id": "postgresql-transactions",
+      "title": "Explicit transactions",
+      "text": "Wrap multi-statement changes in transactions and keep them short.",
+      "recommended": true
+    }
+  ]
+}

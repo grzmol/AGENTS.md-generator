@@ -1,0 +1,38 @@
+{
+  "id": "errors",
+  "title": "Error handling",
+  "kind": "general",
+  "order": 60,
+  "description": "Failures and edge cases.",
+  "rules": [
+    {
+      "id": "errors-no-swallow",
+      "title": "Never swallow errors",
+      "text": "Never swallow exceptions silently; handle them, or rethrow with added context.",
+      "recommended": true
+    },
+    {
+      "id": "errors-typed",
+      "title": "Typed errors",
+      "text": "Use specific error types or codes instead of string matching on messages.",
+      "recommended": true
+    },
+    {
+      "id": "errors-validate",
+      "title": "Validate at boundaries",
+      "text": "Validate all external input (HTTP, files, env, user input) at the boundary and trust typed data inside.",
+      "recommended": true
+    },
+    {
+      "id": "errors-fail-fast",
+      "title": "Fail fast on config",
+      "text": "Fail fast at startup when required configuration is missing or invalid."
+    },
+    {
+      "id": "errors-user-messages",
+      "title": "Safe user-facing messages",
+      "text": "Return safe user-facing error messages; keep stack traces and internals out of responses.",
+      "recommended": true
+    }
+  ]
+}
