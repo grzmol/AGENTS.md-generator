@@ -50,3 +50,15 @@ export interface FormatSpec {
   label: string
   filename: string
 }
+
+export interface Scope {
+  id: string
+  path: string
+  project: ProjectInfo
+  selected: Set<string>
+}
+
+export interface OutputFile {
+  path: string
+  content: string
+}

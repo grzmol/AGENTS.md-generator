@@ -1,5 +1,6 @@
-import type { Pack, Preset, ProjectInfo } from './types'
+import type { ExportFormat, Pack, Preset, ProjectInfo, Scope } from './types'
 import { EMPTY_PROJECT } from './generator'
+import { normalizePath } from './paths'
 
 export function ruleIndex(packs: Pack[]): Map<string, { packId: string; group?: string }> {
   const index = new Map<string, { packId: string; group?: string }>()
@@ -52,31 +53,79 @@ export function recommendedIds(packs: Pack[], only?: (pack: Pack) => boolean): S
   return applyIds(packs, ids)
 }
 
-export interface Snapshot {
-  selected: string[]
-  project: ProjectInfo
+const PROJECT_KEYS: Array<keyof ProjectInfo> = ['install', 'dev', 'build', 'test', 'lint']
+const FORMAT_IDS: ExportFormat[] = ['agents', 'claude', 'cursor', 'copilot']
+
+function parseCommands(value: string | null): string[] {
+  if (!value) return []
+  try {
+    const parsed: unknown = JSON.parse(value)
+    return Array.isArray(parsed) ? parsed.map((item) => (typeof item === 'string' ? item : '')) : []
+  } catch {
+    return []
+  }
 }
 
-export function encodeState(packs: Pack[], selected: ReadonlySet<string>, project: ProjectInfo): string {
-  const known = ruleIndex(packs)
-  const ids = [...selected].filter((id) => known.has(id))
-  const params = new URLSearchParams()
-  params.set('v', '1')
-  if (ids.length > 0) params.set('r', ids.join('.'))
-  for (const key of Object.keys(EMPTY_PROJECT) as Array<keyof ProjectInfo>) {
-    const value = project[key].trim()
-    if (value) params.set(key, value)
+export function packRulesParam(packs: Pack[], selected: ReadonlySet<string>): string {
+  const parts: string[] = []
+  for (const pack of packs) {
+    const suffixes = pack.rules.filter((rule) => selected.has(rule.id)).map((rule) => rule.id.slice(pack.id.length + 1))
+    if (suffixes.length > 0) parts.push(`${pack.id}~${suffixes.join('.')}`)
   }
+  return parts.join(',')
+}
+
+export function parseRulesParam(packs: Pack[], value: string): string[] {
+  const known = ruleIndex(packs)
+  const ids: string[] = []
+  for (const part of value.split(',')) {
+    const [packId, rest] = part.split('~')
+    if (!packId || !rest) continue
+    for (const suffix of rest.split('.')) {
+      const id = `${packId}-${suffix}`
+      if (known.has(id)) ids.push(id)
+    }
+  }
+  return ids
+}
+
+export function newScope(index: number, path: string, project: ProjectInfo = EMPTY_PROJECT, selected: Iterable<string> = []): Scope {
+  return { id: path === '' ? 'root' : `s${index}`, path, project: { ...project }, selected: new Set(selected) }
+}
+
+export function encodeWorkbench(packs: Pack[], scopes: Scope[], format: ExportFormat): string {
+  const params = new URLSearchParams()
+  params.set('v', '2')
+  params.set('f', format)
+  scopes.forEach((scope, index) => {
+    if (index > 0) params.set(`p${index}`, scope.path)
+    const rules = packRulesParam(packs, scope.selected)
+    if (rules) params.set(`r${index}`, rules)
+    if (scope.project.name.trim()) params.set(`n${index}`, scope.project.name.trim())
+    if (scope.project.description.trim()) params.set(`d${index}`, scope.project.description.trim())
+    const commands = PROJECT_KEYS.map((key) => scope.project[key].trim())
+    if (commands.some(Boolean)) params.set(`k${index}`, JSON.stringify(commands))
+  })
   return params.toString()
 }
 
-export function decodeState(packs: Pack[], hash: string): Snapshot {
+export function decodeWorkbench(packs: Pack[], hash: string): { scopes: Scope[]; format: ExportFormat } | null {
   const params = new URLSearchParams(hash.replace(/^#/, ''))
-  const known = ruleIndex(packs)
-  const selected = (params.get('r') ?? '').split('.').filter((id) => id && known.has(id))
-  const project: ProjectInfo = { ...EMPTY_PROJECT }
-  for (const key of Object.keys(EMPTY_PROJECT) as Array<keyof ProjectInfo>) {
-    project[key] = params.get(key) ?? ''
+  if (params.get('v') !== '2') return null
+  const format = FORMAT_IDS.find((id) => id === params.get('f')) ?? 'agents'
+  const scopes: Scope[] = []
+  for (let index = 0; index < 50; index++) {
+    const path = index === 0 ? '' : normalizePath(params.get(`p${index}`) ?? '')
+    if (index > 0 && path === null) {
+      if (!params.has(`p${index}`)) break
+      continue
+    }
+    const project: ProjectInfo = { ...EMPTY_PROJECT, name: params.get(`n${index}`) ?? '', description: params.get(`d${index}`) ?? '' }
+    const commands = parseCommands(params.get(`k${index}`))
+    PROJECT_KEYS.forEach((key, position) => (project[key] = commands[position] ?? ''))
+    const ids = parseRulesParam(packs, params.get(`r${index}`) ?? '')
+    scopes.push(newScope(scopes.length, path ?? '', project, applyIds(packs, ids)))
   }
-  return { selected, project }
+  if (scopes.length === 0) return null
+  return { scopes, format }
 }

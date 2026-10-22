@@ -1,4 +1,5 @@
-import type { ExportFormat, FormatSpec, Pack, ProjectInfo } from './types'
+import { slugFromPath } from './paths'
+import type { ExportFormat, FormatSpec, OutputFile, Pack, ProjectInfo, Scope } from './types'
 
 export const FORMATS: FormatSpec[] = [
   { id: 'agents', label: 'AGENTS.md', filename: 'AGENTS.md' },
@@ -25,15 +26,24 @@ const COMMAND_LABELS: Array<[keyof ProjectInfo, string]> = [
   ['lint', 'Lint']
 ]
 
-function titleFor(format: ExportFormat, project: ProjectInfo): string {
-  const name = project.name.trim()
-  if (format === 'claude') return name ? `${name}: CLAUDE.md` : 'CLAUDE.md'
-  if (format === 'copilot') return name ? `${name}: Copilot instructions` : 'Copilot instructions'
-  return name ? `${name}: AGENTS.md` : 'AGENTS.md'
+function titleFor(format: ExportFormat, project: ProjectInfo, scopePath: string): string {
+  const name = scopePath || project.name.trim()
+  const label = format === 'claude' ? 'CLAUDE.md' : format === 'copilot' ? 'Copilot instructions' : 'AGENTS.md'
+  return name ? `${name}: ${label}` : label
 }
 
-export function buildBody(packs: Pack[], selected: ReadonlySet<string>, project: ProjectInfo, format: ExportFormat = 'agents'): string {
-  const lines: string[] = [`# ${titleFor(format, project)}`, '']
+export function buildBody(
+  packs: Pack[],
+  selected: ReadonlySet<string>,
+  project: ProjectInfo,
+  format: ExportFormat = 'agents',
+  scopePath = ''
+): string {
+  const lines: string[] = [`# ${titleFor(format, project, scopePath)}`, '']
+
+  if (scopePath) {
+    lines.push(`Applies to files under \`${scopePath}/\`. Follow the repository root instructions as well; where they conflict, the rules in this file take precedence for this folder.`, '')
+  }
 
   const description = project.description.trim()
   if (description) lines.push(description, '')
@@ -61,13 +71,42 @@ export function buildBody(packs: Pack[], selected: ReadonlySet<string>, project:
   return lines.join('\n').replace(/\n{3,}/g, '\n\n').trimEnd() + '\n'
 }
 
-export function generate(packs: Pack[], selected: ReadonlySet<string>, project: ProjectInfo, format: ExportFormat = 'agents'): string {
-  const body = buildBody(packs, selected, project, format)
-  if (format === 'cursor') {
-    const description = project.description.trim().split('\n')[0] || 'Project conventions for AI coding agents'
-    return `---\ndescription: ${description}\nalwaysApply: true\n---\n\n${body}`
+export function filePathFor(format: ExportFormat, scopePath: string): string {
+  const slug = slugFromPath(scopePath)
+  switch (format) {
+    case 'claude':
+      return scopePath ? `${scopePath}/CLAUDE.md` : 'CLAUDE.md'
+    case 'cursor':
+      return scopePath ? `.cursor/rules/${slug}.mdc` : '.cursor/rules/agents.mdc'
+    case 'copilot':
+      return scopePath ? `.github/instructions/${slug}.instructions.md` : '.github/copilot-instructions.md'
+    default:
+      return scopePath ? `${scopePath}/AGENTS.md` : 'AGENTS.md'
   }
-  return body
+}
+
+function frontmatter(format: ExportFormat, project: ProjectInfo, scopePath: string): string {
+  if (format === 'cursor') {
+    const description = project.description.trim().split('\n')[0] || (scopePath ? `Conventions for ${scopePath}` : 'Project conventions for AI coding agents')
+    const rule = scopePath ? `globs: ${scopePath}/**\nalwaysApply: false` : 'alwaysApply: true'
+    return `---\ndescription: ${description}\n${rule}\n---\n\n`
+  }
+  if (format === 'copilot' && scopePath) return `---\napplyTo: "${scopePath}/**"\n---\n\n`
+  return ''
+}
+
+export function generateScope(packs: Pack[], scope: Pick<Scope, 'path' | 'project' | 'selected'>, format: ExportFormat = 'agents'): string {
+  return frontmatter(format, scope.project, scope.path) + buildBody(packs, scope.selected, scope.project, format, scope.path)
+}
+
+export function generate(packs: Pack[], selected: ReadonlySet<string>, project: ProjectInfo, format: ExportFormat = 'agents'): string {
+  return generateScope(packs, { path: '', project, selected: selected as Set<string> }, format)
+}
+
+export function generateFiles(packs: Pack[], scopes: Array<Pick<Scope, 'path' | 'project' | 'selected'>>, format: ExportFormat): OutputFile[] {
+  return scopes
+    .filter((scope) => scope.path === '' || scope.selected.size > 0 || scope.project.description.trim() !== '')
+    .map((scope) => ({ path: filePathFor(format, scope.path), content: generateScope(packs, scope, format) }))
 }
 
 export function estimateTokens(text: string): number {
