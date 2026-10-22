@@ -29,7 +29,7 @@ Stack: Svelte 5, Vite, TypeScript, Vitest.
 
 ## Content
 
-Currently 887 rules in 129 packs and 45 presets.
+Currently 894 rules in 129 packs and 45 presets.
 
 Rules live in `content/packs/*.json` and presets in `content/presets/*.json`. Adding a rule is a one-file change.
 
@@ -39,11 +39,11 @@ Tests validate unique ids, radio groups, preset references, rule length and the 
 
 ## Quality review
 
-Packs with a `reviewed` field were checked against official documentation in October 2026 (TypeScript, React, Next.js, Svelte, Vue, Angular, Node.js, Express, Tailwind, Python and uv, FastAPI, Django, Pydantic, SQLAlchemy, Prisma, Docker, Kubernetes, Terraform, GitHub Actions, PostgreSQL, Spring Boot, Claude API, Git, password storage, Go context, Clippy). Rules were corrected where documentation had moved on, for example Next.js 15 caching defaults, FastAPI lifespan events and React Compiler memoization.
+93 of 129 packs carry a `reviewed` field and were checked against official documentation in October 2026 (framework, language and tool docs through Context7, Claude and Claude Code docs, OWASP cheat sheets and the Solidity, Go and Rust sources on GitHub). Rules were corrected where documentation had moved on, for example Next.js 15 caching defaults, FastAPI lifespan events, React Compiler memoization, Angular OnPush as the default, Supabase secret keys and Claude Code reading AGENTS.md directly.
 
-Also checked: TanStack Query, Astro, Nuxt, Flask, Laravel, Rails, Flutter, Redis, MongoDB, Kafka, MCP, ASP.NET Core, Supabase, Temporal, gRPC, Elasticsearch, Flyway and Firebase.
+The `reviewed` pack list is generated from the content files; the UI shows the date and sources on each reviewed pack.
 
-Not yet checked against primary sources: Cursor and Copilot file formats (hosts unreachable during review), Go beyond context, Rust beyond Clippy, and the remaining packs. Each reviewed pack shows its date and sources in the UI.
+Not checked against primary sources: the Cursor and Copilot file formats (the hosts were unreachable), the 23 general convention packs (they are editorial, not tied to one source), and these technology packs: Jupyter, C, Bash, Makefile, Scala, RabbitMQ and SQS, data engineering, AWS, RAG, agent building, payments, SEO and skills. Go and Rust were checked only for the context package and Clippy.
 
 ## Licensing
 

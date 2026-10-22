@@ -29,5 +29,12 @@
       "title": "Mock network at the edge",
       "text": "Mock network calls at the network layer (for example MSW) instead of mocking fetch internals."
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Playwright best practices",
+      "url": "https://playwright.dev/docs/best-practices"
+    }
   ]
 }

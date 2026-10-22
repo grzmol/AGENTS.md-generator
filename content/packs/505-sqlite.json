@@ -15,13 +15,20 @@
     {
       "id": "sqlite-foreign-keys",
       "title": "Enable foreign keys",
-      "text": "Enable PRAGMA foreign_keys on every connection.",
+      "text": "Enable PRAGMA foreign_keys on every connection; it is off by default and applies per connection.",
       "recommended": true
     },
     {
       "id": "sqlite-single-writer",
       "title": "One writer",
       "text": "Serialize writes through one connection or a short transaction queue."
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "SQLite documentation",
+      "url": "https://www.sqlite.org/docs.html"
     }
   ]
 }

@@ -34,5 +34,12 @@
       "text": "Emit content-hashed asset filenames for long-term caching.",
       "recommended": true
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Vite documentation",
+      "url": "https://vite.dev/guide/"
+    }
   ]
 }

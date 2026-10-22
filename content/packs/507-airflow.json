@@ -36,5 +36,12 @@
       "text": "Store credentials in connections or a secrets backend, never in DAG code.",
       "recommended": true
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Airflow best practices",
+      "url": "https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html"
+    }
   ]
 }

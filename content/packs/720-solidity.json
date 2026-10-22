@@ -40,6 +40,19 @@
       "id": "solidity-upgrade",
       "title": "Upgradeability with care",
       "text": "Avoid upgradeable proxies unless required, and document storage layout rules when used."
+    },
+    {
+      "id": "solidity-tx-origin",
+      "title": "Never authorize with tx.origin",
+      "text": "Never use tx.origin for authorization; use msg.sender.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Solidity security considerations",
+      "url": "https://docs.soliditylang.org/en/latest/security-considerations.html"
     }
   ]
 }

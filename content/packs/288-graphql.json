@@ -38,8 +38,15 @@
     {
       "id": "graphql-auth",
       "title": "Authorize in resolvers",
-      "text": "Authorize in the data layer or resolvers, not only at the gateway.",
+      "text": "Delegate authorization to the business logic layer so every entry point shares one source of truth, rather than relying on the gateway or ad hoc resolver checks.",
       "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "GraphQL best practices",
+      "url": "https://graphql.org/learn/best-practices/"
     }
   ]
 }

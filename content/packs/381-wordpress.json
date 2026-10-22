@@ -9,6 +9,10 @@
     {
       "name": "WordPress Coding Standards",
       "url": "https://developer.wordpress.org/coding-standards/"
+    },
+    {
+      "name": "WordPress plugin handbook",
+      "url": "https://developer.wordpress.org/plugins/"
     }
   ],
   "rules": [
@@ -48,5 +52,6 @@
       "text": "Use $wpdb->prepare for every query with variable input.",
       "recommended": true
     }
-  ]
+  ],
+  "reviewed": "2026-10"
 }

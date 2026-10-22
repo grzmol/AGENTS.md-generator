@@ -29,5 +29,12 @@
       "title": "Reuse with includes",
       "text": "Share pipeline logic with include and extends."
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "GitLab CI/CD documentation",
+      "url": "https://docs.gitlab.com/ci/"
+    }
   ]
 }

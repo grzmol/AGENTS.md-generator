@@ -36,5 +36,12 @@
       "text": "Change colors and radii through the theme CSS variables rather than editing utility classes in each component.",
       "recommended": true
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "shadcn/ui documentation",
+      "url": "https://ui.shadcn.com/docs"
+    }
   ]
 }

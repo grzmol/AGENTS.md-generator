@@ -21,13 +21,13 @@
     {
       "id": "llm-apps-structured",
       "title": "Structured outputs",
-      "text": "Request structured output with a schema and validate it, with a repair or retry path.",
+      "text": "Request structured output with a JSON schema, and still check stop_reason: refusals and max_tokens truncation can return output that does not match the schema.",
       "recommended": true
     },
     {
       "id": "llm-apps-evals",
       "title": "Evals for prompts",
-      "text": "Keep an evaluation set and run it before changing prompts or models.",
+      "text": "Keep an automated eval set that mirrors real traffic and edge cases, hold out a test split, and run it before changing prompts or models.",
       "recommended": true
     },
     {
@@ -64,6 +64,13 @@
       "id": "llm-apps-streaming",
       "title": "Stream long responses",
       "text": "Stream long responses to the UI and handle partial output and cancellation."
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Claude API structured outputs and evaluation guides",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs"
     }
   ]
 }

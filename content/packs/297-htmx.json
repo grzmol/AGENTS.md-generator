@@ -29,5 +29,12 @@
       "title": "Explicit targets",
       "text": "Set explicit hx-target and hx-swap so responses land predictably."
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "htmx documentation",
+      "url": "https://htmx.org/docs/"
+    }
   ]
 }

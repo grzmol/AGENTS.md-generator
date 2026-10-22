@@ -28,5 +28,12 @@
       "title": "A11y addon",
       "text": "Keep the accessibility addon clean for every story."
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Storybook documentation",
+      "url": "https://storybook.js.org/docs"
+    }
   ]
 }

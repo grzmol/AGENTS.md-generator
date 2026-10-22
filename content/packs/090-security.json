@@ -95,7 +95,7 @@
     {
       "id": "security-uploads",
       "title": "Safe file uploads",
-      "text": "Validate upload type, size and name, and store uploads outside the web root."
+      "text": "Validate uploads: allow-list extensions, check the real file type instead of the Content-Type header, set a size limit and store files outside the web root."
     },
     {
       "id": "security-password",

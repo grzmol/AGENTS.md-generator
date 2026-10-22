@@ -30,5 +30,12 @@
       "text": "Keep ansible-lint clean and name every task.",
       "recommended": true
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Ansible documentation",
+      "url": "https://docs.ansible.com"
+    }
   ]
 }

@@ -41,5 +41,12 @@
       "text": "Use the authorization code flow with PKCE and validate the state parameter.",
       "recommended": true
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "OWASP OAuth 2.0 Cheat Sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/OAuth2_Cheat_Sheet.html"
+    }
   ]
 }

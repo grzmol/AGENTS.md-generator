@@ -237,7 +237,7 @@ Zrobione: etapy 0, 1 i większość 2-4 w wersji MVP (szkielet, silnik, UI, pres
 
 - UI przeprojektowane jako stanowisko pracy: lewy pasek paczek, środkowy widok reguł, prawy podgląd pliku. Typografia Newsreader, Schibsted Grotesk i IBM Plex Mono (hostowane lokalnie), ciepłe neutralne tła, jeden akcent, bez kart w kartach i gradientów.
 - Tryb monorepo: osobne pliki per folder, ścieżki zależne od formatu, eksport zip.
-- Przegląd jakości: 44 paczki sprawdzone z dokumentacją, limit długości pliku zmieniony z 300 na 200 linii zgodnie z zaleceniem Anthropic dla CLAUDE.md. Claude Code czyta AGENTS.md, gdy nie ma CLAUDE.md powyżej katalogu roboczego; w przeciwnym razie należy zaimportować go przez `@AGENTS.md`.
+- Przegląd jakości: 93 paczek sprawdzonych z dokumentacją, limit długości pliku zmieniony z 300 na 200 linii zgodnie z zaleceniem Anthropic dla CLAUDE.md. Claude Code czyta AGENTS.md, gdy nie ma CLAUDE.md powyżej katalogu roboczego; w przeciwnym razie należy zaimportować go przez `@AGENTS.md`.
 
 ## 14. Następny krok
 

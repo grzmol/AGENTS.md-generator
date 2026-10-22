@@ -28,5 +28,12 @@
       "title": "Test naming",
       "text": "Name tests Method_Scenario_Expected or by behavior consistently."
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "xUnit.net documentation",
+      "url": "https://xunit.net/docs/getting-started/v3/getting-started"
+    }
   ]
 }

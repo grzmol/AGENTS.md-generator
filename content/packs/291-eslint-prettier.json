@@ -29,6 +29,19 @@
       "title": "Lint in CI",
       "text": "Run lint with zero warnings allowed in CI.",
       "recommended": true
+    },
+    {
+      "id": "eslint-prettier-unused-disables",
+      "title": "Report stale disable comments",
+      "text": "Set linterOptions.reportUnusedDisableDirectives so disable comments that no longer suppress anything are reported.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "ESLint documentation",
+      "url": "https://eslint.org/docs/latest/"
     }
   ]
 }

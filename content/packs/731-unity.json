@@ -41,5 +41,12 @@
       "text": "Commit .meta files and never edit scene or prefab YAML by hand without need.",
       "recommended": true
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Unity manual",
+      "url": "https://docs.unity3d.com/Manual/programming-best-practices.html"
+    }
   ]
 }

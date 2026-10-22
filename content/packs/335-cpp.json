@@ -9,6 +9,10 @@
     {
       "name": "C++ Core Guidelines",
       "url": "https://isocpp.github.io/CppCoreGuidelines/"
+    },
+    {
+      "name": "C++ Core Guidelines",
+      "url": "https://isocpp.github.io/CppCoreGuidelines/"
     }
   ],
   "rules": [
@@ -47,5 +51,6 @@
       "title": "C++ Core Guidelines",
       "text": "Follow the C++ Core Guidelines and clang-tidy checks configured in the repository."
     }
-  ]
+  ],
+  "reviewed": "2026-10"
 }

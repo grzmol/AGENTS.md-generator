@@ -36,5 +36,12 @@
       "text": "Compute derived values in selectors instead of storing them.",
       "recommended": true
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Redux Toolkit documentation",
+      "url": "https://redux-toolkit.js.org"
+    }
   ]
 }

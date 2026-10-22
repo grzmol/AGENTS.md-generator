@@ -29,5 +29,12 @@
       "text": "Share types through inference rather than duplicating them.",
       "recommended": true
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "tRPC documentation",
+      "url": "https://trpc.io/docs"
+    }
   ]
 }

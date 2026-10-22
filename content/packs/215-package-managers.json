@@ -15,7 +15,7 @@
     {
       "id": "package-managers-frozen-install",
       "title": "Frozen installs in CI",
-      "text": "Install in CI with the frozen lockfile command (npm ci, pnpm install --frozen-lockfile, yarn install --immutable).",
+      "text": "Install in CI with the frozen lockfile command (npm ci, pnpm install --frozen-lockfile, yarn install --immutable); pnpm already does this by default when it detects CI.",
       "recommended": true
     },
     {
@@ -34,6 +34,13 @@
       "title": "Declare engines",
       "text": "Declare supported Node versions in engines and a version file such as .nvmrc.",
       "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "pnpm documentation",
+      "url": "https://pnpm.io"
     }
   ]
 }

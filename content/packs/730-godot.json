@@ -35,5 +35,12 @@
       "title": "Resources for data",
       "text": "Store shared data in Resource files instead of hardcoding values."
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Godot documentation",
+      "url": "https://docs.godotengine.org/en/stable/"
+    }
   ]
 }

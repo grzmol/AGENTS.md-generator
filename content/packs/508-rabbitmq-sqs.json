@@ -39,7 +39,7 @@
     {
       "id": "rabbitmq-sqs-prefetch",
       "title": "Bound prefetch",
-      "text": "Limit prefetch or batch size so a slow consumer does not hoard messages."
+      "text": "Use manual acknowledgements with a bounded prefetch (often 100 to 300); unbounded prefetch lets unacknowledged messages pile up in consumer memory."
     }
   ]
 }

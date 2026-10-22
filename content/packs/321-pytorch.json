@@ -9,7 +9,7 @@
     {
       "id": "pytorch-seeds",
       "title": "Seed everything",
-      "text": "Set seeds for Python, NumPy and PyTorch and log them with each run.",
+      "text": "Seed Python, NumPy and PyTorch, enable torch.use_deterministic_algorithms where exact repeatability matters, and log the seed with each run.",
       "recommended": true
     },
     {
@@ -35,6 +35,13 @@
       "title": "No data leakage",
       "text": "Split data before any preprocessing fit and never tune on the test set.",
       "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "PyTorch reproducibility notes",
+      "url": "https://docs.pytorch.org/docs/stable/notes/randomness.html"
     }
   ]
 }

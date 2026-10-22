@@ -54,5 +54,12 @@
       "text": "Mark UI-touching code @MainActor and keep heavy work off the main thread.",
       "recommended": true
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "SwiftUI migrating to Observable",
+      "url": "https://developer.apple.com/documentation/swiftui/migrating-from-the-observable-object-protocol-to-the-observable-macro"
+    }
   ]
 }

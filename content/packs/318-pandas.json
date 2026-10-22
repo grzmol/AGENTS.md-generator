@@ -35,5 +35,12 @@
       "title": "Columnar storage",
       "text": "Store intermediate data as Parquet instead of CSV."
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "pandas Copy-on-Write guide",
+      "url": "https://pandas.pydata.org/docs/user_guide/copy_on_write.html"
+    }
   ]
 }

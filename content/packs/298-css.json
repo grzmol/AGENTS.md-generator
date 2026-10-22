@@ -40,5 +40,12 @@
       "title": "Container queries",
       "text": "Prefer container queries for component-level responsiveness."
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "MDN CSS reference",
+      "url": "https://developer.mozilla.org/docs/Web/CSS"
+    }
   ]
 }

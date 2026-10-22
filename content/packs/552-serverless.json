@@ -29,6 +29,19 @@
       "title": "One role per function",
       "text": "Give each function its own minimal role.",
       "recommended": true
+    },
+    {
+      "id": "serverless-no-recursion",
+      "title": "Avoid recursive invocations",
+      "text": "Avoid designs where a function triggers itself; if it happens, set reserved concurrency to 0 to stop the loop while you fix the code.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "AWS Lambda best practices",
+      "url": "https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html"
     }
   ]
 }

@@ -29,5 +29,12 @@
       "title": "Built-in test runner",
       "text": "Use the built-in test runner unless the project already uses another."
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Deno permissions",
+      "url": "https://docs.deno.com/runtime/fundamentals/security/"
+    }
   ]
 }

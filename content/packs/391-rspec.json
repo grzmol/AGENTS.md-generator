@@ -29,5 +29,12 @@
       "text": "Test endpoints with request specs.",
       "recommended": true
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "RuboCop RSpec style guide",
+      "url": "https://rspec.rubystyle.guide"
+    }
   ]
 }

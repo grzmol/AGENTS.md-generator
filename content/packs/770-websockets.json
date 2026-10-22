@@ -35,6 +35,25 @@
       "title": "Versioned messages",
       "text": "Define a typed, versioned message schema.",
       "recommended": true
+    },
+    {
+      "id": "websockets-origin",
+      "title": "Validate Origin",
+      "text": "Check the Origin header on the handshake to prevent cross-site WebSocket hijacking, and do not rely on cookies alone for authorization.",
+      "recommended": true
+    },
+    {
+      "id": "websockets-wss",
+      "title": "Use wss",
+      "text": "Use wss:// (TLS) for every WebSocket connection outside localhost.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "OWASP WebSocket Security Cheat Sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/WebSocket_Security_Cheat_Sheet.html"
     }
   ]
 }

@@ -49,6 +49,11 @@
       "id": "claude-api-system-prompt",
       "title": "System prompt for role and rules",
       "text": "Put role, rules and output format in the system prompt and task data in user messages."
+    },
+    {
+      "id": "claude-api-strict-tools",
+      "title": "Strict tool schemas",
+      "text": "Set strict true on tool definitions when calls must match the input schema exactly, instead of repairing malformed arguments afterwards."
     }
   ],
   "reviewed": "2026-10"

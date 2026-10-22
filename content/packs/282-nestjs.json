@@ -35,5 +35,12 @@
       "title": "Exception filters",
       "text": "Map domain errors to HTTP responses with exception filters."
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "NestJS documentation",
+      "url": "https://docs.nestjs.com"
+    }
   ]
 }

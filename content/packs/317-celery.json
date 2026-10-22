@@ -30,5 +30,12 @@
       "text": "Set soft and hard time limits on every task.",
       "recommended": true
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Celery documentation",
+      "url": "https://docs.celeryq.dev/en/stable/"
+    }
   ]
 }

@@ -41,5 +41,12 @@
       "title": "Compose previews",
       "text": "Add @Preview functions for composables with realistic sample data."
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Compose state hoisting",
+      "url": "https://developer.android.com/develop/ui/compose/state-hoisting"
+    }
   ]
 }

@@ -36,5 +36,12 @@
       "text": "Keep mix format and credo clean.",
       "recommended": true
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Phoenix contexts guide",
+      "url": "https://hexdocs.pm/phoenix/contexts.html"
+    }
   ]
 }

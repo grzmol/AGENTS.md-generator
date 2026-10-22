@@ -35,5 +35,12 @@
       "text": "Describe models and columns in schema files.",
       "recommended": true
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "dbt best practices",
+      "url": "https://docs.getdbt.com/best-practices"
+    }
   ]
 }

@@ -29,5 +29,12 @@
       "text": "Validate and type route params before use.",
       "recommended": true
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "React Router documentation",
+      "url": "https://reactrouter.com"
+    }
   ]
 }

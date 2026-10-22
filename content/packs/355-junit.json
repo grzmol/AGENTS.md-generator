@@ -29,5 +29,12 @@
       "text": "Test persistence against real databases with Testcontainers.",
       "recommended": true
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "JUnit user guide",
+      "url": "https://docs.junit.org/current/user-guide/"
+    }
   ]
 }

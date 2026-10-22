@@ -35,5 +35,12 @@
       "title": "Subscribe narrowly",
       "text": "Avoid watching the whole form; subscribe to individual fields to limit re-renders."
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "React Hook Form documentation",
+      "url": "https://react-hook-form.com"
+    }
   ]
 }

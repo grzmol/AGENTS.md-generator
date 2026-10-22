@@ -9,13 +9,17 @@
     {
       "name": "Prometheus naming practices",
       "url": "https://prometheus.io/docs/practices/naming/"
+    },
+    {
+      "name": "Prometheus naming practices",
+      "url": "https://prometheus.io/docs/practices/naming/"
     }
   ],
   "rules": [
     {
       "id": "prometheus-naming",
       "title": "Metric naming",
-      "text": "Name metrics in snake_case with a base unit suffix (_seconds, _bytes) and end counters with _total.",
+      "text": "Name metrics in snake_case with an application prefix, base units as a plural suffix (_seconds, _bytes) and _total on counters; never mix units in one metric.",
       "recommended": true
     },
     {
@@ -47,5 +51,6 @@
       "title": "Recording rules",
       "text": "Precompute expensive dashboard queries with recording rules."
     }
-  ]
+  ],
+  "reviewed": "2026-10"
 }

@@ -35,5 +35,12 @@
       "title": "SEO metadata",
       "text": "Provide title, description and canonical metadata for public pages."
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "MDN HTML reference",
+      "url": "https://developer.mozilla.org/docs/Web/HTML"
+    }
   ]
 }

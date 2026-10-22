@@ -45,5 +45,12 @@
       "title": "Flow for streams",
       "text": "Use Flow for asynchronous streams and collect lifecycle-aware on Android."
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Kotlin documentation",
+      "url": "https://kotlinlang.org/docs/"
+    }
   ]
 }

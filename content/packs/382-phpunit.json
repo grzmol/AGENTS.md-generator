@@ -23,6 +23,19 @@
       "title": "Fake framework services",
       "text": "Fake queues, mail and storage with framework fakes.",
       "recommended": true
+    },
+    {
+      "id": "phpunit-data-providers",
+      "title": "Data providers for case tables",
+      "text": "Cover tables of inputs with #[DataProvider] attributes instead of loops inside a test.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "PHPUnit documentation",
+      "url": "https://docs.phpunit.de"
     }
   ]
 }

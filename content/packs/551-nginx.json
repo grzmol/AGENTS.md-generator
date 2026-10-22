@@ -29,5 +29,12 @@
       "title": "Hide version",
       "text": "Disable server_tokens."
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "nginx documentation",
+      "url": "https://nginx.org/en/docs/"
+    }
   ]
 }

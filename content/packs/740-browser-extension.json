@@ -36,5 +36,12 @@
       "text": "Avoid inline scripts and eval to satisfy the extension content security policy.",
       "recommended": true
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Chrome extensions documentation",
+      "url": "https://developer.chrome.com/docs/extensions"
+    }
   ]
 }
