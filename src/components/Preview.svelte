@@ -81,31 +81,35 @@
 </script>
 
 <section class="preview" aria-label="Generated file">
-  <div class="format-tabs" role="tablist" aria-label="Output format">
+  <div class="segmented full" role="tablist" aria-label="Output format">
     {#each FORMATS as item (item.id)}
-      <button role="tab" aria-selected={wb.format === item.id} class:active={wb.format === item.id} onclick={() => (wb.format = item.id)}>{item.label}</button>
+      <button role="tab" aria-selected={wb.format === item.id} onclick={() => (wb.format = item.id)}>{item.label}</button>
     {/each}
   </div>
 
-  <div class="file">
-    <div class="file-head">
-      <span class="file-path mono">{wb.activePath}</span>
-      <span class="file-stat">{lines} lines · ~{tokens.toLocaleString('en-US')} tokens</span>
+  <div class="window">
+    <div class="window-bar">
+      <span class="lights" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="window-title mono">{wb.activePath}</span>
+      <span class="window-stat">{lines} lines</span>
     </div>
     <div class="gauge" class:over aria-hidden="true"><span style:width="{gauge}%"></span></div>
     <div class="paper" tabindex="0" role="textbox" aria-readonly="true" aria-multiline="true" aria-label="Preview of {wb.activePath}">
       {#each rows as row (row.number)}
-        <div class="ln {row.kind}"><span class="num" aria-hidden="true">{row.number}</span><span class="txt">{row.text === '' ? ' ' : row.text}</span></div>
+        <div class="ln {row.kind}"><span class="num" aria-hidden="true">{row.number}</span><span class="txt">{row.text === '' ? '\u00a0' : row.text}</span></div>
       {/each}
     </div>
-    {#if over}<p class="warn">Anthropic suggests keeping instruction files under {LENGTH_WARNING_LINES} lines; longer files reduce adherence. Trim to what a new teammate needs on day one.</p>{/if}
+    <div class="window-foot">
+      <span>~{tokens.toLocaleString('en-US')} tokens</span>
+      {#if over}<span class="warn">Over {LENGTH_WARNING_LINES} lines. Anthropic suggests shorter files because adherence drops.</span>{/if}
+    </div>
   </div>
 
   <div class="preview-actions">
-    <button class="solid" onclick={() => copy(content, 'Copied to clipboard')}>Copy file</button>
-    <button class="outline" onclick={downloadFile}>Download</button>
-    {#if wb.files.length > 1}<button class="outline" onclick={downloadZip}>All {wb.files.length} files (.zip)</button>{/if}
-    <button class="text-button" onclick={() => copy(location.href, 'Link copied')}>Copy share link</button>
+    <button class="pill blue" onclick={() => copy(content, 'Copied to clipboard')}>Copy file</button>
+    <button class="pill gray" onclick={downloadFile}>Download</button>
+    {#if wb.files.length > 1}<button class="pill gray" onclick={downloadZip}>All {wb.files.length} files</button>{/if}
+    <button class="link-button" onclick={() => copy(location.href, 'Link copied')}>Copy share link</button>
   </div>
   <p class="status" aria-live="polite">{status}</p>
   <p class="hint">{hint}</p>

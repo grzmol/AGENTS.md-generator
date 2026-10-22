@@ -60,16 +60,16 @@
 <nav class="rail" aria-label="Rule packs">
   <div class="rail-search">
     <label class="visually-hidden" for="search">Search rules</label>
-    <input id="search" type="search" bind:value={wb.query} placeholder="Search rules" autocomplete="off" />
+    <input id="search" type="search" bind:value={wb.query} placeholder="Search" autocomplete="off" />
   </div>
 
   {#if !searching}
     <ul class="rail-list rail-primary">
       <li>
-        <button class="rail-item" class:current={wb.view.kind === 'presets'} onclick={() => go({ kind: 'presets' })}><span class="rail-title">Start from a preset</span></button>
+        <button class="rail-item" class:current={wb.view.kind === 'presets'} onclick={() => go({ kind: 'presets' })}><span class="rail-title">Presets</span></button>
       </li>
       <li>
-        <button class="rail-item" class:current={wb.view.kind === 'project'} onclick={() => go({ kind: 'project' })}><span class="rail-title">Project details</span></button>
+        <button class="rail-item" class:current={wb.view.kind === 'project'} onclick={() => go({ kind: 'project' })}><span class="rail-title">Project</span></button>
       </li>
     </ul>
   {:else}
@@ -77,7 +77,7 @@
   {/if}
 
   {#if !searching || general.some(visible)}
-    <h2 class="rail-heading">Conventions</h2>
+    <h2 class="rail-heading"><span>Conventions</span></h2>
     <ul class="rail-list">{#each general as pack (pack.id)}{@render packButton(pack)}{/each}</ul>
   {/if}
 
@@ -86,7 +86,7 @@
       <h2 class="rail-heading">
         <button class="rail-toggle" aria-expanded={isOpen(group.family)} onclick={() => toggleFamily(group.family)}>
           <span>{group.label}</span>
-          <span class="rail-chevron" aria-hidden="true">{isOpen(group.family) ? 'Hide' : group.packs.length}</span>
+          <span class="rail-chevron" class:open={isOpen(group.family)} aria-hidden="true"></span>
         </button>
       </h2>
       {#if isOpen(group.family)}
@@ -96,7 +96,7 @@
   {/each}
 
   {#if !searching || skills.some(visible)}
-    <h2 class="rail-heading">Skills and tools</h2>
+    <h2 class="rail-heading"><span>Skills and tools</span></h2>
     <ul class="rail-list">{#each skills as pack (pack.id)}{@render packButton(pack)}{/each}</ul>
   {/if}
 </nav>

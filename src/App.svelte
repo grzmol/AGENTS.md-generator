@@ -17,8 +17,9 @@
 </script>
 
 <div class="shell" data-pane={wb.mobilePane} data-detail={wb.mobileDetail}>
-  <Masthead />
-  <ScopeBar />
+  <Masthead>
+    {#snippet center()}<ScopeBar />{/snippet}
+  </Masthead>
 
   <div class="workbench">
     <aside class="col-rail"><Rail /></aside>
@@ -44,6 +45,6 @@
 
   <nav class="mobile-bar" aria-label="View">
     <button class:active={wb.mobilePane === 'build'} onclick={() => (wb.mobilePane = 'build')}>Build</button>
-    <button class:active={wb.mobilePane === 'file'} onclick={() => (wb.mobilePane = 'file')}>File <span class="mono">{wb.active.selected.size}</span></button>
+    <button class:active={wb.mobilePane === 'file'} onclick={() => (wb.mobilePane = 'file')}>File<span class="tab-count">{wb.active.selected.size}</span></button>
   </nav>
 </div>

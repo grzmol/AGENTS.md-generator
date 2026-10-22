@@ -43,7 +43,7 @@ Tests validate unique ids, radio groups, preset references, rule length and the 
 
 The `reviewed` pack list is generated from the content files; the UI shows the date and sources on each reviewed pack.
 
-Not checked against primary sources: the Cursor and Copilot file formats (the hosts were unreachable), the 23 general convention packs (they are editorial, not tied to one source), and these technology packs: Jupyter, C, Bash, Makefile, Scala, RabbitMQ and SQS, data engineering, AWS, RAG, agent building, payments, SEO and skills. Go and Rust were checked only for the context package and Clippy.
+Not checked against primary sources: the Cursor and Copilot file formats (the hosts were unreachable), the remaining general convention packs (they are editorial, not tied to one source), and these technology packs: Jupyter, C, Bash, Makefile, Scala, RabbitMQ and SQS, data engineering, AWS, RAG, agent building, payments, SEO and skills. Go and Rust were checked only for the context package and Clippy.
 
 ## Licensing
 

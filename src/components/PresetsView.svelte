@@ -1,6 +1,8 @@
 <script lang="ts">
-  import { presets } from '../lib/content'
+  import { packs, presets } from '../lib/content'
   import { workbench as wb } from '../lib/workbench.svelte'
+
+  const totalRules = packs.reduce((sum, pack) => sum + pack.rules.length, 0)
 
   function apply(id: string) {
     const preset = presets.find((candidate) => candidate.id === id)
@@ -10,16 +12,16 @@
   }
 </script>
 
-<article class="pane">
-  <p class="eyebrow">Step one</p>
-  <h1 class="pane-title display">Brief your coding agent before it writes a line.</h1>
-  <p class="lede">
-    AGENTS.md is the file agents read first. Start from a preset, adjust packs on the left, and copy the result.
+<article class="pane wide">
+  <p class="eyebrow">{totalRules} rules in {packs.length} packs</p>
+  <h1 class="hero">Brief your coding agent before it writes a line.</h1>
+  <p class="hero-sub">
+    AGENTS.md is the file coding agents read first. Start from a preset, fine tune it pack by pack, then copy the result.
     Everything runs in your browser.
   </p>
 
-  <h2 class="section-label">Presets</h2>
-  <ul class="presets">
+  <h2 class="section-title">Presets</h2>
+  <ul class="preset-grid">
     {#each presets as preset (preset.id)}
       <li>
         <button class="preset" onclick={() => apply(preset.id)}>
@@ -30,5 +32,5 @@
       </li>
     {/each}
   </ul>
-  <p class="foot-note">Applying a preset replaces the selection for the file you are editing.</p>
+  <p class="foot-note">Choosing a preset replaces the selection for the file you are editing.</p>
 </article>

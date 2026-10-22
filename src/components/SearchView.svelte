@@ -9,7 +9,7 @@
 </script>
 
 <article class="pane">
-  <button class="back text-button" onclick={() => (wb.mobileDetail = false)}>All packs</button>
+  <button class="back link-button" onclick={() => (wb.mobileDetail = false)}>Packs</button>
   <p class="eyebrow">Search</p>
   <h1 class="pane-title">“{wb.query.trim()}”</h1>
   <p class="lede">{total} {total === 1 ? 'rule' : 'rules'} across {hits.length} {hits.length === 1 ? 'pack' : 'packs'}.</p>

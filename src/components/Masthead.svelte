@@ -1,8 +1,9 @@
 <script lang="ts">
-  import { packs } from '../lib/content'
+  import type { Snippet } from 'svelte'
 
   type Theme = 'auto' | 'light' | 'dark'
-  const totalRules = packs.reduce((sum, pack) => sum + pack.rules.length, 0)
+
+  let { center }: { center?: Snippet } = $props()
 
   function readTheme(): Theme {
     try {
@@ -27,20 +28,22 @@
     }
   })
 
+  const labels: Record<Theme, string> = { auto: 'Auto', light: 'Light', dark: 'Dark' }
+
   function cycle() {
     theme = theme === 'auto' ? 'light' : theme === 'light' ? 'dark' : 'auto'
   }
 </script>
 
-<header class="masthead">
-  <a class="wordmark" href="./" aria-label="AGENTS.md generator">
-    <span class="wordmark-name">AGENTS<span class="wordmark-dot">.</span>md</span>
-    <span class="wordmark-sub">generator</span>
+<header class="toolbar">
+  <a class="brand" href="./" aria-label="AGENTS.md generator">
+    <span class="brand-mark" aria-hidden="true">@</span>
+    <span class="brand-name">AGENTS.md</span>
   </a>
-  <p class="masthead-meta">{totalRules} rules in {packs.length} packs</p>
-  <nav class="masthead-actions" aria-label="Site">
+  <div class="toolbar-center">{@render center?.()}</div>
+  <nav class="toolbar-actions" aria-label="Site">
     <a href="https://agents.md" target="_blank" rel="noreferrer">Spec</a>
-    <a href="https://github.com/grzmol/AGENTS.md-generator" target="_blank" rel="noreferrer">Source</a>
-    <button class="text-button" onclick={cycle} aria-label="Switch color theme, currently {theme}">Theme: {theme}</button>
+    <a href="https://github.com/grzmol/AGENTS.md-generator" target="_blank" rel="noreferrer">GitHub</a>
+    <button class="link-button" onclick={cycle} aria-label="Appearance, currently {labels[theme]}">{labels[theme]}</button>
   </nav>
 </header>

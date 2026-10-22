@@ -29,39 +29,40 @@
   }
 </script>
 
-<div class="scopebar">
-  <div class="scope-tabs" role="tablist" aria-label="Files in this repository">
+<div class="scopes">
+  <div class="segmented scroll" role="tablist" aria-label="Files in this repository">
     {#each wb.scopes as scope (scope.id)}
-      <div class="scope-tab" class:active={wb.activeId === scope.id}>
-        <button role="tab" aria-selected={wb.activeId === scope.id} onclick={() => (wb.activeId = scope.id)}>
-          <span class="scope-path">{scope.path === '' ? 'Repository root' : scope.path}</span>
-          <span class="scope-count">{scope.selected.size}</span>
-        </button>
-        {#if scope.id !== 'root'}
-          <button class="scope-remove" aria-label="Remove {scope.path}" onclick={() => wb.removeScope(scope.id)}>Remove</button>
-        {/if}
-      </div>
+      <button role="tab" aria-selected={wb.activeId === scope.id} onclick={() => (wb.activeId = scope.id)}>
+        <span>{scope.path === '' ? 'Root' : scope.path}</span>
+        <span class="seg-count">{scope.selected.size}</span>
+      </button>
     {/each}
   </div>
+  <button class="icon-button" aria-label="Add a folder for a monorepo" aria-expanded={adding} title="Add a folder for a monorepo" onclick={() => (adding = !adding)}>
+    <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3v10M3 8h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
+  </button>
+  {#if wb.activeId !== 'root'}
+    <button class="link-button danger" onclick={() => wb.removeScope(wb.activeId)}>Remove folder</button>
+  {/if}
 
   {#if adding}
-    <form class="scope-form" onsubmit={submit}>
+    <form class="popover" onsubmit={submit}>
+      <p class="popover-title">New folder file</p>
+      <p class="popover-text">Adds a nested AGENTS.md for one folder of a monorepo. Agents read the closest file to the code they edit.</p>
       <label class="visually-hidden" for="scope-path">Folder path</label>
       <input id="scope-path" bind:value={path} placeholder="apps/web" autocomplete="off" spellcheck="false" />
       <label class="visually-hidden" for="scope-preset">Start from</label>
       <select id="scope-preset" bind:value={presetId}>
-        <option value="">Empty</option>
+        <option value="">Start empty</option>
         {#each presets as preset (preset.id)}
           <option value={preset.id}>{preset.title}</option>
         {/each}
       </select>
-      <button class="solid small" type="submit">Add file</button>
-      <button class="text-button" type="button" onclick={cancel}>Cancel</button>
-      {#if error}<span class="field-error" role="alert">{error}</span>{/if}
+      {#if error}<p class="field-error" role="alert">{error}</p>{/if}
+      <div class="popover-actions">
+        <button class="pill gray" type="button" onclick={cancel}>Cancel</button>
+        <button class="pill blue" type="submit">Add file</button>
+      </div>
     </form>
-  {:else}
-    <button class="text-button add-scope" onclick={() => (adding = true)}>
-      Add a folder for a monorepo
-    </button>
   {/if}
 </div>

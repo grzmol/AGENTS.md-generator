@@ -235,7 +235,7 @@ Zrobione: etapy 0, 1 i większość 2-4 w wersji MVP (szkielet, silnik, UI, pres
 
 ## 13. Aktualizacja: UI, monorepo i przegląd jakości
 
-- UI przeprojektowane jako stanowisko pracy: lewy pasek paczek, środkowy widok reguł, prawy podgląd pliku. Typografia Newsreader, Schibsted Grotesk i IBM Plex Mono (hostowane lokalnie), ciepłe neutralne tła, jeden akcent, bez kart w kartach i gradientów.
+- UI przeprojektowane jako stanowisko pracy w estetyce Apple: rozmyty pasek narzędzi, lewy pasek paczek jak w macOS, środkowe grupy reguł z przełącznikami iOS i segmentowymi kontrolkami, prawe okno podglądu pliku. Czcionki systemowe (SF na urządzeniach Apple, Inter Variable jako zapasowa) i Geist Mono dla kodu, szare tło, jeden niebieski akcent.
 - Tryb monorepo: osobne pliki per folder, ścieżki zależne od formatu, eksport zip.
 - Przegląd jakości: 93 paczek sprawdzonych z dokumentacją, limit długości pliku zmieniony z 300 na 200 linii zgodnie z zaleceniem Anthropic dla CLAUDE.md. Claude Code czyta AGENTS.md, gdy nie ma CLAUDE.md powyżej katalogu roboczego; w przeciwnym razie należy zaimportować go przez `@AGENTS.md`.
 
