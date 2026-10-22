@@ -23,8 +23,8 @@ describe('content', () => {
       expect(rule.text.trim()).toBe(rule.text)
       expect(rule.text).not.toContain('\n')
       expect(rule.text.length).toBeLessThanOrEqual(220)
-      expect(rule.text).not.toContain('—')
-      expect(rule.title).not.toContain('—')
+      expect(rule.text).not.toContain('\u2014')
+      expect(rule.title).not.toContain('\u2014')
     }
   })
 
