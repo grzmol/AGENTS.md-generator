@@ -59,5 +59,12 @@
       "text": "Call env() only in config files; read config() elsewhere.",
       "recommended": true
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Laravel documentation",
+      "url": "https://laravel.com/docs"
+    }
   ]
 }

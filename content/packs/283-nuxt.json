@@ -15,7 +15,7 @@
     {
       "id": "nuxt-use-fetch",
       "title": "useFetch for data",
-      "text": "Fetch data with useFetch or useAsyncData so it runs once on the server and hydrates on the client.",
+      "text": "Fetch with useFetch or useAsyncData instead of a bare $fetch in setup, so server-rendered data is not requested a second time on the client.",
       "recommended": true
     },
     {
@@ -29,6 +29,13 @@
       "title": "Server routes",
       "text": "Put backend logic in server/api handlers with validated input.",
       "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Nuxt documentation",
+      "url": "https://nuxt.com/docs"
     }
   ]
 }

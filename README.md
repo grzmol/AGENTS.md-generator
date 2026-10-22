@@ -29,7 +29,7 @@ Stack: Svelte 5, Vite, TypeScript, Vitest.
 
 ## Content
 
-Currently 817 rules in 117 packs and 40 presets.
+Currently 887 rules in 129 packs and 45 presets.
 
 Rules live in `content/packs/*.json` and presets in `content/presets/*.json`. Adding a rule is a one-file change.
 
@@ -41,7 +41,9 @@ Tests validate unique ids, radio groups, preset references, rule length and the 
 
 Packs with a `reviewed` field were checked against official documentation in October 2026 (TypeScript, React, Next.js, Svelte, Vue, Angular, Node.js, Express, Tailwind, Python and uv, FastAPI, Django, Pydantic, SQLAlchemy, Prisma, Docker, Kubernetes, Terraform, GitHub Actions, PostgreSQL, Spring Boot, Claude API, Git, password storage, Go context, Clippy). Rules were corrected where documentation had moved on, for example Next.js 15 caching defaults, FastAPI lifespan events and React Compiler memoization.
 
-Not yet checked against primary sources: Cursor and Copilot file formats (hosts unreachable during review), most other packs.
+Also checked: TanStack Query, Astro, Nuxt, Flask, Laravel, Rails, Flutter, Redis, MongoDB, Kafka, MCP, ASP.NET Core, Supabase, Temporal, gRPC, Elasticsearch, Flyway and Firebase.
+
+Not yet checked against primary sources: Cursor and Copilot file formats (hosts unreachable during review), Go beyond context, Rust beyond Clippy, and the remaining packs. Each reviewed pack shows its date and sources in the UI.
 
 ## Licensing
 

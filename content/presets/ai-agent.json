@@ -94,6 +94,8 @@
     "mcp-output-size",
     "mcp-confirm",
     "mcp-no-trust",
+    "mcp-rate-limit",
+    "mcp-consent",
     "agent-building-loop-limits",
     "agent-building-human-in-loop",
     "agent-building-trace",

@@ -1,0 +1,51 @@
+{
+  "id": "prometheus",
+  "title": "Prometheus and Grafana",
+  "kind": "technology",
+  "order": 542,
+  "family": "devops",
+  "description": "Conventions for Prometheus and Grafana.",
+  "sources": [
+    {
+      "name": "Prometheus naming practices",
+      "url": "https://prometheus.io/docs/practices/naming/"
+    }
+  ],
+  "rules": [
+    {
+      "id": "prometheus-naming",
+      "title": "Metric naming",
+      "text": "Name metrics in snake_case with a base unit suffix (_seconds, _bytes) and end counters with _total.",
+      "recommended": true
+    },
+    {
+      "id": "prometheus-histograms",
+      "title": "Histograms for latency",
+      "text": "Record latency with histograms and compute percentiles with histogram_quantile, not averages.",
+      "recommended": true
+    },
+    {
+      "id": "prometheus-rate",
+      "title": "rate() over counters",
+      "text": "Never graph raw counters; use rate() or increase() over a window.",
+      "recommended": true
+    },
+    {
+      "id": "prometheus-labels",
+      "title": "Bounded labels",
+      "text": "Keep label values low-cardinality and never use user IDs or raw URLs as labels.",
+      "recommended": true
+    },
+    {
+      "id": "prometheus-alert-for",
+      "title": "Alert with a for duration",
+      "text": "Give alert rules a for duration and link each alert to a runbook.",
+      "recommended": true
+    },
+    {
+      "id": "prometheus-recording",
+      "title": "Recording rules",
+      "text": "Precompute expensive dashboard queries with recording rules."
+    }
+  ]
+}

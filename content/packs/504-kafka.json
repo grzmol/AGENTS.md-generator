@@ -35,6 +35,25 @@
       "title": "Commit after processing",
       "text": "Commit offsets only after the message has been processed.",
       "recommended": true
+    },
+    {
+      "id": "kafka-idempotent-producer",
+      "title": "Idempotent producer",
+      "text": "Keep the idempotent producer on (the default since Kafka 3.0) and do not add application-level resends, which cannot be deduplicated.",
+      "recommended": true
+    },
+    {
+      "id": "kafka-durability",
+      "title": "Durable topics",
+      "text": "Use replication factor 3 with min.insync.replicas 2 and acks=all for topics that must not lose data.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Apache Kafka documentation",
+      "url": "https://kafka.apache.org/documentation/"
     }
   ]
 }

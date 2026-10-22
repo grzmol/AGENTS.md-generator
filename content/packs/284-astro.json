@@ -29,5 +29,12 @@
       "title": "Astro image optimization",
       "text": "Use the built-in image components for optimization and explicit dimensions."
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Astro documentation",
+      "url": "https://docs.astro.build"
+    }
   ]
 }

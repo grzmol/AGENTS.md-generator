@@ -21,7 +21,7 @@
     {
       "id": "flask-config",
       "title": "Config classes",
-      "text": "Load configuration from environment-specific config objects and never hardcode SECRET_KEY.",
+      "text": "Load configuration from environment-specific objects or from_prefixed_env, and never hardcode SECRET_KEY.",
       "recommended": true
     },
     {
@@ -29,6 +29,13 @@
       "title": "Validate input",
       "text": "Validate request data with a schema library (marshmallow or pydantic).",
       "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Flask documentation",
+      "url": "https://flask.palletsprojects.com"
     }
   ]
 }

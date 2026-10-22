@@ -1,0 +1,39 @@
+{
+  "id": "makefile",
+  "title": "Makefiles and task runners",
+  "kind": "technology",
+  "order": 338,
+  "family": "systems",
+  "description": "Conventions for Makefiles and task runners.",
+  "rules": [
+    {
+      "id": "makefile-phony",
+      "title": "Declare .PHONY",
+      "text": "Mark targets that are not files as .PHONY.",
+      "recommended": true
+    },
+    {
+      "id": "makefile-help-target",
+      "title": "Self-documenting help",
+      "text": "Provide a default help target that lists the available commands with one-line descriptions.",
+      "recommended": true
+    },
+    {
+      "id": "makefile-thin",
+      "title": "Keep recipes thin",
+      "text": "Keep recipes short and delegate real logic to scripts or the language tooling.",
+      "recommended": true
+    },
+    {
+      "id": "makefile-tabs",
+      "title": "Tabs in recipes",
+      "text": "Indent recipe lines with tabs, as make requires, even if the rest of the repository uses spaces.",
+      "recommended": true
+    },
+    {
+      "id": "makefile-variables",
+      "title": "Variables for tools",
+      "text": "Put tool names and flags in variables that can be overridden from the environment."
+    }
+  ]
+}

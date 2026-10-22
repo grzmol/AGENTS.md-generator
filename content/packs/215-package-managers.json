@@ -1,0 +1,39 @@
+{
+  "id": "package-managers",
+  "title": "npm, pnpm and Yarn",
+  "kind": "technology",
+  "order": 215,
+  "family": "javascript",
+  "description": "Conventions for npm, pnpm and Yarn.",
+  "rules": [
+    {
+      "id": "package-managers-one-manager",
+      "title": "One package manager",
+      "text": "Use the package manager the repository already uses, declare it in the packageManager field and never mix lockfiles.",
+      "recommended": true
+    },
+    {
+      "id": "package-managers-frozen-install",
+      "title": "Frozen installs in CI",
+      "text": "Install in CI with the frozen lockfile command (npm ci, pnpm install --frozen-lockfile, yarn install --immutable).",
+      "recommended": true
+    },
+    {
+      "id": "package-managers-workspace-protocol",
+      "title": "Workspace protocol",
+      "text": "Reference sibling packages with the workspace protocol and keep shared dependency versions aligned."
+    },
+    {
+      "id": "package-managers-install-scripts",
+      "title": "Be wary of install scripts",
+      "text": "Review packages that run install scripts before allowing them, and prefer pinned, well-maintained dependencies.",
+      "recommended": true
+    },
+    {
+      "id": "package-managers-engines",
+      "title": "Declare engines",
+      "text": "Declare supported Node versions in engines and a version file such as .nvmrc.",
+      "recommended": true
+    }
+  ]
+}

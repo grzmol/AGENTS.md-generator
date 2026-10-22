@@ -1,0 +1,47 @@
+{
+  "id": "supabase",
+  "title": "Supabase",
+  "kind": "technology",
+  "order": 553,
+  "family": "cloud",
+  "description": "Conventions for Supabase.",
+  "rules": [
+    {
+      "id": "supabase-rls",
+      "title": "Row Level Security everywhere",
+      "text": "Enable Row Level Security on every table in an exposed schema and write explicit policies.",
+      "recommended": true
+    },
+    {
+      "id": "supabase-service-key",
+      "title": "Keep the service role key private",
+      "text": "Never ship the secret key (the legacy service_role key) to a browser or mobile app; it bypasses Row Level Security, so use it only on trusted servers.",
+      "recommended": true
+    },
+    {
+      "id": "supabase-auth-uid",
+      "title": "Policies on auth.uid()",
+      "text": "Base policies on auth.uid() and verify ownership in the policy, not only in the client.",
+      "recommended": true
+    },
+    {
+      "id": "supabase-migrations",
+      "title": "Schema through migrations",
+      "text": "Change the schema through versioned migrations from the Supabase CLI, not in the dashboard.",
+      "recommended": true
+    },
+    {
+      "id": "supabase-types",
+      "title": "Generated types",
+      "text": "Generate TypeScript types from the database schema and use them in the client.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Supabase documentation",
+      "url": "https://supabase.com/docs"
+    }
+  ]
+}

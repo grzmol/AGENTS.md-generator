@@ -1,0 +1,47 @@
+{
+  "id": "elasticsearch",
+  "title": "Elasticsearch and OpenSearch",
+  "kind": "technology",
+  "order": 509,
+  "family": "data",
+  "description": "Conventions for Elasticsearch and OpenSearch.",
+  "rules": [
+    {
+      "id": "elasticsearch-explicit-mapping",
+      "title": "Explicit mappings",
+      "text": "Define explicit mappings and choose keyword or text deliberately instead of relying on dynamic mapping.",
+      "recommended": true
+    },
+    {
+      "id": "elasticsearch-not-primary",
+      "title": "Not the source of truth",
+      "text": "Treat the search index as derived data that can be rebuilt from the primary store.",
+      "recommended": true
+    },
+    {
+      "id": "elasticsearch-search-after",
+      "title": "Avoid deep pagination",
+      "text": "Paginate beyond 10,000 hits with search_after, using a point in time for stable order, instead of large from and size values.",
+      "recommended": true
+    },
+    {
+      "id": "elasticsearch-aliases",
+      "title": "Reindex behind aliases",
+      "text": "Query through index aliases so you can reindex and swap without downtime.",
+      "recommended": true
+    },
+    {
+      "id": "elasticsearch-bulk",
+      "title": "Use the bulk API",
+      "text": "Index in batches with the bulk API and handle per-item failures.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Elasticsearch reference",
+      "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/"
+    }
+  ]
+}

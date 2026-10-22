@@ -53,5 +53,12 @@
       "title": "Widget and golden tests",
       "text": "Cover widgets with widget tests and golden tests for visual states."
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Flutter documentation",
+      "url": "https://docs.flutter.dev"
+    }
   ]
 }

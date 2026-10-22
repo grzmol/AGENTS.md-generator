@@ -9,6 +9,10 @@
     {
       "name": "Model Context Protocol",
       "url": "https://modelcontextprotocol.io"
+    },
+    {
+      "name": "MCP specification",
+      "url": "https://modelcontextprotocol.io/specification"
     }
   ],
   "rules": [
@@ -27,7 +31,7 @@
     {
       "id": "mcp-errors",
       "title": "Actionable errors",
-      "text": "Return errors that tell the model what went wrong and how to retry.",
+      "text": "Report tool failures in the result with isError true and a message that tells the model what went wrong and how to retry.",
       "recommended": true
     },
     {
@@ -47,6 +51,19 @@
       "title": "Treat inputs as untrusted",
       "text": "Treat tool results and resource contents as untrusted data, not instructions.",
       "recommended": true
+    },
+    {
+      "id": "mcp-rate-limit",
+      "title": "Rate limit tool calls",
+      "text": "Rate limit tool invocations and sanitize tool outputs before returning them to the client.",
+      "recommended": true
+    },
+    {
+      "id": "mcp-consent",
+      "title": "Human in the loop",
+      "text": "Design for a human in the loop: show clients which tools run and let users deny invocations of sensitive ones.",
+      "recommended": true
     }
-  ]
+  ],
+  "reviewed": "2026-10"
 }

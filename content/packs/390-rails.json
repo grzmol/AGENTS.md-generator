@@ -15,7 +15,7 @@
     {
       "id": "rails-strong-params",
       "title": "Strong parameters",
-      "text": "Permit parameters explicitly with strong parameters.",
+      "text": "Permit parameters explicitly with strong parameters (params.expect in Rails 8) and never pass raw params to create or update.",
       "recommended": true
     },
     {
@@ -44,7 +44,7 @@
     {
       "id": "rails-jobs",
       "title": "Background jobs",
-      "text": "Run slow work in Active Job with idempotent jobs.",
+      "text": "Run slow work in Active Job and make jobs idempotent; failed jobs are not retried unless you configure retry_on.",
       "recommended": true
     },
     {
@@ -58,6 +58,13 @@
       "title": "Encrypted credentials",
       "text": "Store secrets in encrypted credentials or environment variables.",
       "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Rails Guides",
+      "url": "https://guides.rubyonrails.org"
     }
   ]
 }

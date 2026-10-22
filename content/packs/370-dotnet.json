@@ -35,5 +35,12 @@
       "text": "Bind configuration with the options pattern and validate it on startup.",
       "recommended": true
     }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "ASP.NET Core documentation",
+      "url": "https://learn.microsoft.com/aspnet/core"
+    }
   ]
 }

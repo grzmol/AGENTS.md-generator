@@ -27,13 +27,20 @@
     {
       "id": "tanstack-query-stale",
       "title": "Tune staleTime",
-      "text": "Set staleTime deliberately per query instead of relying on defaults."
+      "text": "Set staleTime deliberately per query; the default is 0, so fetched data is immediately stale and refetches on mount and focus."
     },
     {
       "id": "tanstack-query-error-states",
       "title": "Handle all states",
       "text": "Render loading, error and empty states for every query.",
       "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "TanStack Query documentation",
+      "url": "https://tanstack.com/query/latest"
     }
   ]
 }

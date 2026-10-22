@@ -28,6 +28,19 @@
       "id": "mongodb-validation",
       "title": "Schema validation",
       "text": "Enforce a JSON Schema validator on collections."
+    },
+    {
+      "id": "mongodb-embed-vs-reference",
+      "title": "Embed or reference deliberately",
+      "text": "Embed data that is read and updated together; reference data with high cardinality or unbounded growth.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "MongoDB manual",
+      "url": "https://www.mongodb.com/docs/manual/"
     }
   ]
 }

@@ -87,6 +87,8 @@
     "mcp-errors",
     "mcp-output-size",
     "mcp-confirm",
-    "mcp-no-trust"
+    "mcp-no-trust",
+    "mcp-rate-limit",
+    "mcp-consent"
   ]
 }
