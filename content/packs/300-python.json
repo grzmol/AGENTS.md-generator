@@ -9,6 +9,10 @@
     {
       "name": "PEP 8",
       "url": "https://peps.python.org/pep-0008/"
+    },
+    {
+      "name": "uv documentation",
+      "url": "https://docs.astral.sh/uv/"
     }
   ],
   "rules": [
@@ -39,7 +43,7 @@
     {
       "id": "python-uv",
       "title": "uv for environments",
-      "text": "Manage dependencies and virtual environments with uv and commit the lockfile."
+      "text": "Manage dependencies and virtual environments with uv, commit uv.lock and install with uv sync --locked in CI."
     },
     {
       "id": "python-pytest",
@@ -86,5 +90,6 @@
       "text": "Do not mix blocking calls into async code; use asyncio.to_thread for unavoidable blocking work.",
       "recommended": true
     }
-  ]
+  ],
+  "reviewed": "2026-10"
 }

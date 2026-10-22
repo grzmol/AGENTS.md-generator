@@ -36,5 +36,12 @@
       "text": "Treat Svelte accessibility warnings as errors and fix them.",
       "recommended": true
     }
-  ]
+  ],
+  "sources": [
+    {
+      "name": "Svelte documentation",
+      "url": "https://svelte.dev/docs"
+    }
+  ],
+  "reviewed": "2026-10"
 }

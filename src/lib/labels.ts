@@ -1,5 +1,5 @@
 export const FAMILY_LABELS: Record<string, string> = {
-  javascript: 'JavaScript and web frameworks',
+  javascript: 'JavaScript and web',
   python: 'Python',
   systems: 'Systems and shell',
   jvm: 'JVM',

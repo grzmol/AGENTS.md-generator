@@ -38,7 +38,7 @@
     {
       "id": "django-custom-user",
       "title": "Custom user model",
-      "text": "Start projects with a custom user model.",
+      "text": "Start projects with a custom user model based on AbstractUser and set AUTH_USER_MODEL before the first migration.",
       "recommended": true
     },
     {
@@ -64,5 +64,12 @@
       "text": "Use pytest-django or TestCase with factories and test the API layer.",
       "recommended": true
     }
-  ]
+  ],
+  "sources": [
+    {
+      "name": "Django documentation",
+      "url": "https://docs.djangoproject.com"
+    }
+  ],
+  "reviewed": "2026-10"
 }

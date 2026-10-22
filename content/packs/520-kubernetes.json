@@ -15,7 +15,7 @@
     {
       "id": "kubernetes-probes",
       "title": "Probes",
-      "text": "Define readiness and liveness probes.",
+      "text": "Define readiness and liveness probes, and a startup probe for slow-starting containers.",
       "recommended": true
     },
     {
@@ -38,7 +38,7 @@
     {
       "id": "kubernetes-security-context",
       "title": "Restrictive security context",
-      "text": "Run as non-root with a read-only root filesystem and dropped capabilities.",
+      "text": "Run as non-root with allowPrivilegeEscalation false, a read-only root filesystem, all capabilities dropped and the RuntimeDefault seccomp profile.",
       "recommended": true
     },
     {
@@ -53,5 +53,12 @@
       "text": "Change cluster state through manifests in git, not kubectl edit.",
       "recommended": true
     }
-  ]
+  ],
+  "sources": [
+    {
+      "name": "Kubernetes application security checklist",
+      "url": "https://kubernetes.io/docs/concepts/security/application-security-checklist/"
+    }
+  ],
+  "reviewed": "2026-10"
 }

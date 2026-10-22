@@ -70,5 +70,12 @@
       "text": "Log through SLF4J with parameterized messages.",
       "recommended": true
     }
-  ]
+  ],
+  "sources": [
+    {
+      "name": "Spring Boot reference",
+      "url": "https://docs.spring.io/spring-boot/"
+    }
+  ],
+  "reviewed": "2026-10"
 }

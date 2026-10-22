@@ -36,5 +36,12 @@
       "text": "When using raw SQL, always use parameterized queries.",
       "recommended": true
     }
-  ]
+  ],
+  "sources": [
+    {
+      "name": "Prisma documentation",
+      "url": "https://www.prisma.io/docs"
+    }
+  ],
+  "reviewed": "2026-10"
 }

@@ -8,6 +8,7 @@
 
   const pack = $derived(packs.find((candidate) => candidate.id === id) ?? packs[0])
   const count = $derived(wb.countIn(pack))
+  const reviewedLabel = $derived(pack.reviewed ? new Date(`${pack.reviewed}-01T00:00:00Z`).toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' }) : '')
   const kindLabel = $derived(pack.kind === 'technology' ? familyLabel(pack.family ?? '') : pack.kind === 'skills' ? 'Skills' : 'Conventions')
 </script>
 
@@ -16,6 +17,7 @@
   <p class="eyebrow">{kindLabel}</p>
   <h1 class="pane-title">{pack.title}</h1>
   {#if pack.description}<p class="lede">{pack.description}</p>{/if}
+  {#if pack.reviewed}<p class="reviewed">Checked against official documentation, {reviewedLabel}.</p>{/if}
 
   <div class="pane-bar">
     <p class="pane-stat"><strong>{count}</strong> of {pack.rules.length} in <span class="mono">{wb.active.path || 'root'}</span> file</p>

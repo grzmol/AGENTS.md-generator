@@ -117,4 +117,4 @@ export function lineCount(text: string): number {
   return text.trimEnd().split('\n').length
 }
 
-export const LENGTH_WARNING_LINES = 300
+export const LENGTH_WARNING_LINES = 200

@@ -32,7 +32,7 @@
     {
       "id": "tailwind-no-dynamic",
       "title": "No dynamic class names",
-      "text": "Do not build class names by string concatenation; use complete class strings so the compiler sees them.",
+      "text": "Do not build class names by interpolation such as text-${color}-600; map values to complete class names so Tailwind can detect them.",
       "recommended": true
     },
     {
@@ -46,5 +46,12 @@
       "text": "Extract repeated utility groups into components, not into custom CSS.",
       "recommended": true
     }
-  ]
+  ],
+  "sources": [
+    {
+      "name": "Tailwind CSS documentation",
+      "url": "https://tailwindcss.com/docs"
+    }
+  ],
+  "reviewed": "2026-10"
 }

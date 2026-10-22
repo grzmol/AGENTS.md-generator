@@ -9,6 +9,10 @@
     {
       "name": "Anthropic documentation",
       "url": "https://docs.anthropic.com"
+    },
+    {
+      "name": "Claude API documentation",
+      "url": "https://platform.claude.com/docs"
     }
   ],
   "rules": [
@@ -21,24 +25,24 @@
     {
       "id": "claude-api-model-ids",
       "title": "Check current model ids",
-      "text": "Look up current model identifiers in the official documentation instead of guessing them, and keep them in configuration.",
+      "text": "Look up current model IDs in the official documentation instead of guessing them; IDs are pinned snapshots, so keep them in configuration.",
       "recommended": true
     },
     {
       "id": "claude-api-caching",
       "title": "Prompt caching",
-      "text": "Put stable content first and use prompt caching for large repeated prefixes."
+      "text": "Put stable content (tools, system prompt, reference documents) first, place the cache breakpoint on the last identical block, and verify hits in usage.cache_read_input_tokens."
     },
     {
       "id": "claude-api-tools",
       "title": "Tool use loops",
-      "text": "Validate tool inputs, return clear tool errors to the model and cap the number of loop iterations.",
+      "text": "Return a tool_result for every tool_use block in one user message, validate tool inputs, and cap the number of loop iterations.",
       "recommended": true
     },
     {
       "id": "claude-api-stop-reason",
       "title": "Handle stop reasons",
-      "text": "Check stop_reason and handle max_tokens truncation and tool_use turns explicitly.",
+      "text": "Check stop_reason and handle max_tokens, tool_use, pause_turn and refusal explicitly; refusals arrive as normal successful responses.",
       "recommended": true
     },
     {
@@ -46,5 +50,6 @@
       "title": "System prompt for role and rules",
       "text": "Put role, rules and output format in the system prompt and task data in user messages."
     }
-  ]
+  ],
+  "reviewed": "2026-10"
 }

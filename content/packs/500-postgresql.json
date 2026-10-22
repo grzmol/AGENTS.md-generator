@@ -68,5 +68,12 @@
       "title": "jsonb sparingly",
       "text": "Use jsonb for truly flexible attributes, not as a replacement for relational columns."
     }
-  ]
+  ],
+  "sources": [
+    {
+      "name": "PostgreSQL documentation",
+      "url": "https://www.postgresql.org/docs/current/"
+    }
+  ],
+  "reviewed": "2026-10"
 }

@@ -9,7 +9,7 @@
     {
       "id": "express-async-errors",
       "title": "Centralized error handler",
-      "text": "Route all errors through one error-handling middleware and forward async errors to it.",
+      "text": "Route all errors through one error-handling middleware; Express 5 forwards rejected async handlers to it, while Express 4 needs a wrapper.",
       "recommended": true
     },
     {
@@ -36,5 +36,12 @@
       "text": "Set body size limits and request timeouts.",
       "recommended": true
     }
-  ]
+  ],
+  "sources": [
+    {
+      "name": "Express documentation",
+      "url": "https://expressjs.com"
+    }
+  ],
+  "reviewed": "2026-10"
 }

@@ -137,7 +137,7 @@ input:focus-visible, textarea:focus-visible, select:focus-visible { outline-offs
 .rail-list { display: flex; flex-direction: column; }
 .rail-primary { margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
 .rail-heading { font: 600 0.7rem/1 var(--font-ui); letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-3); margin: 18px 0 6px; padding-left: 8px; }
-.rail-toggle { display: flex; width: 100%; justify-content: space-between; text-transform: inherit; letter-spacing: inherit; font: inherit; color: inherit; padding-right: 8px; }
+.rail-toggle { display: flex; width: 100%; justify-content: space-between; text-align: left; gap: 8px; text-transform: inherit; letter-spacing: inherit; font: inherit; color: inherit; padding-right: 8px; }
 .rail-toggle:hover { color: var(--ink); }
 .rail-chevron { font-variant-numeric: tabular-nums; letter-spacing: 0; }
 .rail-note { color: var(--ink-3); font-size: 0.82rem; padding: 0 8px 6px; }
@@ -155,6 +155,8 @@ input:focus-visible, textarea:focus-visible, select:focus-visible { outline-offs
 .eyebrow { font: 600 0.72rem/1 var(--font-ui); letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
 .pane-title { font: 500 2.4rem/1.08 var(--font-display); letter-spacing: -0.02em; font-variation-settings: 'opsz' 72; text-wrap: balance; }
 .pane-title.display { font-size: clamp(2.4rem, 4.4vw, 3.6rem); line-height: 1.02; font-weight: 450; }
+.reviewed { margin-top: 10px; font-size: 0.82rem; color: var(--ink-3); }
+.reviewed::before { content: ''; display: inline-block; width: 6px; height: 6px; margin-right: 8px; border-radius: 50%; background: var(--accent); vertical-align: 0.1em; }
 .lede { margin-top: 14px; font-size: 1.05rem; color: var(--ink-2); max-width: 58ch; text-wrap: pretty; }
 .back { display: none; margin-bottom: 16px; }
 .pane-bar { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; margin: 28px 0 4px; padding-bottom: 10px; border-bottom: 1px solid var(--ink); }

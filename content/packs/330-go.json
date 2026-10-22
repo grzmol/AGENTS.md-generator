@@ -9,6 +9,10 @@
     {
       "name": "Effective Go",
       "url": "https://go.dev/doc/effective_go"
+    },
+    {
+      "name": "Go context package",
+      "url": "https://pkg.go.dev/context"
     }
   ],
   "rules": [
@@ -27,7 +31,7 @@
     {
       "id": "go-context",
       "title": "Pass context",
-      "text": "Pass context.Context as the first parameter to functions that do I/O.",
+      "text": "Pass context.Context explicitly as the first parameter of functions that do I/O, and never store it in a struct.",
       "recommended": true
     },
     {
@@ -48,5 +52,6 @@
       "text": "Never start a goroutine without a clear way for it to stop.",
       "recommended": true
     }
-  ]
+  ],
+  "reviewed": "2026-10"
 }

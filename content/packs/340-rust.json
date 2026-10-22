@@ -9,13 +9,17 @@
     {
       "name": "Rust API Guidelines",
       "url": "https://rust-lang.github.io/api-guidelines/"
+    },
+    {
+      "name": "Clippy",
+      "url": "https://github.com/rust-lang/rust-clippy"
     }
   ],
   "rules": [
     {
       "id": "rust-clippy",
       "title": "rustfmt and clippy",
-      "text": "Run cargo fmt and cargo clippy with warnings denied.",
+      "text": "Run cargo fmt and cargo clippy and treat warnings as errors in CI.",
       "recommended": true
     },
     {
@@ -41,5 +45,6 @@
       "text": "Avoid unsafe; when required, keep it minimal and document its safety invariants.",
       "recommended": true
     }
-  ]
+  ],
+  "reviewed": "2026-10"
 }

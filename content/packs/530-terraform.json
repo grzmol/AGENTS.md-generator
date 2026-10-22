@@ -33,7 +33,7 @@
     {
       "id": "terraform-pin-providers",
       "title": "Pin providers",
-      "text": "Pin provider and module versions and commit the lock file.",
+      "text": "Pin provider versions in required_providers and commit the .terraform.lock.hcl lock file.",
       "recommended": true
     },
     {
@@ -54,5 +54,12 @@
       "text": "Mark sensitive variables and outputs as sensitive.",
       "recommended": true
     }
-  ]
+  ],
+  "sources": [
+    {
+      "name": "Terraform documentation",
+      "url": "https://developer.hashicorp.com/terraform"
+    }
+  ],
+  "reviewed": "2026-10"
 }

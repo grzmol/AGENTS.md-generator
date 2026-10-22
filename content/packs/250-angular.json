@@ -21,14 +21,21 @@
     {
       "id": "angular-onpush",
       "title": "OnPush change detection",
-      "text": "Use OnPush change detection for components.",
+      "text": "Use OnPush change detection; it is the default in recent Angular versions, so set it explicitly on older ones.",
       "recommended": true
     },
     {
       "id": "angular-rxjs",
       "title": "Clean up subscriptions",
-      "text": "Avoid manual subscribe where possible; use the async pipe or takeUntilDestroyed.",
+      "text": "Avoid manual subscribe where possible; use the async pipe or takeUntilDestroyed, passing a DestroyRef when called outside an injection context.",
       "recommended": true
     }
-  ]
+  ],
+  "sources": [
+    {
+      "name": "Angular documentation",
+      "url": "https://angular.dev"
+    }
+  ],
+  "reviewed": "2026-10"
 }

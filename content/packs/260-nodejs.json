@@ -58,5 +58,12 @@
       "title": "Use --env-file",
       "text": "Load local env with --env-file or the platform; do not commit .env."
     }
-  ]
+  ],
+  "sources": [
+    {
+      "name": "Node.js API documentation",
+      "url": "https://nodejs.org/docs/latest-v22.x/api/"
+    }
+  ],
+  "reviewed": "2026-10"
 }

@@ -29,5 +29,12 @@
       "title": "Immutable models",
       "text": "Make value models frozen when they should not change."
     }
-  ]
+  ],
+  "sources": [
+    {
+      "name": "Pydantic documentation",
+      "url": "https://docs.pydantic.dev"
+    }
+  ],
+  "reviewed": "2026-10"
 }

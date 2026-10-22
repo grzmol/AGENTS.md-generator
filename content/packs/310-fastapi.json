@@ -21,7 +21,7 @@
     {
       "id": "fastapi-async",
       "title": "Do not block the event loop",
-      "text": "Use async def only with non-blocking calls; run blocking work in a threadpool.",
+      "text": "Use async def only when awaiting non-blocking I/O; declare handlers that call blocking code with plain def so FastAPI runs them in a threadpool.",
       "recommended": true
     },
     {
@@ -39,7 +39,7 @@
     {
       "id": "fastapi-lifespan",
       "title": "Lifespan events",
-      "text": "Create and close shared resources in the lifespan handler.",
+      "text": "Create and close shared resources in a lifespan context manager; on_event startup and shutdown handlers are deprecated.",
       "recommended": true
     },
     {
@@ -53,5 +53,12 @@
       "title": "Background tasks sparingly",
       "text": "Use BackgroundTasks only for short work; use a queue for anything important."
     }
-  ]
+  ],
+  "sources": [
+    {
+      "name": "FastAPI documentation",
+      "url": "https://fastapi.tiangolo.com"
+    }
+  ],
+  "reviewed": "2026-10"
 }

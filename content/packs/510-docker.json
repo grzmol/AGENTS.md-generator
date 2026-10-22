@@ -64,5 +64,12 @@
       "text": "Use the exec form for ENTRYPOINT and CMD so signals reach the process.",
       "recommended": true
     }
-  ]
+  ],
+  "sources": [
+    {
+      "name": "Docker build best practices",
+      "url": "https://docs.docker.com/build/building/best-practices/"
+    }
+  ],
+  "reviewed": "2026-10"
 }

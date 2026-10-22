@@ -52,5 +52,12 @@
       "title": "Typed router usage",
       "text": "Use named routes and lazy-loaded route components."
     }
-  ]
+  ],
+  "sources": [
+    {
+      "name": "Vue documentation",
+      "url": "https://vuejs.org/guide"
+    }
+  ],
+  "reviewed": "2026-10"
 }

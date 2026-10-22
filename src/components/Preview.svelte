@@ -35,11 +35,11 @@
 
   const hint = $derived(
     wb.format === 'cursor'
-      ? 'Cursor reads rules from .cursor/rules.'
+      ? 'Cursor reads project rules from .cursor/rules.'
       : wb.format === 'copilot'
         ? 'GitHub Copilot reads repository instructions from .github.'
         : wb.format === 'claude'
-          ? 'Claude Code reads CLAUDE.md. To keep one source, import AGENTS.md from it.'
+          ? 'Claude Code reads AGENTS.md when no CLAUDE.md exists above the working directory. To keep one shared file next to a CLAUDE.md, import it with @AGENTS.md.'
           : 'Place it at this path in your repository.'
   )
 
@@ -98,7 +98,7 @@
         <div class="ln {row.kind}"><span class="num" aria-hidden="true">{row.number}</span><span class="txt">{row.text === '' ? ' ' : row.text}</span></div>
       {/each}
     </div>
-    {#if over}<p class="warn">Past {LENGTH_WARNING_LINES} lines agents start to skim. Trim to what you would tell a new teammate on day one.</p>{/if}
+    {#if over}<p class="warn">Anthropic suggests keeping instruction files under {LENGTH_WARNING_LINES} lines; longer files reduce adherence. Trim to what a new teammate needs on day one.</p>{/if}
   </div>
 
   <div class="preview-actions">

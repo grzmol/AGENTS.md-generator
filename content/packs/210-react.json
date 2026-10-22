@@ -44,7 +44,7 @@
     {
       "id": "react-memo",
       "title": "Memoize only with evidence",
-      "text": "Add useMemo, useCallback and memo only after measuring a problem.",
+      "text": "Do not add useMemo, useCallback or memo by default; rely on React Compiler where enabled and memoize by hand only for measured cost or stable effect dependencies.",
       "recommended": true
     },
     {
@@ -75,5 +75,12 @@
       "title": "One exported component per file",
       "text": "Export one main component per file and colocate its tests and styles."
     }
-  ]
+  ],
+  "sources": [
+    {
+      "name": "React documentation",
+      "url": "https://react.dev"
+    }
+  ],
+  "reviewed": "2026-10"
 }

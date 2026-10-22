@@ -4,6 +4,17 @@ Static site that builds an `AGENTS.md` (also `CLAUDE.md`, Cursor `.mdc` and Copi
 
 Live site: https://grzmol.github.io/AGENTS.md-generator/ (after enabling Pages with the GitHub Actions source in repository settings).
 
+## Monorepo mode
+
+Add a folder (for example `apps/web`) to produce a nested file for it. Each folder keeps its own selection, project details and commands. Output paths per format:
+
+- AGENTS.md: `AGENTS.md`, `apps/web/AGENTS.md`
+- CLAUDE.md: `CLAUDE.md`, `apps/web/CLAUDE.md`
+- Cursor: `.cursor/rules/agents.mdc`, `.cursor/rules/apps-web.mdc` with `globs: apps/web/**`
+- Copilot: `.github/copilot-instructions.md`, `.github/instructions/apps-web.instructions.md` with `applyTo`
+
+Several files download as one `.zip`. Nested scopes started from a preset keep only technology and skill rules, because conventions are inherited from the root file.
+
 ## Develop
 
 ```
@@ -25,6 +36,12 @@ Rules live in `content/packs/*.json` and presets in `content/presets/*.json`. Ad
 A rule has `id` (prefixed with its pack id), `title`, `text` (one imperative line), optional `recommended`, optional `group` (rules sharing a group in one pack are mutually exclusive and render as radios) and optional `url` for skills.
 
 Tests validate unique ids, radio groups, preset references, rule length and the absence of em dashes.
+
+## Quality review
+
+Packs with a `reviewed` field were checked against official documentation in October 2026 (TypeScript, React, Next.js, Svelte, Vue, Angular, Node.js, Express, Tailwind, Python and uv, FastAPI, Django, Pydantic, SQLAlchemy, Prisma, Docker, Kubernetes, Terraform, GitHub Actions, PostgreSQL, Spring Boot, Claude API, Git, password storage, Go context, Clippy). Rules were corrected where documentation had moved on, for example Next.js 15 caching defaults, FastAPI lifespan events and React Compiler memoization.
+
+Not yet checked against primary sources: Cursor and Copilot file formats (hosts unreachable during review), most other packs.
 
 ## Licensing
 

@@ -42,6 +42,15 @@ describe('content', () => {
     }
   })
 
+  it('lists a source for every reviewed pack', () => {
+    for (const pack of packs) {
+      if (pack.reviewed) {
+        expect(pack.reviewed).toMatch(/^\d{4}-\d{2}$/)
+        expect(pack.sources?.length ?? 0).toBeGreaterThan(0)
+      }
+    }
+  })
+
   it('has presets that reference existing rules and respect radio groups', () => {
     const ids = new Map(allRules.map(({ rule }) => [rule.id, rule]))
     for (const preset of presets) {

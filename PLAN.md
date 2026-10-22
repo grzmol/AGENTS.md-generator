@@ -233,7 +233,13 @@ Szacunek: MVP w 3-4 tygodnie pracy jednej osoby, z czego większość to content
 
 Zrobione: etapy 0, 1 i większość 2-4 w wersji MVP (szkielet, silnik, UI, presety, eksporty, CI i deploy Pages, testy treści). Katalog rozbudowany do 817 reguł na podstawie wzorców z publicznych plików AGENTS.md (Sentry, Airflow, Next.js), oficjalnych przewodników i wiedzy własnej, w całości parafrazowanych. Do zrobienia: automatyczny harvest pipeline, tryb wielu plików w monorepo, licznik rzeczywistych tokenów, Lighthouse CI.
 
-## 13. Następny krok
+## 13. Aktualizacja: UI, monorepo i przegląd jakości
+
+- UI przeprojektowane jako stanowisko pracy: lewy pasek paczek, środkowy widok reguł, prawy podgląd pliku. Typografia Newsreader, Schibsted Grotesk i IBM Plex Mono (hostowane lokalnie), ciepłe neutralne tła, jeden akcent, bez kart w kartach i gradientów.
+- Tryb monorepo: osobne pliki per folder, ścieżki zależne od formatu, eksport zip.
+- Przegląd jakości: 26 paczek sprawdzonych z dokumentacją, limit długości pliku zmieniony z 300 na 200 linii zgodnie z zaleceniem Anthropic dla CLAUDE.md. Claude Code czyta AGENTS.md, gdy nie ma CLAUDE.md powyżej katalogu roboczego; w przeciwnym razie należy zaimportować go przez `@AGENTS.md`.
+
+## 14. Następny krok
 
 Po zatwierdzeniu decyzji z sekcji 11: etap 0 (szkielet repo, CI, JSON Schema, pierwsze 20 reguł) i równolegle skrypt harvest na 5-10 repozytoriach referencyjnych, aby zmierzyć realny koszt redakcji contentu.
 

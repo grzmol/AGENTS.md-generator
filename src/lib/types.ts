@@ -22,6 +22,7 @@ export interface Pack {
   order: number
   family?: string
   description?: string
+  reviewed?: string
   sources?: Source[]
   rules: Rule[]
 }

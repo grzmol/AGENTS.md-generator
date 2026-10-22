@@ -9,7 +9,7 @@
     {
       "id": "github-actions-pin",
       "title": "Pin actions",
-      "text": "Pin third-party actions to a full commit SHA.",
+      "text": "Pin third-party actions to a full-length commit SHA and verify it belongs to the action repository, not a fork.",
       "recommended": true
     },
     {
@@ -51,5 +51,12 @@
       "title": "Matrix builds",
       "text": "Test supported versions with a build matrix."
     }
-  ]
+  ],
+  "sources": [
+    {
+      "name": "GitHub Actions secure use",
+      "url": "https://docs.github.com/en/actions/reference/security/secure-use"
+    }
+  ],
+  "reviewed": "2026-10"
 }
