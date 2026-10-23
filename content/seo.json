@@ -13,6 +13,7 @@
   },
   "features": [
     "{rules} short, specific rules in {packs} packs, from formatting and logging to Next.js, FastAPI, Go, Rust and Kubernetes.",
+    "Repository scan: paste a public GitHub URL or choose a local folder and the generator detects your stack, preselects matching rules and fills in your commands.",
     "{presets} presets for common stacks, so a first draft takes seconds.",
     "Monorepo mode: a separate nested file for every folder, downloaded as one zip.",
     "Four output formats: AGENTS.md, CLAUDE.md, Cursor rule files and GitHub Copilot instructions.",
@@ -22,6 +23,10 @@
     {
       "q": "What is an AGENTS.md generator?",
       "a": "An AGENTS.md generator builds the instruction file that AI coding agents read before they work on a repository. This one lets you toggle rules for formatting, testing, git, security and your framework, add project commands, and copy or download the result."
+    },
+    {
+      "q": "Can the AGENTS.md generator scan my repository?",
+      "a": "Yes. Paste a public GitHub URL or choose a local folder and it reads dependency manifests and file names to detect frameworks, test tools, infrastructure and monorepo packages, then preselects matching rules and fills in install, build and test commands."
     },
     {
       "q": "What is AGENTS.md?",
@@ -41,7 +46,7 @@
     },
     {
       "q": "Is the AGENTS.md generator free and private?",
-      "a": "Yes. It is open source under the MIT license and runs entirely in your browser. Nothing you type is uploaded, and the shareable link only stores your selection in the URL fragment."
+      "a": "Yes. It is open source under the MIT license and runs in your browser, and nothing is sent to a server of this project. A local folder scan never leaves your computer. Scanning a public GitHub repository makes requests from your browser to GitHub's public API."
     }
   ],
   "guides": [

@@ -66,6 +66,9 @@
   {#if !searching}
     <ul class="rail-list rail-primary">
       <li>
+        <button class="rail-item" class:current={wb.view.kind === 'scan'} onclick={() => go({ kind: 'scan' })}><span class="rail-title">Scan repository</span></button>
+      </li>
+      <li>
         <button class="rail-item" class:current={wb.view.kind === 'presets'} onclick={() => go({ kind: 'presets' })}><span class="rail-title">Presets</span></button>
       </li>
       <li>

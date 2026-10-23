@@ -13,6 +13,12 @@ The app is client rendered, so `scripts/prerender.ts` runs after `vite build` an
 
 Off-site steps that cannot be done from the code: set the repository description, website and topics (`agents-md`, `agents-md-generator`, `ai-coding-agents`, `claude-code`, `cursor-rules`), and consider a custom domain that contains the keyword.
 
+## Repository scan
+
+The Scan repository view detects a stack without any backend. It accepts a public GitHub URL (`owner/repo`, a full URL or a `/tree/branch/folder` link), which uses the GitHub tree API and `raw.githubusercontent.com` from the browser (60 anonymous API requests per hour), or a local folder (File System Access API, with a folder input fallback), which never uploads anything.
+
+`src/lib/scan.ts` reads manifests (`package.json`, `pyproject.toml`, `go.mod`, `Cargo.toml`, `pom.xml`, `composer.json`, `Gemfile` and others), file names and lockfiles, and returns detected packs with their evidence, project commands (package manager aware), and monorepo package folders that become nested files. `src/lib/scan-apply.ts` turns that into a rule selection: recommended rules of the detected packs plus a base set. Detection is heuristic, so the UI shows the evidence for every finding.
+
 ## Monorepo mode
 
 Add a folder (for example `apps/web`) to produce a nested file for it. Each folder keeps its own selection, project details and commands. Output paths per format:

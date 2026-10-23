@@ -19,6 +19,11 @@
   <h1 class="hero">{seo.hero.h1}</h1>
   <p class="hero-sub">{seo.hero.lead}</p>
 
+  <div class="hero-actions">
+    <button class="pill blue" onclick={() => (wb.view = { kind: 'scan' })}>Scan your repository</button>
+    <span class="hero-note">Detects your stack from a GitHub URL or a local folder.</span>
+  </div>
+
   <h2 class="section-title">Presets</h2>
   <ul class="preset-grid">
     {#each presets as preset (preset.id)}
