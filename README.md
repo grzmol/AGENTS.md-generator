@@ -2,7 +2,7 @@
 
 Static site that builds an `AGENTS.md` (also `CLAUDE.md`, Cursor `.mdc` and Copilot instructions) from checkboxes. Pick conventions for formatting, naming, logging, design systems, testing, git and security, add technology packs and skills, and copy or download the result. Everything runs in the browser.
 
-Live site: https://grzmol.github.io/AGENTS.md-generator/ (after enabling Pages with the GitHub Actions source in repository settings).
+Live site: https://agents-md.app
 
 ## Monorepo mode
 
