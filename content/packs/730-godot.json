@@ -1,0 +1,46 @@
+{
+  "id": "godot",
+  "title": "Godot",
+  "kind": "technology",
+  "order": 730,
+  "family": "gamedev",
+  "description": "Conventions for Godot.",
+  "rules": [
+    {
+      "id": "godot-signals",
+      "title": "Signals for decoupling",
+      "text": "Communicate upward with signals and downward with direct calls.",
+      "recommended": true
+    },
+    {
+      "id": "godot-typed-gdscript",
+      "title": "Typed GDScript",
+      "text": "Use static typing in GDScript.",
+      "recommended": true
+    },
+    {
+      "id": "godot-scenes",
+      "title": "Small scenes",
+      "text": "Build small reusable scenes and compose them instead of large monolithic scenes.",
+      "recommended": true
+    },
+    {
+      "id": "godot-process",
+      "title": "Use the right callback",
+      "text": "Use _physics_process for physics and _process for frame updates, and multiply movement by delta.",
+      "recommended": true
+    },
+    {
+      "id": "godot-resources",
+      "title": "Resources for data",
+      "text": "Store shared data in Resource files instead of hardcoding values."
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Godot documentation",
+      "url": "https://docs.godotengine.org/en/stable/"
+    }
+  ]
+}

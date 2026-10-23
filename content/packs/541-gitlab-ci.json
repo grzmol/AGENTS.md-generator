@@ -1,0 +1,40 @@
+{
+  "id": "gitlab-ci",
+  "title": "GitLab CI",
+  "kind": "technology",
+  "order": 541,
+  "family": "devops",
+  "description": "Conventions for GitLab CI.",
+  "rules": [
+    {
+      "id": "gitlab-ci-rules",
+      "title": "Use rules",
+      "text": "Control job execution with rules instead of only/except.",
+      "recommended": true
+    },
+    {
+      "id": "gitlab-ci-cache-artifacts",
+      "title": "Cache and artifacts",
+      "text": "Use cache for dependencies and artifacts for build outputs with expiry.",
+      "recommended": true
+    },
+    {
+      "id": "gitlab-ci-protected",
+      "title": "Protect variables",
+      "text": "Mark secrets as protected and masked variables.",
+      "recommended": true
+    },
+    {
+      "id": "gitlab-ci-templates",
+      "title": "Reuse with includes",
+      "text": "Share pipeline logic with include and extends."
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "GitLab CI/CD documentation",
+      "url": "https://docs.gitlab.com/ci/"
+    }
+  ]
+}

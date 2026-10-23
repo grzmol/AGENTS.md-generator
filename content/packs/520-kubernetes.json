@@ -1,0 +1,64 @@
+{
+  "id": "kubernetes",
+  "title": "Kubernetes",
+  "kind": "technology",
+  "order": 520,
+  "family": "devops",
+  "description": "Conventions for Kubernetes.",
+  "rules": [
+    {
+      "id": "kubernetes-limits",
+      "title": "Requests and limits",
+      "text": "Set resource requests and limits on every container.",
+      "recommended": true
+    },
+    {
+      "id": "kubernetes-probes",
+      "title": "Probes",
+      "text": "Define readiness and liveness probes, and a startup probe for slow-starting containers.",
+      "recommended": true
+    },
+    {
+      "id": "kubernetes-config",
+      "title": "ConfigMaps and Secrets",
+      "text": "Keep configuration in ConfigMaps and Secrets, not in images.",
+      "recommended": true
+    },
+    {
+      "id": "kubernetes-pin",
+      "title": "Pin image tags",
+      "text": "Pin images by version or digest, never :latest.",
+      "recommended": true
+    },
+    {
+      "id": "kubernetes-pdb",
+      "title": "Disruption budgets",
+      "text": "Define PodDisruptionBudgets and multiple replicas for important services."
+    },
+    {
+      "id": "kubernetes-security-context",
+      "title": "Restrictive security context",
+      "text": "Run as non-root with allowPrivilegeEscalation false, a read-only root filesystem, all capabilities dropped and the RuntimeDefault seccomp profile.",
+      "recommended": true
+    },
+    {
+      "id": "kubernetes-namespaces",
+      "title": "Namespaces and RBAC",
+      "text": "Isolate workloads with namespaces and minimal RBAC.",
+      "recommended": true
+    },
+    {
+      "id": "kubernetes-declarative",
+      "title": "Declarative changes",
+      "text": "Change cluster state through manifests in git, not kubectl edit.",
+      "recommended": true
+    }
+  ],
+  "sources": [
+    {
+      "name": "Kubernetes application security checklist",
+      "url": "https://kubernetes.io/docs/concepts/security/application-security-checklist/"
+    }
+  ],
+  "reviewed": "2026-10"
+}

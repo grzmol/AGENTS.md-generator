@@ -1,0 +1,51 @@
+{
+  "id": "css",
+  "title": "CSS",
+  "kind": "technology",
+  "order": 298,
+  "family": "javascript",
+  "description": "Conventions for CSS.",
+  "rules": [
+    {
+      "id": "css-custom-props",
+      "title": "Custom properties",
+      "text": "Define colors, spacing and fonts as CSS custom properties.",
+      "recommended": true
+    },
+    {
+      "id": "css-logical",
+      "title": "Logical properties",
+      "text": "Use logical properties (margin-inline, padding-block) over left and right."
+    },
+    {
+      "id": "css-layout",
+      "title": "Grid and flexbox",
+      "text": "Use grid and flexbox for layout; avoid floats and fixed pixel heights.",
+      "recommended": true
+    },
+    {
+      "id": "css-specificity",
+      "title": "Low specificity",
+      "text": "Keep selectors flat and low in specificity; avoid !important and id selectors.",
+      "recommended": true
+    },
+    {
+      "id": "css-rem",
+      "title": "Relative units",
+      "text": "Use rem for type and spacing so user font settings are respected.",
+      "recommended": true
+    },
+    {
+      "id": "css-container",
+      "title": "Container queries",
+      "text": "Prefer container queries for component-level responsiveness."
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "MDN CSS reference",
+      "url": "https://developer.mozilla.org/docs/Web/CSS"
+    }
+  ]
+}

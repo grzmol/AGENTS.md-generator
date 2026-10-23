@@ -1,0 +1,81 @@
+{
+  "id": "java",
+  "title": "Java and Spring Boot",
+  "kind": "technology",
+  "order": 350,
+  "family": "jvm",
+  "description": "Conventions for Java and Spring Boot.",
+  "rules": [
+    {
+      "id": "java-constructor-di",
+      "title": "Constructor injection",
+      "text": "Use constructor injection; avoid field injection.",
+      "recommended": true
+    },
+    {
+      "id": "java-records",
+      "title": "Records and immutability",
+      "text": "Use records and immutable types for DTOs.",
+      "recommended": true
+    },
+    {
+      "id": "java-layers",
+      "title": "Controller, service, repository",
+      "text": "Keep controllers thin, logic in services and persistence in repositories.",
+      "recommended": true
+    },
+    {
+      "id": "java-validation",
+      "title": "Bean validation",
+      "text": "Validate request bodies with Jakarta Bean Validation annotations.",
+      "recommended": true
+    },
+    {
+      "id": "java-optional",
+      "title": "Optional for return values",
+      "text": "Use Optional only for return values, never for fields or parameters."
+    },
+    {
+      "id": "java-streams",
+      "title": "Streams with care",
+      "text": "Use streams for transformations but fall back to loops when they hurt readability."
+    },
+    {
+      "id": "java-transactions",
+      "title": "Transactional boundaries",
+      "text": "Place @Transactional on service methods and keep transactions short.",
+      "recommended": true
+    },
+    {
+      "id": "java-config-props",
+      "title": "Typed configuration",
+      "text": "Bind configuration with @ConfigurationProperties instead of scattered @Value.",
+      "recommended": true
+    },
+    {
+      "id": "java-dto-entities",
+      "title": "Do not expose entities",
+      "text": "Do not return JPA entities from APIs; map to DTOs.",
+      "recommended": true
+    },
+    {
+      "id": "java-lazy",
+      "title": "Avoid lazy loading surprises",
+      "text": "Fetch associations explicitly and avoid open-session-in-view.",
+      "recommended": true
+    },
+    {
+      "id": "java-logging",
+      "title": "SLF4J logging",
+      "text": "Log through SLF4J with parameterized messages.",
+      "recommended": true
+    }
+  ],
+  "sources": [
+    {
+      "name": "Spring Boot reference",
+      "url": "https://docs.spring.io/spring-boot/"
+    }
+  ],
+  "reviewed": "2026-10"
+}

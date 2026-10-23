@@ -1,0 +1,40 @@
+{
+  "id": "react-router",
+  "title": "React Router and Remix",
+  "kind": "technology",
+  "order": 285,
+  "family": "javascript",
+  "description": "Conventions for React Router and Remix.",
+  "rules": [
+    {
+      "id": "react-router-loaders",
+      "title": "Loaders and actions",
+      "text": "Fetch data in route loaders and mutate through actions instead of effects.",
+      "recommended": true
+    },
+    {
+      "id": "react-router-error-boundaries",
+      "title": "Route error boundaries",
+      "text": "Define an error boundary for each route segment that can fail.",
+      "recommended": true
+    },
+    {
+      "id": "react-router-forms",
+      "title": "Progressive forms",
+      "text": "Use Form components so mutations work without client JavaScript."
+    },
+    {
+      "id": "react-router-typed-routes",
+      "title": "Typed route params",
+      "text": "Validate and type route params before use.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "React Router documentation",
+      "url": "https://reactrouter.com"
+    }
+  ]
+}

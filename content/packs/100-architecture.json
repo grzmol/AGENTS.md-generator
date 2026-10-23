@@ -1,0 +1,94 @@
+{
+  "id": "architecture",
+  "title": "Architecture and code quality",
+  "kind": "general",
+  "order": 100,
+  "description": "Structure and maintainability.",
+  "rules": [
+    {
+      "id": "architecture-boundaries",
+      "title": "Respect module boundaries",
+      "text": "Respect module boundaries; depend on public interfaces, not internals of other modules.",
+      "recommended": true
+    },
+    {
+      "id": "architecture-small-functions",
+      "title": "Small focused functions",
+      "text": "Keep functions small and single-purpose; extract when a function mixes levels of abstraction.",
+      "recommended": true
+    },
+    {
+      "id": "architecture-no-premature",
+      "title": "Avoid premature abstraction",
+      "text": "Prefer a little duplication over a premature abstraction; abstract after the third repetition.",
+      "recommended": true
+    },
+    {
+      "id": "architecture-pure",
+      "title": "Separate pure logic from I/O",
+      "text": "Keep business logic pure and push I/O to the edges so it is easy to test."
+    },
+    {
+      "id": "architecture-immutable",
+      "title": "Prefer immutability",
+      "text": "Prefer immutable data and avoid mutating function arguments."
+    },
+    {
+      "id": "architecture-dead-code",
+      "title": "Remove dead code",
+      "text": "Delete unused code and commented-out code instead of leaving it behind.",
+      "recommended": true
+    },
+    {
+      "id": "architecture-adr",
+      "title": "Record decisions",
+      "text": "Record significant architectural decisions in docs/adr before implementing them."
+    },
+    {
+      "id": "architecture-dependency-direction",
+      "title": "Inward dependencies",
+      "text": "Keep dependencies pointing inward: domain code must not import framework or infrastructure code.",
+      "recommended": true
+    },
+    {
+      "id": "architecture-composition",
+      "title": "Composition over inheritance",
+      "text": "Prefer composition and small interfaces over deep inheritance trees.",
+      "recommended": true
+    },
+    {
+      "id": "architecture-single-source",
+      "title": "Single source of truth",
+      "text": "Keep one source of truth for each piece of data and derive the rest.",
+      "recommended": true
+    },
+    {
+      "id": "architecture-yagni",
+      "title": "Build only what is needed",
+      "text": "Implement only what the task requires; no speculative options or extension points.",
+      "recommended": true
+    },
+    {
+      "id": "architecture-feature-folders",
+      "title": "Group by feature",
+      "text": "Group code by feature or domain rather than by technical type when the project already does so."
+    },
+    {
+      "id": "architecture-public-surface",
+      "title": "Small public surface",
+      "text": "Export the minimum from each module and keep helpers private.",
+      "recommended": true
+    },
+    {
+      "id": "architecture-idempotent-jobs",
+      "title": "Idempotent background jobs",
+      "text": "Write background jobs so they can be retried or run twice safely.",
+      "recommended": true
+    },
+    {
+      "id": "architecture-boring",
+      "title": "Prefer boring solutions",
+      "text": "Prefer proven simple solutions over clever or novel ones."
+    }
+  ]
+}

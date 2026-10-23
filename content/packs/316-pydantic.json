@@ -1,0 +1,40 @@
+{
+  "id": "pydantic",
+  "title": "Pydantic",
+  "kind": "technology",
+  "order": 316,
+  "family": "python",
+  "description": "Conventions for Pydantic.",
+  "rules": [
+    {
+      "id": "pydantic-v2",
+      "title": "Pydantic v2 APIs",
+      "text": "Use model_validate, model_dump and ConfigDict, not the deprecated v1 APIs.",
+      "recommended": true
+    },
+    {
+      "id": "pydantic-strict",
+      "title": "Strict types",
+      "text": "Use strict field types and constraints (Field, constr, StrictInt) for external data.",
+      "recommended": true
+    },
+    {
+      "id": "pydantic-settings",
+      "title": "pydantic-settings",
+      "text": "Load configuration with pydantic-settings and validate at startup.",
+      "recommended": true
+    },
+    {
+      "id": "pydantic-frozen",
+      "title": "Immutable models",
+      "text": "Make value models frozen when they should not change."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Pydantic documentation",
+      "url": "https://docs.pydantic.dev"
+    }
+  ],
+  "reviewed": "2026-10"
+}

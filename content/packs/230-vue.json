@@ -1,0 +1,63 @@
+{
+  "id": "vue",
+  "title": "Vue",
+  "kind": "technology",
+  "order": 230,
+  "family": "javascript",
+  "description": "Conventions for Vue.",
+  "rules": [
+    {
+      "id": "vue-composition",
+      "title": "Composition API",
+      "text": "Use the Composition API with <script setup> and TypeScript.",
+      "recommended": true
+    },
+    {
+      "id": "vue-props",
+      "title": "Typed props and emits",
+      "text": "Declare typed props and emits with defineProps and defineEmits.",
+      "recommended": true
+    },
+    {
+      "id": "vue-pinia",
+      "title": "Pinia for shared state",
+      "text": "Use Pinia for shared state; keep local state in components.",
+      "recommended": true
+    },
+    {
+      "id": "vue-v-for-key",
+      "title": "Keys on v-for",
+      "text": "Always provide a stable :key with v-for and never combine v-if with v-for.",
+      "recommended": true
+    },
+    {
+      "id": "vue-composables",
+      "title": "Extract composables",
+      "text": "Extract reusable stateful logic into composables named useX.",
+      "recommended": true
+    },
+    {
+      "id": "vue-reactivity",
+      "title": "Mind reactivity",
+      "text": "Use ref and computed correctly and never destructure reactive objects without toRefs.",
+      "recommended": true
+    },
+    {
+      "id": "vue-v-model",
+      "title": "Typed v-model",
+      "text": "Use defineModel for two-way bindings."
+    },
+    {
+      "id": "vue-router",
+      "title": "Typed router usage",
+      "text": "Use named routes and lazy-loaded route components."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Vue documentation",
+      "url": "https://vuejs.org/guide"
+    }
+  ],
+  "reviewed": "2026-10"
+}

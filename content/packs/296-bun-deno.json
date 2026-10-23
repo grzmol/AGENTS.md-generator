@@ -1,0 +1,40 @@
+{
+  "id": "bun-deno",
+  "title": "Bun and Deno",
+  "kind": "technology",
+  "order": 296,
+  "family": "javascript",
+  "description": "Conventions for Bun and Deno.",
+  "rules": [
+    {
+      "id": "bun-deno-runtime-apis",
+      "title": "Prefer runtime built-ins",
+      "text": "Prefer the runtime built-in APIs (Bun.file, Deno.readTextFile, fetch) over extra packages.",
+      "recommended": true
+    },
+    {
+      "id": "bun-deno-permissions",
+      "title": "Minimal Deno permissions",
+      "text": "Run Deno with the narrowest permission flags required.",
+      "recommended": true
+    },
+    {
+      "id": "bun-deno-lock",
+      "title": "Respect the lockfile",
+      "text": "Use the runtime native lockfile and do not mix package managers.",
+      "recommended": true
+    },
+    {
+      "id": "bun-deno-test-runner",
+      "title": "Built-in test runner",
+      "text": "Use the built-in test runner unless the project already uses another."
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Deno permissions",
+      "url": "https://docs.deno.com/runtime/fundamentals/security/"
+    }
+  ]
+}

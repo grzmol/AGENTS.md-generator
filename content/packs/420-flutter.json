@@ -1,0 +1,64 @@
+{
+  "id": "flutter",
+  "title": "Flutter and Dart",
+  "kind": "technology",
+  "order": 420,
+  "family": "mobile",
+  "description": "Conventions for Flutter and Dart.",
+  "rules": [
+    {
+      "id": "flutter-const",
+      "title": "const constructors",
+      "text": "Use const constructors and widgets wherever possible.",
+      "recommended": true
+    },
+    {
+      "id": "flutter-small-widgets",
+      "title": "Small widgets",
+      "text": "Split large build methods into small widgets, not helper methods.",
+      "recommended": true
+    },
+    {
+      "id": "flutter-analysis",
+      "title": "dart analyze and format",
+      "text": "Keep dart analyze clean and format with dart format.",
+      "recommended": true
+    },
+    {
+      "id": "flutter-state",
+      "title": "One state solution",
+      "text": "Use a single state management approach consistently across the app.",
+      "recommended": true
+    },
+    {
+      "id": "flutter-keys",
+      "title": "Keys for lists",
+      "text": "Provide keys for stateful items in dynamic lists.",
+      "recommended": true
+    },
+    {
+      "id": "flutter-async-gaps",
+      "title": "Check mounted after await",
+      "text": "Check context.mounted after awaits before using BuildContext.",
+      "recommended": true
+    },
+    {
+      "id": "flutter-theme",
+      "title": "Theme over hardcoding",
+      "text": "Take colors and text styles from Theme instead of hardcoding them.",
+      "recommended": true
+    },
+    {
+      "id": "flutter-golden",
+      "title": "Widget and golden tests",
+      "text": "Cover widgets with widget tests and golden tests for visual states."
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Flutter documentation",
+      "url": "https://docs.flutter.dev"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "id": "fastapi",
+  "title": "FastAPI",
+  "kind": "technology",
+  "order": 310,
+  "family": "python",
+  "description": "Conventions for FastAPI.",
+  "rules": [
+    {
+      "id": "fastapi-pydantic",
+      "title": "Pydantic models",
+      "text": "Define request and response bodies as Pydantic models and set response_model.",
+      "recommended": true
+    },
+    {
+      "id": "fastapi-depends",
+      "title": "Dependency injection",
+      "text": "Use Depends for database sessions, auth and settings.",
+      "recommended": true
+    },
+    {
+      "id": "fastapi-async",
+      "title": "Do not block the event loop",
+      "text": "Use async def only when awaiting non-blocking I/O; declare handlers that call blocking code with plain def so FastAPI runs them in a threadpool.",
+      "recommended": true
+    },
+    {
+      "id": "fastapi-routers",
+      "title": "APIRouter modules",
+      "text": "Split endpoints into APIRouter modules by domain.",
+      "recommended": true
+    },
+    {
+      "id": "fastapi-errors",
+      "title": "HTTPException with codes",
+      "text": "Raise HTTPException with accurate status codes and consistent error bodies.",
+      "recommended": true
+    },
+    {
+      "id": "fastapi-lifespan",
+      "title": "Lifespan events",
+      "text": "Create and close shared resources in a lifespan context manager; on_event startup and shutdown handlers are deprecated.",
+      "recommended": true
+    },
+    {
+      "id": "fastapi-status-codes",
+      "title": "Declare status codes",
+      "text": "Set status_code on routes and document error responses.",
+      "recommended": true
+    },
+    {
+      "id": "fastapi-background",
+      "title": "Background tasks sparingly",
+      "text": "Use BackgroundTasks only for short work; use a queue for anything important."
+    }
+  ],
+  "sources": [
+    {
+      "name": "FastAPI documentation",
+      "url": "https://fastapi.tiangolo.com"
+    }
+  ],
+  "reviewed": "2026-10"
+}

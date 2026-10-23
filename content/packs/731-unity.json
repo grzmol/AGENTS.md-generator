@@ -1,0 +1,52 @@
+{
+  "id": "unity",
+  "title": "Unity",
+  "kind": "technology",
+  "order": 731,
+  "family": "gamedev",
+  "description": "Conventions for Unity.",
+  "rules": [
+    {
+      "id": "unity-serialize",
+      "title": "SerializeField over public",
+      "text": "Use [SerializeField] private fields instead of public fields for inspector values.",
+      "recommended": true
+    },
+    {
+      "id": "unity-cache",
+      "title": "Cache references",
+      "text": "Cache component references in Awake and avoid GetComponent and Find in Update.",
+      "recommended": true
+    },
+    {
+      "id": "unity-pooling",
+      "title": "Object pooling",
+      "text": "Pool frequently spawned objects instead of instantiating and destroying them.",
+      "recommended": true
+    },
+    {
+      "id": "unity-scriptable",
+      "title": "ScriptableObjects for data",
+      "text": "Keep configuration and shared data in ScriptableObjects."
+    },
+    {
+      "id": "unity-alloc",
+      "title": "Avoid per-frame allocations",
+      "text": "Avoid allocations in Update such as LINQ, string concatenation and new collections.",
+      "recommended": true
+    },
+    {
+      "id": "unity-meta",
+      "title": "Commit .meta files",
+      "text": "Commit .meta files and never edit scene or prefab YAML by hand without need.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Unity manual",
+      "url": "https://docs.unity3d.com/Manual/programming-best-practices.html"
+    }
+  ]
+}

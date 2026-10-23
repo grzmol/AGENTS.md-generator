@@ -1,0 +1,47 @@
+{
+  "id": "airflow",
+  "title": "Airflow and orchestration",
+  "kind": "technology",
+  "order": 507,
+  "family": "data",
+  "description": "Conventions for Airflow and orchestration.",
+  "rules": [
+    {
+      "id": "airflow-idempotent",
+      "title": "Idempotent tasks",
+      "text": "Make tasks idempotent and keyed by logical date so reruns are safe.",
+      "recommended": true
+    },
+    {
+      "id": "airflow-no-top-level",
+      "title": "No heavy top-level code",
+      "text": "Keep DAG files light: no network calls or heavy imports at parse time.",
+      "recommended": true
+    },
+    {
+      "id": "airflow-small-tasks",
+      "title": "Small tasks",
+      "text": "Keep tasks small and atomic; pass references, not data, through XCom.",
+      "recommended": true
+    },
+    {
+      "id": "airflow-retries",
+      "title": "Retries and timeouts",
+      "text": "Configure retries, timeouts and SLAs on tasks.",
+      "recommended": true
+    },
+    {
+      "id": "airflow-secrets",
+      "title": "Connections and secrets backend",
+      "text": "Store credentials in connections or a secrets backend, never in DAG code.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Airflow best practices",
+      "url": "https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html"
+    }
+  ]
+}

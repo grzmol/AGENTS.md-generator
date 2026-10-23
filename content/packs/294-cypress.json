@@ -1,0 +1,40 @@
+{
+  "id": "cypress",
+  "title": "Cypress",
+  "kind": "technology",
+  "order": 294,
+  "family": "javascript",
+  "description": "Conventions for Cypress.",
+  "rules": [
+    {
+      "id": "cypress-selectors",
+      "title": "Data attributes for selectors",
+      "text": "Select elements with dedicated data-cy or data-testid attributes, not CSS classes, ids or text that may change.",
+      "recommended": true
+    },
+    {
+      "id": "cypress-network",
+      "title": "Control the network",
+      "text": "Stub or wait on network calls with cy.intercept aliases instead of fixed waits.",
+      "recommended": true
+    },
+    {
+      "id": "cypress-independence",
+      "title": "Independent specs",
+      "text": "Make each spec set up its own state through API calls and not depend on other specs.",
+      "recommended": true
+    },
+    {
+      "id": "cypress-login",
+      "title": "Programmatic login",
+      "text": "Log in through the API with cy.session instead of through the UI in every test."
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Cypress best practices",
+      "url": "https://docs.cypress.io/app/core-concepts/best-practices"
+    }
+  ]
+}

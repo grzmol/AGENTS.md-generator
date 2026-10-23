@@ -1,0 +1,60 @@
+{
+  "id": "claude-api",
+  "title": "Anthropic Claude API",
+  "kind": "technology",
+  "order": 701,
+  "family": "ai",
+  "description": "Conventions for Anthropic Claude API.",
+  "sources": [
+    {
+      "name": "Anthropic documentation",
+      "url": "https://docs.anthropic.com"
+    },
+    {
+      "name": "Claude API documentation",
+      "url": "https://platform.claude.com/docs"
+    }
+  ],
+  "rules": [
+    {
+      "id": "claude-api-sdk",
+      "title": "Use the official SDK",
+      "text": "Use the official Anthropic SDK and read the API key from the environment.",
+      "recommended": true
+    },
+    {
+      "id": "claude-api-model-ids",
+      "title": "Check current model ids",
+      "text": "Look up current model IDs in the official documentation instead of guessing them; IDs are pinned snapshots, so keep them in configuration.",
+      "recommended": true
+    },
+    {
+      "id": "claude-api-caching",
+      "title": "Prompt caching",
+      "text": "Put stable content (tools, system prompt, reference documents) first, place the cache breakpoint on the last identical block, and verify hits in usage.cache_read_input_tokens."
+    },
+    {
+      "id": "claude-api-tools",
+      "title": "Tool use loops",
+      "text": "Return a tool_result for every tool_use block in one user message, validate tool inputs, and cap the number of loop iterations.",
+      "recommended": true
+    },
+    {
+      "id": "claude-api-stop-reason",
+      "title": "Handle stop reasons",
+      "text": "Check stop_reason and handle max_tokens, tool_use, pause_turn and refusal explicitly; refusals arrive as normal successful responses.",
+      "recommended": true
+    },
+    {
+      "id": "claude-api-system-prompt",
+      "title": "System prompt for role and rules",
+      "text": "Put role, rules and output format in the system prompt and task data in user messages."
+    },
+    {
+      "id": "claude-api-strict-tools",
+      "title": "Strict tool schemas",
+      "text": "Set strict true on tool definitions when calls must match the input schema exactly, instead of repairing malformed arguments afterwards."
+    }
+  ],
+  "reviewed": "2026-10"
+}

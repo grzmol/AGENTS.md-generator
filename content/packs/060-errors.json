@@ -1,0 +1,72 @@
+{
+  "id": "errors",
+  "title": "Error handling",
+  "kind": "general",
+  "order": 60,
+  "description": "Failures and edge cases.",
+  "rules": [
+    {
+      "id": "errors-no-swallow",
+      "title": "Never swallow errors",
+      "text": "Never swallow exceptions silently; handle them, or rethrow with added context.",
+      "recommended": true
+    },
+    {
+      "id": "errors-typed",
+      "title": "Typed errors",
+      "text": "Use specific error types or codes instead of string matching on messages.",
+      "recommended": true
+    },
+    {
+      "id": "errors-validate",
+      "title": "Validate at boundaries",
+      "text": "Validate all external input (HTTP, files, env, user input) at the boundary and trust typed data inside.",
+      "recommended": true
+    },
+    {
+      "id": "errors-fail-fast",
+      "title": "Fail fast on config",
+      "text": "Fail fast at startup when required configuration is missing or invalid."
+    },
+    {
+      "id": "errors-user-messages",
+      "title": "Safe user-facing messages",
+      "text": "Return safe user-facing error messages; keep stack traces and internals out of responses.",
+      "recommended": true
+    },
+    {
+      "id": "errors-retry-transient",
+      "title": "Retry transient failures only",
+      "text": "Retry only transient failures and surface permanent failures immediately.",
+      "recommended": true
+    },
+    {
+      "id": "errors-finally",
+      "title": "Release resources",
+      "text": "Always release resources (files, connections, locks) in finally blocks or equivalent scopes.",
+      "recommended": true
+    },
+    {
+      "id": "errors-partial",
+      "title": "Avoid partial writes",
+      "text": "Make multi-step operations atomic or compensate on failure so state never stays half-updated.",
+      "recommended": true
+    },
+    {
+      "id": "errors-boundaries",
+      "title": "Convert errors at boundaries",
+      "text": "Translate low-level errors into domain errors at module boundaries."
+    },
+    {
+      "id": "errors-assert",
+      "title": "Assertions for invariants",
+      "text": "Use assertions only for programmer errors, never for validating input."
+    },
+    {
+      "id": "errors-null-handling",
+      "title": "Explicit absence",
+      "text": "Model absence explicitly (Option, nullable, Maybe) and avoid returning magic values like -1 or empty strings.",
+      "recommended": true
+    }
+  ]
+}

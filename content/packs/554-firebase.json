@@ -1,0 +1,46 @@
+{
+  "id": "firebase",
+  "title": "Firebase and Firestore",
+  "kind": "technology",
+  "order": 554,
+  "family": "cloud",
+  "description": "Conventions for Firebase and Firestore.",
+  "rules": [
+    {
+      "id": "firebase-rules-deny",
+      "title": "Deny by default",
+      "text": "Write security rules that deny by default and allow only the exact reads and writes needed.",
+      "recommended": true
+    },
+    {
+      "id": "firebase-emulator",
+      "title": "Test rules with the emulator",
+      "text": "Test security rules and functions with the Firebase emulator suite before deploying.",
+      "recommended": true
+    },
+    {
+      "id": "firebase-data-model",
+      "title": "Model for reads",
+      "text": "Model Firestore data around your queries and avoid unbounded collection-wide listeners.",
+      "recommended": true
+    },
+    {
+      "id": "firebase-app-check",
+      "title": "Enable App Check",
+      "text": "Enable App Check to reject traffic from clients that are not your app."
+    },
+    {
+      "id": "firebase-indexes",
+      "title": "Commit index definitions",
+      "text": "Commit firestore.indexes.json and deploy it with the code that needs it.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Firebase documentation",
+      "url": "https://firebase.google.com/docs"
+    }
+  ]
+}

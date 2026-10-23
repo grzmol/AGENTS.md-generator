@@ -1,0 +1,40 @@
+{
+  "id": "js-testing",
+  "title": "Vitest, Jest and Playwright",
+  "kind": "technology",
+  "order": 280,
+  "family": "javascript",
+  "description": "Conventions for Vitest, Jest and Playwright.",
+  "rules": [
+    {
+      "id": "js-testing-vitest",
+      "title": "Colocated unit tests",
+      "text": "Colocate unit tests as *.test.ts next to the code they cover.",
+      "recommended": true
+    },
+    {
+      "id": "js-testing-playwright",
+      "title": "Playwright for E2E",
+      "text": "Write end-to-end tests with Playwright, using role and text locators rather than CSS selectors.",
+      "recommended": true
+    },
+    {
+      "id": "js-testing-no-sleep",
+      "title": "No fixed waits",
+      "text": "Never use fixed sleeps in tests; wait on conditions or web-first assertions.",
+      "recommended": true
+    },
+    {
+      "id": "js-testing-msw",
+      "title": "Mock network at the edge",
+      "text": "Mock network calls at the network layer (for example MSW) instead of mocking fetch internals."
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Playwright best practices",
+      "url": "https://playwright.dev/docs/best-practices"
+    }
+  ]
+}

@@ -221,15 +221,25 @@ Szacunek: MVP w 3-4 tygodnie pracy jednej osoby, z czego większość to content
 | Praca nad contentem przerasta czas | Zacząć od 12 technologii, resztę oddać społeczności |
 | Ścieżka `/repo-name/` na Pages psuje zasoby | Ustawić `base` w Vite, test na preview |
 
-**Decyzje do potwierdzenia:**
-1. Stack: Vite+Preact (rekomendowane) czy Astro?
-2. Język UI: PL+EN czy tylko EN?
-3. Licencja katalogu: CC0 czy MIT?
-4. Pierwsza fala technologii: czy lista z 6.2 jest właściwa?
-5. Czy eksport `CLAUDE.md` i `.mdc` wchodzi do MVP, czy dopiero etap 4?
-6. Domena: domyślny `grzmol.github.io/AGENTS.md-generator` czy własna?
+**Decyzje (potwierdzone):**
+1. Stack: Svelte 5 + Vite + TypeScript.
+2. Język UI: tylko angielski.
+3. Licencja: kod MIT, treść katalogu (oryginalne sformułowania) CC0. Treści na licencjach copyleft (np. OWASP CC BY-SA) tylko linkowane, nie kopiowane.
+4. Pierwsza fala technologii: lista z sekcji 6.2 (zaimplementowane 117 paczek, 817 reguł, 40 presetów).
+5. Eksport `CLAUDE.md`, `.mdc` i Copilot wchodzi do MVP (zaimplementowane).
+6. Domena: domyślna `grzmol.github.io/AGENTS.md-generator`.
 
-## 12. Następny krok
+## 12. Status wdrożenia
+
+Zrobione: etapy 0, 1 i większość 2-4 w wersji MVP (szkielet, silnik, UI, presety, eksporty, CI i deploy Pages, testy treści). Katalog rozbudowany do 817 reguł na podstawie wzorców z publicznych plików AGENTS.md (Sentry, Airflow, Next.js), oficjalnych przewodników i wiedzy własnej, w całości parafrazowanych. Do zrobienia: automatyczny harvest pipeline, tryb wielu plików w monorepo, licznik rzeczywistych tokenów, Lighthouse CI.
+
+## 13. Aktualizacja: UI, monorepo i przegląd jakości
+
+- UI przeprojektowane jako stanowisko pracy w estetyce Apple: rozmyty pasek narzędzi, lewy pasek paczek jak w macOS, środkowe grupy reguł z przełącznikami iOS i segmentowymi kontrolkami, prawe okno podglądu pliku. Czcionki systemowe (SF na urządzeniach Apple, Inter Variable jako zapasowa) i Geist Mono dla kodu, szare tło, jeden niebieski akcent.
+- Tryb monorepo: osobne pliki per folder, ścieżki zależne od formatu, eksport zip.
+- Przegląd jakości: 93 paczek sprawdzonych z dokumentacją, limit długości pliku zmieniony z 300 na 200 linii zgodnie z zaleceniem Anthropic dla CLAUDE.md. Claude Code czyta AGENTS.md, gdy nie ma CLAUDE.md powyżej katalogu roboczego; w przeciwnym razie należy zaimportować go przez `@AGENTS.md`.
+
+## 14. Następny krok
 
 Po zatwierdzeniu decyzji z sekcji 11: etap 0 (szkielet repo, CI, JSON Schema, pierwsze 20 reguł) i równolegle skrypt harvest na 5-10 repozytoriach referencyjnych, aby zmierzyć realny koszt redakcji contentu.
 

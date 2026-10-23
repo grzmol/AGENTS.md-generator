@@ -1,0 +1,119 @@
+{
+  "id": "security",
+  "title": "Security",
+  "kind": "general",
+  "order": 90,
+  "description": "Baseline secure coding.",
+  "sources": [
+    {
+      "name": "OWASP Cheat Sheet Series",
+      "url": "https://cheatsheetseries.owasp.org",
+      "license": "CC BY-SA 4.0 (linked, not copied)"
+    },
+    {
+      "name": "OWASP Password Storage Cheat Sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html"
+    }
+  ],
+  "rules": [
+    {
+      "id": "security-secrets",
+      "title": "Secrets in env or vault",
+      "text": "Load secrets from environment variables or a secret manager; never hardcode them.",
+      "recommended": true
+    },
+    {
+      "id": "security-injection",
+      "title": "Prevent injection",
+      "text": "Use parameterized queries and safe APIs; never build SQL, shell commands or HTML by string concatenation with user input.",
+      "recommended": true
+    },
+    {
+      "id": "security-authz",
+      "title": "Check authorization server-side",
+      "text": "Enforce authentication and authorization on the server for every protected operation.",
+      "recommended": true
+    },
+    {
+      "id": "security-deps",
+      "title": "Vet dependencies",
+      "text": "Pin dependency versions, commit lockfiles and review new packages before adding them.",
+      "recommended": true
+    },
+    {
+      "id": "security-least-privilege",
+      "title": "Least privilege",
+      "text": "Grant the minimum permissions needed for tokens, service accounts and containers.",
+      "recommended": true
+    },
+    {
+      "id": "security-crypto",
+      "title": "Use vetted crypto",
+      "text": "Use well-reviewed cryptographic libraries; never invent your own algorithms or store plain passwords.",
+      "recommended": true
+    },
+    {
+      "id": "security-owasp",
+      "title": "Follow OWASP guidance",
+      "text": "Follow OWASP Top 10 and ASVS guidance when handling web input, sessions and authentication."
+    },
+    {
+      "id": "security-xss",
+      "title": "Output encoding",
+      "text": "Encode output for its context and avoid injecting raw HTML; sanitize rich text with a vetted library.",
+      "recommended": true
+    },
+    {
+      "id": "security-csrf",
+      "title": "CSRF protection",
+      "text": "Protect state-changing browser requests with CSRF tokens or SameSite cookies.",
+      "recommended": true
+    },
+    {
+      "id": "security-cors",
+      "title": "Strict CORS",
+      "text": "Configure CORS with explicit origins; never reflect arbitrary origins with credentials.",
+      "recommended": true
+    },
+    {
+      "id": "security-headers",
+      "title": "Security headers",
+      "text": "Set security headers such as Content-Security-Policy, X-Content-Type-Options and Strict-Transport-Security."
+    },
+    {
+      "id": "security-session",
+      "title": "Safe sessions",
+      "text": "Use HttpOnly, Secure, SameSite cookies and rotate session identifiers on login.",
+      "recommended": true
+    },
+    {
+      "id": "security-ssrf",
+      "title": "Guard outbound requests",
+      "text": "Validate and allow-list URLs before fetching user-supplied addresses to prevent SSRF.",
+      "recommended": true
+    },
+    {
+      "id": "security-uploads",
+      "title": "Safe file uploads",
+      "text": "Validate uploads: allow-list extensions, check the real file type instead of the Content-Type header, set a size limit and store files outside the web root."
+    },
+    {
+      "id": "security-password",
+      "title": "Password hashing",
+      "text": "Hash passwords with Argon2id, or scrypt or bcrypt where it is unavailable, with a unique salt; never use fast hashes such as SHA-256.",
+      "recommended": true
+    },
+    {
+      "id": "security-timing",
+      "title": "Constant-time comparison",
+      "text": "Compare secrets and tokens in constant time."
+    },
+    {
+      "id": "security-scan",
+      "title": "Secret scanning",
+      "text": "Run secret scanning in CI and rotate any credential that has been exposed.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10"
+}

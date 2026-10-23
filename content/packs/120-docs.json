@@ -1,0 +1,59 @@
+{
+  "id": "docs",
+  "title": "Documentation",
+  "kind": "general",
+  "order": 120,
+  "description": "Docs and comments.",
+  "rules": [
+    {
+      "id": "docs-update-docs",
+      "title": "Update docs with code",
+      "text": "Update README and docs in the same change that alters behavior.",
+      "recommended": true
+    },
+    {
+      "id": "docs-public-api",
+      "title": "Document public APIs",
+      "text": "Document public functions, types and endpoints, including inputs, outputs and errors.",
+      "recommended": true
+    },
+    {
+      "id": "docs-todo",
+      "title": "TODOs need context",
+      "text": "Write TODOs with an owner or issue reference; do not leave bare TODOs."
+    },
+    {
+      "id": "docs-examples",
+      "title": "Prefer examples",
+      "text": "Show a short working example in docs for every non-trivial feature."
+    },
+    {
+      "id": "docs-readme-quickstart",
+      "title": "README quickstart",
+      "text": "Keep the README quickstart working: install, run and test in a few commands.",
+      "recommended": true
+    },
+    {
+      "id": "docs-changelog-docs",
+      "title": "Document breaking changes",
+      "text": "Document breaking changes and migration steps wherever users will see them.",
+      "recommended": true
+    },
+    {
+      "id": "docs-why-not-what",
+      "title": "Explain why",
+      "text": "Document decisions and trade-offs, not what the code visibly does.",
+      "recommended": true
+    },
+    {
+      "id": "docs-diagrams",
+      "title": "Diagrams as code",
+      "text": "Keep architecture diagrams as code (Mermaid, PlantUML) next to the docs they illustrate."
+    },
+    {
+      "id": "docs-links",
+      "title": "Check links",
+      "text": "Use relative links for repository docs and keep them valid."
+    }
+  ]
+}

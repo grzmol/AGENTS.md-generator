@@ -1,0 +1,143 @@
+{
+  "id": "agent-behavior",
+  "title": "Agent behavior",
+  "kind": "general",
+  "order": 10,
+  "description": "How the agent should work with you.",
+  "sources": [
+    {
+      "name": "agents.md",
+      "url": "https://agents.md"
+    }
+  ],
+  "rules": [
+    {
+      "id": "agent-behavior-plan",
+      "title": "Plan before large changes",
+      "text": "For changes touching more than three files, outline the plan and wait for confirmation before editing.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-ask",
+      "title": "Ask when ambiguous",
+      "text": "Ask a clarifying question when requirements are ambiguous instead of guessing.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-small-diffs",
+      "title": "Small focused diffs",
+      "text": "Keep diffs small and focused on the request; do not refactor unrelated code.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-verify",
+      "title": "Verify before done",
+      "text": "Run the relevant tests, linter and type checker before reporting a task as done, and report failures honestly.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-no-delete-tests",
+      "title": "Never weaken tests",
+      "text": "Never delete, skip or loosen a failing test to make it pass; fix the cause.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-deps",
+      "title": "No new dependencies without approval",
+      "text": "Do not add new dependencies without explicit approval; prefer the standard library and existing packages.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-generated",
+      "title": "Do not edit generated files",
+      "text": "Do not edit generated or vendored files; change the source and regenerate.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-edit-existing",
+      "title": "Prefer editing existing files",
+      "text": "Prefer editing existing files over creating new ones, and follow the structure already in the repository."
+    },
+    {
+      "id": "agent-behavior-secrets",
+      "title": "Never touch secrets",
+      "text": "Never read, print or commit secrets, .env files or credentials.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-concise",
+      "title": "Concise explanations",
+      "text": "Keep explanations brief; state what changed and why, not a tour of the code."
+    },
+    {
+      "id": "agent-behavior-no-comments",
+      "title": "No code comments",
+      "text": "Do not add comments to code; make names and structure self-explanatory.",
+      "group": "agent-comments"
+    },
+    {
+      "id": "agent-behavior-why-comments",
+      "title": "Only explain why",
+      "text": "Add comments only to explain why something is done, never what the code does.",
+      "group": "agent-comments"
+    },
+    {
+      "id": "agent-behavior-investigate",
+      "title": "Investigate before changing",
+      "text": "Read the relevant code and tests before proposing a change; do not edit files you have not read.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-root-cause",
+      "title": "Fix root causes",
+      "text": "Fix the root cause rather than suppressing the symptom with a workaround or silenced warning.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-no-suppress",
+      "title": "No lint suppression",
+      "text": "Do not add lint or type suppressions to get a clean run; fix the underlying issue.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-incremental",
+      "title": "Work incrementally",
+      "text": "Make one logical change at a time and keep the code building between steps."
+    },
+    {
+      "id": "agent-behavior-honest",
+      "title": "Report honestly",
+      "text": "Report failing tests, skipped steps and unverified claims plainly; never claim success without evidence.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-no-guess-api",
+      "title": "Check APIs before using them",
+      "text": "Verify library APIs in the installed version or its docs before using them; do not invent functions.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-backward",
+      "title": "Preserve behavior",
+      "text": "Do not change public behavior, file formats or APIs unless the task asks for it.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-hardcode",
+      "title": "No special-casing tests",
+      "text": "Never hardcode values or special-case inputs to satisfy a test.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-language",
+      "title": "Match the language",
+      "text": "Write code, comments and commit messages in English."
+    },
+    {
+      "id": "agent-behavior-time-box",
+      "title": "Stop and ask when stuck",
+      "text": "If an approach fails twice, stop and ask instead of trying increasingly invasive workarounds.",
+      "recommended": true
+    }
+  ]
+}

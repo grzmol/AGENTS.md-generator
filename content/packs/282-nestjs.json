@@ -1,0 +1,46 @@
+{
+  "id": "nestjs",
+  "title": "NestJS",
+  "kind": "technology",
+  "order": 282,
+  "family": "javascript",
+  "description": "Conventions for NestJS.",
+  "rules": [
+    {
+      "id": "nestjs-modules",
+      "title": "Feature modules",
+      "text": "Organize code into feature modules with explicit providers and exports.",
+      "recommended": true
+    },
+    {
+      "id": "nestjs-dto",
+      "title": "DTOs with validation",
+      "text": "Define DTO classes with class-validator and enable the global ValidationPipe with whitelist.",
+      "recommended": true
+    },
+    {
+      "id": "nestjs-di",
+      "title": "Constructor injection",
+      "text": "Use constructor injection and avoid manually instantiating providers.",
+      "recommended": true
+    },
+    {
+      "id": "nestjs-guards",
+      "title": "Guards for authorization",
+      "text": "Enforce authentication and authorization with guards, not inside controllers.",
+      "recommended": true
+    },
+    {
+      "id": "nestjs-filters",
+      "title": "Exception filters",
+      "text": "Map domain errors to HTTP responses with exception filters."
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "NestJS documentation",
+      "url": "https://docs.nestjs.com"
+    }
+  ]
+}

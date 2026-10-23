@@ -1,0 +1,53 @@
+{
+  "id": "workflows",
+  "title": "Durable workflows (Temporal)",
+  "kind": "technology",
+  "order": 512,
+  "family": "data",
+  "description": "Conventions for Durable workflows (Temporal).",
+  "rules": [
+    {
+      "id": "workflows-deterministic",
+      "title": "Deterministic workflow code",
+      "text": "Keep workflow code deterministic: no random values, wall-clock time, network calls or unordered iteration inside workflows.",
+      "recommended": true
+    },
+    {
+      "id": "workflows-activities",
+      "title": "Side effects in activities",
+      "text": "Put all I/O and side effects in activities and keep workflows as orchestration only.",
+      "recommended": true
+    },
+    {
+      "id": "workflows-idempotent-activities",
+      "title": "Idempotent activities",
+      "text": "Make activities idempotent because they can be retried or run more than once.",
+      "recommended": true
+    },
+    {
+      "id": "workflows-timeouts",
+      "title": "Explicit timeouts and retries",
+      "text": "Set start-to-close timeouts and a retry policy on every activity.",
+      "recommended": true
+    },
+    {
+      "id": "workflows-small-payloads",
+      "title": "Small payloads",
+      "text": "Pass identifiers rather than large payloads through workflow inputs and history.",
+      "recommended": true
+    },
+    {
+      "id": "workflows-versioning",
+      "title": "Version workflow changes",
+      "text": "Change running workflows only through versioning or patching so replays of existing executions stay valid.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Temporal documentation",
+      "url": "https://docs.temporal.io"
+    }
+  ]
+}

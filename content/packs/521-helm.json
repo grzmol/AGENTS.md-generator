@@ -1,0 +1,40 @@
+{
+  "id": "helm",
+  "title": "Helm",
+  "kind": "technology",
+  "order": 521,
+  "family": "devops",
+  "description": "Conventions for Helm.",
+  "rules": [
+    {
+      "id": "helm-values",
+      "title": "Document values",
+      "text": "Document every value in values.yaml and keep sensible defaults.",
+      "recommended": true
+    },
+    {
+      "id": "helm-lint",
+      "title": "helm lint and template",
+      "text": "Run helm lint and helm template in CI.",
+      "recommended": true
+    },
+    {
+      "id": "helm-no-secrets",
+      "title": "No secrets in values",
+      "text": "Never commit secrets in values files; use an external secrets operator.",
+      "recommended": true
+    },
+    {
+      "id": "helm-labels",
+      "title": "Standard labels",
+      "text": "Apply the recommended app.kubernetes.io labels through helpers."
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Helm chart best practices",
+      "url": "https://helm.sh/docs/chart_best_practices/"
+    }
+  ]
+}

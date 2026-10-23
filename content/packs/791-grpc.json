@@ -1,0 +1,53 @@
+{
+  "id": "grpc",
+  "title": "gRPC and Protocol Buffers",
+  "kind": "technology",
+  "order": 791,
+  "family": "web",
+  "description": "Conventions for gRPC and Protocol Buffers.",
+  "rules": [
+    {
+      "id": "grpc-field-numbers",
+      "title": "Never reuse field numbers",
+      "text": "Never change or reuse a field number; mark removed fields and names as reserved.",
+      "recommended": true
+    },
+    {
+      "id": "grpc-additive",
+      "title": "Additive changes only",
+      "text": "Evolve messages additively; renaming, retyping or removing fields breaks existing clients.",
+      "recommended": true
+    },
+    {
+      "id": "grpc-deadlines",
+      "title": "Deadlines on every call",
+      "text": "Set a deadline on every client call and propagate it to downstream calls.",
+      "recommended": true
+    },
+    {
+      "id": "grpc-status-codes",
+      "title": "Use canonical status codes",
+      "text": "Return the canonical gRPC status codes with a useful message instead of encoding errors in successful responses.",
+      "recommended": true
+    },
+    {
+      "id": "grpc-lint-buf",
+      "title": "Lint and detect breaking changes",
+      "text": "Run buf lint and buf breaking in CI.",
+      "recommended": true
+    },
+    {
+      "id": "grpc-tls",
+      "title": "Encrypt transport",
+      "text": "Use TLS (or mTLS between services) for every gRPC channel outside localhost.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "gRPC deadlines guide",
+      "url": "https://grpc.io/docs/guides/deadlines/"
+    }
+  ]
+}

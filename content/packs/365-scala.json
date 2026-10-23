@@ -1,0 +1,33 @@
+{
+  "id": "scala",
+  "title": "Scala",
+  "kind": "technology",
+  "order": 365,
+  "family": "jvm",
+  "description": "Conventions for Scala.",
+  "rules": [
+    {
+      "id": "scala-immutability",
+      "title": "Immutable data",
+      "text": "Prefer immutable case classes and collections.",
+      "recommended": true
+    },
+    {
+      "id": "scala-options",
+      "title": "Option instead of null",
+      "text": "Use Option, Either and Try instead of null and exceptions for control flow.",
+      "recommended": true
+    },
+    {
+      "id": "scala-effects",
+      "title": "One effect system",
+      "text": "Use the project effect system (cats-effect, ZIO or Futures) consistently.",
+      "recommended": true
+    },
+    {
+      "id": "scala-implicits",
+      "title": "Limit implicits",
+      "text": "Keep implicits and givens explicit and discoverable."
+    }
+  ]
+}

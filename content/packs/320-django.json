@@ -1,0 +1,75 @@
+{
+  "id": "django",
+  "title": "Django",
+  "kind": "technology",
+  "order": 320,
+  "family": "python",
+  "description": "Conventions for Django.",
+  "rules": [
+    {
+      "id": "django-fat-models",
+      "title": "Logic outside views",
+      "text": "Keep views thin; put business logic in services or model methods.",
+      "recommended": true
+    },
+    {
+      "id": "django-orm",
+      "title": "Efficient ORM use",
+      "text": "Use select_related and prefetch_related to avoid N+1 queries.",
+      "recommended": true
+    },
+    {
+      "id": "django-migrations",
+      "title": "Migrations",
+      "text": "Commit migrations with model changes and never edit applied migrations.",
+      "recommended": true
+    },
+    {
+      "id": "django-settings",
+      "title": "Split settings",
+      "text": "Keep settings per environment and read secrets from environment variables.",
+      "recommended": true
+    },
+    {
+      "id": "django-drf",
+      "title": "Serializers for validation",
+      "text": "Validate API input with serializers, not manual request parsing."
+    },
+    {
+      "id": "django-custom-user",
+      "title": "Custom user model",
+      "text": "Start projects with a custom user model based on AbstractUser and set AUTH_USER_MODEL before the first migration.",
+      "recommended": true
+    },
+    {
+      "id": "django-csrf",
+      "title": "Keep CSRF enabled",
+      "text": "Keep CSRF middleware on and use the csrf_token tag in forms.",
+      "recommended": true
+    },
+    {
+      "id": "django-queries",
+      "title": "Use QuerySet methods",
+      "text": "Filter in the database with QuerySet methods rather than in Python loops.",
+      "recommended": true
+    },
+    {
+      "id": "django-signals",
+      "title": "Use signals sparingly",
+      "text": "Avoid signals for core logic; call services explicitly."
+    },
+    {
+      "id": "django-tests",
+      "title": "Django test tools",
+      "text": "Use pytest-django or TestCase with factories and test the API layer.",
+      "recommended": true
+    }
+  ],
+  "sources": [
+    {
+      "name": "Django documentation",
+      "url": "https://docs.djangoproject.com"
+    }
+  ],
+  "reviewed": "2026-10"
+}

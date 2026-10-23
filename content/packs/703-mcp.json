@@ -1,0 +1,69 @@
+{
+  "id": "mcp",
+  "title": "MCP servers",
+  "kind": "technology",
+  "order": 703,
+  "family": "ai",
+  "description": "Conventions for MCP servers.",
+  "sources": [
+    {
+      "name": "Model Context Protocol",
+      "url": "https://modelcontextprotocol.io"
+    },
+    {
+      "name": "MCP specification",
+      "url": "https://modelcontextprotocol.io/specification"
+    }
+  ],
+  "rules": [
+    {
+      "id": "mcp-tool-design",
+      "title": "Narrow, well-described tools",
+      "text": "Expose a small number of tools with clear names, descriptions and typed input schemas.",
+      "recommended": true
+    },
+    {
+      "id": "mcp-least-privilege",
+      "title": "Least privilege",
+      "text": "Give tools the least privilege needed and separate read-only from write tools.",
+      "recommended": true
+    },
+    {
+      "id": "mcp-errors",
+      "title": "Actionable errors",
+      "text": "Report tool failures in the result with isError true and a message that tells the model what went wrong and how to retry.",
+      "recommended": true
+    },
+    {
+      "id": "mcp-output-size",
+      "title": "Bound output size",
+      "text": "Paginate and truncate large outputs to protect the context window.",
+      "recommended": true
+    },
+    {
+      "id": "mcp-confirm",
+      "title": "Confirm destructive actions",
+      "text": "Require explicit confirmation for destructive or outward-facing actions.",
+      "recommended": true
+    },
+    {
+      "id": "mcp-no-trust",
+      "title": "Treat inputs as untrusted",
+      "text": "Treat tool results and resource contents as untrusted data, not instructions.",
+      "recommended": true
+    },
+    {
+      "id": "mcp-rate-limit",
+      "title": "Rate limit tool calls",
+      "text": "Rate limit tool invocations and sanitize tool outputs before returning them to the client.",
+      "recommended": true
+    },
+    {
+      "id": "mcp-consent",
+      "title": "Human in the loop",
+      "text": "Design for a human in the loop: show clients which tools run and let users deny invocations of sensitive ones.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10"
+}

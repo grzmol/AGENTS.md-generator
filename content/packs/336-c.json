@@ -1,0 +1,40 @@
+{
+  "id": "c",
+  "title": "C",
+  "kind": "technology",
+  "order": 336,
+  "family": "systems",
+  "description": "Conventions for C.",
+  "rules": [
+    {
+      "id": "c-bounds",
+      "title": "Check bounds",
+      "text": "Check buffer bounds and use size-aware functions (snprintf, memcpy with explicit sizes).",
+      "recommended": true
+    },
+    {
+      "id": "c-ownership",
+      "title": "Document ownership",
+      "text": "Document who owns and frees every allocation.",
+      "recommended": true
+    },
+    {
+      "id": "c-return-checks",
+      "title": "Check return values",
+      "text": "Check the return value of every call that can fail, including malloc.",
+      "recommended": true
+    },
+    {
+      "id": "c-static",
+      "title": "Static analysis",
+      "text": "Run clang-tidy or a static analyzer and sanitizers in CI.",
+      "recommended": true
+    },
+    {
+      "id": "c-init",
+      "title": "Initialize variables",
+      "text": "Initialize every variable and free pointers to null after release.",
+      "recommended": true
+    }
+  ]
+}

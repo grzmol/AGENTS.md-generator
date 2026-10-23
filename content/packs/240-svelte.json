@@ -1,0 +1,47 @@
+{
+  "id": "svelte",
+  "title": "Svelte and SvelteKit",
+  "kind": "technology",
+  "order": 240,
+  "family": "javascript",
+  "description": "Conventions for Svelte and SvelteKit.",
+  "rules": [
+    {
+      "id": "svelte-runes",
+      "title": "Svelte 5 runes",
+      "text": "Use Svelte 5 runes ($state, $derived, $props, $effect) and avoid legacy reactive statements.",
+      "recommended": true
+    },
+    {
+      "id": "svelte-derived",
+      "title": "Prefer $derived over $effect",
+      "text": "Use $derived for computed values and reserve $effect for side effects.",
+      "recommended": true
+    },
+    {
+      "id": "svelte-load",
+      "title": "Load data in load functions",
+      "text": "Fetch page data in SvelteKit load functions, not in component onMount.",
+      "recommended": true
+    },
+    {
+      "id": "svelte-ts",
+      "title": "TypeScript in components",
+      "text": "Use lang=\"ts\" in components and type $props explicitly.",
+      "recommended": true
+    },
+    {
+      "id": "svelte-a11y",
+      "title": "Fix Svelte a11y warnings",
+      "text": "Treat Svelte accessibility warnings as errors and fix them.",
+      "recommended": true
+    }
+  ],
+  "sources": [
+    {
+      "name": "Svelte documentation",
+      "url": "https://svelte.dev/docs"
+    }
+  ],
+  "reviewed": "2026-10"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "eslint-prettier",
+  "title": "ESLint and Prettier",
+  "kind": "technology",
+  "order": 291,
+  "family": "javascript",
+  "description": "Conventions for ESLint and Prettier.",
+  "rules": [
+    {
+      "id": "eslint-prettier-flat-config",
+      "title": "ESLint flat config",
+      "text": "Configure ESLint with the flat config and keep rules in version control.",
+      "recommended": true
+    },
+    {
+      "id": "eslint-prettier-prettier-owns",
+      "title": "Prettier owns formatting",
+      "text": "Let Prettier own formatting and keep ESLint to code-quality rules.",
+      "recommended": true
+    },
+    {
+      "id": "eslint-prettier-no-disable",
+      "title": "Do not disable rules inline",
+      "text": "Do not add eslint-disable comments; fix the code or change the rule in config with a reason.",
+      "recommended": true
+    },
+    {
+      "id": "eslint-prettier-ci-lint",
+      "title": "Lint in CI",
+      "text": "Run lint with zero warnings allowed in CI.",
+      "recommended": true
+    },
+    {
+      "id": "eslint-prettier-unused-disables",
+      "title": "Report stale disable comments",
+      "text": "Set linterOptions.reportUnusedDisableDirectives so disable comments that no longer suppress anything are reported.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "ESLint documentation",
+      "url": "https://eslint.org/docs/latest/"
+    }
+  ]
+}

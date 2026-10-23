@@ -1,0 +1,45 @@
+{
+  "id": "rabbitmq-sqs",
+  "title": "Message queues (RabbitMQ, SQS)",
+  "kind": "technology",
+  "order": 508,
+  "family": "data",
+  "description": "Conventions for Message queues (RabbitMQ, SQS).",
+  "rules": [
+    {
+      "id": "rabbitmq-sqs-ack-after",
+      "title": "Acknowledge after processing",
+      "text": "Acknowledge a message only after it has been processed successfully.",
+      "recommended": true
+    },
+    {
+      "id": "rabbitmq-sqs-idempotent",
+      "title": "Idempotent consumers",
+      "text": "Make consumers idempotent because delivery is at least once.",
+      "recommended": true
+    },
+    {
+      "id": "rabbitmq-sqs-dead-letter",
+      "title": "Dead-letter queues",
+      "text": "Configure a dead-letter queue with a bounded retry count and alert on messages that land there.",
+      "recommended": true
+    },
+    {
+      "id": "rabbitmq-sqs-visibility",
+      "title": "Visibility timeout above processing time",
+      "text": "Set the visibility timeout (SQS) or acknowledgement timeout above the longest expected processing time.",
+      "recommended": true
+    },
+    {
+      "id": "rabbitmq-sqs-small-messages",
+      "title": "Small messages",
+      "text": "Keep messages small and store large payloads elsewhere, passing a reference.",
+      "recommended": true
+    },
+    {
+      "id": "rabbitmq-sqs-prefetch",
+      "title": "Bound prefetch",
+      "text": "Use manual acknowledgements with a bounded prefetch (often 100 to 300); unbounded prefetch lets unacknowledged messages pile up in consumer memory."
+    }
+  ]
+}

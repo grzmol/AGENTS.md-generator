@@ -1,0 +1,63 @@
+{
+  "id": "react-native",
+  "title": "React Native",
+  "kind": "technology",
+  "order": 410,
+  "family": "mobile",
+  "description": "Conventions for React Native.",
+  "rules": [
+    {
+      "id": "react-native-expo",
+      "title": "Expo tooling",
+      "text": "Use Expo tooling and config plugins instead of editing native projects by hand."
+    },
+    {
+      "id": "react-native-flatlist",
+      "title": "Virtualized lists",
+      "text": "Use FlatList or FlashList for long lists, never map inside ScrollView.",
+      "recommended": true
+    },
+    {
+      "id": "react-native-platform",
+      "title": "Test on both platforms",
+      "text": "Verify changes on both iOS and Android and keep platform branches small.",
+      "recommended": true
+    },
+    {
+      "id": "react-native-safe-area",
+      "title": "Safe areas",
+      "text": "Handle safe areas with react-native-safe-area-context, which replaces the core SafeAreaView, and handle keyboard avoidance on every screen.",
+      "recommended": true
+    },
+    {
+      "id": "react-native-hermes",
+      "title": "Measure on devices",
+      "text": "Profile on real devices and avoid inline functions and styles in hot lists."
+    },
+    {
+      "id": "react-native-navigation",
+      "title": "Typed navigation",
+      "text": "Type navigation params and keep screens decoupled through the navigator.",
+      "recommended": true
+    },
+    {
+      "id": "react-native-storage",
+      "title": "Secure storage",
+      "text": "Store tokens in secure storage, not AsyncStorage.",
+      "recommended": true
+    },
+    {
+      "id": "react-native-updates",
+      "title": "Respect native versions",
+      "text": "Check library compatibility with the React Native and Expo SDK version before upgrading.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "React Native documentation",
+      "url": "https://reactnative.dev/docs/getting-started"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "nginx",
+  "title": "Nginx",
+  "kind": "technology",
+  "order": 551,
+  "family": "cloud",
+  "description": "Conventions for Nginx.",
+  "rules": [
+    {
+      "id": "nginx-tls",
+      "title": "Modern TLS",
+      "text": "Enable TLS 1.2 and 1.3 only with HSTS and redirect HTTP to HTTPS.",
+      "recommended": true
+    },
+    {
+      "id": "nginx-test",
+      "title": "Test before reload",
+      "text": "Run nginx -t before reloading configuration.",
+      "recommended": true
+    },
+    {
+      "id": "nginx-limits",
+      "title": "Limits and timeouts",
+      "text": "Set client body size, rate limits and timeouts explicitly.",
+      "recommended": true
+    },
+    {
+      "id": "nginx-tokens",
+      "title": "Hide version",
+      "text": "Disable server_tokens."
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "nginx documentation",
+      "url": "https://nginx.org/en/docs/"
+    }
+  ]
+}

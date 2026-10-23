@@ -1,0 +1,40 @@
+{
+  "id": "electron",
+  "title": "Electron",
+  "kind": "technology",
+  "order": 295,
+  "family": "javascript",
+  "description": "Conventions for Electron.",
+  "rules": [
+    {
+      "id": "electron-isolation",
+      "title": "Context isolation",
+      "text": "Keep contextIsolation on and nodeIntegration off in renderers.",
+      "recommended": true
+    },
+    {
+      "id": "electron-preload",
+      "title": "Narrow preload API",
+      "text": "Expose a minimal typed API through the preload script and validate IPC messages in the main process.",
+      "recommended": true
+    },
+    {
+      "id": "electron-csp",
+      "title": "Content Security Policy",
+      "text": "Set a strict Content Security Policy and never load remote code in privileged windows.",
+      "recommended": true
+    },
+    {
+      "id": "electron-updates",
+      "title": "Signed auto-updates",
+      "text": "Ship signed builds with a secure auto-update channel."
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Electron security tutorial",
+      "url": "https://www.electronjs.org/docs/latest/tutorial/security"
+    }
+  ]
+}

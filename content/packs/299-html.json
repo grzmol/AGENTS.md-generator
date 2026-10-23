@@ -1,0 +1,46 @@
+{
+  "id": "html",
+  "title": "HTML",
+  "kind": "technology",
+  "order": 299,
+  "family": "javascript",
+  "description": "Conventions for HTML.",
+  "rules": [
+    {
+      "id": "html-doctype",
+      "title": "Valid document skeleton",
+      "text": "Include doctype, lang attribute, charset and viewport meta on every page.",
+      "recommended": true
+    },
+    {
+      "id": "html-headings",
+      "title": "Heading hierarchy",
+      "text": "Use one h1 and a logical heading hierarchy.",
+      "recommended": true
+    },
+    {
+      "id": "html-landmarks",
+      "title": "Landmarks",
+      "text": "Use header, nav, main and footer landmarks.",
+      "recommended": true
+    },
+    {
+      "id": "html-loading",
+      "title": "Lazy images",
+      "text": "Set width, height and loading=\"lazy\" on below-the-fold images.",
+      "recommended": true
+    },
+    {
+      "id": "html-meta",
+      "title": "SEO metadata",
+      "text": "Provide title, description and canonical metadata for public pages."
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "MDN HTML reference",
+      "url": "https://developer.mozilla.org/docs/Web/HTML"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "seo",
+  "title": "SEO and web performance",
+  "kind": "technology",
+  "order": 780,
+  "family": "web",
+  "description": "Conventions for SEO and web performance.",
+  "rules": [
+    {
+      "id": "seo-cwv",
+      "title": "Core Web Vitals",
+      "text": "Keep LCP, INP and CLS within the recommended thresholds.",
+      "recommended": true
+    },
+    {
+      "id": "seo-canonical",
+      "title": "Canonical URLs",
+      "text": "Set canonical URLs and provide sitemap.xml and robots.txt.",
+      "recommended": true
+    },
+    {
+      "id": "seo-structured-data",
+      "title": "Structured data",
+      "text": "Add JSON-LD structured data to pages where it applies."
+    },
+    {
+      "id": "seo-render",
+      "title": "Crawlable content",
+      "text": "Make sure primary content is in the initial HTML, not only rendered client-side.",
+      "recommended": true
+    },
+    {
+      "id": "seo-social",
+      "title": "Open Graph tags",
+      "text": "Provide Open Graph and Twitter card metadata for shareable pages."
+    }
+  ]
+}

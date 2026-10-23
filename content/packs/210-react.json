@@ -1,0 +1,86 @@
+{
+  "id": "react",
+  "title": "React",
+  "kind": "technology",
+  "order": 210,
+  "family": "javascript",
+  "description": "Conventions for React.",
+  "rules": [
+    {
+      "id": "react-function",
+      "title": "Function components and hooks",
+      "text": "Use function components and hooks; do not write class components.",
+      "recommended": true
+    },
+    {
+      "id": "react-hooks-rules",
+      "title": "Rules of hooks",
+      "text": "Follow the Rules of Hooks and keep effect dependency arrays exhaustive.",
+      "recommended": true
+    },
+    {
+      "id": "react-derived",
+      "title": "Derive state",
+      "text": "Derive values during render instead of duplicating them in state or syncing them with effects.",
+      "recommended": true
+    },
+    {
+      "id": "react-keys",
+      "title": "Stable keys",
+      "text": "Use stable unique keys for lists, never array indexes for dynamic lists.",
+      "recommended": true
+    },
+    {
+      "id": "react-colocate",
+      "title": "Colocate state",
+      "text": "Keep state as close as possible to where it is used."
+    },
+    {
+      "id": "react-rtl",
+      "title": "Test with Testing Library",
+      "text": "Test components through user-visible behavior with React Testing Library, not implementation details.",
+      "recommended": true
+    },
+    {
+      "id": "react-memo",
+      "title": "Memoize only with evidence",
+      "text": "Do not add useMemo, useCallback or memo by default; rely on React Compiler where enabled and memoize by hand only for measured cost or stable effect dependencies.",
+      "recommended": true
+    },
+    {
+      "id": "react-composition",
+      "title": "Composition over props",
+      "text": "Prefer composition (children, slots) over long prop lists and boolean flags.",
+      "recommended": true
+    },
+    {
+      "id": "react-suspense",
+      "title": "Suspense and error boundaries",
+      "text": "Use Suspense and error boundaries for async UI states."
+    },
+    {
+      "id": "react-controlled",
+      "title": "Consistent form control",
+      "text": "Keep each input either controlled or uncontrolled, never switching between them.",
+      "recommended": true
+    },
+    {
+      "id": "react-effects",
+      "title": "Effects only for sync",
+      "text": "Use effects only to synchronize with external systems, not for data transformation.",
+      "recommended": true
+    },
+    {
+      "id": "react-file-layout",
+      "title": "One exported component per file",
+      "text": "Export one main component per file and colocate its tests and styles."
+    }
+  ],
+  "sources": [
+    {
+      "name": "React documentation",
+      "url": "https://react.dev"
+    }
+  ],
+  "reviewed": "2026-10"
+}

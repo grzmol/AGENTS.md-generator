@@ -1,0 +1,69 @@
+{
+  "id": "nodejs",
+  "title": "Node.js",
+  "kind": "technology",
+  "order": 260,
+  "family": "javascript",
+  "description": "Conventions for Node.js.",
+  "rules": [
+    {
+      "id": "nodejs-esm",
+      "title": "ES modules",
+      "text": "Use ES modules and the node: prefix for built-in imports.",
+      "recommended": true
+    },
+    {
+      "id": "nodejs-async",
+      "title": "async/await",
+      "text": "Use async/await and always handle promise rejections.",
+      "recommended": true
+    },
+    {
+      "id": "nodejs-config",
+      "title": "Central config",
+      "text": "Read environment variables in one config module and validate them at startup.",
+      "recommended": true
+    },
+    {
+      "id": "nodejs-shutdown",
+      "title": "Graceful shutdown",
+      "text": "Handle SIGTERM and close servers and connections gracefully."
+    },
+    {
+      "id": "nodejs-no-sync",
+      "title": "No blocking calls",
+      "text": "Do not use synchronous filesystem or crypto calls in request handlers.",
+      "recommended": true
+    },
+    {
+      "id": "nodejs-streams",
+      "title": "Use streams for large data",
+      "text": "Use streams for large files instead of loading them into memory.",
+      "recommended": true
+    },
+    {
+      "id": "nodejs-signals",
+      "title": "Handle unhandled rejections",
+      "text": "Treat unhandled rejections and uncaught exceptions as fatal and exit so the supervisor restarts the process.",
+      "recommended": true
+    },
+    {
+      "id": "nodejs-no-blocking-loop",
+      "title": "Keep the event loop free",
+      "text": "Move CPU-heavy work to worker threads or separate services.",
+      "recommended": true
+    },
+    {
+      "id": "nodejs-env-file",
+      "title": "Use --env-file",
+      "text": "Load local env with --env-file or the platform; do not commit .env."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Node.js API documentation",
+      "url": "https://nodejs.org/docs/latest-v22.x/api/"
+    }
+  ],
+  "reviewed": "2026-10"
+}

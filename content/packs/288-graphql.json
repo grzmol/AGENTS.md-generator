@@ -1,0 +1,52 @@
+{
+  "id": "graphql",
+  "title": "GraphQL",
+  "kind": "technology",
+  "order": 288,
+  "family": "javascript",
+  "description": "Conventions for GraphQL.",
+  "rules": [
+    {
+      "id": "graphql-schema-first",
+      "title": "Schema as contract",
+      "text": "Treat the schema as the contract: change it additively and deprecate before removing.",
+      "recommended": true
+    },
+    {
+      "id": "graphql-n-plus-one",
+      "title": "Batch with dataloaders",
+      "text": "Batch and cache field resolution with dataloaders to avoid N+1 queries.",
+      "recommended": true
+    },
+    {
+      "id": "graphql-limits",
+      "title": "Query depth and cost limits",
+      "text": "Enforce query depth, complexity and pagination limits.",
+      "recommended": true
+    },
+    {
+      "id": "graphql-nullability",
+      "title": "Intentional nullability",
+      "text": "Make fields non-null only when failure should fail the parent."
+    },
+    {
+      "id": "graphql-codegen",
+      "title": "Generate types",
+      "text": "Generate client types and hooks from the schema; do not hand-write them.",
+      "recommended": true
+    },
+    {
+      "id": "graphql-auth",
+      "title": "Authorize in resolvers",
+      "text": "Delegate authorization to the business logic layer so every entry point shares one source of truth, rather than relying on the gateway or ad hoc resolver checks.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "GraphQL best practices",
+      "url": "https://graphql.org/learn/best-practices/"
+    }
+  ]
+}

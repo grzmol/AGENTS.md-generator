@@ -1,0 +1,48 @@
+{
+  "id": "observability",
+  "title": "Observability",
+  "kind": "general",
+  "order": 145,
+  "description": "Metrics, traces and health.",
+  "rules": [
+    {
+      "id": "observability-otel",
+      "title": "OpenTelemetry",
+      "text": "Instrument with OpenTelemetry for traces and metrics rather than vendor-specific SDKs."
+    },
+    {
+      "id": "observability-health",
+      "title": "Health endpoints",
+      "text": "Expose liveness and readiness endpoints that reflect real dependencies.",
+      "recommended": true
+    },
+    {
+      "id": "observability-metrics",
+      "title": "Golden signals",
+      "text": "Track latency, traffic, errors and saturation for every service.",
+      "recommended": true
+    },
+    {
+      "id": "observability-cardinality",
+      "title": "Bound metric cardinality",
+      "text": "Never use unbounded values such as user IDs or URLs as metric labels.",
+      "recommended": true
+    },
+    {
+      "id": "observability-trace-context",
+      "title": "Propagate trace context",
+      "text": "Propagate trace and correlation context across service calls and background jobs.",
+      "recommended": true
+    },
+    {
+      "id": "observability-alerts",
+      "title": "Alert on symptoms",
+      "text": "Alert on user-visible symptoms and SLO burn rather than on every internal cause."
+    },
+    {
+      "id": "observability-error-tracking",
+      "title": "Report unexpected errors",
+      "text": "Send unexpected errors to the error tracker with context, and do not report expected validation failures."
+    }
+  ]
+}

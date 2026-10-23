@@ -1,0 +1,46 @@
+{
+  "id": "agent-building",
+  "title": "Building AI agents",
+  "kind": "technology",
+  "order": 704,
+  "family": "ai",
+  "description": "Conventions for Building AI agents.",
+  "rules": [
+    {
+      "id": "agent-building-loop-limits",
+      "title": "Bound the loop",
+      "text": "Cap iterations, tokens and wall-clock time for every agent loop.",
+      "recommended": true
+    },
+    {
+      "id": "agent-building-human-in-loop",
+      "title": "Human approval for risky steps",
+      "text": "Require human approval before irreversible or high-impact actions.",
+      "recommended": true
+    },
+    {
+      "id": "agent-building-trace",
+      "title": "Trace every step",
+      "text": "Log each model call and tool call with inputs, outputs and timing for debugging.",
+      "recommended": true
+    },
+    {
+      "id": "agent-building-small-context",
+      "title": "Keep context small",
+      "text": "Summarize or drop stale context and pass only what the next step needs.",
+      "recommended": true
+    },
+    {
+      "id": "agent-building-sandbox",
+      "title": "Sandbox execution",
+      "text": "Run generated code and shell commands in a sandbox with restricted network and filesystem access.",
+      "recommended": true
+    },
+    {
+      "id": "agent-building-test-trajectories",
+      "title": "Test end-to-end tasks",
+      "text": "Evaluate agents on whole tasks with deterministic checkers, not only single prompts.",
+      "recommended": true
+    }
+  ]
+}

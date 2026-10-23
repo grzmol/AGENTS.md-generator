@@ -1,0 +1,41 @@
+{
+  "id": "angular",
+  "title": "Angular",
+  "kind": "technology",
+  "order": 250,
+  "family": "javascript",
+  "description": "Conventions for Angular.",
+  "rules": [
+    {
+      "id": "angular-standalone",
+      "title": "Standalone components",
+      "text": "Use standalone components and the inject() function.",
+      "recommended": true
+    },
+    {
+      "id": "angular-signals",
+      "title": "Signals for state",
+      "text": "Use signals for component state and prefer them over manual subscriptions.",
+      "recommended": true
+    },
+    {
+      "id": "angular-onpush",
+      "title": "OnPush change detection",
+      "text": "Use OnPush change detection; it is the default in recent Angular versions, so set it explicitly on older ones.",
+      "recommended": true
+    },
+    {
+      "id": "angular-rxjs",
+      "title": "Clean up subscriptions",
+      "text": "Avoid manual subscribe where possible; use the async pipe or takeUntilDestroyed, passing a DestroyRef when called outside an injection context.",
+      "recommended": true
+    }
+  ],
+  "sources": [
+    {
+      "name": "Angular documentation",
+      "url": "https://angular.dev"
+    }
+  ],
+  "reviewed": "2026-10"
+}

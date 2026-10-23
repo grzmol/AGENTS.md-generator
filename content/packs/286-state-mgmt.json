@@ -1,0 +1,47 @@
+{
+  "id": "state-mgmt",
+  "title": "Redux Toolkit and Zustand",
+  "kind": "technology",
+  "order": 286,
+  "family": "javascript",
+  "description": "Conventions for Redux Toolkit and Zustand.",
+  "rules": [
+    {
+      "id": "state-mgmt-server-state",
+      "title": "Server state elsewhere",
+      "text": "Keep server data in a data-fetching cache, not in global client state.",
+      "recommended": true
+    },
+    {
+      "id": "state-mgmt-slices",
+      "title": "Small slices",
+      "text": "Keep stores small and organized by feature with colocated selectors.",
+      "recommended": true
+    },
+    {
+      "id": "state-mgmt-selectors",
+      "title": "Select narrowly",
+      "text": "Select only the fields a component needs to avoid extra re-renders.",
+      "recommended": true
+    },
+    {
+      "id": "state-mgmt-immutable",
+      "title": "Immutable updates",
+      "text": "Update state immutably; use Redux Toolkit or immer helpers rather than manual copying.",
+      "recommended": true
+    },
+    {
+      "id": "state-mgmt-no-derived",
+      "title": "Do not store derived data",
+      "text": "Compute derived values in selectors instead of storing them.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Redux Toolkit documentation",
+      "url": "https://redux-toolkit.js.org"
+    }
+  ]
+}

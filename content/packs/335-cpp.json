@@ -1,0 +1,56 @@
+{
+  "id": "cpp",
+  "title": "C++",
+  "kind": "technology",
+  "order": 335,
+  "family": "systems",
+  "description": "Conventions for C++.",
+  "sources": [
+    {
+      "name": "C++ Core Guidelines",
+      "url": "https://isocpp.github.io/CppCoreGuidelines/"
+    },
+    {
+      "name": "C++ Core Guidelines",
+      "url": "https://isocpp.github.io/CppCoreGuidelines/"
+    }
+  ],
+  "rules": [
+    {
+      "id": "cpp-raii",
+      "title": "RAII",
+      "text": "Manage resources with RAII and smart pointers; avoid raw new and delete.",
+      "recommended": true
+    },
+    {
+      "id": "cpp-modern",
+      "title": "Modern standard",
+      "text": "Use the project C++ standard features (auto, range-for, std::optional, std::span) where they improve clarity.",
+      "recommended": true
+    },
+    {
+      "id": "cpp-const",
+      "title": "const correctness",
+      "text": "Mark everything const that can be const and pass large objects by const reference.",
+      "recommended": true
+    },
+    {
+      "id": "cpp-sanitizers",
+      "title": "Run sanitizers",
+      "text": "Run tests under AddressSanitizer and UndefinedBehaviorSanitizer.",
+      "recommended": true
+    },
+    {
+      "id": "cpp-warnings",
+      "title": "Warnings as errors",
+      "text": "Compile with strict warnings (-Wall -Wextra) treated as errors.",
+      "recommended": true
+    },
+    {
+      "id": "cpp-core-guidelines",
+      "title": "C++ Core Guidelines",
+      "text": "Follow the C++ Core Guidelines and clang-tidy checks configured in the repository."
+    }
+  ],
+  "reviewed": "2026-10"
+}

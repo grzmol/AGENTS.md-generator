@@ -1,0 +1,70 @@
+{
+  "id": "rails",
+  "title": "Ruby on Rails",
+  "kind": "technology",
+  "order": 390,
+  "family": "ruby",
+  "description": "Conventions for Ruby on Rails.",
+  "rules": [
+    {
+      "id": "rails-conventions",
+      "title": "Convention over configuration",
+      "text": "Follow Rails conventions for naming, routing and file layout.",
+      "recommended": true
+    },
+    {
+      "id": "rails-strong-params",
+      "title": "Strong parameters",
+      "text": "Permit parameters explicitly with strong parameters (params.expect in Rails 8) and never pass raw params to create or update.",
+      "recommended": true
+    },
+    {
+      "id": "rails-fat-model",
+      "title": "Service objects",
+      "text": "Keep controllers thin and move complex logic into service objects."
+    },
+    {
+      "id": "rails-includes",
+      "title": "Avoid N+1",
+      "text": "Use includes to avoid N+1 queries and add database indexes for foreign keys.",
+      "recommended": true
+    },
+    {
+      "id": "rails-rubocop",
+      "title": "RuboCop",
+      "text": "Keep RuboCop clean.",
+      "recommended": true
+    },
+    {
+      "id": "rails-callbacks",
+      "title": "Limit callbacks",
+      "text": "Avoid model callbacks for business logic; call services explicitly.",
+      "recommended": true
+    },
+    {
+      "id": "rails-jobs",
+      "title": "Background jobs",
+      "text": "Run slow work in Active Job and make jobs idempotent; failed jobs are not retried unless you configure retry_on.",
+      "recommended": true
+    },
+    {
+      "id": "rails-migrations",
+      "title": "Safe migrations",
+      "text": "Write reversible migrations and use strong_migrations rules for zero-downtime changes.",
+      "recommended": true
+    },
+    {
+      "id": "rails-credentials",
+      "title": "Encrypted credentials",
+      "text": "Store secrets in encrypted credentials or environment variables.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Rails Guides",
+      "url": "https://guides.rubyonrails.org"
+    }
+  ]
+}

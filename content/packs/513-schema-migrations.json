@@ -1,0 +1,46 @@
+{
+  "id": "schema-migrations",
+  "title": "Flyway and Liquibase",
+  "kind": "technology",
+  "order": 513,
+  "family": "data",
+  "description": "Conventions for Flyway and Liquibase.",
+  "rules": [
+    {
+      "id": "schema-migrations-immutable",
+      "title": "Never edit applied migrations",
+      "text": "Never edit a migration that has been applied anywhere; add a new migration instead.",
+      "recommended": true
+    },
+    {
+      "id": "schema-migrations-versioned",
+      "title": "Ordered, descriptive versions",
+      "text": "Use ordered version numbers and descriptive names, and keep one logical change per migration.",
+      "recommended": true
+    },
+    {
+      "id": "schema-migrations-expand-contract",
+      "title": "Backward compatible steps",
+      "text": "Write migrations so the previous application version still works, and drop old columns in a later release.",
+      "recommended": true
+    },
+    {
+      "id": "schema-migrations-test-migrations",
+      "title": "Test on realistic data",
+      "text": "Run migrations against a production-like copy in CI before releasing.",
+      "recommended": true
+    },
+    {
+      "id": "schema-migrations-repeatable",
+      "title": "Repeatable migrations for code objects",
+      "text": "Use repeatable migrations only for views and functions that can be safely recreated."
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Flyway documentation",
+      "url": "https://documentation.red-gate.com/flyway"
+    }
+  ]
+}

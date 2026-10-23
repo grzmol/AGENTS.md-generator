@@ -1,0 +1,103 @@
+{
+  "id": "naming",
+  "title": "Naming conventions",
+  "kind": "general",
+  "order": 30,
+  "description": "Identifiers and files.",
+  "rules": [
+    {
+      "id": "naming-camel",
+      "title": "camelCase identifiers",
+      "text": "Use camelCase for variables and functions.",
+      "group": "ident"
+    },
+    {
+      "id": "naming-snake",
+      "title": "snake_case identifiers",
+      "text": "Use snake_case for variables and functions.",
+      "group": "ident"
+    },
+    {
+      "id": "naming-types-pascal",
+      "title": "PascalCase types",
+      "text": "Use PascalCase for classes, types and components.",
+      "recommended": true
+    },
+    {
+      "id": "naming-constants",
+      "title": "UPPER_SNAKE constants",
+      "text": "Use UPPER_SNAKE_CASE for constants.",
+      "recommended": true
+    },
+    {
+      "id": "naming-files-kebab",
+      "title": "kebab-case files",
+      "text": "Name files in kebab-case.",
+      "group": "files"
+    },
+    {
+      "id": "naming-files-snake",
+      "title": "snake_case files",
+      "text": "Name files in snake_case.",
+      "group": "files"
+    },
+    {
+      "id": "naming-files-pascal",
+      "title": "PascalCase component files",
+      "text": "Name component files in PascalCase, matching the component they export.",
+      "group": "files"
+    },
+    {
+      "id": "naming-booleans",
+      "title": "Boolean prefixes",
+      "text": "Prefix booleans with is, has, can or should.",
+      "recommended": true
+    },
+    {
+      "id": "naming-no-abbrev",
+      "title": "No cryptic abbreviations",
+      "text": "Use descriptive names; avoid single-letter names outside tiny loops and avoid unclear abbreviations.",
+      "recommended": true
+    },
+    {
+      "id": "naming-test-names",
+      "title": "Behavior-based test names",
+      "text": "Name tests after the behavior they verify, for example \"returns an error when the token is expired\".",
+      "recommended": true
+    },
+    {
+      "id": "naming-no-hungarian",
+      "title": "No type prefixes",
+      "text": "Do not encode types in names (strName, IUser) unless the language idiom requires it."
+    },
+    {
+      "id": "naming-verbs",
+      "title": "Verb names for functions",
+      "text": "Name functions with verbs and values with nouns.",
+      "recommended": true
+    },
+    {
+      "id": "naming-plural",
+      "title": "Plural collections",
+      "text": "Name collections in the plural and single items in the singular.",
+      "recommended": true
+    },
+    {
+      "id": "naming-units",
+      "title": "Units in names",
+      "text": "Include units in names when not obvious, such as timeoutMs or sizeBytes.",
+      "recommended": true
+    },
+    {
+      "id": "naming-domain",
+      "title": "Use domain vocabulary",
+      "text": "Use the domain terms from the product and docs consistently instead of inventing synonyms.",
+      "recommended": true
+    },
+    {
+      "id": "naming-avoid-negatives",
+      "title": "Avoid negated names",
+      "text": "Avoid negated boolean names such as isNotReady."
+    }
+  ]
+}

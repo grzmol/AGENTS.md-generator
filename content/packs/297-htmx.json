@@ -1,0 +1,40 @@
+{
+  "id": "htmx",
+  "title": "htmx and server-rendered HTML",
+  "kind": "technology",
+  "order": 297,
+  "family": "javascript",
+  "description": "Conventions for htmx and server-rendered HTML.",
+  "rules": [
+    {
+      "id": "htmx-hypermedia",
+      "title": "Return HTML fragments",
+      "text": "Return HTML fragments from the server and let htmx swap them; avoid client-side rendering logic.",
+      "recommended": true
+    },
+    {
+      "id": "htmx-progressive",
+      "title": "Progressive enhancement",
+      "text": "Make pages work without JavaScript where feasible and enhance with htmx attributes.",
+      "recommended": true
+    },
+    {
+      "id": "htmx-csrf",
+      "title": "CSRF headers",
+      "text": "Send CSRF tokens on htmx requests via hx-headers.",
+      "recommended": true
+    },
+    {
+      "id": "htmx-targets",
+      "title": "Explicit targets",
+      "text": "Set explicit hx-target and hx-swap so responses land predictably."
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "htmx documentation",
+      "url": "https://htmx.org/docs/"
+    }
+  ]
+}

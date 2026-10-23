@@ -1,0 +1,45 @@
+{
+  "id": "rag",
+  "title": "Retrieval-augmented generation",
+  "kind": "technology",
+  "order": 702,
+  "family": "ai",
+  "description": "Conventions for Retrieval-augmented generation.",
+  "rules": [
+    {
+      "id": "rag-chunking",
+      "title": "Chunk deliberately",
+      "text": "Chunk documents on semantic boundaries with overlap and keep source metadata with each chunk.",
+      "recommended": true
+    },
+    {
+      "id": "rag-hybrid",
+      "title": "Hybrid retrieval",
+      "text": "Combine keyword and vector search and rerank results before prompting."
+    },
+    {
+      "id": "rag-citations",
+      "title": "Cite sources",
+      "text": "Return sources with answers and say when the context does not contain the answer.",
+      "recommended": true
+    },
+    {
+      "id": "rag-eval-retrieval",
+      "title": "Evaluate retrieval separately",
+      "text": "Measure retrieval quality separately from generation quality.",
+      "recommended": true
+    },
+    {
+      "id": "rag-access",
+      "title": "Respect permissions",
+      "text": "Filter retrieval by the requesting user permissions before building the prompt.",
+      "recommended": true
+    },
+    {
+      "id": "rag-freshness",
+      "title": "Reindex on change",
+      "text": "Reindex or invalidate embeddings when source documents change.",
+      "recommended": true
+    }
+  ]
+}

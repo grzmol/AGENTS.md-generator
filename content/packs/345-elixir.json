@@ -1,0 +1,47 @@
+{
+  "id": "elixir",
+  "title": "Elixir and Phoenix",
+  "kind": "technology",
+  "order": 345,
+  "family": "beam",
+  "description": "Conventions for Elixir and Phoenix.",
+  "rules": [
+    {
+      "id": "elixir-pattern-matching",
+      "title": "Pattern match",
+      "text": "Prefer pattern matching and multiple function clauses over nested conditionals.",
+      "recommended": true
+    },
+    {
+      "id": "elixir-contexts",
+      "title": "Phoenix contexts",
+      "text": "Put business logic in context modules, not in controllers or LiveViews.",
+      "recommended": true
+    },
+    {
+      "id": "elixir-ok-error",
+      "title": "Tagged tuples",
+      "text": "Return {:ok, value} and {:error, reason} and handle both with with or case.",
+      "recommended": true
+    },
+    {
+      "id": "elixir-supervision",
+      "title": "Supervise processes",
+      "text": "Run long-lived processes under a supervisor and let them crash.",
+      "recommended": true
+    },
+    {
+      "id": "elixir-format",
+      "title": "mix format and credo",
+      "text": "Keep mix format and credo clean.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Phoenix contexts guide",
+      "url": "https://hexdocs.pm/phoenix/contexts.html"
+    }
+  ]
+}

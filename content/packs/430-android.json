@@ -1,0 +1,52 @@
+{
+  "id": "android",
+  "title": "Android and Jetpack Compose",
+  "kind": "technology",
+  "order": 430,
+  "family": "mobile",
+  "description": "Conventions for Android and Jetpack Compose.",
+  "rules": [
+    {
+      "id": "android-compose",
+      "title": "Compose for new UI",
+      "text": "Build new UI in Jetpack Compose with stateless composables and state hoisting.",
+      "recommended": true
+    },
+    {
+      "id": "android-viewmodel",
+      "title": "ViewModel owns state",
+      "text": "Keep UI state in a ViewModel exposed as StateFlow and avoid business logic in composables.",
+      "recommended": true
+    },
+    {
+      "id": "android-lifecycle",
+      "title": "Lifecycle-aware collection",
+      "text": "Collect flows with collectAsStateWithLifecycle.",
+      "recommended": true
+    },
+    {
+      "id": "android-hilt",
+      "title": "Dependency injection",
+      "text": "Use Hilt for dependency injection.",
+      "recommended": true
+    },
+    {
+      "id": "android-permissions",
+      "title": "Request minimal permissions",
+      "text": "Request permissions at the moment of use and handle denial gracefully.",
+      "recommended": true
+    },
+    {
+      "id": "android-previews",
+      "title": "Compose previews",
+      "text": "Add @Preview functions for composables with realistic sample data."
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Compose state hoisting",
+      "url": "https://developer.android.com/develop/ui/compose/state-hoisting"
+    }
+  ]
+}

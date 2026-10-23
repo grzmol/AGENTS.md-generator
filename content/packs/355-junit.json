@@ -1,0 +1,40 @@
+{
+  "id": "junit",
+  "title": "JUnit and Mockito",
+  "kind": "technology",
+  "order": 355,
+  "family": "jvm",
+  "description": "Conventions for JUnit and Mockito.",
+  "rules": [
+    {
+      "id": "junit-junit5",
+      "title": "JUnit 5",
+      "text": "Write tests with JUnit 5 and parameterized tests for tables of cases.",
+      "recommended": true
+    },
+    {
+      "id": "junit-assertj",
+      "title": "Fluent assertions",
+      "text": "Use AssertJ assertions for readable failures."
+    },
+    {
+      "id": "junit-mock-boundaries",
+      "title": "Mock boundaries only",
+      "text": "Use Mockito for external boundaries and prefer real objects otherwise.",
+      "recommended": true
+    },
+    {
+      "id": "junit-testcontainers",
+      "title": "Testcontainers",
+      "text": "Test persistence against real databases with Testcontainers.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "JUnit user guide",
+      "url": "https://docs.junit.org/current/user-guide/"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "kotlin",
+  "title": "Kotlin",
+  "kind": "technology",
+  "order": 360,
+  "family": "jvm",
+  "description": "Conventions for Kotlin.",
+  "rules": [
+    {
+      "id": "kotlin-null-safety",
+      "title": "Null safety",
+      "text": "Avoid !!; model absence with nullable types and handle it explicitly.",
+      "recommended": true
+    },
+    {
+      "id": "kotlin-immutable",
+      "title": "val and data classes",
+      "text": "Prefer val, immutable collections and data classes.",
+      "recommended": true
+    },
+    {
+      "id": "kotlin-coroutines",
+      "title": "Structured concurrency",
+      "text": "Use structured concurrency with coroutines and never GlobalScope.",
+      "recommended": true
+    },
+    {
+      "id": "kotlin-ktlint",
+      "title": "ktlint or detekt",
+      "text": "Keep ktlint and detekt clean."
+    },
+    {
+      "id": "kotlin-sealed",
+      "title": "Sealed hierarchies",
+      "text": "Model closed variants with sealed classes and use exhaustive when.",
+      "recommended": true
+    },
+    {
+      "id": "kotlin-extension",
+      "title": "Extension functions",
+      "text": "Use extension functions for utilities and keep them close to their domain."
+    },
+    {
+      "id": "kotlin-flow",
+      "title": "Flow for streams",
+      "text": "Use Flow for asynchronous streams and collect lifecycle-aware on Android."
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Kotlin documentation",
+      "url": "https://kotlinlang.org/docs/"
+    }
+  ]
+}

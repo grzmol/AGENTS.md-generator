@@ -1,0 +1,106 @@
+{
+  "id": "testing",
+  "title": "Testing",
+  "kind": "general",
+  "order": 70,
+  "description": "Test strategy and discipline.",
+  "rules": [
+    {
+      "id": "testing-add-tests",
+      "title": "Add tests with changes",
+      "text": "Add or update tests for every behavior change and bug fix.",
+      "recommended": true
+    },
+    {
+      "id": "testing-regression",
+      "title": "Reproduce bugs first",
+      "text": "For bug fixes, write a failing test that reproduces the bug before fixing it.",
+      "recommended": true
+    },
+    {
+      "id": "testing-pyramid",
+      "title": "Test pyramid",
+      "text": "Prefer many fast unit tests, fewer integration tests and a small number of end-to-end tests.",
+      "recommended": true
+    },
+    {
+      "id": "testing-no-mock-overuse",
+      "title": "Mock only boundaries",
+      "text": "Mock only external boundaries (network, clock, filesystem); use real collaborators otherwise.",
+      "recommended": true
+    },
+    {
+      "id": "testing-deterministic",
+      "title": "Deterministic tests",
+      "text": "Keep tests deterministic: no real time, randomness or network without control.",
+      "recommended": true
+    },
+    {
+      "id": "testing-tdd",
+      "title": "Test-driven development",
+      "text": "Work test-first: write a failing test, make it pass, then refactor."
+    },
+    {
+      "id": "testing-coverage",
+      "title": "Coverage threshold",
+      "text": "Do not lower the coverage threshold; new code should be covered."
+    },
+    {
+      "id": "testing-isolated",
+      "title": "Independent tests",
+      "text": "Keep tests independent; no shared mutable state or required execution order.",
+      "recommended": true
+    },
+    {
+      "id": "testing-arrange-act-assert",
+      "title": "Arrange, act, assert",
+      "text": "Structure tests as arrange, act, assert with one behavior per test.",
+      "recommended": true
+    },
+    {
+      "id": "testing-fixtures",
+      "title": "Factories over shared fixtures",
+      "text": "Build test data with small factories instead of large shared fixtures.",
+      "recommended": true
+    },
+    {
+      "id": "testing-flaky",
+      "title": "No flaky tests",
+      "text": "Treat a flaky test as a bug: find the cause instead of adding retries or sleeps.",
+      "recommended": true
+    },
+    {
+      "id": "testing-contract",
+      "title": "Contract tests",
+      "text": "Cover service boundaries with contract tests so consumers and providers cannot drift."
+    },
+    {
+      "id": "testing-snapshot",
+      "title": "Snapshots sparingly",
+      "text": "Use snapshot tests only for small stable outputs and review snapshot diffs carefully.",
+      "recommended": true
+    },
+    {
+      "id": "testing-property",
+      "title": "Property-based tests",
+      "text": "Use property-based tests for parsers, serializers and invariants."
+    },
+    {
+      "id": "testing-test-public",
+      "title": "Test public behavior",
+      "text": "Test public behavior rather than private functions or implementation details.",
+      "recommended": true
+    },
+    {
+      "id": "testing-perf-tests",
+      "title": "Performance regression checks",
+      "text": "Add benchmarks for performance-critical paths and compare against a baseline."
+    },
+    {
+      "id": "testing-mutation",
+      "title": "Meaningful assertions",
+      "text": "Make assertions specific enough that the test fails if the behavior breaks.",
+      "recommended": true
+    }
+  ]
+}

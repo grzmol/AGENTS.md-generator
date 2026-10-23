@@ -1,0 +1,44 @@
+{
+  "id": "concurrency",
+  "title": "Concurrency",
+  "kind": "general",
+  "order": 180,
+  "description": "Parallel and async code.",
+  "rules": [
+    {
+      "id": "concurrency-shared-state",
+      "title": "Avoid shared mutable state",
+      "text": "Avoid shared mutable state; prefer message passing or immutable data.",
+      "recommended": true
+    },
+    {
+      "id": "concurrency-timeouts",
+      "title": "Timeouts everywhere",
+      "text": "Set explicit timeouts on every network call, lock and queue operation.",
+      "recommended": true
+    },
+    {
+      "id": "concurrency-cancellation",
+      "title": "Support cancellation",
+      "text": "Propagate cancellation so abandoned work stops.",
+      "recommended": true
+    },
+    {
+      "id": "concurrency-retries",
+      "title": "Bounded retries with backoff",
+      "text": "Retry only idempotent operations, with exponential backoff, jitter and a maximum.",
+      "recommended": true
+    },
+    {
+      "id": "concurrency-races",
+      "title": "Test for races",
+      "text": "Run race detectors or stress tests when changing concurrent code."
+    },
+    {
+      "id": "concurrency-locks",
+      "title": "Hold locks briefly",
+      "text": "Hold locks for the shortest time possible and never across I/O.",
+      "recommended": true
+    }
+  ]
+}

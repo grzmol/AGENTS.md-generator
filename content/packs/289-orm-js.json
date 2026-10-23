@@ -1,0 +1,47 @@
+{
+  "id": "orm-js",
+  "title": "Prisma and Drizzle",
+  "kind": "technology",
+  "order": 289,
+  "family": "javascript",
+  "description": "Conventions for Prisma and Drizzle.",
+  "rules": [
+    {
+      "id": "orm-js-schema",
+      "title": "Schema as source",
+      "text": "Change the database only through the schema file and generated migrations.",
+      "recommended": true
+    },
+    {
+      "id": "orm-js-select",
+      "title": "Select only needed fields",
+      "text": "Select only the fields you need and avoid returning full rows to the client.",
+      "recommended": true
+    },
+    {
+      "id": "orm-js-transactions",
+      "title": "Use transactions",
+      "text": "Wrap related writes in a transaction.",
+      "recommended": true
+    },
+    {
+      "id": "orm-js-client-singleton",
+      "title": "Single client instance",
+      "text": "Create one database client per process and reuse it.",
+      "recommended": true
+    },
+    {
+      "id": "orm-js-raw",
+      "title": "Parameterize raw SQL",
+      "text": "When using raw SQL, always use parameterized queries.",
+      "recommended": true
+    }
+  ],
+  "sources": [
+    {
+      "name": "Prisma documentation",
+      "url": "https://www.prisma.io/docs"
+    }
+  ],
+  "reviewed": "2026-10"
+}

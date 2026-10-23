@@ -1,0 +1,75 @@
+{
+  "id": "nextjs",
+  "title": "Next.js",
+  "kind": "technology",
+  "order": 220,
+  "family": "javascript",
+  "description": "Conventions for Next.js.",
+  "rules": [
+    {
+      "id": "nextjs-app-router",
+      "title": "App Router",
+      "text": "Use the App Router; keep components server components by default.",
+      "recommended": true
+    },
+    {
+      "id": "nextjs-use-client",
+      "title": "Minimize client components",
+      "text": "Add \"use client\" only to the smallest components that need interactivity or browser APIs.",
+      "recommended": true
+    },
+    {
+      "id": "nextjs-data-fetching",
+      "title": "Fetch on the server",
+      "text": "Fetch data in server components or route handlers, not in client effects.",
+      "recommended": true
+    },
+    {
+      "id": "nextjs-env",
+      "title": "Env var exposure",
+      "text": "Expose only NEXT_PUBLIC_ variables to the browser, remember they are inlined at build time, and never put secrets in them.",
+      "recommended": true
+    },
+    {
+      "id": "nextjs-images",
+      "title": "next/image and next/font",
+      "text": "Use next/image and next/font for images and fonts."
+    },
+    {
+      "id": "nextjs-metadata",
+      "title": "Metadata API",
+      "text": "Define page metadata with the Metadata API.",
+      "recommended": true
+    },
+    {
+      "id": "nextjs-server-actions",
+      "title": "Validate server actions",
+      "text": "Treat server actions as public endpoints: authenticate, authorize and validate input inside every action, and return only the data the UI needs.",
+      "recommended": true
+    },
+    {
+      "id": "nextjs-caching",
+      "title": "Be explicit about caching",
+      "text": "Fetches are not cached by default in Next.js 15 and later; opt in with cache: 'force-cache' or revalidate, and set caching explicitly per fetch and route.",
+      "recommended": true
+    },
+    {
+      "id": "nextjs-loading-ui",
+      "title": "loading.tsx and error.tsx",
+      "text": "Provide loading.tsx and error.tsx for route segments that fetch data."
+    },
+    {
+      "id": "nextjs-route-handlers",
+      "title": "Typed route handlers",
+      "text": "Validate route handler input and return typed JSON with correct status codes.",
+      "recommended": true
+    }
+  ],
+  "sources": [
+    {
+      "name": "Next.js documentation",
+      "url": "https://nextjs.org/docs"
+    }
+  ],
+  "reviewed": "2026-10"
+}

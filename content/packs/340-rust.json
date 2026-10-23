@@ -1,0 +1,50 @@
+{
+  "id": "rust",
+  "title": "Rust",
+  "kind": "technology",
+  "order": 340,
+  "family": "systems",
+  "description": "Conventions for Rust.",
+  "sources": [
+    {
+      "name": "Rust API Guidelines",
+      "url": "https://rust-lang.github.io/api-guidelines/"
+    },
+    {
+      "name": "Clippy",
+      "url": "https://github.com/rust-lang/rust-clippy"
+    }
+  ],
+  "rules": [
+    {
+      "id": "rust-clippy",
+      "title": "rustfmt and clippy",
+      "text": "Run cargo fmt and cargo clippy and treat warnings as errors in CI.",
+      "recommended": true
+    },
+    {
+      "id": "rust-result",
+      "title": "Result over panic",
+      "text": "Return Result and propagate with ?; avoid unwrap and expect outside tests.",
+      "recommended": true
+    },
+    {
+      "id": "rust-thiserror",
+      "title": "thiserror and anyhow",
+      "text": "Use thiserror for library errors and anyhow for application errors."
+    },
+    {
+      "id": "rust-borrow",
+      "title": "Borrow before cloning",
+      "text": "Prefer borrowing over cloning; clone only when ownership is needed.",
+      "recommended": true
+    },
+    {
+      "id": "rust-unsafe",
+      "title": "Justify unsafe",
+      "text": "Avoid unsafe; when required, keep it minimal and document its safety invariants.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10"
+}

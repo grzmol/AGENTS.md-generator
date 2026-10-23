@@ -1,0 +1,40 @@
+{
+  "id": "mysql",
+  "title": "MySQL and MariaDB",
+  "kind": "technology",
+  "order": 501,
+  "family": "data",
+  "description": "Conventions for MySQL and MariaDB.",
+  "rules": [
+    {
+      "id": "mysql-utf8mb4",
+      "title": "utf8mb4",
+      "text": "Use utf8mb4 with a modern collation for all tables.",
+      "recommended": true
+    },
+    {
+      "id": "mysql-innodb",
+      "title": "InnoDB",
+      "text": "Use InnoDB tables with foreign keys and explicit primary keys.",
+      "recommended": true
+    },
+    {
+      "id": "mysql-explain",
+      "title": "Explain slow queries",
+      "text": "Check slow queries with EXPLAIN and add composite indexes in selective order.",
+      "recommended": true
+    },
+    {
+      "id": "mysql-online-ddl",
+      "title": "Online schema changes",
+      "text": "Use online schema change tools for large tables."
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "MySQL reference manual",
+      "url": "https://dev.mysql.com/doc/refman/8.0/en/"
+    }
+  ]
+}

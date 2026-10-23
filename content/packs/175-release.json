@@ -1,0 +1,43 @@
+{
+  "id": "release",
+  "title": "Releases and migrations",
+  "kind": "general",
+  "order": 175,
+  "description": "Shipping safely.",
+  "rules": [
+    {
+      "id": "release-semver",
+      "title": "Semantic versioning",
+      "text": "Follow semantic versioning and bump versions only in release changes.",
+      "recommended": true
+    },
+    {
+      "id": "release-changelog",
+      "title": "Keep a changelog",
+      "text": "Record user-visible changes in CHANGELOG.md under an Unreleased heading.",
+      "recommended": true
+    },
+    {
+      "id": "release-flags",
+      "title": "Feature flags",
+      "text": "Gate risky or incomplete features behind a flag and remove the flag once fully rolled out."
+    },
+    {
+      "id": "release-expand-contract",
+      "title": "Expand and contract migrations",
+      "text": "Ship database changes in backward compatible steps: add, backfill, switch reads, then remove.",
+      "recommended": true
+    },
+    {
+      "id": "release-rollback",
+      "title": "Plan the rollback",
+      "text": "Make every release reversible and note the rollback path in the pull request.",
+      "recommended": true
+    },
+    {
+      "id": "release-no-manual",
+      "title": "No manual release steps",
+      "text": "Automate releases in CI; do not rely on manual steps run from a laptop."
+    }
+  ]
+}

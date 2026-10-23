@@ -1,0 +1,47 @@
+{
+  "id": "express",
+  "title": "Express and Fastify",
+  "kind": "technology",
+  "order": 281,
+  "family": "javascript",
+  "description": "Conventions for Express and Fastify.",
+  "rules": [
+    {
+      "id": "express-async-errors",
+      "title": "Centralized error handler",
+      "text": "Route all errors through one error-handling middleware; Express 5 forwards rejected async handlers to it, while Express 4 needs a wrapper.",
+      "recommended": true
+    },
+    {
+      "id": "express-validate",
+      "title": "Validate requests",
+      "text": "Validate params, query and body with a schema (zod, joi, typebox) before the handler runs.",
+      "recommended": true
+    },
+    {
+      "id": "express-helmet",
+      "title": "Security middleware",
+      "text": "Apply helmet or equivalent security headers and disable the x-powered-by header.",
+      "recommended": true
+    },
+    {
+      "id": "express-layers",
+      "title": "Thin route handlers",
+      "text": "Keep route handlers thin; put logic in services that do not import req or res.",
+      "recommended": true
+    },
+    {
+      "id": "express-limits",
+      "title": "Body size limits",
+      "text": "Set body size limits and request timeouts.",
+      "recommended": true
+    }
+  ],
+  "sources": [
+    {
+      "name": "Express documentation",
+      "url": "https://expressjs.com"
+    }
+  ],
+  "reviewed": "2026-10"
+}

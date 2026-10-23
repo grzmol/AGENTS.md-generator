@@ -1,0 +1,41 @@
+{
+  "id": "celery",
+  "title": "Celery and task queues",
+  "kind": "technology",
+  "order": 317,
+  "family": "python",
+  "description": "Conventions for Celery and task queues.",
+  "rules": [
+    {
+      "id": "celery-idempotent",
+      "title": "Idempotent tasks",
+      "text": "Make tasks idempotent because they may run more than once.",
+      "recommended": true
+    },
+    {
+      "id": "celery-ids",
+      "title": "Pass IDs, not objects",
+      "text": "Pass identifiers to tasks and load fresh data inside the task.",
+      "recommended": true
+    },
+    {
+      "id": "celery-retry",
+      "title": "Retries with backoff",
+      "text": "Configure retries with exponential backoff and a maximum.",
+      "recommended": true
+    },
+    {
+      "id": "celery-timeouts",
+      "title": "Task time limits",
+      "text": "Set soft and hard time limits on every task.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Celery documentation",
+      "url": "https://docs.celeryq.dev/en/stable/"
+    }
+  ]
+}

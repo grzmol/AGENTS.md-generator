@@ -1,0 +1,47 @@
+{
+  "id": "serverless",
+  "title": "Serverless functions",
+  "kind": "technology",
+  "order": 552,
+  "family": "cloud",
+  "description": "Conventions for Serverless functions.",
+  "rules": [
+    {
+      "id": "serverless-stateless",
+      "title": "Stateless handlers",
+      "text": "Keep handlers stateless and initialize clients outside the handler for reuse.",
+      "recommended": true
+    },
+    {
+      "id": "serverless-small",
+      "title": "Small packages",
+      "text": "Keep deployment packages small to reduce cold starts.",
+      "recommended": true
+    },
+    {
+      "id": "serverless-timeouts",
+      "title": "Timeouts and retries",
+      "text": "Set timeouts below the caller timeout and design for duplicate invocations.",
+      "recommended": true
+    },
+    {
+      "id": "serverless-least-priv",
+      "title": "One role per function",
+      "text": "Give each function its own minimal role.",
+      "recommended": true
+    },
+    {
+      "id": "serverless-no-recursion",
+      "title": "Avoid recursive invocations",
+      "text": "Avoid designs where a function triggers itself; if it happens, set reserved concurrency to 0 to stop the loop while you fix the code.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "AWS Lambda best practices",
+      "url": "https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html"
+    }
+  ]
+}

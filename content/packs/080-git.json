@@ -1,0 +1,108 @@
+{
+  "id": "git",
+  "title": "Git and pull requests",
+  "kind": "general",
+  "order": 80,
+  "description": "Version control workflow.",
+  "sources": [
+    {
+      "name": "Conventional Commits",
+      "url": "https://www.conventionalcommits.org"
+    }
+  ],
+  "rules": [
+    {
+      "id": "git-conventional",
+      "title": "Conventional Commits",
+      "text": "Write commit messages in Conventional Commits format (feat:, fix:, docs:, refactor:, test:, chore:) and mark breaking changes with ! or a BREAKING CHANGE footer.",
+      "recommended": true
+    },
+    {
+      "id": "git-small-prs",
+      "title": "Small pull requests",
+      "text": "Keep pull requests small and focused on one change.",
+      "recommended": true
+    },
+    {
+      "id": "git-imperative",
+      "title": "Imperative commit subjects",
+      "text": "Write commit subjects in the imperative mood, 72 characters or fewer.",
+      "recommended": true
+    },
+    {
+      "id": "git-no-force",
+      "title": "No force push",
+      "text": "Never force-push to shared branches and never rewrite published history.",
+      "recommended": true
+    },
+    {
+      "id": "git-branch-names",
+      "title": "Branch naming",
+      "text": "Name branches type/short-description, for example feat/add-login."
+    },
+    {
+      "id": "git-checks",
+      "title": "Run checks before commit",
+      "text": "Run lint, type check and tests before committing.",
+      "recommended": true
+    },
+    {
+      "id": "git-no-secrets-commit",
+      "title": "No secrets in commits",
+      "text": "Never commit secrets, build output or large binaries.",
+      "recommended": true
+    },
+    {
+      "id": "git-pr-description",
+      "title": "Explain the why in PRs",
+      "text": "Describe motivation, approach and testing in the pull request description.",
+      "recommended": true
+    },
+    {
+      "id": "git-atomic",
+      "title": "Atomic commits",
+      "text": "Make each commit one logical change that builds and passes tests.",
+      "recommended": true
+    },
+    {
+      "id": "git-no-wip",
+      "title": "No WIP in shared branches",
+      "text": "Squash fixup and WIP commits before merging."
+    },
+    {
+      "id": "git-link-issues",
+      "title": "Link issues",
+      "text": "Reference the issue or ticket in the commit body or pull request."
+    },
+    {
+      "id": "git-no-amend-pushed",
+      "title": "No history rewrite after push",
+      "text": "Do not amend or rebase commits that are already pushed to a shared branch.",
+      "recommended": true
+    },
+    {
+      "id": "git-gitignore",
+      "title": "Keep .gitignore current",
+      "text": "Add build output, local env files and editor files to .gitignore instead of committing them.",
+      "recommended": true
+    },
+    {
+      "id": "git-review-ready",
+      "title": "Review-ready PRs",
+      "text": "Open pull requests only when CI is green and the diff is self-reviewed.",
+      "recommended": true
+    },
+    {
+      "id": "git-hooks",
+      "title": "Do not skip hooks",
+      "text": "Never bypass commit hooks or signing with --no-verify unless explicitly instructed.",
+      "recommended": true
+    },
+    {
+      "id": "git-commit-body",
+      "title": "Explain why in the body",
+      "text": "Use the commit body to explain why the change was made when it is not obvious."
+    }
+  ],
+  "reviewed": "2026-10"
+}

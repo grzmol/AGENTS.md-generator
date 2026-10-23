@@ -1,0 +1,64 @@
+{
+  "id": "performance",
+  "title": "Performance",
+  "kind": "general",
+  "order": 110,
+  "description": "Efficiency guidelines.",
+  "rules": [
+    {
+      "id": "performance-measure",
+      "title": "Measure first",
+      "text": "Measure before optimizing; do not trade readability for unmeasured gains.",
+      "recommended": true
+    },
+    {
+      "id": "performance-n-plus-one",
+      "title": "Avoid N+1 queries",
+      "text": "Avoid N+1 queries; batch or join database access.",
+      "recommended": true
+    },
+    {
+      "id": "performance-pagination",
+      "title": "Paginate large results",
+      "text": "Paginate or stream large result sets instead of loading everything into memory.",
+      "recommended": true
+    },
+    {
+      "id": "performance-lazy",
+      "title": "Lazy-load heavy code",
+      "text": "Lazy-load heavy modules and assets that are not needed on first render."
+    },
+    {
+      "id": "performance-cache",
+      "title": "Cache with invalidation",
+      "text": "Add caching only with a clear key, TTL and invalidation strategy."
+    },
+    {
+      "id": "performance-indexes",
+      "title": "Index hot queries",
+      "text": "Index columns used in hot queries and verify with a query plan.",
+      "recommended": true
+    },
+    {
+      "id": "performance-bundle",
+      "title": "Watch bundle size",
+      "text": "Keep client bundle size in check and avoid importing whole libraries for one function."
+    },
+    {
+      "id": "performance-alloc",
+      "title": "Avoid needless allocations",
+      "text": "Avoid allocating in hot loops and reuse buffers where profiling shows it matters."
+    },
+    {
+      "id": "performance-async-io",
+      "title": "Do I/O concurrently",
+      "text": "Run independent I/O operations concurrently with a bounded concurrency limit.",
+      "recommended": true
+    },
+    {
+      "id": "performance-budget",
+      "title": "Performance budgets",
+      "text": "Respect existing performance budgets and fail the change if it regresses them."
+    }
+  ]
+}

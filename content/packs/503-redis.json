@@ -1,0 +1,45 @@
+{
+  "id": "redis",
+  "title": "Redis",
+  "kind": "technology",
+  "order": 503,
+  "family": "data",
+  "description": "Conventions for Redis.",
+  "rules": [
+    {
+      "id": "redis-ttl",
+      "title": "Set TTLs",
+      "text": "Set expirations on cache keys and namespace key names (service:entity:id).",
+      "recommended": true
+    },
+    {
+      "id": "redis-scan",
+      "title": "SCAN, not KEYS",
+      "text": "Use SCAN instead of KEYS in production code.",
+      "recommended": true
+    },
+    {
+      "id": "redis-not-source",
+      "title": "Not the source of truth",
+      "text": "Treat Redis as a cache unless persistence has been explicitly designed.",
+      "recommended": true
+    },
+    {
+      "id": "redis-pipelines",
+      "title": "Pipeline round trips",
+      "text": "Batch commands with pipelines to reduce round trips."
+    },
+    {
+      "id": "redis-transactions",
+      "title": "Atomic multi-step updates",
+      "text": "Use transactions or Lua scripts when several commands must apply together; a plain pipeline is not atomic."
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Redis documentation",
+      "url": "https://redis.io/docs"
+    }
+  ]
+}

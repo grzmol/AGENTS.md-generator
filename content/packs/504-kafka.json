@@ -1,0 +1,59 @@
+{
+  "id": "kafka",
+  "title": "Kafka and event streaming",
+  "kind": "technology",
+  "order": 504,
+  "family": "data",
+  "description": "Conventions for Kafka and event streaming.",
+  "rules": [
+    {
+      "id": "kafka-schemas",
+      "title": "Schema registry",
+      "text": "Define event schemas in a registry and evolve them compatibly.",
+      "recommended": true
+    },
+    {
+      "id": "kafka-keys",
+      "title": "Partition keys",
+      "text": "Choose partition keys that preserve per-entity ordering and spread load.",
+      "recommended": true
+    },
+    {
+      "id": "kafka-idempotent-consumers",
+      "title": "Idempotent consumers",
+      "text": "Make consumers idempotent because delivery is at least once.",
+      "recommended": true
+    },
+    {
+      "id": "kafka-dlq",
+      "title": "Dead-letter handling",
+      "text": "Route poison messages to a dead-letter topic with context.",
+      "recommended": true
+    },
+    {
+      "id": "kafka-offsets",
+      "title": "Commit after processing",
+      "text": "Commit offsets only after the message has been processed.",
+      "recommended": true
+    },
+    {
+      "id": "kafka-idempotent-producer",
+      "title": "Idempotent producer",
+      "text": "Keep the idempotent producer on (the default since Kafka 3.0) and do not add application-level resends, which cannot be deduplicated.",
+      "recommended": true
+    },
+    {
+      "id": "kafka-durability",
+      "title": "Durable topics",
+      "text": "Use replication factor 3 with min.insync.replicas 2 and acks=all for topics that must not lose data.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Apache Kafka documentation",
+      "url": "https://kafka.apache.org/documentation/"
+    }
+  ]
+}

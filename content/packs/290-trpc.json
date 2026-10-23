@@ -1,0 +1,40 @@
+{
+  "id": "trpc",
+  "title": "tRPC",
+  "kind": "technology",
+  "order": 290,
+  "family": "javascript",
+  "description": "Conventions for tRPC.",
+  "rules": [
+    {
+      "id": "trpc-input",
+      "title": "Validate inputs",
+      "text": "Validate every procedure input with zod.",
+      "recommended": true
+    },
+    {
+      "id": "trpc-context",
+      "title": "Auth in context and middleware",
+      "text": "Resolve the session in context and enforce auth in middleware procedures.",
+      "recommended": true
+    },
+    {
+      "id": "trpc-routers",
+      "title": "Routers per domain",
+      "text": "Split routers by domain and merge them at the root."
+    },
+    {
+      "id": "trpc-types",
+      "title": "Share inferred types",
+      "text": "Share types through inference rather than duplicating them.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "tRPC documentation",
+      "url": "https://trpc.io/docs"
+    }
+  ]
+}

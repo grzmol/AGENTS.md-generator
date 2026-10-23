@@ -1,0 +1,44 @@
+{
+  "id": "review",
+  "title": "Self-review checklist",
+  "kind": "general",
+  "order": 160,
+  "description": "What to verify before handing work off.",
+  "rules": [
+    {
+      "id": "review-diff",
+      "title": "Read your own diff",
+      "text": "Read the full diff before finishing and remove debug code, unrelated edits and stray files.",
+      "recommended": true
+    },
+    {
+      "id": "review-edge-cases",
+      "title": "Think through edge cases",
+      "text": "Check empty, null, large, concurrent and failure inputs for every new code path.",
+      "recommended": true
+    },
+    {
+      "id": "review-backward",
+      "title": "Check backward compatibility",
+      "text": "Confirm that changes to public interfaces, configs and data formats stay backward compatible.",
+      "recommended": true
+    },
+    {
+      "id": "review-scope",
+      "title": "Stay in scope",
+      "text": "Flag out-of-scope problems you notice instead of fixing them inside this change.",
+      "recommended": true
+    },
+    {
+      "id": "review-summary",
+      "title": "Summarize with evidence",
+      "text": "End with a short summary of what changed, how you verified it and what remains uncertain.",
+      "recommended": true
+    },
+    {
+      "id": "review-assumptions",
+      "title": "State assumptions",
+      "text": "List assumptions you made so the reviewer can confirm them."
+    }
+  ]
+}

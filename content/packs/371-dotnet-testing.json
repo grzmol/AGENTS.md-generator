@@ -1,0 +1,39 @@
+{
+  "id": "dotnet-testing",
+  "title": "xUnit and .NET testing",
+  "kind": "technology",
+  "order": 371,
+  "family": "dotnet",
+  "description": "Conventions for xUnit and .NET testing.",
+  "rules": [
+    {
+      "id": "dotnet-testing-xunit",
+      "title": "xUnit conventions",
+      "text": "Write tests with xUnit using Fact and Theory with InlineData.",
+      "recommended": true
+    },
+    {
+      "id": "dotnet-testing-integration",
+      "title": "WebApplicationFactory",
+      "text": "Test HTTP endpoints with WebApplicationFactory against a real pipeline.",
+      "recommended": true
+    },
+    {
+      "id": "dotnet-testing-fakes",
+      "title": "Prefer fakes",
+      "text": "Prefer in-memory fakes or Testcontainers over mocking databases."
+    },
+    {
+      "id": "dotnet-testing-naming",
+      "title": "Test naming",
+      "text": "Name tests Method_Scenario_Expected or by behavior consistently."
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "xUnit.net documentation",
+      "url": "https://xunit.net/docs/getting-started/v3/getting-started"
+    }
+  ]
+}

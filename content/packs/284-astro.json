@@ -1,0 +1,40 @@
+{
+  "id": "astro",
+  "title": "Astro",
+  "kind": "technology",
+  "order": 284,
+  "family": "javascript",
+  "description": "Conventions for Astro.",
+  "rules": [
+    {
+      "id": "astro-islands",
+      "title": "Minimal client JS",
+      "text": "Ship zero JavaScript by default and hydrate only interactive islands with the lightest client directive.",
+      "recommended": true
+    },
+    {
+      "id": "astro-content-collections",
+      "title": "Content collections",
+      "text": "Model content with content collections and a zod schema.",
+      "recommended": true
+    },
+    {
+      "id": "astro-static-first",
+      "title": "Prefer static output",
+      "text": "Prefer static generation and opt into server rendering only for dynamic pages.",
+      "recommended": true
+    },
+    {
+      "id": "astro-images",
+      "title": "Astro image optimization",
+      "text": "Use the built-in image components for optimization and explicit dimensions."
+    }
+  ],
+  "reviewed": "2026-10",
+  "sources": [
+    {
+      "name": "Astro documentation",
+      "url": "https://docs.astro.build"
+    }
+  ]
+}

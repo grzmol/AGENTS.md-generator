@@ -1,0 +1,95 @@
+{
+  "id": "python",
+  "title": "Python",
+  "kind": "technology",
+  "order": 300,
+  "family": "python",
+  "description": "Conventions for Python.",
+  "sources": [
+    {
+      "name": "PEP 8",
+      "url": "https://peps.python.org/pep-0008/"
+    },
+    {
+      "name": "uv documentation",
+      "url": "https://docs.astral.sh/uv/"
+    }
+  ],
+  "rules": [
+    {
+      "id": "python-pep8",
+      "title": "PEP 8 with Ruff",
+      "text": "Follow PEP 8 and use Ruff for linting and formatting.",
+      "recommended": true
+    },
+    {
+      "id": "python-typing",
+      "title": "Type hints",
+      "text": "Add type hints to all function signatures and run mypy or pyright.",
+      "recommended": true
+    },
+    {
+      "id": "python-pathlib",
+      "title": "pathlib",
+      "text": "Use pathlib for filesystem paths and context managers for resources.",
+      "recommended": true
+    },
+    {
+      "id": "python-dataclasses",
+      "title": "Dataclasses or Pydantic",
+      "text": "Model structured data with dataclasses or Pydantic, not loose dicts.",
+      "recommended": true
+    },
+    {
+      "id": "python-uv",
+      "title": "uv for environments",
+      "text": "Manage dependencies and virtual environments with uv, commit uv.lock and install with uv sync --locked in CI."
+    },
+    {
+      "id": "python-pytest",
+      "title": "pytest",
+      "text": "Write tests with pytest, using fixtures and parametrize instead of loops.",
+      "recommended": true
+    },
+    {
+      "id": "python-exceptions",
+      "title": "Specific exceptions",
+      "text": "Catch specific exceptions, never bare except.",
+      "recommended": true
+    },
+    {
+      "id": "python-f-strings",
+      "title": "f-strings",
+      "text": "Use f-strings for formatting, but not for building SQL or log messages with sensitive data."
+    },
+    {
+      "id": "python-comprehensions",
+      "title": "Readable comprehensions",
+      "text": "Use comprehensions for simple transforms and loops when logic is complex."
+    },
+    {
+      "id": "python-mutable-defaults",
+      "title": "No mutable defaults",
+      "text": "Never use mutable default arguments.",
+      "recommended": true
+    },
+    {
+      "id": "python-logging-module",
+      "title": "logging module",
+      "text": "Use the logging module with a module-level logger, not print.",
+      "recommended": true
+    },
+    {
+      "id": "python-protocols",
+      "title": "Protocols for interfaces",
+      "text": "Use Protocol or ABC to define interfaces and keep concrete types out of signatures."
+    },
+    {
+      "id": "python-async-io",
+      "title": "asyncio discipline",
+      "text": "Do not mix blocking calls into async code; use asyncio.to_thread for unavoidable blocking work.",
+      "recommended": true
+    }
+  ],
+  "reviewed": "2026-10"
+}
