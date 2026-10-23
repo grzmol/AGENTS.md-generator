@@ -4,4 +4,6 @@ import '@fontsource-variable/geist-mono'
 import './app.css'
 import App from './App.svelte'
 
-mount(App, { target: document.getElementById('app')! })
+const target = document.getElementById('app')!
+target.replaceChildren()
+mount(App, { target })

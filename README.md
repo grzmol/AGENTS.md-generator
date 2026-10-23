@@ -1,8 +1,17 @@
 # AGENTS.md Generator
 
-Static site that builds an `AGENTS.md` (also `CLAUDE.md`, Cursor `.mdc` and Copilot instructions) from checkboxes. Pick conventions for formatting, naming, logging, design systems, testing, git and security, add technology packs and skills, and copy or download the result. Everything runs in the browser.
+Free, open source **AGENTS.md generator**. Pick rules for your stack with toggles, add your project commands and download `AGENTS.md`, `CLAUDE.md`, Cursor rule files or GitHub Copilot instructions. Everything runs in your browser.
 
-Live site: https://grzmol.github.io/AGENTS.md-generator/ (after enabling Pages with the GitHub Actions source in repository settings).
+Live site: https://grzmol.github.io/AGENTS.md-generator/ (enable Pages with the GitHub Actions source in the repository settings).
+
+- [AGENTS.md templates](https://grzmol.github.io/AGENTS.md-generator/templates/) for every preset
+- [Guides](https://grzmol.github.io/AGENTS.md-generator/guides/): what AGENTS.md is, AGENTS.md vs CLAUDE.md, best practices, monorepos
+
+## SEO
+
+The app is client rendered, so `scripts/prerender.ts` runs after `vite build` and adds crawlable HTML: prerendered home content with FAQ, one landing page per preset under `/templates/`, guides under `/guides/`, JSON-LD (WebApplication, FAQPage, TechArticle, BreadcrumbList), canonical URLs, Open Graph tags, `sitemap.xml` and `robots.txt`. Copy lives in `content/seo.json`; a test keeps the primary keyword in the title, description and heading.
+
+Off-site steps that cannot be done from the code: set the repository description, website and topics (`agents-md`, `agents-md-generator`, `ai-coding-agents`, `claude-code`, `cursor-rules`), and consider a custom domain that contains the keyword.
 
 ## Monorepo mode
 
