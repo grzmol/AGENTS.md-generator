@@ -1,10 +1,10 @@
 {
   "site": {
-    "url": "https://grzmol.github.io/AGENTS.md-generator/",
+    "url": "https://agents-md.app/",
     "name": "AGENTS.md Generator",
     "title": "AGENTS.md Generator: Build AGENTS.md and CLAUDE.md Online",
     "description": "Free AGENTS.md generator. Pick rules for your stack, add skills and commands, then download AGENTS.md, CLAUDE.md, Cursor or Copilot files. No sign-up.",
-    "ogImage": "https://grzmol.github.io/AGENTS.md-generator/og.png",
+    "ogImage": "https://agents-md.app/og.png",
     "keywords": "AGENTS.md generator, AGENTS.md, AGENTS.md template, CLAUDE.md generator, Cursor rules generator, Copilot instructions, AI coding agent instructions"
   },
   "hero": {
