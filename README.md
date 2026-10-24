@@ -1,9 +1,5 @@
 # AGENTS.md Generator
 
-[![CI](https://github.com/grzmol/AGENTS.md-generator/actions/workflows/ci.yml/badge.svg)](https://github.com/grzmol/AGENTS.md-generator/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
-[![Content: CC0](https://img.shields.io/badge/content-CC0-lightgrey.svg)](content/LICENSE)
-
 A free, open source **AGENTS.md generator**. Pick the rules that fit your stack with toggles, add your project commands, and download an `AGENTS.md` that coding agents will actually follow. The same selection exports to `CLAUDE.md`, Cursor rule files and GitHub Copilot instructions.
 
 Everything runs in your browser. There is no backend, no sign-up and no telemetry.
