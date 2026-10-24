@@ -2,10 +2,10 @@
 
 Free, open source **AGENTS.md generator**. Pick rules for your stack with toggles, add your project commands and download `AGENTS.md`, `CLAUDE.md`, Cursor rule files or GitHub Copilot instructions. Everything runs in your browser.
 
-Live site: https://grzmol.github.io/AGENTS.md-generator/ (enable Pages with the GitHub Actions source in the repository settings).
+Live site: https://agents-md.app
 
-- [AGENTS.md templates](https://grzmol.github.io/AGENTS.md-generator/templates/) for every preset
-- [Guides](https://grzmol.github.io/AGENTS.md-generator/guides/): what AGENTS.md is, AGENTS.md vs CLAUDE.md, best practices, monorepos
+- [AGENTS.md templates](https://agents-md.app/templates/) for every preset
+- [Guides](https://agents-md.app/guides/): what AGENTS.md is, AGENTS.md vs CLAUDE.md, best practices, monorepos
 
 ## SEO
 
