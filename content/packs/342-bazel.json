@@ -1,0 +1,72 @@
+{
+  "id": "bazel",
+  "title": "Bazel",
+  "kind": "technology",
+  "order": 342,
+  "family": "systems",
+  "description": "Conventions for Bazel.",
+  "sources": [
+    {
+      "name": "angular/angular AGENTS.md",
+      "url": "https://github.com/angular/angular/blob/main/AGENTS.md"
+    },
+    {
+      "name": "cloudflare/workerd AGENTS.md",
+      "url": "https://github.com/cloudflare/workerd/blob/main/AGENTS.md"
+    },
+    {
+      "name": "apache/kafka AGENTS.md",
+      "url": "https://github.com/apache/kafka/blob/trunk/AGENTS.md"
+    },
+    {
+      "name": "Bazel documentation",
+      "url": "https://bazel.build/docs"
+    }
+  ],
+  "rules": [
+    {
+      "id": "bazel-bazelisk",
+      "title": "Bazelisk and .bazelversion",
+      "text": "Use Bazelisk and pin the Bazel version in .bazelversion so everyone builds with the same release.",
+      "recommended": true
+    },
+    {
+      "id": "bazel-target-first",
+      "title": "Targets before everything",
+      "text": "Run specific targets, for example bazel test //pkg:target, before running the whole workspace.",
+      "recommended": true
+    },
+    {
+      "id": "bazel-visibility",
+      "title": "Restrict visibility",
+      "text": "Restrict target visibility to the packages that need it.",
+      "recommended": true
+    },
+    {
+      "id": "bazel-declare-deps",
+      "title": "Declare every dependency",
+      "text": "Declare every dependency in BUILD files. Do not rely on transitive dependencies."
+    },
+    {
+      "id": "bazel-bazelrc-configs",
+      "title": "Named configs",
+      "text": "Group flags into named configs in .bazelrc and select them with --config."
+    },
+    {
+      "id": "bazel-hermetic-toolchains",
+      "title": "Hermetic toolchains",
+      "text": "Pin toolchains and runtimes, for example a remote JDK, instead of using whatever is installed locally."
+    },
+    {
+      "id": "bazel-buildifier",
+      "title": "Format with buildifier",
+      "text": "Format BUILD and .bzl files with buildifier."
+    },
+    {
+      "id": "bazel-no-bazel-out",
+      "title": "Never edit bazel-* links",
+      "text": "Never edit files through the bazel-* output symlinks."
+    }
+  ],
+  "reviewed": "2026-10"
+}

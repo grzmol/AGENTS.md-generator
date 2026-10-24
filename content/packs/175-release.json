@@ -38,6 +38,35 @@
       "id": "release-no-manual",
       "title": "No manual release steps",
       "text": "Automate releases in CI; do not rely on manual steps run from a laptop."
+    },
+    {
+      "id": "release-dispatch",
+      "title": "Release via workflow",
+      "text": "Cut releases through the release workflow, never by creating tags by hand."
+    },
+    {
+      "id": "release-release-notes",
+      "title": "Write the release note",
+      "text": "Write the user-facing release note in the PR description or changeset, in the project format."
+    },
+    {
+      "id": "release-canary",
+      "title": "Canary first",
+      "text": "Publish risky changes to a canary or pre-release channel before the stable one."
+    }
+  ],
+  "sources": [
+    {
+      "name": "langchain-ai/langchain AGENTS.md",
+      "url": "https://github.com/langchain-ai/langchain/blob/master/AGENTS.md"
+    },
+    {
+      "name": "vercel/ai AGENTS.md",
+      "url": "https://github.com/vercel/ai/blob/main/AGENTS.md"
+    },
+    {
+      "name": "biomejs/biome AGENTS.md",
+      "url": "https://github.com/biomejs/biome/blob/main/AGENTS.md"
     }
   ]
 }

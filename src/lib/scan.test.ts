@@ -30,6 +30,20 @@ describe('detect', () => {
     expect(ids(result)).not.toContain('html')
   })
 
+  it('detects tooling packs from config files and dependencies', async () => {
+    const { paths, read } = fixture({
+      'package.json': JSON.stringify({ name: 'edge', devDependencies: { wrangler: '4', vitest: '3', '@playwright/test': '1', '@changesets/cli': '2', turbo: '2', '@biomejs/biome': '2' }, dependencies: { '@ai-sdk/openai': '3' } }),
+      'wrangler.jsonc': '{}',
+      'turbo.json': '{}',
+      '.changeset/config.json': '{}',
+      'pnpm-workspace.yaml': '',
+      'justfile': '',
+      'MODULE.bazel': ''
+    })
+    const result = await detect(paths, read)
+    expect(ids(result)).toEqual(expect.arrayContaining(['cloudflare-workers', 'vitest', 'playwright', 'changesets', 'turborepo', 'biome', 'vercel-ai-sdk', 'pnpm', 'just', 'bazel']))
+  })
+
   it('detects FastAPI with uv and pytest', async () => {
     const { paths, read } = fixture({
       'pyproject.toml': '[project]\nname = "api"\ndescription = "Orders API"\ndependencies = ["fastapi>=0.110", "pydantic", "sqlalchemy", "psycopg[binary]"]\n[dependency-groups]\ndev = ["pytest", "ruff"]\n',

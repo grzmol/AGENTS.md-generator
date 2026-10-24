@@ -13,6 +13,14 @@
     {
       "name": "Go context package",
       "url": "https://pkg.go.dev/context"
+    },
+    {
+      "name": "kubernetes/kubernetes AGENTS.md",
+      "url": "https://github.com/kubernetes/kubernetes/blob/master/AGENTS.md"
+    },
+    {
+      "name": "grafana/grafana AGENTS.md",
+      "url": "https://github.com/grafana/grafana/blob/main/AGENTS.md"
     }
   ],
   "rules": [
@@ -51,6 +59,27 @@
       "title": "Own goroutine lifetimes",
       "text": "Never start a goroutine without a clear way for it to stop.",
       "recommended": true
+    },
+    {
+      "id": "go-generated",
+      "title": "Generated Go files",
+      "text": "Never hand-edit generated Go files such as zz_generated.* or *.pb.go. Regenerate them with the project make target.",
+      "recommended": true
+    },
+    {
+      "id": "go-packages",
+      "title": "Package names",
+      "text": "Name packages in lowercase, a single word, matching the directory."
+    },
+    {
+      "id": "go-error-strings",
+      "title": "Error strings",
+      "text": "Write error strings in lowercase without trailing punctuation, saying what failed and with which input."
+    },
+    {
+      "id": "go-golangci",
+      "title": "golangci-lint in CI",
+      "text": "Run golangci-lint with a committed config in CI."
     }
   ],
   "reviewed": "2026-10"

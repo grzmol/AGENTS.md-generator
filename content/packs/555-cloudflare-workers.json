@@ -1,0 +1,89 @@
+{
+  "id": "cloudflare-workers",
+  "title": "Cloudflare Workers",
+  "kind": "technology",
+  "order": 555,
+  "family": "cloud",
+  "description": "Conventions for Cloudflare Workers.",
+  "sources": [
+    {
+      "name": "cloudflare/workers-sdk AGENTS.md",
+      "url": "https://github.com/cloudflare/workers-sdk/blob/main/AGENTS.md"
+    },
+    {
+      "name": "cloudflare/workerd AGENTS.md",
+      "url": "https://github.com/cloudflare/workerd/blob/main/AGENTS.md"
+    },
+    {
+      "name": "Cloudflare Workers docs",
+      "url": "https://developers.cloudflare.com/workers/"
+    }
+  ],
+  "rules": [
+    {
+      "id": "cloudflare-workers-compat-date",
+      "title": "Explicit compatibility date",
+      "text": "Set compatibility_date explicitly in the Wrangler config and update it deliberately after testing.",
+      "recommended": true
+    },
+    {
+      "id": "cloudflare-workers-wrangler-types",
+      "title": "Generate binding types",
+      "text": "Generate binding types with wrangler types, and run wrangler types --check in CI so Env stays current.",
+      "recommended": true
+    },
+    {
+      "id": "cloudflare-workers-secrets",
+      "title": "Secrets via Wrangler",
+      "text": "Store secrets with wrangler secret, never in vars or in the repository.",
+      "recommended": true
+    },
+    {
+      "id": "cloudflare-workers-bindings",
+      "title": "Use bindings",
+      "text": "Access resources through bindings on env, not through globals or hard-coded URLs.",
+      "recommended": true
+    },
+    {
+      "id": "cloudflare-workers-nodejs-compat",
+      "title": "nodejs_compat when needed",
+      "text": "Add the nodejs_compat flag when you need Node.js built-ins, and import them with the node: prefix."
+    },
+    {
+      "id": "cloudflare-workers-jsonc-schema",
+      "title": "wrangler.jsonc with schema",
+      "text": "Prefer wrangler.jsonc and include the $schema entry so editors validate the config."
+    },
+    {
+      "id": "cloudflare-workers-do-migrations",
+      "title": "Durable Object migrations",
+      "text": "Declare each Durable Object class with a migration entry, using new_sqlite_classes for SQLite-backed objects."
+    },
+    {
+      "id": "cloudflare-workers-hyperdrive",
+      "title": "Hyperdrive for Postgres",
+      "text": "Use Hyperdrive for pooled access to external Postgres from Workers."
+    },
+    {
+      "id": "cloudflare-workers-no-request-globals",
+      "title": "No per-request globals",
+      "text": "Do not keep per-request state in module globals. Isolates are reused across requests."
+    },
+    {
+      "id": "cloudflare-workers-background-work",
+      "title": "Background work",
+      "text": "Use ctx.waitUntil for work that may finish after the response, and keep handlers within CPU and memory limits."
+    },
+    {
+      "id": "cloudflare-workers-local-first",
+      "title": "Develop locally",
+      "text": "Develop with wrangler dev or Miniflare, and do not depend on production bindings in tests."
+    },
+    {
+      "id": "cloudflare-workers-shared-dev-layer",
+      "title": "Shared dev behavior",
+      "text": "Implement local development features in the shared simulator so Wrangler, the Vite plugin and the Vitest plugin all benefit."
+    }
+  ],
+  "reviewed": "2026-10"
+}

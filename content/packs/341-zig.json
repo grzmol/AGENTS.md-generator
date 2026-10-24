@@ -1,0 +1,54 @@
+{
+  "id": "zig",
+  "title": "Zig",
+  "kind": "technology",
+  "order": 341,
+  "family": "systems",
+  "description": "Conventions for Zig.",
+  "sources": [
+    {
+      "name": "ghostty-org/ghostty AGENTS.md",
+      "url": "https://github.com/ghostty-org/ghostty/blob/main/AGENTS.md"
+    }
+  ],
+  "rules": [
+    {
+      "id": "zig-fmt",
+      "title": "zig fmt",
+      "text": "Format code with zig fmt before committing.",
+      "recommended": true
+    },
+    {
+      "id": "zig-test-filter",
+      "title": "Targeted tests",
+      "text": "Run targeted tests with zig build test -Dtest-filter=<name>. The full suite is slow.",
+      "recommended": true
+    },
+    {
+      "id": "zig-allocators",
+      "title": "Explicit allocators",
+      "text": "Pass allocators explicitly, free with defer and use errdefer for cleanup on error paths.",
+      "recommended": true
+    },
+    {
+      "id": "zig-errors",
+      "title": "Handle error unions",
+      "text": "Return error unions and handle them with try and catch. Do not discard errors."
+    },
+    {
+      "id": "zig-debug-first",
+      "title": "Debug builds first",
+      "text": "Develop and test in Debug, which keeps safety checks on, and choose a Release mode deliberately."
+    },
+    {
+      "id": "zig-skip-extra-targets",
+      "title": "Skip unneeded targets",
+      "text": "Use the project build options to skip platform-specific app bundles you are not touching."
+    },
+    {
+      "id": "zig-comptime",
+      "title": "Readable comptime",
+      "text": "Use comptime for generics and compile-time checks, but keep it readable."
+    }
+  ]
+}

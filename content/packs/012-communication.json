@@ -1,0 +1,76 @@
+{
+  "id": "communication",
+  "title": "Communication style",
+  "kind": "general",
+  "order": 12,
+  "description": "How the agent talks: short, evidence-backed and free of filler.",
+  "sources": [
+    {
+      "name": "kubernetes/kubernetes AGENTS.md",
+      "url": "https://github.com/kubernetes/kubernetes/blob/master/AGENTS.md"
+    },
+    {
+      "name": "biomejs/biome AGENTS.md",
+      "url": "https://github.com/biomejs/biome/blob/main/AGENTS.md"
+    },
+    {
+      "name": "ggml-org/llama.cpp AGENTS.md",
+      "url": "https://github.com/ggml-org/llama.cpp/blob/master/AGENTS.md"
+    },
+    {
+      "name": "supabase/supabase AGENTS.md",
+      "url": "https://github.com/supabase/supabase/blob/master/AGENTS.md"
+    }
+  ],
+  "rules": [
+    {
+      "id": "communication-concise",
+      "title": "Short and factual",
+      "text": "Keep replies short, factual and technical. Skip preambles, flattery and closing recaps.",
+      "recommended": true
+    },
+    {
+      "id": "communication-evidence",
+      "title": "Claims need evidence",
+      "text": "Do not claim that a function, flag or behavior exists unless you can point to a file and line, an excerpt or a command that shows it.",
+      "recommended": true
+    },
+    {
+      "id": "communication-unknown",
+      "title": "Say when unsure",
+      "text": "When evidence is unavailable, say so plainly instead of presenting a guess as fact.",
+      "recommended": true
+    },
+    {
+      "id": "communication-summary",
+      "title": "Useful final summary",
+      "text": "End a task with what changed, how it was verified and what remains open. Report failures and skipped steps explicitly.",
+      "recommended": true
+    },
+    {
+      "id": "communication-reader-first",
+      "title": "Write for the reader",
+      "text": "Write PR text, docs and comments for a reader who has not seen this conversation. Leave out iteration history, discarded options and tool usage."
+    },
+    {
+      "id": "communication-no-emoji",
+      "title": "No emojis",
+      "text": "Do not use emojis in code, comments, commit messages, docs or agent output."
+    },
+    {
+      "id": "communication-ascii",
+      "title": "Plain ASCII punctuation",
+      "text": "Use plain ASCII punctuation in code, comments and commit messages. Avoid em dashes, smart quotes, unicode arrows and ellipsis characters."
+    },
+    {
+      "id": "communication-actionable-errors",
+      "title": "Actionable messages",
+      "text": "Write error and diagnostic messages that name the problem and the next step. Never print a vague \"something went wrong\"."
+    },
+    {
+      "id": "communication-one-english",
+      "title": "One spelling variant",
+      "text": "Pick one English spelling variant, such as U.S. English, and use it across code, docs and user-facing copy."
+    }
+  ]
+}

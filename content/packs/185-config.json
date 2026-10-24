@@ -8,6 +8,10 @@
     {
       "name": "The Twelve-Factor App",
       "url": "https://12factor.net"
+    },
+    {
+      "name": "astral-sh/ruff AGENTS.md",
+      "url": "https://github.com/astral-sh/ruff/blob/main/AGENTS.md"
     }
   ],
   "rules": [
@@ -39,6 +43,11 @@
       "title": "Safe defaults",
       "text": "Default to the secure, least-privileged and non-destructive option.",
       "recommended": true
+    },
+    {
+      "id": "config-regen-after-options",
+      "title": "Regenerate after option changes",
+      "text": "Regenerate schemas, docs and CLI references after changing config options, flags or environment variables."
     }
   ]
 }

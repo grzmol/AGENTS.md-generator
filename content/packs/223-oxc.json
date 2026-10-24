@@ -1,0 +1,72 @@
+{
+  "id": "oxc",
+  "title": "Oxlint and Oxfmt",
+  "kind": "technology",
+  "order": 223,
+  "family": "javascript",
+  "description": "Conventions for Oxlint and Oxfmt.",
+  "sources": [
+    {
+      "name": "vitest-dev/vitest AGENTS.md",
+      "url": "https://github.com/vitest-dev/vitest/blob/main/AGENTS.md"
+    },
+    {
+      "name": "vercel/ai AGENTS.md",
+      "url": "https://github.com/vercel/ai/blob/main/AGENTS.md"
+    },
+    {
+      "name": "cloudflare/workers-sdk AGENTS.md",
+      "url": "https://github.com/cloudflare/workers-sdk/blob/main/AGENTS.md"
+    },
+    {
+      "name": "Oxlint configuration",
+      "url": "https://oxc.rs/docs/guide/usage/linter/config.html"
+    }
+  ],
+  "rules": [
+    {
+      "id": "oxc-config",
+      "title": "Commit the config",
+      "text": "Configure Oxlint in a committed .oxlintrc.json and keep the config in sync with the CI scripts.",
+      "recommended": true
+    },
+    {
+      "id": "oxc-categories",
+      "title": "Explicit categories",
+      "text": "Enable the correctness category as error and add stricter categories deliberately.",
+      "recommended": true
+    },
+    {
+      "id": "oxc-oxfmt-owns-format",
+      "title": "Oxfmt owns formatting",
+      "text": "Let Oxfmt own formatting and import order. Do not sort imports by hand.",
+      "recommended": true
+    },
+    {
+      "id": "oxc-type-aware",
+      "title": "Type-aware linting",
+      "text": "Turn on type-aware linting with options.typeAware or --type-aware when you need rules that use TypeScript types."
+    },
+    {
+      "id": "oxc-fix",
+      "title": "Review autofixes",
+      "text": "Apply safe fixes with oxlint --fix and review the diff before committing."
+    },
+    {
+      "id": "oxc-ignore-patterns",
+      "title": "Ignore generated output",
+      "text": "Exclude build output, coverage and snapshots with ignorePatterns in the config."
+    },
+    {
+      "id": "oxc-no-inline-disables",
+      "title": "No inline disables",
+      "text": "Do not add inline disables to silence a rule. Fix the code or change the shared config."
+    },
+    {
+      "id": "oxc-same-scripts",
+      "title": "Same scripts everywhere",
+      "text": "Run the same lint and format scripts locally, in hooks and in CI."
+    }
+  ],
+  "reviewed": "2026-10"
+}

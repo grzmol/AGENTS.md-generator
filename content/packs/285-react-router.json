@@ -28,6 +28,16 @@
       "title": "Typed route params",
       "text": "Validate and type route params before use.",
       "recommended": true
+    },
+    {
+      "id": "react-router-identify-mode",
+      "title": "Identify the mode",
+      "text": "Identify which mode a feature targets, declarative, data or framework, before changing routing code."
+    },
+    {
+      "id": "react-router-typegen",
+      "title": "Run typegen",
+      "text": "In framework mode, regenerate route types after changing the route config."
     }
   ],
   "reviewed": "2026-10",
@@ -35,6 +45,10 @@
     {
       "name": "React Router documentation",
       "url": "https://reactrouter.com"
+    },
+    {
+      "name": "remix-run/react-router AGENTS.md",
+      "url": "https://github.com/remix-run/react-router/blob/main/AGENTS.md"
     }
   ]
 }

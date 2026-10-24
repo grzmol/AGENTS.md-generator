@@ -1,0 +1,63 @@
+{
+  "id": "insta",
+  "title": "Rust snapshots (insta)",
+  "kind": "technology",
+  "order": 343,
+  "family": "systems",
+  "description": "Conventions for Rust snapshots (insta).",
+  "sources": [
+    {
+      "name": "astral-sh/ruff AGENTS.md",
+      "url": "https://github.com/astral-sh/ruff/blob/main/AGENTS.md"
+    },
+    {
+      "name": "astral-sh/uv AGENTS.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/AGENTS.md"
+    },
+    {
+      "name": "insta documentation",
+      "url": "https://insta.rs/docs/"
+    }
+  ],
+  "rules": [
+    {
+      "id": "insta-review-pending",
+      "title": "Review pending snapshots",
+      "text": "Review pending snapshots with cargo insta review, or inspect the diff, before accepting them.",
+      "recommended": true
+    },
+    {
+      "id": "insta-no-hand-edits",
+      "title": "Never hand-edit snapshots",
+      "text": "Never edit snapshot files or inline snapshot bodies by hand. Regenerate them with a test run and review the diff.",
+      "recommended": true
+    },
+    {
+      "id": "insta-ci-check",
+      "title": "Fail on mismatch in CI",
+      "text": "Run cargo insta test --check in CI so mismatches fail instead of writing files.",
+      "recommended": true
+    },
+    {
+      "id": "insta-pending-leftovers",
+      "title": "Check for leftovers",
+      "text": "After a forced-update run, look for leftover .pending-snap files when inline snapshots are involved."
+    },
+    {
+      "id": "insta-redact",
+      "title": "Redact unstable values",
+      "text": "Redact nondeterministic values such as timestamps and ids before snapshotting."
+    },
+    {
+      "id": "insta-explicit-cases",
+      "title": "Explicit cases",
+      "text": "Write explicit snapshots per scenario instead of looping over cases that share one snapshot."
+    },
+    {
+      "id": "insta-unreferenced",
+      "title": "Clean unreferenced",
+      "text": "Remove unreferenced snapshots after deleting tests, for example with --unreferenced=delete."
+    }
+  ],
+  "reviewed": "2026-10"
+}

@@ -58,7 +58,7 @@ Stack: Svelte 5, Vite, TypeScript, Vitest.
 
 ## Content
 
-Currently 894 rules in 129 packs and 45 presets.
+Currently 1280 rules in 161 packs and 57 presets.
 
 Rules live in `content/packs/*.json` and presets in `content/presets/*.json`. Adding a rule is a one-file change.
 
@@ -66,13 +66,17 @@ A rule has `id` (prefixed with its pack id), `title`, `text` (one imperative lin
 
 Tests validate unique ids, radio groups, preset references, rule length and the absence of em dashes.
 
+## Patterns from large projects
+
+Newer general packs (communication, verification, agent docs, code comments, contributing, AI policy, API stability, generated code, imports and exports, test craft, public repository hygiene) and many technology rules were distilled from the AGENTS.md files of large open source projects such as LangChain, Ruff, uv, Supabase, Prisma, Grafana, Home Assistant, Vercel AI SDK, Rust, Node.js, Kafka, Spark, Elasticsearch, Kubernetes, Cloudflare Workers, SvelteKit, Angular, React Router, Vitest, Storybook, Mastra, the MCP Python SDK, Ghostty, Biome, llama.cpp, vLLM and Ray. Rules are paraphrased, generalized to apply outside the source project, and linked in each pack under its sources. Policy-style rules (for example the AI policy pack) are opt-in, because they only fit some repositories.
+
 ## Quality review
 
-93 of 129 packs carry a `reviewed` field and were checked against official documentation in October 2026 (framework, language and tool docs through Context7, Claude and Claude Code docs, OWASP cheat sheets and the Solidity, Go and Rust sources on GitHub). Rules were corrected where documentation had moved on, for example Next.js 15 caching defaults, FastAPI lifespan events, React Compiler memoization, Angular OnPush as the default, Supabase secret keys and Claude Code reading AGENTS.md directly.
+109 of 161 packs carry a `reviewed` field and were checked against official documentation in October 2026 (framework, language and tool docs through Context7, Claude and Claude Code docs, OWASP cheat sheets and the Solidity, Go and Rust sources on GitHub). Rules were corrected where documentation had moved on, for example Next.js 15 caching defaults, FastAPI lifespan events, React Compiler memoization, Angular OnPush as the default, Supabase secret keys and Claude Code reading AGENTS.md directly.
 
 The `reviewed` pack list is generated from the content files; the UI shows the date and sources on each reviewed pack.
 
-Not checked against primary sources: the Cursor and Copilot file formats (the hosts were unreachable), the remaining general convention packs (they are editorial, not tied to one source), and these technology packs: Jupyter, C, Bash, Makefile, Scala, RabbitMQ and SQS, data engineering, AWS, RAG, agent building, payments, SEO and skills. Go and Rust were checked only for the context package and Clippy.
+Not checked against primary sources: the Cursor and Copilot file formats (the hosts were unreachable), the remaining general convention packs (they are editorial, not tied to one source), and these technology packs: Jupyter, C, Bash, Makefile, Scala, RabbitMQ and SQS, data engineering, AWS, RAG, agent building, payments, SEO, skills, Zig, just, Gradle, pytest and Python library packaging. Go and Rust were checked only for the context package and Clippy.
 
 ## Licensing
 

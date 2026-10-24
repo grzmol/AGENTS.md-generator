@@ -1,0 +1,84 @@
+{
+  "id": "generated-code",
+  "title": "Generated code",
+  "kind": "general",
+  "order": 186,
+  "description": "Handle generated files, snapshots and lockfiles without hand edits.",
+  "sources": [
+    {
+      "name": "kubernetes/kubernetes AGENTS.md",
+      "url": "https://github.com/kubernetes/kubernetes/blob/master/AGENTS.md"
+    },
+    {
+      "name": "supabase/supabase AGENTS.md",
+      "url": "https://github.com/supabase/supabase/blob/master/AGENTS.md"
+    },
+    {
+      "name": "cloudflare/workers-sdk AGENTS.md",
+      "url": "https://github.com/cloudflare/workers-sdk/blob/main/AGENTS.md"
+    },
+    {
+      "name": "biomejs/biome AGENTS.md",
+      "url": "https://github.com/biomejs/biome/blob/main/AGENTS.md"
+    },
+    {
+      "name": "astral-sh/ruff AGENTS.md",
+      "url": "https://github.com/astral-sh/ruff/blob/main/AGENTS.md"
+    }
+  ],
+  "rules": [
+    {
+      "id": "generated-code-no-hand-edit",
+      "title": "Never hand-edit",
+      "text": "Never edit generated files by hand. Change the source or the generator and regenerate.",
+      "recommended": true
+    },
+    {
+      "id": "generated-code-run-generators",
+      "title": "Run generators",
+      "text": "After changing schemas, IDL, config options or routes, run the project generation command and commit the result.",
+      "recommended": true
+    },
+    {
+      "id": "generated-code-snapshots-regen",
+      "title": "Regenerate snapshots",
+      "text": "Regenerate snapshot files with the test tool update mode, then review the diff. Never hand-edit them.",
+      "recommended": true
+    },
+    {
+      "id": "generated-code-list-generated",
+      "title": "List generated paths",
+      "text": "List generated paths in the agent file so they are easy to recognize."
+    },
+    {
+      "id": "generated-code-ci-diff",
+      "title": "CI diff check",
+      "text": "Add a CI check that regeneration produces no diff."
+    },
+    {
+      "id": "generated-code-no-incidental",
+      "title": "No incidental diffs",
+      "text": "Do not commit incidental changes to generated files that come from unrelated tooling runs."
+    },
+    {
+      "id": "generated-code-header",
+      "title": "Generated header",
+      "text": "Mark generated files with a header naming the generator and the command that rebuilds them."
+    },
+    {
+      "id": "generated-code-deterministic",
+      "title": "Deterministic output",
+      "text": "Make generators deterministic: stable ordering, no timestamps and no absolute paths."
+    },
+    {
+      "id": "generated-code-exclude-tools",
+      "title": "Exclude from tools",
+      "text": "Exclude generated and vendored directories from formatters and linters in tool config."
+    },
+    {
+      "id": "generated-code-lockfiles",
+      "title": "Lockfiles are generated",
+      "text": "Treat lockfiles as generated. Change them with the package manager, never by hand."
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "id": "playwright",
+  "title": "Playwright",
+  "kind": "technology",
+  "order": 222,
+  "family": "javascript",
+  "description": "Conventions for Playwright.",
+  "sources": [
+    {
+      "name": "remix-run/react-router AGENTS.md",
+      "url": "https://github.com/remix-run/react-router/blob/main/AGENTS.md"
+    },
+    {
+      "name": "storybookjs/storybook AGENTS.md",
+      "url": "https://github.com/storybookjs/storybook/blob/next/AGENTS.md"
+    },
+    {
+      "name": "Playwright best practices",
+      "url": "https://playwright.dev/docs/best-practices"
+    }
+  ],
+  "rules": [
+    {
+      "id": "playwright-role-locators",
+      "title": "Locate by role",
+      "text": "Locate elements by role, label or text with getByRole and related locators. Avoid long CSS and XPath chains.",
+      "recommended": true
+    },
+    {
+      "id": "playwright-web-first",
+      "title": "Web-first assertions",
+      "text": "Use auto-waiting web-first assertions such as expect(locator).toBeVisible instead of asserting on state read too early.",
+      "recommended": true
+    },
+    {
+      "id": "playwright-no-fixed-waits",
+      "title": "No fixed sleeps",
+      "text": "Do not use waitForTimeout. Wait for a visible condition instead.",
+      "recommended": true
+    },
+    {
+      "id": "playwright-isolated",
+      "title": "Independent tests",
+      "text": "Keep each test independent, with its own browser context and data, so tests can run in parallel in any order.",
+      "recommended": true
+    },
+    {
+      "id": "playwright-trace",
+      "title": "Traces on first retry",
+      "text": "Record traces on the first retry and use the trace viewer to debug failures.",
+      "recommended": true
+    },
+    {
+      "id": "playwright-retries-ci",
+      "title": "Retries only in CI",
+      "text": "Enable retries only in CI, for example retries: process.env.CI ? 2 : 0."
+    },
+    {
+      "id": "playwright-storage-state",
+      "title": "Reuse login state",
+      "text": "Log in once in a setup step and reuse storageState in tests."
+    },
+    {
+      "id": "playwright-one-project-local",
+      "title": "One project locally",
+      "text": "Run a single project such as chromium while developing and the full browser matrix in CI."
+    },
+    {
+      "id": "playwright-route-third-party",
+      "title": "Mock third parties",
+      "text": "Mock third-party network calls with page.route and keep calls to your own backend real in integration tests."
+    },
+    {
+      "id": "playwright-no-networkidle",
+      "title": "Avoid networkidle",
+      "text": "Avoid waiting for networkidle. Assert on the UI state that signals readiness."
+    },
+    {
+      "id": "playwright-helpers",
+      "title": "Shared flows",
+      "text": "Wrap repeated flows in small page objects or helper functions."
+    }
+  ],
+  "reviewed": "2026-10"
+}

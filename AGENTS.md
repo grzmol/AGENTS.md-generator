@@ -39,6 +39,8 @@ Static Svelte 5 site that builds AGENTS.md files from toggled rules, with a repo
 - Do not change public behavior, file formats or APIs unless the task asks for it.
 - Never hardcode values or special-case inputs to satisfy a test.
 - If an approach fails twice, stop and ask instead of trying increasingly invasive workarounds.
+- Before editing a directory, read the nearest AGENTS.md and follow it over the root file where they differ.
+- Preserve unrelated working tree changes. Never revert or rewrite edits you did not make.
 
 ## Design system and UI
 
@@ -97,6 +99,7 @@ Static Svelte 5 site that builds AGENTS.md files from toggled rules, with a repo
 - Validate and allow-list URLs before fetching user-supplied addresses to prevent SSRF.
 - Hash passwords with Argon2id, or scrypt or bcrypt where it is unavailable, with a unique salt; never use fast hashes such as SHA-256.
 - Run secret scanning in CI and rotate any credential that has been exposed.
+- Validate untrusted input against a schema. Never run eval, exec or unpickling on it.
 
 ## Workflow and tooling
 
@@ -111,6 +114,7 @@ Static Svelte 5 site that builds AGENTS.md files from toggled rules, with a repo
 - Ask before running destructive or irreversible commands such as dropping databases, deleting branches, rm -rf or force operations.
 - Prefer existing scripts, generators and templates in the repo over writing new ad hoc tooling.
 - When the repository documents skills or runbooks for a task (migrations, releases, dependency bumps), follow them instead of improvising.
+- Never start long-running dev servers or watchers in the foreground. Use targeted one-shot commands.
 
 ## Accessibility
 
@@ -129,6 +133,13 @@ Static Svelte 5 site that builds AGENTS.md files from toggled rules, with a repo
 - Avoid non-null assertions (!) and unchecked type assertions (as).
 - Model variants with discriminated unions and exhaustive switch checks.
 - Do not use @ts-ignore; use @ts-expect-error with a reason only when unavoidable.
+
+## Vitest conventions
+
+- Run tests once with vitest run or CI=true. Plain vitest starts watch mode in an interactive terminal.
+- Pass a file path or a -t name pattern to run a subset while developing.
+- Use test.each with a title format to cover many cases without copy-pasted tests.
+- Control time with vi.useFakeTimers and vi.advanceTimersByTime, and restore real timers after the test.
 
 ## Svelte and SvelteKit conventions
 

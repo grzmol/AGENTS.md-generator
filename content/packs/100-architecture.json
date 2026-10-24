@@ -89,6 +89,49 @@
       "id": "architecture-boring",
       "title": "Prefer boring solutions",
       "text": "Prefer proven simple solutions over clever or novel ones."
+    },
+    {
+      "id": "architecture-thin-integrations",
+      "title": "Thin integration layers",
+      "text": "Keep integration layers thin and put shared behavior in the lowest suitable layer, so every consumer gets it."
+    },
+    {
+      "id": "architecture-adapters-not-branches",
+      "title": "Adapters over branches",
+      "text": "Vary behavior through adapters or strategies, not by checking the target platform in shared code."
+    },
+    {
+      "id": "architecture-schema-first",
+      "title": "Constraints in schemas",
+      "text": "Put deterministic constraints in schemas and types. Keep runtime checks such as authorization and existence in code."
+    },
+    {
+      "id": "architecture-contract-first",
+      "title": "Contract first",
+      "text": "Define machine-readable contracts first and generate types and docs from them."
+    },
+    {
+      "id": "architecture-fix-the-design",
+      "title": "Fix the design",
+      "text": "Prefer fixing the underlying design over a localized workaround, even when the diff is larger."
+    }
+  ],
+  "sources": [
+    {
+      "name": "cloudflare/workers-sdk AGENTS.md",
+      "url": "https://github.com/cloudflare/workers-sdk/blob/main/AGENTS.md"
+    },
+    {
+      "name": "prisma/prisma AGENTS.md",
+      "url": "https://github.com/prisma/prisma/blob/main/AGENTS.md"
+    },
+    {
+      "name": "mastra-ai/mastra AGENTS.md",
+      "url": "https://github.com/mastra-ai/mastra/blob/main/AGENTS.md"
+    },
+    {
+      "name": "astral-sh/ruff AGENTS.md",
+      "url": "https://github.com/astral-sh/ruff/blob/main/AGENTS.md"
     }
   ]
 }

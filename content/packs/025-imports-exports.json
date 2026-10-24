@@ -1,0 +1,83 @@
+{
+  "id": "imports-exports",
+  "title": "Imports and exports",
+  "kind": "general",
+  "order": 25,
+  "description": "Where imports go, what to export and how modules depend on each other.",
+  "sources": [
+    {
+      "name": "prisma/prisma AGENTS.md",
+      "url": "https://github.com/prisma/prisma/blob/main/AGENTS.md"
+    },
+    {
+      "name": "supabase/supabase AGENTS.md",
+      "url": "https://github.com/supabase/supabase/blob/master/AGENTS.md"
+    },
+    {
+      "name": "astral-sh/ruff AGENTS.md",
+      "url": "https://github.com/astral-sh/ruff/blob/main/AGENTS.md"
+    },
+    {
+      "name": "storybookjs/storybook AGENTS.md",
+      "url": "https://github.com/storybookjs/storybook/blob/next/AGENTS.md"
+    },
+    {
+      "name": "modelcontextprotocol/python-sdk AGENTS.md",
+      "url": "https://github.com/modelcontextprotocol/python-sdk/blob/main/AGENTS.md"
+    },
+    {
+      "name": "elastic/elasticsearch AGENTS.md",
+      "url": "https://github.com/elastic/elasticsearch/blob/main/AGENTS.md"
+    }
+  ],
+  "rules": [
+    {
+      "id": "imports-exports-top",
+      "title": "Imports at the top",
+      "text": "Put all imports at the top of the file. Use a local import only for a real circular dependency or an optional lazy load.",
+      "recommended": true
+    },
+    {
+      "id": "imports-exports-no-wildcard",
+      "title": "No wildcard imports",
+      "text": "Avoid wildcard imports. Import the names you use.",
+      "recommended": true
+    },
+    {
+      "id": "imports-exports-named-exports",
+      "title": "Named exports",
+      "text": "Prefer named exports. Use default exports only where a framework requires them.",
+      "recommended": true
+    },
+    {
+      "id": "imports-exports-no-barrels",
+      "title": "Few barrel files",
+      "text": "Avoid barrel files and re-exports between modules, except at the public entry point of a package."
+    },
+    {
+      "id": "imports-exports-no-cycles",
+      "title": "No import cycles",
+      "text": "Do not introduce import cycles. Move shared code to a lower layer instead."
+    },
+    {
+      "id": "imports-exports-layering-tool",
+      "title": "Enforce layering",
+      "text": "Enforce import direction between layers with a lint rule or dependency checker and fix violations instead of bypassing them."
+    },
+    {
+      "id": "imports-exports-extensions",
+      "title": "Consistent extensions",
+      "text": "Follow the project rule on file extensions in relative imports and keep it consistent."
+    },
+    {
+      "id": "imports-exports-formatter-order",
+      "title": "Formatter sorts imports",
+      "text": "Let the formatter order imports. Do not reorder lines you did not change."
+    },
+    {
+      "id": "imports-exports-narrow-visibility",
+      "title": "Private by default",
+      "text": "Keep symbols private by default and widen visibility only when another module needs them."
+    }
+  ]
+}

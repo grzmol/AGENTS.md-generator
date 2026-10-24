@@ -41,6 +41,17 @@
       "title": "Test end-to-end tasks",
       "text": "Evaluate agents on whole tasks with deterministic checkers, not only single prompts.",
       "recommended": true
+    },
+    {
+      "id": "agent-building-schema-checks",
+      "title": "Schema for static checks",
+      "text": "Put deterministic input and output constraints in the tool schema. Keep runtime checks such as authorization and existence in execute."
+    }
+  ],
+  "sources": [
+    {
+      "name": "mastra-ai/mastra AGENTS.md",
+      "url": "https://github.com/mastra-ai/mastra/blob/main/AGENTS.md"
     }
   ]
 }

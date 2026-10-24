@@ -8,6 +8,22 @@
     {
       "name": "agents.md",
       "url": "https://agents.md"
+    },
+    {
+      "name": "grafana/grafana AGENTS.md",
+      "url": "https://github.com/grafana/grafana/blob/main/AGENTS.md"
+    },
+    {
+      "name": "biomejs/biome AGENTS.md",
+      "url": "https://github.com/biomejs/biome/blob/main/AGENTS.md"
+    },
+    {
+      "name": "astral-sh/ruff AGENTS.md",
+      "url": "https://github.com/astral-sh/ruff/blob/main/AGENTS.md"
+    },
+    {
+      "name": "ghostty-org/ghostty AGENTS.md",
+      "url": "https://github.com/ghostty-org/ghostty/blob/main/AGENTS.md"
     }
   ],
   "rules": [
@@ -138,6 +154,33 @@
       "title": "Stop and ask when stuck",
       "text": "If an approach fails twice, stop and ask instead of trying increasingly invasive workarounds.",
       "recommended": true
+    },
+    {
+      "id": "agent-behavior-nearest-agents",
+      "title": "Nearest AGENTS.md wins",
+      "text": "Before editing a directory, read the nearest AGENTS.md and follow it over the root file where they differ.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-preserve-changes",
+      "title": "Preserve others' changes",
+      "text": "Preserve unrelated working tree changes. Never revert or rewrite edits you did not make.",
+      "recommended": true
+    },
+    {
+      "id": "agent-behavior-read-in-full",
+      "title": "Read before wide edits",
+      "text": "Read a file in full before a wide-ranging change to it or before editing a file you do not know."
+    },
+    {
+      "id": "agent-behavior-reuse-first",
+      "title": "Reuse before writing",
+      "text": "Look for an existing utility or mechanism before writing new code, and prefer fixing the underlying design over a local workaround."
+    },
+    {
+      "id": "agent-behavior-no-unasked-pr",
+      "title": "No PR unless asked",
+      "text": "Do not open issues or pull requests unless the user asks you to."
     }
   ]
 }

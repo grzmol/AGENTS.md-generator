@@ -1,0 +1,87 @@
+{
+  "id": "pnpm",
+  "title": "pnpm",
+  "kind": "technology",
+  "order": 216,
+  "family": "javascript",
+  "description": "Conventions for pnpm.",
+  "sources": [
+    {
+      "name": "prisma/prisma AGENTS.md",
+      "url": "https://github.com/prisma/prisma/blob/main/AGENTS.md"
+    },
+    {
+      "name": "vercel/ai AGENTS.md",
+      "url": "https://github.com/vercel/ai/blob/main/AGENTS.md"
+    },
+    {
+      "name": "cloudflare/workers-sdk AGENTS.md",
+      "url": "https://github.com/cloudflare/workers-sdk/blob/main/AGENTS.md"
+    },
+    {
+      "name": "supabase/supabase AGENTS.md",
+      "url": "https://github.com/supabase/supabase/blob/master/AGENTS.md"
+    },
+    {
+      "name": "pnpm catalogs and workspaces",
+      "url": "https://pnpm.io/catalogs"
+    }
+  ],
+  "rules": [
+    {
+      "id": "pnpm-only",
+      "title": "Use pnpm only",
+      "text": "Use pnpm in a pnpm workspace. Do not mix in npm or yarn commands or lockfiles.",
+      "recommended": true
+    },
+    {
+      "id": "pnpm-frozen",
+      "title": "Frozen installs in CI",
+      "text": "Install in CI with pnpm install --frozen-lockfile so the lockfile is never rewritten silently.",
+      "recommended": true
+    },
+    {
+      "id": "pnpm-filter",
+      "title": "Scope with --filter",
+      "text": "Scope commands to one package with --filter, for example pnpm --filter <name> test, instead of running the whole workspace.",
+      "recommended": true
+    },
+    {
+      "id": "pnpm-workspace-protocol",
+      "title": "workspace: protocol",
+      "text": "Reference sibling packages with the workspace: protocol so local versions are always linked.",
+      "recommended": true
+    },
+    {
+      "id": "pnpm-catalogs",
+      "title": "Catalogs for shared versions",
+      "text": "Pin shared dependency versions once in a catalog in pnpm-workspace.yaml and reference them with catalog:."
+    },
+    {
+      "id": "pnpm-overrides-catalog",
+      "title": "Overrides via catalog",
+      "text": "Use overrides sparingly and point them at a catalog entry so the version lives in one place."
+    },
+    {
+      "id": "pnpm-exec-not-npx",
+      "title": "pnpm exec over npx",
+      "text": "Run local tools with pnpm exec and one-off tools with pnpm dlx, so binaries resolve from the workspace."
+    },
+    {
+      "id": "pnpm-toolchain-versions",
+      "title": "Declared toolchain",
+      "text": "Use the Node.js and pnpm versions declared in package.json and do not switch versions with a version manager mid-task."
+    },
+    {
+      "id": "pnpm-build-scripts",
+      "title": "Trusted build scripts",
+      "text": "Allow dependency lifecycle scripts only for packages you explicitly trust."
+    },
+    {
+      "id": "pnpm-build-after-types",
+      "title": "Rebuild after type changes",
+      "text": "After changing exported types in a workspace package, rebuild it so dependents see fresh declaration files."
+    }
+  ],
+  "reviewed": "2026-10"
+}

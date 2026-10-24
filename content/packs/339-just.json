@@ -1,0 +1,65 @@
+{
+  "id": "just",
+  "title": "just",
+  "kind": "technology",
+  "order": 339,
+  "family": "systems",
+  "description": "Conventions for just.",
+  "sources": [
+    {
+      "name": "cloudflare/workerd AGENTS.md",
+      "url": "https://github.com/cloudflare/workerd/blob/main/AGENTS.md"
+    },
+    {
+      "name": "ghostty-org/ghostty AGENTS.md",
+      "url": "https://github.com/ghostty-org/ghostty/blob/main/AGENTS.md"
+    },
+    {
+      "name": "biomejs/biome AGENTS.md",
+      "url": "https://github.com/biomejs/biome/blob/main/AGENTS.md"
+    }
+  ],
+  "rules": [
+    {
+      "id": "just-entry-points",
+      "title": "Standard recipes",
+      "text": "Provide fmt, lint and test recipes as the standard entry points for contributors and agents.",
+      "recommended": true
+    },
+    {
+      "id": "just-list",
+      "title": "Discoverable recipes",
+      "text": "Keep recipe names short and make them discoverable with just --list."
+    },
+    {
+      "id": "just-docs",
+      "title": "Document each recipe",
+      "text": "Add a doc line above each recipe so just --list explains it."
+    },
+    {
+      "id": "just-parameters",
+      "title": "Parameters with defaults",
+      "text": "Use recipe parameters with defaults instead of environment variable juggling."
+    },
+    {
+      "id": "just-format-changed",
+      "title": "Format changed files",
+      "text": "Offer a recipe that formats only files changed since HEAD."
+    },
+    {
+      "id": "just-aliases",
+      "title": "Short aliases",
+      "text": "Define short aliases such as b, t and f for the most common recipes."
+    },
+    {
+      "id": "just-scaffold",
+      "title": "Scaffold recipes",
+      "text": "Provide scaffold recipes for new tests and benchmarks so they start from the repo template."
+    },
+    {
+      "id": "just-hooks-match-ci",
+      "title": "Hooks match CI",
+      "text": "Wire the pre-commit hook to the same recipes CI runs."
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "id": "changesets",
+  "title": "Changesets",
+  "kind": "technology",
+  "order": 218,
+  "family": "javascript",
+  "description": "Conventions for Changesets.",
+  "sources": [
+    {
+      "name": "vercel/ai AGENTS.md",
+      "url": "https://github.com/vercel/ai/blob/main/AGENTS.md"
+    },
+    {
+      "name": "cloudflare/workers-sdk AGENTS.md",
+      "url": "https://github.com/cloudflare/workers-sdk/blob/main/AGENTS.md"
+    },
+    {
+      "name": "biomejs/biome AGENTS.md",
+      "url": "https://github.com/biomejs/biome/blob/main/AGENTS.md"
+    },
+    {
+      "name": "Changesets documentation",
+      "url": "https://github.com/changesets/changesets/tree/main/docs"
+    }
+  ],
+  "rules": [
+    {
+      "id": "changesets-add",
+      "title": "One per user-facing change",
+      "text": "Add a changeset with changeset add for every PR that changes published code.",
+      "recommended": true
+    },
+    {
+      "id": "changesets-patch-default",
+      "title": "Default to patch",
+      "text": "Default to patch. Choose minor or major only when the change warrants it and the maintainers agree.",
+      "recommended": true
+    },
+    {
+      "id": "changesets-user-summary",
+      "title": "Write for users",
+      "text": "Write the summary for users of the package: what was broken or added and how it behaves now.",
+      "recommended": true
+    },
+    {
+      "id": "changesets-skip-internal",
+      "title": "Skip internal changes",
+      "text": "Tests, CI and docs-only changes do not need a changeset."
+    },
+    {
+      "id": "changesets-unpublished",
+      "title": "Skip unpublished packages",
+      "text": "Do not select examples or private packages in a changeset."
+    },
+    {
+      "id": "changesets-ignore-temporary",
+      "title": "ignore is temporary",
+      "text": "Use the ignore option only temporarily. Mark a package private: true to stop publishing it for good."
+    },
+    {
+      "id": "changesets-release-pr",
+      "title": "Release from CI",
+      "text": "Run changeset version in a release PR and changeset publish from CI, not from a laptop."
+    }
+  ],
+  "reviewed": "2026-10"
+}

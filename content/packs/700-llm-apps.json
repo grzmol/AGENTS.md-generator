@@ -64,6 +64,11 @@
       "id": "llm-apps-streaming",
       "title": "Stream long responses",
       "text": "Stream long responses to the UI and handle partial output and cancellation."
+    },
+    {
+      "id": "llm-apps-current-models",
+      "title": "Current model IDs",
+      "text": "Use current model IDs and verify them against the provider docs before hardcoding names."
     }
   ],
   "reviewed": "2026-10",
@@ -71,6 +76,14 @@
     {
       "name": "Claude API structured outputs and evaluation guides",
       "url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs"
+    },
+    {
+      "name": "langchain-ai/langchain AGENTS.md",
+      "url": "https://github.com/langchain-ai/langchain/blob/master/AGENTS.md"
+    },
+    {
+      "name": "mastra-ai/mastra AGENTS.md",
+      "url": "https://github.com/mastra-ai/mastra/blob/main/AGENTS.md"
     }
   ]
 }

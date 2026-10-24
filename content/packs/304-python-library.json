@@ -1,0 +1,73 @@
+{
+  "id": "python-library",
+  "title": "Python library packaging",
+  "kind": "technology",
+  "order": 304,
+  "family": "python",
+  "description": "Conventions for Python library packaging.",
+  "sources": [
+    {
+      "name": "modelcontextprotocol/python-sdk AGENTS.md",
+      "url": "https://github.com/modelcontextprotocol/python-sdk/blob/main/AGENTS.md"
+    },
+    {
+      "name": "langchain-ai/langchain AGENTS.md",
+      "url": "https://github.com/langchain-ai/langchain/blob/master/AGENTS.md"
+    },
+    {
+      "name": "home-assistant/core AGENTS.md",
+      "url": "https://github.com/home-assistant/core/blob/dev/AGENTS.md"
+    }
+  ],
+  "rules": [
+    {
+      "id": "python-library-all-exports",
+      "title": "Define __all__",
+      "text": "Define the public API in the package __init__.py with __all__. Adding a symbol there is a deliberate API decision.",
+      "recommended": true
+    },
+    {
+      "id": "python-library-encoding",
+      "title": "Explicit file encoding",
+      "text": "Pass encoding= to text-mode open, read_text and write_text. The default is the locale encoding, not UTF-8.",
+      "recommended": true
+    },
+    {
+      "id": "python-library-docstrings",
+      "title": "Public docstrings",
+      "text": "Give public APIs docstrings, with a Raises section for exceptions callers should catch.",
+      "recommended": true
+    },
+    {
+      "id": "python-library-keyword-only",
+      "title": "Keyword-only additions",
+      "text": "Add new parameters as keyword-only with defaults so positional callers keep working.",
+      "recommended": true
+    },
+    {
+      "id": "python-library-typed",
+      "title": "Typed package",
+      "text": "Require type hints on all code and ship a py.typed marker."
+    },
+    {
+      "id": "python-library-pyproject",
+      "title": "pyproject.toml only",
+      "text": "Declare metadata and build config in pyproject.toml and avoid setup.py."
+    },
+    {
+      "id": "python-library-docstring-style",
+      "title": "One docstring style",
+      "text": "Use one docstring style such as Google and keep types in signatures, not in docstrings."
+    },
+    {
+      "id": "python-library-version-matrix",
+      "title": "Test every supported Python",
+      "text": "Test against every supported Python version in CI."
+    },
+    {
+      "id": "python-library-dependency-bounds",
+      "title": "Honest dependency bounds",
+      "text": "Declare only the lower bounds you need and let users upgrade within them."
+    }
+  ]
+}

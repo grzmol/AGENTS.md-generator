@@ -13,6 +13,18 @@
     {
       "name": "Clippy",
       "url": "https://github.com/rust-lang/rust-clippy"
+    },
+    {
+      "name": "astral-sh/ruff AGENTS.md",
+      "url": "https://github.com/astral-sh/ruff/blob/main/AGENTS.md"
+    },
+    {
+      "name": "astral-sh/uv AGENTS.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/AGENTS.md"
+    },
+    {
+      "name": "rust-lang/rust AGENTS.md",
+      "url": "https://github.com/rust-lang/rust/blob/master/AGENTS.md"
     }
   ],
   "rules": [
@@ -44,6 +56,67 @@
       "title": "Justify unsafe",
       "text": "Avoid unsafe; when required, keep it minimal and document its safety invariants.",
       "recommended": true
+    },
+    {
+      "id": "rust-let-chains",
+      "title": "Let chains",
+      "text": "Prefer let chains over nested if let where the edition supports them."
+    },
+    {
+      "id": "rust-expect-over-allow",
+      "title": "expect over allow",
+      "text": "If a Clippy lint must be silenced, use #[expect] over #[allow] so stale suppressions get flagged."
+    },
+    {
+      "id": "rust-no-unwrap",
+      "title": "Avoid unwrap and panic",
+      "text": "Avoid unwrap, expect, panic! and unreachable! in library code. Encode the invariant in types or return an error.",
+      "recommended": true
+    },
+    {
+      "id": "rust-exhaustive-match",
+      "title": "Exhaustive match",
+      "text": "Prefer exhaustive match without a wildcard arm, so new enum variants force a decision."
+    },
+    {
+      "id": "rust-safety-comments",
+      "title": "SAFETY comments",
+      "text": "Give every unsafe block a SAFETY comment stating the invariants it relies on."
+    },
+    {
+      "id": "rust-debug-builds",
+      "title": "Debug builds while developing",
+      "text": "Develop with debug builds and use --release only for performance work."
+    },
+    {
+      "id": "rust-update-precise",
+      "title": "cargo update --precise",
+      "text": "Change lockfile entries with cargo update --precise instead of updating every dependency."
+    },
+    {
+      "id": "rust-clippy-deny",
+      "title": "Clippy with warnings denied",
+      "text": "Run cargo clippy --workspace --all-targets with warnings denied in CI."
+    },
+    {
+      "id": "rust-narrow-visibility",
+      "title": "Narrow visibility",
+      "text": "Default to private items and use pub(crate) unless another crate needs the item."
+    },
+    {
+      "id": "rust-constructor-names",
+      "title": "Constructor names",
+      "text": "Name functions that return Self as constructors: new, new_* or from_*."
+    },
+    {
+      "id": "rust-intra-doc-links",
+      "title": "Intra-doc links",
+      "text": "Link types in doc comments with intra-doc links such as [`TypeName`]."
+    },
+    {
+      "id": "rust-minimal-annotations",
+      "title": "Minimal annotations",
+      "text": "Annotate types only where inference needs help, and keep annotations short with _ placeholders."
     }
   ],
   "reviewed": "2026-10"

@@ -1,0 +1,93 @@
+{
+  "id": "code-comments",
+  "title": "Code comments",
+  "kind": "general",
+  "order": 125,
+  "description": "When a comment earns its place, and what it must never contain.",
+  "sources": [
+    {
+      "name": "home-assistant/core AGENTS.md",
+      "url": "https://github.com/home-assistant/core/blob/dev/AGENTS.md"
+    },
+    {
+      "name": "biomejs/biome AGENTS.md",
+      "url": "https://github.com/biomejs/biome/blob/main/AGENTS.md"
+    },
+    {
+      "name": "grafana/grafana AGENTS.md",
+      "url": "https://github.com/grafana/grafana/blob/main/AGENTS.md"
+    },
+    {
+      "name": "kubernetes/kubernetes AGENTS.md",
+      "url": "https://github.com/kubernetes/kubernetes/blob/master/AGENTS.md"
+    },
+    {
+      "name": "ggml-org/llama.cpp AGENTS.md",
+      "url": "https://github.com/ggml-org/llama.cpp/blob/master/AGENTS.md"
+    },
+    {
+      "name": "cloudflare/workerd AGENTS.md",
+      "url": "https://github.com/cloudflare/workerd/blob/main/AGENTS.md"
+    }
+  ],
+  "rules": [
+    {
+      "id": "code-comments-why-only",
+      "title": "Explain why",
+      "text": "Add a comment only when it explains why, states an invariant or warns about a non-obvious constraint. Skip comments that restate the code.",
+      "recommended": true
+    },
+    {
+      "id": "code-comments-current-state",
+      "title": "Describe the present",
+      "text": "Describe the system as it is now. Never narrate the task, the change history or the debugging session that produced the code.",
+      "recommended": true
+    },
+    {
+      "id": "code-comments-no-conversation",
+      "title": "No conversation leaks",
+      "text": "Do not leak prompts, chat history or review back-and-forth into comments, docs or PR text.",
+      "recommended": true
+    },
+    {
+      "id": "code-comments-self-contained",
+      "title": "Self-contained",
+      "text": "Make each comment understandable to someone reading the file for the first time, without the issue, PR or diff."
+    },
+    {
+      "id": "code-comments-no-dividers",
+      "title": "No section dividers",
+      "text": "Avoid banner and section divider comments. They go stale and add noise."
+    },
+    {
+      "id": "code-comments-no-links",
+      "title": "No tracker links",
+      "text": "Do not put tracker, chat or ticket links in code comments. Put that context in the commit or PR."
+    },
+    {
+      "id": "code-comments-keep-human",
+      "title": "Keep human comments",
+      "text": "Keep helpful human-written comments unless your change makes them wrong. Update them in the same diff."
+    },
+    {
+      "id": "code-comments-public-docs",
+      "title": "Document public APIs",
+      "text": "Document public APIs with the language doc format: contract, parameters and the errors callers should handle."
+    },
+    {
+      "id": "code-comments-code-first",
+      "title": "Code first",
+      "text": "Write the code first, then add comments only where it still cannot speak for itself."
+    },
+    {
+      "id": "code-comments-suppress-reason",
+      "title": "Reasoned suppressions",
+      "text": "Give every lint or type suppression a specific rule name and a reason. Prefer fixing the cause."
+    },
+    {
+      "id": "code-comments-doc-examples",
+      "title": "Examples in doc comments",
+      "text": "Include a tiny example in a doc comment when the usage is not obvious from the signature."
+    }
+  ]
+}

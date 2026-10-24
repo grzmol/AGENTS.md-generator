@@ -1,0 +1,86 @@
+{
+  "id": "api-stability",
+  "title": "Public API stability",
+  "kind": "general",
+  "order": 142,
+  "description": "Keep released APIs compatible, and change them on purpose.",
+  "sources": [
+    {
+      "name": "modelcontextprotocol/python-sdk AGENTS.md",
+      "url": "https://github.com/modelcontextprotocol/python-sdk/blob/main/AGENTS.md"
+    },
+    {
+      "name": "vercel/ai AGENTS.md",
+      "url": "https://github.com/vercel/ai/blob/main/AGENTS.md"
+    },
+    {
+      "name": "prisma/prisma AGENTS.md",
+      "url": "https://github.com/prisma/prisma/blob/main/AGENTS.md"
+    },
+    {
+      "name": "langchain-ai/langchain AGENTS.md",
+      "url": "https://github.com/langchain-ai/langchain/blob/master/AGENTS.md"
+    }
+  ],
+  "rules": [
+    {
+      "id": "api-stability-contract",
+      "title": "API is a contract",
+      "text": "Treat the public API of a released major version as a compatibility contract. Renames, removals and signature changes need an explicit maintainer decision.",
+      "recommended": true
+    },
+    {
+      "id": "api-stability-additive",
+      "title": "Prefer additive changes",
+      "text": "Prefer additive changes. Add new parameters as optional or keyword-only with safe defaults.",
+      "recommended": true
+    },
+    {
+      "id": "api-stability-deprecate",
+      "title": "Deprecate first",
+      "text": "Deprecate before removing: keep a working shim and mark it deprecated with the replacement and the removal version.",
+      "recommended": true
+    },
+    {
+      "id": "api-stability-explicit-exports",
+      "title": "Explicit public surface",
+      "text": "Define the public surface explicitly, such as __all__ or an exports map. Adding a symbol there is an API decision, not a convenience.",
+      "recommended": true
+    },
+    {
+      "id": "api-stability-internal-names",
+      "title": "Mark internals",
+      "text": "Mark internals with underscore names or internal entry points so users do not depend on them."
+    },
+    {
+      "id": "api-stability-no-compat-unasked",
+      "title": "No unasked aliases",
+      "text": "Do not add backward-compatibility re-exports or aliases unless asked."
+    },
+    {
+      "id": "api-stability-wire-format",
+      "title": "Stable wire formats",
+      "text": "Never change serialized formats, error codes or protocol field names without a versioned migration path."
+    },
+    {
+      "id": "api-stability-exported-types",
+      "title": "Types are API",
+      "text": "Treat exported types as API. Narrowing an accepted type or widening a returned one can break callers."
+    },
+    {
+      "id": "api-stability-codemods",
+      "title": "Codemods for majors",
+      "text": "Ship a codemod or a migration guide with each major release that breaks users."
+    },
+    {
+      "id": "api-stability-docs-same-pr",
+      "title": "Docs in the same PR",
+      "text": "Update reference docs and migration notes in the same PR as a public API change."
+    },
+    {
+      "id": "api-stability-backports",
+      "title": "Narrow backports",
+      "text": "Backport only critical bug fixes and security fixes to maintenance branches, and label them as backports."
+    }
+  ]
+}

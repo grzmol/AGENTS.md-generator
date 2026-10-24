@@ -1,0 +1,59 @@
+{
+  "id": "biome",
+  "title": "Biome",
+  "kind": "technology",
+  "order": 224,
+  "family": "javascript",
+  "description": "Conventions for Biome.",
+  "sources": [
+    {
+      "name": "biomejs/biome AGENTS.md",
+      "url": "https://github.com/biomejs/biome/blob/main/AGENTS.md"
+    },
+    {
+      "name": "Biome CLI reference",
+      "url": "https://biomejs.dev/reference/cli/"
+    }
+  ],
+  "rules": [
+    {
+      "id": "biome-check-write",
+      "title": "check --write locally",
+      "text": "Run biome check --write to format, lint and organize imports in one pass.",
+      "recommended": true
+    },
+    {
+      "id": "biome-ci",
+      "title": "biome ci in CI",
+      "text": "Use biome ci in CI. It checks everything without writing files.",
+      "recommended": true
+    },
+    {
+      "id": "biome-reasoned-ignores",
+      "title": "Reasoned suppressions",
+      "text": "Suppress with biome-ignore only with a rule name and a reason, and never to hide a real bug.",
+      "recommended": true
+    },
+    {
+      "id": "biome-vcs",
+      "title": "Respect .gitignore",
+      "text": "Enable VCS integration with useIgnoreFile so Biome skips git-ignored files."
+    },
+    {
+      "id": "biome-unsafe-fixes",
+      "title": "Review unsafe fixes",
+      "text": "Review fixes applied with --unsafe by hand before committing them."
+    },
+    {
+      "id": "biome-single-root-config",
+      "title": "Single root config",
+      "text": "Keep shared settings in the root biome.json and add package configs only where a package must differ."
+    },
+    {
+      "id": "biome-one-formatter",
+      "title": "One formatter",
+      "text": "Do not run Prettier or ESLint on files Biome already owns."
+    }
+  ],
+  "reviewed": "2026-10"
+}

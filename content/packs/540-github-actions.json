@@ -50,12 +50,30 @@
       "id": "github-actions-matrix",
       "title": "Matrix builds",
       "text": "Test supported versions with a build matrix."
+    },
+    {
+      "id": "github-actions-no-pr-target",
+      "title": "Avoid pull_request_target",
+      "text": "Avoid pull_request_target workflows. Route privileged automation through a reviewed dispatcher."
+    },
+    {
+      "id": "github-actions-path-filters",
+      "title": "Path filters with a cheap gate",
+      "text": "Use path filters so expensive jobs run only when relevant files change, and keep a cheap required check on every PR."
     }
   ],
   "sources": [
     {
       "name": "GitHub Actions secure use",
       "url": "https://docs.github.com/en/actions/reference/security/secure-use"
+    },
+    {
+      "name": "astral-sh/uv AGENTS.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/AGENTS.md"
+    },
+    {
+      "name": "supabase/supabase AGENTS.md",
+      "url": "https://github.com/supabase/supabase/blob/master/AGENTS.md"
     }
   ],
   "reviewed": "2026-10"

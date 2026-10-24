@@ -1,0 +1,100 @@
+{
+  "id": "ai-policy",
+  "title": "AI contribution policy",
+  "kind": "general",
+  "order": 163,
+  "description": "Rules large projects set for AI-assisted work. Enable the ones your project or target repository requires.",
+  "sources": [
+    {
+      "name": "nodejs/node AGENTS.md",
+      "url": "https://github.com/nodejs/node/blob/main/AGENTS.md"
+    },
+    {
+      "name": "ggml-org/llama.cpp AGENTS.md",
+      "url": "https://github.com/ggml-org/llama.cpp/blob/master/AGENTS.md"
+    },
+    {
+      "name": "kubernetes/kubernetes AGENTS.md",
+      "url": "https://github.com/kubernetes/kubernetes/blob/master/AGENTS.md"
+    },
+    {
+      "name": "rust-lang/rust AGENTS.md",
+      "url": "https://github.com/rust-lang/rust/blob/master/AGENTS.md"
+    },
+    {
+      "name": "ray-project/ray AGENTS.md",
+      "url": "https://github.com/ray-project/ray/blob/master/AGENTS.md"
+    },
+    {
+      "name": "ghostty-org/ghostty AGENTS.md",
+      "url": "https://github.com/ghostty-org/ghostty/blob/main/AGENTS.md"
+    },
+    {
+      "name": "home-assistant/core AGENTS.md",
+      "url": "https://github.com/home-assistant/core/blob/dev/AGENTS.md"
+    }
+  ],
+  "rules": [
+    {
+      "id": "ai-policy-human-owns",
+      "title": "A human owns the change",
+      "text": "A human must review, understand and be able to explain every change before it is submitted."
+    },
+    {
+      "id": "ai-policy-no-autonomous",
+      "title": "No autonomous posting",
+      "text": "Do not open issues or pull requests, or post comments, on a person's behalf without their review."
+    },
+    {
+      "id": "ai-policy-ask-before-push",
+      "title": "Approval before push",
+      "text": "Show a summary of the changes and wait for explicit approval before running git push. \"Open a PR\" is intent, not permission."
+    },
+    {
+      "id": "ai-policy-no-pr-unasked",
+      "title": "No PR unless asked",
+      "text": "Do not create a pull request unless the user explicitly asks for one.",
+      "recommended": true
+    },
+    {
+      "id": "ai-policy-disclose",
+      "title": "Disclose AI assistance",
+      "text": "Disclose meaningful AI assistance in the PR description, in the form the project template asks for."
+    },
+    {
+      "id": "ai-policy-trailers",
+      "title": "Follow the trailer rules",
+      "text": "Follow the project trailer convention for AI assistance. Some projects require Assisted-by and forbid Co-authored-by for an agent."
+    },
+    {
+      "id": "ai-policy-no-sign-off",
+      "title": "Humans sign off",
+      "text": "Leave Signed-off-by to the human author. An agent never signs off a commit."
+    },
+    {
+      "id": "ai-policy-no-promotion",
+      "title": "No promotion",
+      "text": "Do not use commit messages or PR text to promote products or brands."
+    },
+    {
+      "id": "ai-policy-gate-stop",
+      "title": "Stop at a policy gate",
+      "text": "When a project policy bans a kind of work, stop and explain the policy instead of offering the same output under another name."
+    },
+    {
+      "id": "ai-policy-comprehension",
+      "title": "Guide, do not just solve",
+      "text": "If the user cannot yet explain the change, point to the relevant code and let them shape the approach before you write it."
+    },
+    {
+      "id": "ai-policy-personal-use",
+      "title": "Personal-use exemption",
+      "text": "Some limits relax for work that will never be shared. Apply that exemption only when the user states it explicitly."
+    },
+    {
+      "id": "ai-policy-own-pr-text",
+      "title": "Human-written PR text",
+      "text": "Where a project requires human-written PR descriptions, commit messages and review replies, do not draft them."
+    }
+  ]
+}
