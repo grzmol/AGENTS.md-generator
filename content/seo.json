@@ -14,6 +14,7 @@
   "features": [
     "{rules} short, specific rules in {packs} packs, from formatting and logging to Next.js, FastAPI, Go, Rust and Kubernetes.",
     "Repository scan: paste a public GitHub URL or choose a local folder and the generator detects your stack, preselects matching rules and fills in your commands.",
+    "Keep it updated: a GitHub Action rescans your repository on a schedule and opens a pull request that refreshes only the generated block of your AGENTS.md.",
     "{presets} presets for common stacks, so a first draft takes seconds.",
     "Monorepo mode: a separate nested file for every folder, downloaded as one zip.",
     "Four output formats: AGENTS.md, CLAUDE.md, Cursor rule files and GitHub Copilot instructions.",
@@ -27,6 +28,10 @@
     {
       "q": "Can the AGENTS.md generator scan my repository?",
       "a": "Yes. Paste a public GitHub URL or choose a local folder and it reads dependency manifests and file names to detect frameworks, test tools, infrastructure and monorepo packages, then preselects matching rules and fills in install, build and test commands."
+    },
+    {
+      "q": "How do I keep AGENTS.md up to date automatically?",
+      "a": "Add the AGENTS.md updater workflow from this generator to your repository. It rescans your manifests on a schedule, rewrites the block between the agents-md-generator markers and opens a pull request, so hand written notes are never overwritten. A second workflow can fail pull requests when the file has drifted."
     },
     {
       "q": "What is AGENTS.md?",
@@ -215,6 +220,46 @@
           "h2": "One download",
           "p": [
             "Add a folder in the generator, choose a preset for it, and download every file as a single zip."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "keep-agents-md-up-to-date",
+      "title": "How to Keep AGENTS.md Up to Date with GitHub Actions",
+      "description": "Stop AGENTS.md from going stale: a managed block, a scheduled GitHub Action that opens update pull requests and a drift check for CI.",
+      "h1": "Keep AGENTS.md up to date",
+      "lead": "An AGENTS.md written once drifts as dependencies, scripts and tools change. Automate the parts that can be detected and keep the human parts by hand.",
+      "sections": [
+        {
+          "h2": "Why files go stale",
+          "p": [
+            "Commands get renamed, test runners change and new frameworks arrive, but nobody edits the file that tells agents how the project works. Stale instructions are worse than none, because agents follow them."
+          ]
+        },
+        {
+          "h2": "Separate generated and hand written text",
+          "p": [
+            "Wrap the generated rules in comment markers and keep project specific notes outside them. A tool can then rewrite the block safely. The AGENTS.md generator uses agents-md-generator start and end comments for this."
+          ]
+        },
+        {
+          "h2": "Open a pull request on a schedule",
+          "p": [
+            "A weekly GitHub Actions workflow rescans manifests, lockfiles and file names, regenerates the block and opens a pull request only when something changed. You review the diff like any other change.",
+            "The generator produces this workflow for you, with permissions and an optional adopt switch for repositories that already have an AGENTS.md."
+          ]
+        },
+        {
+          "h2": "Fail pull requests that drift",
+          "p": [
+            "A second workflow runs the same scan in check mode. If a dependency change should have updated the file, the check fails and tells the author to run the updater."
+          ]
+        },
+        {
+          "h2": "Tune the result",
+          "p": [
+            "Add a small .agents-md.json to include or exclude packs and to override commands that detection cannot know. Review every update, because detection reads dependencies and file names and can miss technologies that live only in code."
           ]
         }
       ]

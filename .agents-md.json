@@ -1,0 +1,7 @@
+{
+  "exclude": ["html", "css", "a11y", "design-system"],
+  "project": {
+    "name": "AGENTS.md Generator",
+    "description": "Static Svelte 5 site that builds AGENTS.md files from toggled rules, with a repository scan and a monorepo mode. All logic runs in the browser."
+  }
+}

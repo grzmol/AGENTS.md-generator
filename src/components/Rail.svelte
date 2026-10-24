@@ -72,6 +72,9 @@
         <button class="rail-item" class:current={wb.view.kind === 'presets'} onclick={() => go({ kind: 'presets' })}><span class="rail-title">Presets</span></button>
       </li>
       <li>
+        <button class="rail-item" class:current={wb.view.kind === 'automation'} onclick={() => go({ kind: 'automation' })}><span class="rail-title">Keep it updated</span></button>
+      </li>
+      <li>
         <button class="rail-item" class:current={wb.view.kind === 'project'} onclick={() => go({ kind: 'project' })}><span class="rail-title">Project</span></button>
       </li>
     </ul>

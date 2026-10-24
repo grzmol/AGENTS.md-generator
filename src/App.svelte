@@ -6,6 +6,7 @@
   import ProjectView from './components/ProjectView.svelte'
   import Rail from './components/Rail.svelte'
   import ScopeBar from './components/ScopeBar.svelte'
+  import AutomationView from './components/AutomationView.svelte'
   import ScanView from './components/ScanView.svelte'
   import SearchView from './components/SearchView.svelte'
   import { workbench as wb } from './lib/workbench.svelte'
@@ -34,6 +35,8 @@
             <PackView id={wb.view.id} />
           {:else if wb.view.kind === 'scan'}
             <ScanView />
+          {:else if wb.view.kind === 'automation'}
+            <AutomationView />
           {:else if wb.view.kind === 'project'}
             <ProjectView />
           {:else}

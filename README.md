@@ -19,6 +19,20 @@ The Scan repository view detects a stack without any backend. It accepts a publi
 
 `src/lib/scan.ts` reads manifests (`package.json`, `pyproject.toml`, `go.mod`, `Cargo.toml`, `pom.xml`, `composer.json`, `Gemfile` and others), file names and lockfiles, and returns detected packs with their evidence, project commands (package manager aware), and monorepo package folders that become nested files. `src/lib/scan-apply.ts` turns that into a rule selection: recommended rules of the detected packs plus a base set. Detection is heuristic, so the UI shows the evidence for every finding.
 
+## Keeping AGENTS.md up to date
+
+`cli/agents-md.ts` scans a directory with the same detection as the app and rewrites only the block between `<!-- agents-md-generator:start -->` and `<!-- agents-md-generator:end -->`. Text outside the markers is never touched, and a file without markers is skipped unless `--adopt` is passed.
+
+```
+npm run agents:update      # write
+npm run agents:check       # exit 1 when a file is missing or stale
+npx tsx cli/agents-md.ts --dir ../other-repo --dry-run
+```
+
+`action.yml` wraps the CLI as a composite GitHub Action (`mode: update` opens a pull request through peter-evans/create-pull-request, `mode: check` fails on drift). The app has a Keep it updated view that generates both workflows. Optional `.agents-md.json` supports `include`, `exclude`, `nested` and `project` overrides. This repository runs the action weekly on itself (`.github/workflows/agents-md.yml`).
+
+Maintenance workflows: `dependabot.yml` groups npm and Actions updates weekly, and `content-freshness.yml` opens a monthly issue listing packs reviewed more than six months ago, broken source links and never reviewed packs (`npm run freshness` runs it locally).
+
 ## Monorepo mode
 
 Add a folder (for example `apps/web`) to produce a nested file for it. Each folder keeps its own selection, project details and commands. Output paths per format:

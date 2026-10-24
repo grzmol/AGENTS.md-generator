@@ -6,7 +6,7 @@ import { selectionForScan } from './scan-apply'
 import type { ScanResult } from './scan'
 import type { ExportFormat, Pack, Preset, ProjectInfo, Scope } from './types'
 
-export type View = { kind: 'presets' } | { kind: 'scan' } | { kind: 'project' } | { kind: 'pack'; id: string } | { kind: 'search' }
+export type View = { kind: 'presets' } | { kind: 'scan' } | { kind: 'automation' } | { kind: 'project' } | { kind: 'pack'; id: string } | { kind: 'search' }
 
 function initialScopes(): { scopes: Scope[]; format: ExportFormat } {
   const hash = typeof location === 'undefined' ? '' : location.hash

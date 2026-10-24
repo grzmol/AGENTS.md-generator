@@ -1,0 +1,73 @@
+name: AGENTS.md updater
+description: Detect the technologies in a repository and keep the generated block of AGENTS.md up to date, by pull request or as a drift check.
+author: grzmol
+branding:
+  icon: file-text
+  color: blue
+
+inputs:
+  mode:
+    description: "update writes changes and can open a pull request. check fails when AGENTS.md is out of date."
+    default: update
+  path:
+    description: Directory to scan, relative to the workspace.
+    default: .
+  adopt:
+    description: Append a managed block to an existing AGENTS.md that has no markers.
+    default: "false"
+  create-pr:
+    description: Open or update a pull request with the changes (update mode only).
+    default: "true"
+  token:
+    description: Token used to create the pull request. Needs contents and pull-requests write access.
+    default: ${{ github.token }}
+  branch:
+    description: Branch name for the pull request.
+    default: agents-md/update
+  commit-message:
+    description: Commit message and pull request title.
+    default: "Update AGENTS.md from repository scan"
+
+outputs:
+  changed:
+    description: "true when at least one file was created or changed."
+    value: ${{ steps.run.outputs.changed }}
+  files:
+    description: Comma separated list of created or changed files.
+    value: ${{ steps.run.outputs.files }}
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 22
+
+    - id: run
+      shell: bash
+      env:
+        INPUT_MODE: ${{ inputs.mode }}
+        INPUT_PATH: ${{ inputs.path }}
+        INPUT_ADOPT: ${{ inputs.adopt }}
+      run: |
+        args=(--dir "$INPUT_PATH")
+        if [ "$INPUT_MODE" = "check" ]; then args+=(--check); fi
+        if [ "$INPUT_ADOPT" = "true" ]; then args+=(--adopt); fi
+        npx --yes tsx@4 "$GITHUB_ACTION_PATH/cli/agents-md.ts" "${args[@]}"
+
+    - if: ${{ inputs.mode == 'update' && inputs.create-pr == 'true' && steps.run.outputs.changed == 'true' }}
+      uses: peter-evans/create-pull-request@v8
+      with:
+        token: ${{ inputs.token }}
+        branch: ${{ inputs.branch }}
+        commit-message: ${{ inputs.commit-message }}
+        title: ${{ inputs.commit-message }}
+        add-paths: |
+          **/AGENTS.md
+        delete-branch: true
+        body: |
+          This pull request was opened by the AGENTS.md updater. It rescans the repository and refreshes the generated block of AGENTS.md. Text outside the `agents-md-generator` markers is never touched.
+
+          Changed files: `${{ steps.run.outputs.files }}`
+
+          Review the diff, then merge. Rules can be tuned in `.agents-md.json`.
