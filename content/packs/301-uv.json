@@ -1,0 +1,83 @@
+{
+  "id": "uv",
+  "title": "uv",
+  "kind": "technology",
+  "order": 301,
+  "family": "python",
+  "description": "Conventions for uv.",
+  "sources": [
+    {
+      "name": "astral-sh/uv AGENTS.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/AGENTS.md"
+    },
+    {
+      "name": "modelcontextprotocol/python-sdk AGENTS.md",
+      "url": "https://github.com/modelcontextprotocol/python-sdk/blob/main/AGENTS.md"
+    },
+    {
+      "name": "home-assistant/core AGENTS.md",
+      "url": "https://github.com/home-assistant/core/blob/dev/AGENTS.md"
+    },
+    {
+      "name": "uv documentation",
+      "url": "https://docs.astral.sh/uv/"
+    }
+  ],
+  "rules": [
+    {
+      "id": "uv-add",
+      "title": "uv add, not pip",
+      "text": "Add dependencies with uv add so pyproject.toml and the lockfile stay in sync. Never use pip install in a uv project.",
+      "recommended": true
+    },
+    {
+      "id": "uv-locked",
+      "title": "Locked runs",
+      "text": "Run tools with uv run --locked, which fails if the lock is stale. Use --frozen only when the lock must not be checked.",
+      "recommended": true
+    },
+    {
+      "id": "uv-upgrade-package",
+      "title": "Upgrade one package",
+      "text": "Upgrade a single package with uv lock --upgrade-package <name> instead of upgrading everything.",
+      "recommended": true
+    },
+    {
+      "id": "uv-no-system-python",
+      "title": "No system Python",
+      "text": "Never use the system python3 or a bare pip for project work. Go through uv and the project environment.",
+      "recommended": true
+    },
+    {
+      "id": "uv-pep723",
+      "title": "PEP 723 scripts",
+      "text": "Write self-contained scripts with PEP 723 inline metadata and run them with uv run script.py."
+    },
+    {
+      "id": "uv-no-uv-pip",
+      "title": "Avoid uv pip install",
+      "text": "Avoid uv pip install inside a uv project. It bypasses the lockfile."
+    },
+    {
+      "id": "uv-docker-layers",
+      "title": "Docker sync layers",
+      "text": "In Docker, sync dependencies with --frozen in the cached layer and with --locked in the final sync."
+    },
+    {
+      "id": "uv-python-pin",
+      "title": "Pin the interpreter",
+      "text": "Pin the interpreter with .python-version or requires-python and let uv manage it."
+    },
+    {
+      "id": "uv-workspaces",
+      "title": "Workspaces",
+      "text": "Use uv workspaces for multi-package repos with a single lockfile."
+    },
+    {
+      "id": "uv-uvx",
+      "title": "uvx for one-off tools",
+      "text": "Run one-off tools with uvx instead of installing them globally."
+    }
+  ],
+  "reviewed": "2026-10"
+}

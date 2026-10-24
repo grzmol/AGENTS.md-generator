@@ -43,6 +43,17 @@
       "id": "observability-error-tracking",
       "title": "Report unexpected errors",
       "text": "Send unexpected errors to the error tracker with context, and do not report expected validation failures."
+    },
+    {
+      "id": "observability-metrics-review",
+      "title": "Review metric changes",
+      "text": "Review metric changes for registration, duplicate names, label cardinality and the effect of renames on dashboards and alerts."
+    }
+  ],
+  "sources": [
+    {
+      "name": "grafana/grafana AGENTS.md",
+      "url": "https://github.com/grafana/grafana/blob/main/AGENTS.md"
     }
   ]
 }

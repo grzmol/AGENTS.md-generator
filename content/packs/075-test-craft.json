@@ -1,0 +1,118 @@
+{
+  "id": "test-craft",
+  "title": "Test craft",
+  "kind": "general",
+  "order": 75,
+  "description": "How to design tests that stay fast, readable and meaningful.",
+  "sources": [
+    {
+      "name": "vitest-dev/vitest AGENTS.md",
+      "url": "https://github.com/vitest-dev/vitest/blob/main/AGENTS.md"
+    },
+    {
+      "name": "vllm-project/vllm AGENTS.md",
+      "url": "https://github.com/vllm-project/vllm/blob/main/AGENTS.md"
+    },
+    {
+      "name": "home-assistant/core AGENTS.md",
+      "url": "https://github.com/home-assistant/core/blob/dev/AGENTS.md"
+    },
+    {
+      "name": "astral-sh/uv AGENTS.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/AGENTS.md"
+    },
+    {
+      "name": "modelcontextprotocol/python-sdk AGENTS.md",
+      "url": "https://github.com/modelcontextprotocol/python-sdk/blob/main/AGENTS.md"
+    },
+    {
+      "name": "langchain-ai/langchain AGENTS.md",
+      "url": "https://github.com/langchain-ai/langchain/blob/master/AGENTS.md"
+    },
+    {
+      "name": "prisma/prisma AGENTS.md",
+      "url": "https://github.com/prisma/prisma/blob/main/AGENTS.md"
+    }
+  ],
+  "rules": [
+    {
+      "id": "test-craft-design-first",
+      "title": "Design before writing",
+      "text": "Before writing a test, decide what the module is for, its input and output contract and the failure it guards against.",
+      "recommended": true
+    },
+    {
+      "id": "test-craft-cheapest-level",
+      "title": "Cheapest sufficient level",
+      "text": "Pick the cheapest test level that reproduces the risk, and use an end-to-end path for user-visible behavior.",
+      "recommended": true
+    },
+    {
+      "id": "test-craft-reuse",
+      "title": "Reuse before creating",
+      "text": "Extend existing test files, fixtures and helpers before creating new ones.",
+      "recommended": true
+    },
+    {
+      "id": "test-craft-behavior",
+      "title": "Assert behavior",
+      "text": "Assert observable behavior through public interfaces, and let the test name say why it matters.",
+      "recommended": true
+    },
+    {
+      "id": "test-craft-no-branching",
+      "title": "No logic in tests",
+      "text": "Do not put conditionals or loops in tests. Split the test or parametrize the cases."
+    },
+    {
+      "id": "test-craft-parametrize",
+      "title": "Parametrize duplicates",
+      "text": "Merge near-duplicate tests into one parameterized test with named cases."
+    },
+    {
+      "id": "test-craft-whole-shape",
+      "title": "Assert the whole shape",
+      "text": "Assert the whole result shape or a snapshot rather than one field when the shape is the contract."
+    },
+    {
+      "id": "test-craft-no-trivial",
+      "title": "No coverage padding",
+      "text": "Do not add trivial tests only to raise the coverage number."
+    },
+    {
+      "id": "test-craft-fast-deterministic",
+      "title": "Fast and deterministic",
+      "text": "Keep tests fast and deterministic. Prefer in-memory execution, and use threads or subprocesses only when nothing else works."
+    },
+    {
+      "id": "test-craft-wait-conditions",
+      "title": "Wait on conditions",
+      "text": "Wait on a condition, never on a fixed sleep."
+    },
+    {
+      "id": "test-craft-fixtures-readonly",
+      "title": "Fixtures stay read-only",
+      "text": "Never modify committed fixtures from a test. Copy them to a temporary directory first."
+    },
+    {
+      "id": "test-craft-real-over-mock",
+      "title": "Real over mocks",
+      "text": "Prefer real objects or small fakes over mocks. When a mock is unavoidable, document why."
+    },
+    {
+      "id": "test-craft-mirror-tree",
+      "title": "Mirror the source tree",
+      "text": "Mirror the source tree in the test tree so tests are easy to find."
+    },
+    {
+      "id": "test-craft-offline",
+      "title": "Offline unit tests",
+      "text": "Unit tests must not touch the network. Isolate them from environment variables that enable tracing or real services."
+    },
+    {
+      "id": "test-craft-plain-names",
+      "title": "Plain test names",
+      "text": "Name tests after the behavior and omit \"should\". Keep each test body short."
+    }
+  ]
+}

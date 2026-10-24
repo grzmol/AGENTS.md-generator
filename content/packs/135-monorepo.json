@@ -48,6 +48,68 @@
       "id": "monorepo-ownership",
       "title": "Respect CODEOWNERS",
       "text": "Check CODEOWNERS before editing files owned by other teams and keep such changes minimal."
+    },
+    {
+      "id": "monorepo-per-package-commands",
+      "title": "Per-package commands",
+      "text": "Run format, lint and tests inside the package you changed, using its own scripts, before opening a PR.",
+      "recommended": true
+    },
+    {
+      "id": "monorepo-nearest-agents",
+      "title": "Package AGENTS.md",
+      "text": "Read the AGENTS.md in a package before changing it. It overrides the root file for that package."
+    },
+    {
+      "id": "monorepo-split-fe-be",
+      "title": "Split frontend and backend",
+      "text": "Split frontend and backend changes into separate PRs when they ship on different cadences."
+    },
+    {
+      "id": "monorepo-new-package",
+      "title": "New package checklist",
+      "text": "When adding a package, update the workspace config, TypeScript references, CI and release config together."
+    },
+    {
+      "id": "monorepo-dependency-map",
+      "title": "Document the dependency map",
+      "text": "Document which packages may depend on which, and the direction imports may flow."
+    },
+    {
+      "id": "monorepo-layering-lint",
+      "title": "Run the layering check",
+      "text": "Run the dependency layering check and fix violations. Never bypass it."
+    },
+    {
+      "id": "monorepo-shared-first",
+      "title": "Shared behavior low",
+      "text": "Build shared behavior in the lowest suitable shared package and keep tool-specific integrations thin."
+    }
+  ],
+  "sources": [
+    {
+      "name": "supabase/supabase AGENTS.md",
+      "url": "https://github.com/supabase/supabase/blob/master/AGENTS.md"
+    },
+    {
+      "name": "vercel/ai AGENTS.md",
+      "url": "https://github.com/vercel/ai/blob/main/AGENTS.md"
+    },
+    {
+      "name": "cloudflare/workers-sdk AGENTS.md",
+      "url": "https://github.com/cloudflare/workers-sdk/blob/main/AGENTS.md"
+    },
+    {
+      "name": "getsentry/sentry AGENTS.md",
+      "url": "https://github.com/getsentry/sentry/blob/master/AGENTS.md"
+    },
+    {
+      "name": "prisma/prisma AGENTS.md",
+      "url": "https://github.com/prisma/prisma/blob/main/AGENTS.md"
+    },
+    {
+      "name": "langchain-ai/langchain AGENTS.md",
+      "url": "https://github.com/langchain-ai/langchain/blob/master/AGENTS.md"
     }
   ]
 }

@@ -6,15 +6,21 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && tsx scripts/prerender.ts",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
-    "test": "vitest run"
+    "test": "vitest run",
+    "build:app": "vite build",
+    "agents:update": "tsx cli/agents-md.ts",
+    "agents:check": "tsx cli/agents-md.ts --check",
+    "freshness": "tsx scripts/freshness.ts"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^6.2.0",
+    "@types/node": "^22.20.5",
     "svelte": "^5.57.2",
     "svelte-check": "^4.3.0",
+    "tsx": "^4.23.15",
     "typescript": "^5.9.0",
     "vite": "^7.3.1",
     "vitest": "^3.2.0"

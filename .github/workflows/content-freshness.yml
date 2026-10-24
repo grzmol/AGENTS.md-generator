@@ -1,0 +1,40 @@
+name: Content freshness
+
+on:
+  schedule:
+    - cron: "23 5 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - id: report
+        run: npm run freshness
+      - name: Open or update the freshness issue
+        if: steps.report.outputs.actionable == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="Content freshness report"
+          number=$(gh issue list --state open --label content-freshness --json number --jq '.[0].number // empty')
+          if [ -n "$number" ]; then
+            gh issue edit "$number" --body-file freshness-report.md
+          else
+            gh label create content-freshness --description "Stale rules or broken sources" --color 0071e3 2>/dev/null || true
+            gh issue create --title "$title" --label content-freshness --body-file freshness-report.md
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: freshness-report
+          path: freshness-report.md

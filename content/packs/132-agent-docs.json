@@ -1,0 +1,104 @@
+{
+  "id": "agent-docs",
+  "title": "Maintaining agent instructions",
+  "kind": "general",
+  "order": 132,
+  "description": "How to keep AGENTS.md and related files short, true and useful.",
+  "sources": [
+    {
+      "name": "storybookjs/storybook AGENTS.md",
+      "url": "https://github.com/storybookjs/storybook/blob/next/AGENTS.md"
+    },
+    {
+      "name": "cloudflare/workers-sdk AGENTS.md",
+      "url": "https://github.com/cloudflare/workers-sdk/blob/main/AGENTS.md"
+    },
+    {
+      "name": "getsentry/sentry AGENTS.md",
+      "url": "https://github.com/getsentry/sentry/blob/master/AGENTS.md"
+    },
+    {
+      "name": "mastra-ai/mastra AGENTS.md",
+      "url": "https://github.com/mastra-ai/mastra/blob/main/AGENTS.md"
+    },
+    {
+      "name": "prisma/prisma AGENTS.md",
+      "url": "https://github.com/prisma/prisma/blob/main/AGENTS.md"
+    },
+    {
+      "name": "cloudflare/workerd AGENTS.md",
+      "url": "https://github.com/cloudflare/workerd/blob/main/AGENTS.md"
+    }
+  ],
+  "rules": [
+    {
+      "id": "agent-docs-short",
+      "title": "Keep the root file short",
+      "text": "Keep the root agent file to always-on rules and pointers. Put detail in the document that owns the topic.",
+      "recommended": true
+    },
+    {
+      "id": "agent-docs-nested",
+      "title": "Nested files per package",
+      "text": "Add nested AGENTS.md files for packages with their own commands or rules, and read the nearest one before editing there.",
+      "recommended": true
+    },
+    {
+      "id": "agent-docs-link-not-copy",
+      "title": "Link, do not copy",
+      "text": "Link to the authoritative config or doc instead of copying versions, rule lists and counts that go stale.",
+      "recommended": true
+    },
+    {
+      "id": "agent-docs-verified-commands",
+      "title": "Verified commands",
+      "text": "List only commands that work from a clean checkout, with the working directory they expect.",
+      "recommended": true
+    },
+    {
+      "id": "agent-docs-thin-entrypoints",
+      "title": "Thin tool entry files",
+      "text": "Keep CLAUDE.md and other tool-specific entry files as thin pointers to AGENTS.md."
+    },
+    {
+      "id": "agent-docs-map",
+      "title": "Directory map",
+      "text": "Include a short map of directories and what lives where, so an agent can find the right place without searching."
+    },
+    {
+      "id": "agent-docs-never-run",
+      "title": "Commands never to run",
+      "text": "State commands an agent must never run, such as long-running dev servers or destructive scripts, and mirror them in tool permission lists."
+    },
+    {
+      "id": "agent-docs-encode-lessons",
+      "title": "Encode repeated corrections",
+      "text": "Turn a correction you repeat into a lint rule, test or script. Keep the instruction file for what tooling cannot enforce."
+    },
+    {
+      "id": "agent-docs-suggest-updates",
+      "title": "Suggest updates",
+      "text": "Suggest an update to the agent file when you learn something durable about the project that it is missing."
+    },
+    {
+      "id": "agent-docs-skills-pointer",
+      "title": "Point to skills",
+      "text": "Point to reusable skills for repeatable workflows and name the task each one covers."
+    },
+    {
+      "id": "agent-docs-review-guide",
+      "title": "Dedicated review guide",
+      "text": "Point review agents to a review guide so authoring and review follow the same conventions."
+    },
+    {
+      "id": "agent-docs-remove-stale",
+      "title": "Remove stale pointers",
+      "text": "Remove a pointer and its document together when a topic disappears."
+    },
+    {
+      "id": "agent-docs-path-scoped",
+      "title": "Path-scoped guidance",
+      "text": "Say which guidance applies to which paths, so agents load backend, frontend and test rules only when relevant."
+    }
+  ]
+}

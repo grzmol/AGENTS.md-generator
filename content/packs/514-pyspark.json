@@ -1,0 +1,69 @@
+{
+  "id": "pyspark",
+  "title": "PySpark",
+  "kind": "technology",
+  "order": 514,
+  "family": "data",
+  "description": "Conventions for PySpark.",
+  "sources": [
+    {
+      "name": "apache/spark AGENTS.md",
+      "url": "https://github.com/apache/spark/blob/master/AGENTS.md"
+    },
+    {
+      "name": "PySpark user guide",
+      "url": "https://spark.apache.org/docs/latest/api/python/user_guide/index.html"
+    }
+  ],
+  "rules": [
+    {
+      "id": "pyspark-builtin-functions",
+      "title": "Built-ins over UDFs",
+      "text": "Prefer built-in pyspark.sql.functions over Python UDFs. When a UDF is needed, use a pandas UDF with type hints.",
+      "recommended": true
+    },
+    {
+      "id": "pyspark-no-collect",
+      "title": "Do not collect big data",
+      "text": "Avoid collect() and toPandas() on large DataFrames. Aggregate or limit first.",
+      "recommended": true
+    },
+    {
+      "id": "pyspark-assert-dataframes",
+      "title": "Assert with pyspark.testing",
+      "text": "Compare DataFrames and schemas in tests with assertDataFrameEqual and assertSchemaEqual.",
+      "recommended": true
+    },
+    {
+      "id": "pyspark-broadcast",
+      "title": "Broadcast small tables",
+      "text": "Hint joins with a small table using broadcast() and check the physical plan with explain()."
+    },
+    {
+      "id": "pyspark-explicit-schema",
+      "title": "Explicit schemas",
+      "text": "Define schemas explicitly when reading files in production instead of relying on inference."
+    },
+    {
+      "id": "pyspark-filter-early",
+      "title": "Filter and project early",
+      "text": "Filter rows and select columns early to shrink shuffles, and avoid wide transformations you do not need."
+    },
+    {
+      "id": "pyspark-aqe",
+      "title": "Adaptive execution",
+      "text": "Keep adaptive query execution enabled unless profiling shows a reason to change it."
+    },
+    {
+      "id": "pyspark-cache-sparingly",
+      "title": "Cache sparingly",
+      "text": "Cache a DataFrame only when it is reused, and unpersist it when done."
+    },
+    {
+      "id": "pyspark-error-classes",
+      "title": "Assert on error classes",
+      "text": "Where the API exposes it, assert on the error class and message parameters instead of message text."
+    }
+  ],
+  "reviewed": "2026-10"
+}

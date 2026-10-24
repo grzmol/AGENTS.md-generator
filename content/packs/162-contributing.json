@@ -1,0 +1,93 @@
+{
+  "id": "contributing",
+  "title": "Contributing to other projects",
+  "kind": "general",
+  "order": 162,
+  "description": "Etiquette for opening issues and pull requests in a repository you do not own.",
+  "sources": [
+    {
+      "name": "astral-sh/ruff AGENTS.md",
+      "url": "https://github.com/astral-sh/ruff/blob/main/AGENTS.md"
+    },
+    {
+      "name": "ray-project/ray AGENTS.md",
+      "url": "https://github.com/ray-project/ray/blob/master/AGENTS.md"
+    },
+    {
+      "name": "vllm-project/vllm AGENTS.md",
+      "url": "https://github.com/vllm-project/vllm/blob/main/AGENTS.md"
+    },
+    {
+      "name": "modelcontextprotocol/python-sdk AGENTS.md",
+      "url": "https://github.com/modelcontextprotocol/python-sdk/blob/main/AGENTS.md"
+    },
+    {
+      "name": "apache/spark AGENTS.md",
+      "url": "https://github.com/apache/spark/blob/master/AGENTS.md"
+    },
+    {
+      "name": "getsentry/sentry AGENTS.md",
+      "url": "https://github.com/getsentry/sentry/blob/master/AGENTS.md"
+    }
+  ],
+  "rules": [
+    {
+      "id": "contributing-dup-check",
+      "title": "Check for duplicates",
+      "text": "Before starting, look for an existing issue or open PR for the same change. Do not open a competing one without agreement.",
+      "recommended": true
+    },
+    {
+      "id": "contributing-template",
+      "title": "Keep the PR template",
+      "text": "Use the repository PR template and keep every section and checkbox, including the ones left unchecked.",
+      "recommended": true
+    },
+    {
+      "id": "contributing-read-guide",
+      "title": "Read the contributing guide",
+      "text": "Read CONTRIBUTING and any AI contribution policy before opening an issue or PR, and follow the target branch it names.",
+      "recommended": true
+    },
+    {
+      "id": "contributing-link-issue",
+      "title": "Link and discuss first",
+      "text": "Link a PR to the issue it resolves, and discuss non-trivial features in an issue before implementing them."
+    },
+    {
+      "id": "contributing-focused",
+      "title": "Keep it focused",
+      "text": "Keep PRs small and focused. Do not bundle unrelated cleanups into a feature PR."
+    },
+    {
+      "id": "contributing-no-busywork",
+      "title": "No busywork PRs",
+      "text": "Skip one-off PRs for a single typo or an isolated style tweak unless maintainers asked for them."
+    },
+    {
+      "id": "contributing-labels",
+      "title": "Labels and changelog",
+      "text": "Pick labels and the changelog entry deliberately. Check which labels include or exclude a change from the release notes."
+    },
+    {
+      "id": "contributing-split-fe-be",
+      "title": "Split frontend and backend",
+      "text": "Send frontend and backend changes as separate PRs when they deploy on different schedules. Land the backend first when the frontend depends on it."
+    },
+    {
+      "id": "contributing-tests-reported",
+      "title": "Report test runs",
+      "text": "State in the PR which test commands you ran and what they returned."
+    },
+    {
+      "id": "contributing-backport-prefix",
+      "title": "Backport conventions",
+      "text": "Mark backport PRs the way the project requires, for example a branch prefix in the title, and target the maintenance branch."
+    },
+    {
+      "id": "contributing-respond",
+      "title": "Respond to review",
+      "text": "Address review comments in follow-up work and say what changed in the reply."
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "gradle",
+  "title": "Gradle",
+  "kind": "technology",
+  "order": 356,
+  "family": "jvm",
+  "description": "Conventions for Gradle.",
+  "sources": [
+    {
+      "name": "apache/kafka AGENTS.md",
+      "url": "https://github.com/apache/kafka/blob/trunk/AGENTS.md"
+    },
+    {
+      "name": "elastic/elasticsearch AGENTS.md",
+      "url": "https://github.com/elastic/elasticsearch/blob/main/AGENTS.md"
+    }
+  ],
+  "rules": [
+    {
+      "id": "gradle-wrapper",
+      "title": "Use the wrapper",
+      "text": "Use the Gradle wrapper (./gradlew) so everyone builds with the same Gradle version.",
+      "recommended": true
+    },
+    {
+      "id": "gradle-scoped-tasks",
+      "title": "Module-scoped tasks",
+      "text": "Run module-scoped tasks such as ./gradlew :server:test while developing instead of the whole build.",
+      "recommended": true
+    },
+    {
+      "id": "gradle-test-filter",
+      "title": "Filter tests",
+      "text": "Select tests with --tests and a class or pattern.",
+      "recommended": true
+    },
+    {
+      "id": "gradle-spotless",
+      "title": "Let Spotless format",
+      "text": "Run spotlessApply instead of fixing formatting and unused imports by hand."
+    },
+    {
+      "id": "gradle-version-catalog",
+      "title": "Version catalog",
+      "text": "Declare dependency versions in a version catalog such as libs.versions.toml."
+    },
+    {
+      "id": "gradle-build-cache",
+      "title": "Trust the build cache",
+      "text": "Rely on the build cache and avoid clean unless something is genuinely stale."
+    },
+    {
+      "id": "gradle-jdk",
+      "title": "Declared JDK",
+      "text": "Use the JDK version the build declares, through JAVA_HOME or toolchains."
+    },
+    {
+      "id": "gradle-check-before-pr",
+      "title": "Run check before a PR",
+      "text": "Run ./gradlew check before opening a PR."
+    }
+  ]
+}

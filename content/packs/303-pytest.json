@@ -1,0 +1,83 @@
+{
+  "id": "pytest",
+  "title": "pytest",
+  "kind": "technology",
+  "order": 303,
+  "family": "python",
+  "description": "Conventions for pytest.",
+  "sources": [
+    {
+      "name": "home-assistant/core AGENTS.md",
+      "url": "https://github.com/home-assistant/core/blob/dev/AGENTS.md"
+    },
+    {
+      "name": "modelcontextprotocol/python-sdk AGENTS.md",
+      "url": "https://github.com/modelcontextprotocol/python-sdk/blob/main/AGENTS.md"
+    },
+    {
+      "name": "ray-project/ray AGENTS.md",
+      "url": "https://github.com/ray-project/ray/blob/master/AGENTS.md"
+    }
+  ],
+  "rules": [
+    {
+      "id": "pytest-plain-functions",
+      "title": "Plain test functions",
+      "text": "Write tests as plain test_ functions with fixtures. Do not add test classes to new code.",
+      "recommended": true
+    },
+    {
+      "id": "pytest-parametrize",
+      "title": "Named parametrization",
+      "text": "Use pytest.mark.parametrize with pytest.param(..., id=...) for named cases.",
+      "recommended": true
+    },
+    {
+      "id": "pytest-fixtures-conftest",
+      "title": "Fixtures in conftest",
+      "text": "Share fixtures through conftest.py and keep them small and composable.",
+      "recommended": true
+    },
+    {
+      "id": "pytest-tmp-path",
+      "title": "tmp_path and monkeypatch",
+      "text": "Use tmp_path for files and monkeypatch for environment and attributes.",
+      "recommended": true
+    },
+    {
+      "id": "pytest-usefixtures",
+      "title": "usefixtures for side effects",
+      "text": "Use pytest.mark.usefixtures for fixtures a test needs but never reads."
+    },
+    {
+      "id": "pytest-strict-markers",
+      "title": "Strict markers",
+      "text": "Register custom markers in config and run with --strict-markers."
+    },
+    {
+      "id": "pytest-anyio",
+      "title": "One async runner",
+      "text": "For async tests use a single runner such as anyio, not a mix of plugins."
+    },
+    {
+      "id": "pytest-snapshots",
+      "title": "Snapshot big structures",
+      "text": "Use syrupy snapshots for large expected structures instead of building them inline."
+    },
+    {
+      "id": "pytest-warnings-as-errors",
+      "title": "Warnings as errors",
+      "text": "Treat warnings as errors with filterwarnings = error, adding narrow exceptions."
+    },
+    {
+      "id": "pytest-typed-tests",
+      "title": "Typed tests",
+      "text": "Annotate test function parameters and prefer concrete types over Any."
+    },
+    {
+      "id": "pytest-run-subset",
+      "title": "Run a subset",
+      "text": "Run a specific file or a -k expression instead of the whole suite to check one change."
+    }
+  ]
+}

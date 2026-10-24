@@ -1,0 +1,69 @@
+{
+  "id": "open-source",
+  "title": "Public repository hygiene",
+  "kind": "general",
+  "order": 176,
+  "description": "Keep world-readable repositories free of internal detail and legally clean.",
+  "sources": [
+    {
+      "name": "supabase/supabase AGENTS.md",
+      "url": "https://github.com/supabase/supabase/blob/master/AGENTS.md"
+    },
+    {
+      "name": "grafana/grafana AGENTS.md",
+      "url": "https://github.com/grafana/grafana/blob/main/AGENTS.md"
+    },
+    {
+      "name": "kubernetes/kubernetes AGENTS.md",
+      "url": "https://github.com/kubernetes/kubernetes/blob/master/AGENTS.md"
+    },
+    {
+      "name": "nodejs/node AGENTS.md",
+      "url": "https://github.com/nodejs/node/blob/main/AGENTS.md"
+    }
+  ],
+  "rules": [
+    {
+      "id": "open-source-no-internal",
+      "title": "No internal detail",
+      "text": "Treat PRs, issues and comments as world-readable. Keep out internal metrics, vendor or pricing talk and customer details.",
+      "recommended": true
+    },
+    {
+      "id": "open-source-relative-metrics",
+      "title": "Relative numbers",
+      "text": "State percentages, ratios or relative change instead of absolute production numbers."
+    },
+    {
+      "id": "open-source-security-policy",
+      "title": "Report privately",
+      "text": "Report vulnerabilities through the project security policy, never in a public issue or PR.",
+      "recommended": true
+    },
+    {
+      "id": "open-source-license-headers",
+      "title": "License headers",
+      "text": "Keep the required license header on every new source file."
+    },
+    {
+      "id": "open-source-dco",
+      "title": "DCO sign-off",
+      "text": "Add a Signed-off-by line when the project requires a Developer Certificate of Origin. The human author signs."
+    },
+    {
+      "id": "open-source-license-compat",
+      "title": "License compatibility",
+      "text": "Only add code and dependencies whose licenses are compatible with the project license."
+    },
+    {
+      "id": "open-source-no-competitors",
+      "title": "No competitor names",
+      "text": "Do not name competitors in code, comments or docs unless a protocol or format requires it."
+    },
+    {
+      "id": "open-source-no-private-links",
+      "title": "No private links",
+      "text": "Do not link to private trackers, chats or documents from public code."
+    }
+  ]
+}

@@ -39,6 +39,31 @@
       "id": "review-assumptions",
       "title": "State assumptions",
       "text": "List assumptions you made so the reviewer can confirm them."
+    },
+    {
+      "id": "review-against-conventions",
+      "title": "Check against conventions",
+      "text": "Check the change against the conventions in AGENTS.md and report violations it introduces, not unrelated old ones.",
+      "recommended": true
+    },
+    {
+      "id": "review-finding-evidence",
+      "title": "Evidence for findings",
+      "text": "Back each finding with the file and line and a concrete failure scenario."
+    }
+  ],
+  "sources": [
+    {
+      "name": "astral-sh/ruff AGENTS.md",
+      "url": "https://github.com/astral-sh/ruff/blob/main/AGENTS.md"
+    },
+    {
+      "name": "biomejs/biome AGENTS.md",
+      "url": "https://github.com/biomejs/biome/blob/main/AGENTS.md"
+    },
+    {
+      "name": "ggml-org/llama.cpp AGENTS.md",
+      "url": "https://github.com/ggml-org/llama.cpp/blob/master/AGENTS.md"
     }
   ]
 }

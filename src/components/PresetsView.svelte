@@ -1,8 +1,10 @@
 <script lang="ts">
+  import seo from '../../content/seo.json'
   import { packs, presets } from '../lib/content'
   import { workbench as wb } from '../lib/workbench.svelte'
 
   const totalRules = packs.reduce((sum, pack) => sum + pack.rules.length, 0)
+  const fill = (text: string) => text.replace('{rules}', String(totalRules)).replace('{packs}', String(packs.length)).replace('{presets}', String(presets.length))
 
   function apply(id: string) {
     const preset = presets.find((candidate) => candidate.id === id)
@@ -14,11 +16,13 @@
 
 <article class="pane wide">
   <p class="eyebrow">{totalRules} rules in {packs.length} packs</p>
-  <h1 class="hero">Brief your coding agent before it writes a line.</h1>
-  <p class="hero-sub">
-    AGENTS.md is the file coding agents read first. Start from a preset, fine tune it pack by pack, then copy the result.
-    Everything runs in your browser.
-  </p>
+  <h1 class="hero">{seo.hero.h1}</h1>
+  <p class="hero-sub">{seo.hero.lead}</p>
+
+  <div class="hero-actions">
+    <button class="pill blue" onclick={() => (wb.view = { kind: 'scan' })}>Scan your repository</button>
+    <span class="hero-note">Detects your stack from a GitHub URL or a local folder.</span>
+  </div>
 
   <h2 class="section-title">Presets</h2>
   <ul class="preset-grid">
@@ -33,4 +37,29 @@
     {/each}
   </ul>
   <p class="foot-note">Choosing a preset replaces the selection for the file you are editing.</p>
+
+  <h2 class="section-title">What you get</h2>
+  <ul class="group about">
+    {#each seo.features as feature (feature)}
+      <li class="about-row">{fill(feature)}</li>
+    {/each}
+  </ul>
+
+  <h2 class="section-title">Guides and templates</h2>
+  <ul class="link-list">
+    {#each seo.guides as guide (guide.slug)}
+      <li><a href={`./guides/${guide.slug}/`}>{guide.h1}</a></li>
+    {/each}
+    <li><a href="./templates/">AGENTS.md templates by stack</a></li>
+  </ul>
+
+  <h2 class="section-title">Questions</h2>
+  <div class="faq">
+    {#each seo.faq as item (item.q)}
+      <details>
+        <summary>{item.q}</summary>
+        <p>{item.a}</p>
+      </details>
+    {/each}
+  </div>
 </article>

@@ -57,12 +57,25 @@
       "id": "nodejs-env-file",
       "title": "Use --env-file",
       "text": "Load local env with --env-file or the platform; do not commit .env."
+    },
+    {
+      "id": "nodejs-node-prefix",
+      "title": "node: prefix",
+      "text": "Import Node.js built-in modules with the node: prefix."
     }
   ],
   "sources": [
     {
       "name": "Node.js API documentation",
       "url": "https://nodejs.org/docs/latest-v22.x/api/"
+    },
+    {
+      "name": "cloudflare/workers-sdk AGENTS.md",
+      "url": "https://github.com/cloudflare/workers-sdk/blob/main/AGENTS.md"
+    },
+    {
+      "name": "storybookjs/storybook AGENTS.md",
+      "url": "https://github.com/storybookjs/storybook/blob/next/AGENTS.md"
     }
   ],
   "reviewed": "2026-10"

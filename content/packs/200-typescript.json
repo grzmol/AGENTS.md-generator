@@ -76,12 +76,39 @@
       "id": "typescript-esm",
       "title": "Explicit module settings",
       "text": "Keep module and moduleResolution consistent with the runtime and bundler."
+    },
+    {
+      "id": "typescript-no-bare-casts",
+      "title": "Avoid as casts",
+      "text": "Avoid as casts. Use a type guard or a narrow helper with a stated reason when a cast is unavoidable."
+    },
+    {
+      "id": "typescript-exact-optional",
+      "title": "exactOptionalPropertyTypes",
+      "text": "Enable exactOptionalPropertyTypes so optional properties mean missing, not undefined."
+    },
+    {
+      "id": "typescript-no-require",
+      "title": "No require()",
+      "text": "Use ES module import syntax. Do not use require() in TypeScript sources."
     }
   ],
   "sources": [
     {
       "name": "TypeScript documentation",
       "url": "https://www.typescriptlang.org/docs/"
+    },
+    {
+      "name": "prisma/prisma AGENTS.md",
+      "url": "https://github.com/prisma/prisma/blob/main/AGENTS.md"
+    },
+    {
+      "name": "vercel/ai AGENTS.md",
+      "url": "https://github.com/vercel/ai/blob/main/AGENTS.md"
+    },
+    {
+      "name": "cloudflare/workerd AGENTS.md",
+      "url": "https://github.com/cloudflare/workerd/blob/main/AGENTS.md"
     }
   ],
   "reviewed": "2026-10"

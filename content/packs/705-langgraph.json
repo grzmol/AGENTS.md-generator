@@ -1,0 +1,79 @@
+{
+  "id": "langgraph",
+  "title": "LangGraph",
+  "kind": "technology",
+  "order": 705,
+  "family": "ai",
+  "description": "Conventions for LangGraph.",
+  "sources": [
+    {
+      "name": "langchain-ai/langgraph AGENTS.md",
+      "url": "https://github.com/langchain-ai/langgraph/blob/main/AGENTS.md"
+    },
+    {
+      "name": "langchain-ai/langchain AGENTS.md",
+      "url": "https://github.com/langchain-ai/langchain/blob/master/AGENTS.md"
+    },
+    {
+      "name": "LangGraph repository",
+      "url": "https://github.com/langchain-ai/langgraph"
+    }
+  ],
+  "rules": [
+    {
+      "id": "langgraph-typed-state",
+      "title": "Explicit state schema",
+      "text": "Define graph state with an explicit schema and reducers for fields that merge updates, such as message lists.",
+      "recommended": true
+    },
+    {
+      "id": "langgraph-checkpointer-thread",
+      "title": "Checkpointer and thread_id",
+      "text": "Compile with a checkpointer and pass a thread_id in the config to persist and resume a conversation.",
+      "recommended": true
+    },
+    {
+      "id": "langgraph-interrupt",
+      "title": "Human approval with interrupt",
+      "text": "Use interrupt() for human approval. It needs a checkpointer, and the node restarts from its beginning on resume.",
+      "recommended": true
+    },
+    {
+      "id": "langgraph-idempotent-before-interrupt",
+      "title": "Idempotent before interrupt",
+      "text": "Keep work that runs before an interrupt idempotent, because the node re-executes on resume.",
+      "recommended": true
+    },
+    {
+      "id": "langgraph-recursion-limit",
+      "title": "Recursion limit",
+      "text": "Set a recursion_limit and handle GraphRecursionError so loops end predictably."
+    },
+    {
+      "id": "langgraph-remaining-steps",
+      "title": "Stop before the limit",
+      "text": "Track remaining_steps in state and end gracefully before the limit instead of failing."
+    },
+    {
+      "id": "langgraph-interrupt-order",
+      "title": "Stable interrupt order",
+      "text": "If a node has several interrupt calls, keep their order stable because resume values are matched by index."
+    },
+    {
+      "id": "langgraph-small-nodes",
+      "title": "Small nodes",
+      "text": "Keep nodes small and single-purpose so they can be tested and traced individually."
+    },
+    {
+      "id": "langgraph-durable-checkpointer",
+      "title": "Durable checkpointer",
+      "text": "Use a durable checkpointer such as Postgres in production, not the in-memory one."
+    },
+    {
+      "id": "langgraph-test-nodes",
+      "title": "Test nodes as functions",
+      "text": "Test nodes as plain functions with fixed state, then test full flows with a fake model."
+    }
+  ],
+  "reviewed": "2026-10"
+}

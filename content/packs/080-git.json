@@ -8,6 +8,22 @@
     {
       "name": "Conventional Commits",
       "url": "https://www.conventionalcommits.org"
+    },
+    {
+      "name": "home-assistant/core AGENTS.md",
+      "url": "https://github.com/home-assistant/core/blob/dev/AGENTS.md"
+    },
+    {
+      "name": "kubernetes/kubernetes AGENTS.md",
+      "url": "https://github.com/kubernetes/kubernetes/blob/master/AGENTS.md"
+    },
+    {
+      "name": "cloudflare/workerd AGENTS.md",
+      "url": "https://github.com/cloudflare/workerd/blob/main/AGENTS.md"
+    },
+    {
+      "name": "nodejs/node AGENTS.md",
+      "url": "https://github.com/nodejs/node/blob/main/AGENTS.md"
     }
   ],
   "rules": [
@@ -102,6 +118,38 @@
       "id": "git-commit-body",
       "title": "Explain why in the body",
       "text": "Use the commit body to explain why the change was made when it is not obvious."
+    },
+    {
+      "id": "git-conventional-scope",
+      "title": "Scoped commit titles",
+      "text": "Use Conventional Commits with a scope, and keep the subject lowercase and imperative when the project asks for it."
+    },
+    {
+      "id": "git-closing-keywords",
+      "title": "Closing keywords in the PR",
+      "text": "Put closing keywords such as \"Fixes #123\" in the PR description rather than commit messages, so the issue closes only on merge."
+    },
+    {
+      "id": "git-no-mentions",
+      "title": "No @mentions in commits",
+      "text": "Do not put @mentions in commit messages. They notify people on every rebase."
+    },
+    {
+      "id": "git-keep-history",
+      "title": "Keep review history",
+      "text": "After a PR is open, add new commits for review fixes. Do not amend, squash or rebase pushed commits.",
+      "group": "review-history"
+    },
+    {
+      "id": "git-squash-fixups",
+      "title": "Squash fixups into commits",
+      "text": "Squash review fixes into the commits they correct before merge, so no commit ships known-wrong code followed by a fixup.",
+      "group": "review-history"
+    },
+    {
+      "id": "git-commit-compiles",
+      "title": "Every commit builds",
+      "text": "Make each commit compile and pass tests on its own, and keep fixup commits out of the final history."
     }
   ],
   "reviewed": "2026-10"

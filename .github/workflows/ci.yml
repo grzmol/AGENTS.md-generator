@@ -21,3 +21,6 @@ jobs:
       - run: npm run check
       - run: npm test
       - run: npm run build
+      - name: AGENTS.md drift check
+        run: npm run agents:check
+        continue-on-error: true

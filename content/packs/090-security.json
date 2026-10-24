@@ -13,6 +13,22 @@
     {
       "name": "OWASP Password Storage Cheat Sheet",
       "url": "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html"
+    },
+    {
+      "name": "vercel/ai AGENTS.md",
+      "url": "https://github.com/vercel/ai/blob/main/AGENTS.md"
+    },
+    {
+      "name": "home-assistant/core AGENTS.md",
+      "url": "https://github.com/home-assistant/core/blob/dev/AGENTS.md"
+    },
+    {
+      "name": "astral-sh/ruff AGENTS.md",
+      "url": "https://github.com/astral-sh/ruff/blob/main/AGENTS.md"
+    },
+    {
+      "name": "langchain-ai/langchain AGENTS.md",
+      "url": "https://github.com/langchain-ai/langchain/blob/master/AGENTS.md"
     }
   ],
   "rules": [
@@ -113,6 +129,27 @@
       "title": "Secret scanning",
       "text": "Run secret scanning in CI and rotate any credential that has been exposed.",
       "recommended": true
+    },
+    {
+      "id": "security-untrusted-parsing",
+      "title": "Parse untrusted input safely",
+      "text": "Validate untrusted input against a schema. Never run eval, exec or unpickling on it.",
+      "recommended": true
+    },
+    {
+      "id": "security-admin-actions",
+      "title": "Gate sensitive actions",
+      "text": "Gate actions that change configuration or security behavior behind an admin check in the service layer."
+    },
+    {
+      "id": "security-response-urls",
+      "title": "Validate response URLs",
+      "text": "Validate URLs that arrive in responses before fetching them, and withhold credentials when a redirect leaves the original origin."
+    },
+    {
+      "id": "security-threat-model",
+      "title": "Use a threat model",
+      "text": "Calibrate the severity of findings against a written threat model of trust boundaries."
     }
   ],
   "reviewed": "2026-10"

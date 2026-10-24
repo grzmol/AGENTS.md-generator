@@ -1,0 +1,74 @@
+{
+  "id": "ruff",
+  "title": "Ruff",
+  "kind": "technology",
+  "order": 302,
+  "family": "python",
+  "description": "Conventions for Ruff.",
+  "sources": [
+    {
+      "name": "astral-sh/ruff AGENTS.md",
+      "url": "https://github.com/astral-sh/ruff/blob/main/AGENTS.md"
+    },
+    {
+      "name": "astral-sh/uv AGENTS.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/AGENTS.md"
+    },
+    {
+      "name": "Ruff configuration",
+      "url": "https://docs.astral.sh/ruff/configuration/"
+    }
+  ],
+  "rules": [
+    {
+      "id": "ruff-format",
+      "title": "ruff format and --fix",
+      "text": "Use ruff format as the formatter and ruff check --fix for autofixable lint.",
+      "recommended": true
+    },
+    {
+      "id": "ruff-pyproject-config",
+      "title": "Config in pyproject",
+      "text": "Keep Ruff settings in pyproject.toml or ruff.toml under the lint and format tables.",
+      "recommended": true
+    },
+    {
+      "id": "ruff-explicit-select",
+      "title": "Choose rules deliberately",
+      "text": "Choose rule families with select or extend-select rather than enabling everything.",
+      "recommended": true
+    },
+    {
+      "id": "ruff-per-file-ignores",
+      "title": "Scoped ignores",
+      "text": "Scope exceptions with per-file-ignores for tests, scripts and __init__.py instead of global ignores.",
+      "recommended": true
+    },
+    {
+      "id": "ruff-noqa-codes",
+      "title": "noqa with a code",
+      "text": "Use # noqa with a specific rule code, only where unavoidable."
+    },
+    {
+      "id": "ruff-unfixable",
+      "title": "Unfixable rules",
+      "text": "List rules you do not want auto-fixed under unfixable."
+    },
+    {
+      "id": "ruff-notebooks",
+      "title": "Notebook exceptions",
+      "text": "Relax noisy rules such as print checks for notebooks through per-file-ignores."
+    },
+    {
+      "id": "ruff-ci-and-hooks",
+      "title": "CI and hooks",
+      "text": "Run ruff check and ruff format --check in CI and through pre-commit so local and CI results match."
+    },
+    {
+      "id": "ruff-target-version",
+      "title": "Target version",
+      "text": "Set requires-python or target-version so Ruff applies the right syntax rules."
+    }
+  ],
+  "reviewed": "2026-10"
+}

@@ -1,0 +1,120 @@
+{
+  "id": "verification",
+  "title": "Verification and CI feedback",
+  "kind": "general",
+  "order": 131,
+  "description": "Prove a change works before calling it done, and react to CI the right way.",
+  "sources": [
+    {
+      "name": "biomejs/biome AGENTS.md",
+      "url": "https://github.com/biomejs/biome/blob/main/AGENTS.md"
+    },
+    {
+      "name": "vitest-dev/vitest AGENTS.md",
+      "url": "https://github.com/vitest-dev/vitest/blob/main/AGENTS.md"
+    },
+    {
+      "name": "apache/spark AGENTS.md",
+      "url": "https://github.com/apache/spark/blob/master/AGENTS.md"
+    },
+    {
+      "name": "elastic/elasticsearch AGENTS.md",
+      "url": "https://github.com/elastic/elasticsearch/blob/main/AGENTS.md"
+    },
+    {
+      "name": "supabase/supabase AGENTS.md",
+      "url": "https://github.com/supabase/supabase/blob/master/AGENTS.md"
+    },
+    {
+      "name": "astral-sh/uv AGENTS.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/AGENTS.md"
+    }
+  ],
+  "rules": [
+    {
+      "id": "verification-narrowest-first",
+      "title": "Narrowest check first",
+      "text": "Run the narrowest relevant test first, then widen to the package and workspace checks as confidence grows.",
+      "recommended": true
+    },
+    {
+      "id": "verification-fmt-lint",
+      "title": "Format and lint before commit",
+      "text": "Run the project formatter and linter on changed files before committing, using the repo scripts or hooks.",
+      "recommended": true
+    },
+    {
+      "id": "verification-bug-repro",
+      "title": "Reproduce, then fix",
+      "text": "For a bug fix, reproduce the failure first, then show the regression test failing without the fix and passing with it.",
+      "recommended": true
+    },
+    {
+      "id": "verification-no-unproven-done",
+      "title": "No unproven \"done\"",
+      "text": "Report a task as done only after running the checks that prove it. If you could not run them, say so.",
+      "recommended": true
+    },
+    {
+      "id": "verification-final-review",
+      "title": "Final self-review",
+      "text": "Before finishing, re-read the full diff as a reviewer with no knowledge of this session and fix what would confuse them.",
+      "recommended": true
+    },
+    {
+      "id": "verification-not-preexisting",
+      "title": "Not \"pre-existing\" by default",
+      "text": "Do not assume a failing check or a warning was already there. Prove it on a clean base before calling it pre-existing."
+    },
+    {
+      "id": "verification-ci-mode",
+      "title": "One-shot test runs",
+      "text": "Run tests once in CI mode. Never leave a watch process or dev server running in the foreground of an agent session."
+    },
+    {
+      "id": "verification-long-timeouts",
+      "title": "Generous timeouts",
+      "text": "Give slow installs, builds and integration suites long timeouts and do not cancel them early."
+    },
+    {
+      "id": "verification-repro-ci",
+      "title": "Reproduce CI locally",
+      "text": "Reproduce a CI failure locally with the seed, flags and environment printed in the log before changing code."
+    },
+    {
+      "id": "verification-failed-job-only",
+      "title": "Read the failed job",
+      "text": "Read only the failed job log and its annotations instead of paging through the whole run."
+    },
+    {
+      "id": "verification-review-snapshots",
+      "title": "Review snapshots",
+      "text": "Read changed snapshots as behavior changes. Never accept them blindly."
+    },
+    {
+      "id": "verification-no-only",
+      "title": "No leftover focus",
+      "text": "Check for leftover focused tests such as .only, fit or fdescribe before finishing."
+    },
+    {
+      "id": "verification-paths-cross-platform",
+      "title": "Cross-platform paths",
+      "text": "Normalize path separators in tests so they pass on Windows as well as Linux and macOS."
+    },
+    {
+      "id": "verification-generated-check",
+      "title": "Generated files check",
+      "text": "After touching sources of generated code, run the repo check that confirms generated files are up to date."
+    },
+    {
+      "id": "verification-fresh-reviewer",
+      "title": "Fresh-context reviewer",
+      "text": "When a subagent is available, have it review the finished change from the scope and requirements only, without your suspected defects."
+    },
+    {
+      "id": "verification-ratchet",
+      "title": "Ratchet legacy debt",
+      "text": "Where legacy warnings exist, use a ratchet so the warning count may fall but never rise."
+    }
+  ]
+}

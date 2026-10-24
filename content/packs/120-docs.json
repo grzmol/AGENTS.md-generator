@@ -54,6 +54,26 @@
       "id": "docs-links",
       "title": "Check links",
       "text": "Use relative links for repository docs and keep them valid."
+    },
+    {
+      "id": "docs-user-visible-docs",
+      "title": "Docs for user-visible changes",
+      "text": "Update rendered docs in the same PR for features, flags, config, environment variables, defaults and deprecations."
+    },
+    {
+      "id": "docs-redirects",
+      "title": "Keep old URLs alive",
+      "text": "When you move or rename a documented public API, keep the old docs URL working with a redirect."
+    }
+  ],
+  "sources": [
+    {
+      "name": "vllm-project/vllm AGENTS.md",
+      "url": "https://github.com/vllm-project/vllm/blob/main/AGENTS.md"
+    },
+    {
+      "name": "ray-project/ray AGENTS.md",
+      "url": "https://github.com/ray-project/ray/blob/master/AGENTS.md"
     }
   ]
 }

@@ -1,0 +1,268 @@
+{
+  "site": {
+    "url": "https://agents-md.app/",
+    "name": "AGENTS.md Generator",
+    "title": "AGENTS.md Generator: Build AGENTS.md and CLAUDE.md Online",
+    "description": "Free AGENTS.md generator. Pick rules for your stack, add skills and commands, then download AGENTS.md, CLAUDE.md, Cursor or Copilot files. No sign-up.",
+    "ogImage": "https://agents-md.app/og.png",
+    "keywords": "AGENTS.md generator, AGENTS.md, AGENTS.md template, CLAUDE.md generator, Cursor rules generator, Copilot instructions, AI coding agent instructions"
+  },
+  "hero": {
+    "h1": "The AGENTS.md generator for coding agents.",
+    "lead": "Pick the rules that fit your stack, add your commands, and get an AGENTS.md your agent will actually follow. Export the same selection as CLAUDE.md, Cursor rules or Copilot instructions. Everything runs in your browser."
+  },
+  "features": [
+    "{rules} short, specific rules in {packs} packs, from formatting and logging to Next.js, FastAPI, Go, Rust and Kubernetes.",
+    "Repository scan: paste a public GitHub URL or choose a local folder and the generator detects your stack, preselects matching rules and fills in your commands.",
+    "Keep it updated: a GitHub Action rescans your repository on a schedule and opens a pull request that refreshes only the generated block of your AGENTS.md.",
+    "{presets} presets for common stacks, so a first draft takes seconds.",
+    "Monorepo mode: a separate nested file for every folder, downloaded as one zip.",
+    "Four output formats: AGENTS.md, CLAUDE.md, Cursor rule files and GitHub Copilot instructions.",
+    "Rules checked against official documentation where it is marked in the app, with sources shown."
+  ],
+  "faq": [
+    {
+      "q": "What is an AGENTS.md generator?",
+      "a": "An AGENTS.md generator builds the instruction file that AI coding agents read before they work on a repository. This one lets you toggle rules for formatting, testing, git, security and your framework, add project commands, and copy or download the result."
+    },
+    {
+      "q": "Can the AGENTS.md generator scan my repository?",
+      "a": "Yes. Paste a public GitHub URL or choose a local folder and it reads dependency manifests and file names to detect frameworks, test tools, infrastructure and monorepo packages, then preselects matching rules and fills in install, build and test commands."
+    },
+    {
+      "q": "How do I keep AGENTS.md up to date automatically?",
+      "a": "Add the AGENTS.md updater workflow from this generator to your repository. It rescans your manifests on a schedule, rewrites the block between the agents-md-generator markers and opens a pull request, so hand written notes are never overwritten. A second workflow can fail pull requests when the file has drifted."
+    },
+    {
+      "q": "What is AGENTS.md?",
+      "a": "AGENTS.md is a plain Markdown file in a repository that tells coding agents how to build, test and change the project. It has no required schema, so it can hold whatever a new teammate would need to know on day one."
+    },
+    {
+      "q": "Does Claude Code read AGENTS.md?",
+      "a": "Claude Code reads AGENTS.md when there is no CLAUDE.md in the working directory or above it. If you keep a CLAUDE.md, add a line with @AGENTS.md to import the shared file, or export the CLAUDE.md format from this generator."
+    },
+    {
+      "q": "How long should an AGENTS.md be?",
+      "a": "Short. Anthropic recommends keeping CLAUDE.md files under 200 lines because longer files reduce how well instructions are followed. The generator shows a line and token count and warns when you pass that limit."
+    },
+    {
+      "q": "Can I generate AGENTS.md files for a monorepo?",
+      "a": "Yes. Add a folder such as apps/web and the generator creates a nested file for it with its own rules and commands. Cursor and Copilot exports use glob scoped rule files, and everything downloads as one zip."
+    },
+    {
+      "q": "Is the AGENTS.md generator free and private?",
+      "a": "Yes. It is open source under the MIT license and runs in your browser, and nothing is sent to a server of this project. A local folder scan never leaves your computer. Scanning a public GitHub repository makes requests from your browser to GitHub's public API."
+    }
+  ],
+  "guides": [
+    {
+      "slug": "what-is-agents-md",
+      "title": "What Is AGENTS.md? A Practical Guide",
+      "description": "What AGENTS.md is, where to put it, what to include and how coding agents use it. Includes a minimal example you can generate in seconds.",
+      "h1": "What is AGENTS.md?",
+      "lead": "AGENTS.md is a Markdown file that gives AI coding agents the context a human teammate would need: how to install, build and test the project, what style to follow and what to avoid.",
+      "sections": [
+        {
+          "h2": "Where it goes",
+          "p": [
+            "Put AGENTS.md in the repository root. In a monorepo you can add more files in subfolders. Most tools prefer the file closest to the code being edited, and some, such as Claude Code, load files from the root down and pick up a subfolder file when they work in that folder.",
+            "There is no required structure. The file is a README for agents: plain headings and bullet points."
+          ]
+        },
+        {
+          "h2": "What to include",
+          "p": [
+            "Commands first: install, dev server, build, test and lint. Agents act on exact commands more reliably than on prose.",
+            "Then the rules that are not obvious from the code: naming and formatting choices, testing expectations, git and pull request conventions, security boundaries and things the agent must never touch.",
+            "Leave out anything the code or the README already makes clear, and never put secrets in the file."
+          ]
+        },
+        {
+          "h2": "Keep it short and specific",
+          "p": [
+            "Anthropic advises keeping instruction files under about 200 lines, using concrete wording such as \"Use 2-space indentation\" instead of \"Format code properly\", and removing contradictory rules, because an agent may follow either one.",
+            "The AGENTS.md generator helps with this: every rule is one line, and the preview shows a line and token count."
+          ]
+        },
+        {
+          "h2": "A minimal example",
+          "p": [
+            "A good first version has three parts: a Commands list, a short list of conventions and a few boundaries.",
+            "Use the generator to start from a preset for your stack, then delete anything that does not apply to your project."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "agents-md-vs-claude-md",
+      "title": "AGENTS.md vs CLAUDE.md: Differences and How to Use Both",
+      "description": "How Claude Code treats AGENTS.md and CLAUDE.md, when each is read, and how to keep one shared file with an @AGENTS.md import.",
+      "h1": "AGENTS.md vs CLAUDE.md",
+      "lead": "AGENTS.md is the shared instruction file for many coding agents. CLAUDE.md is the file Claude Code has always read. You can use either, or keep one source of truth and point the other at it.",
+      "sections": [
+        {
+          "h2": "What Claude Code reads",
+          "p": [
+            "According to the Claude Code documentation, Claude reads AGENTS.md when there is no CLAUDE.md in the working directory or any directory above it. If both exist, it reads the CLAUDE.md files only.",
+            "A subfolder AGENTS.md is loaded when Claude works with files in that folder and the folder has no CLAUDE.md of its own."
+          ]
+        },
+        {
+          "h2": "Keep one shared file",
+          "p": [
+            "If your repository also has a CLAUDE.md, create a CLAUDE.md next to AGENTS.md that starts with a line containing @AGENTS.md, then add any Claude specific instructions below it. Claude reads the imported file first.",
+            "A symlink from CLAUDE.md to AGENTS.md also works, but it does not suit Windows checkouts, where Git may turn a committed symlink into a plain text file."
+          ]
+        },
+        {
+          "h2": "Size matters for both",
+          "p": [
+            "The same guidance applies to either file: aim for under 200 lines, group instructions under clear headings and avoid conflicting rules."
+          ]
+        },
+        {
+          "h2": "Generate either format",
+          "p": [
+            "The generator exports the same selection as AGENTS.md, CLAUDE.md, a Cursor rule file or GitHub Copilot instructions, so you can switch format without redoing your choices."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "agents-md-best-practices",
+      "title": "AGENTS.md Best Practices: 9 Rules for Better Agent Output",
+      "description": "Nine practical rules for writing an AGENTS.md that coding agents follow: commands first, short and specific wording, nested files and regular review.",
+      "h1": "AGENTS.md best practices",
+      "lead": "A good AGENTS.md is short, concrete and kept up to date. These nine rules come from the documentation of the tools that read the file.",
+      "sections": [
+        {
+          "h2": "1. Lead with commands",
+          "p": [
+            "List how to install, run, build, test and lint the project exactly as you would type them."
+          ]
+        },
+        {
+          "h2": "2. Write verifiable instructions",
+          "p": [
+            "\"Run npm test before committing\" can be checked. \"Test your changes\" cannot."
+          ]
+        },
+        {
+          "h2": "3. Stay under 200 lines",
+          "p": [
+            "Longer files use more context and reduce adherence. Move area specific rules into nested files."
+          ]
+        },
+        {
+          "h2": "4. Remove contradictions",
+          "p": [
+            "When two instructions conflict, an agent may pick either. Review the file whenever the project changes."
+          ]
+        },
+        {
+          "h2": "5. Do not repeat the code",
+          "p": [
+            "Skip anything the code, the linter or the README already enforces. Spend lines on what an agent would otherwise guess wrong."
+          ]
+        },
+        {
+          "h2": "6. Set boundaries",
+          "p": [
+            "State what the agent must not do: edit generated files, add dependencies without approval, touch secrets or weaken tests."
+          ]
+        },
+        {
+          "h2": "7. Use nested files for areas",
+          "p": [
+            "Keep repository wide rules in the root file and put package specific commands and conventions next to the code."
+          ]
+        },
+        {
+          "h2": "8. Tell the agent how to verify work",
+          "p": [
+            "Name the checks to run before it reports a task as done and ask it to report failures honestly."
+          ]
+        },
+        {
+          "h2": "9. Review it like code",
+          "p": [
+            "Treat AGENTS.md as part of the repository: change it in pull requests and delete rules that no longer apply."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "agents-md-for-monorepos",
+      "title": "AGENTS.md for Monorepos: Nested Files per Package",
+      "description": "How to structure AGENTS.md in a monorepo with a root file and nested files per package, plus the matching Cursor and Copilot formats.",
+      "h1": "AGENTS.md for monorepos",
+      "lead": "In a monorepo, keep shared conventions in the root AGENTS.md and give each package its own nested file with the commands and rules that only apply there.",
+      "sections": [
+        {
+          "h2": "Root file",
+          "p": [
+            "Put repository wide rules in the root: git workflow, security boundaries, how to run the full test suite and how workspace commands filter by package."
+          ]
+        },
+        {
+          "h2": "Nested files",
+          "p": [
+            "Add an AGENTS.md in each package or app, for example apps/web and services/api. List the package commands, framework conventions and testing setup there. Start the nested file from a preset for that package's stack."
+          ]
+        },
+        {
+          "h2": "Other tools",
+          "p": [
+            "Cursor rules can be scoped with a globs entry such as apps/web/**, and GitHub Copilot path specific instruction files use an applyTo pattern. The generator writes both when you export from monorepo mode."
+          ]
+        },
+        {
+          "h2": "One download",
+          "p": [
+            "Add a folder in the generator, choose a preset for it, and download every file as a single zip."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "keep-agents-md-up-to-date",
+      "title": "How to Keep AGENTS.md Up to Date with GitHub Actions",
+      "description": "Stop AGENTS.md from going stale: a managed block, a scheduled GitHub Action that opens update pull requests and a drift check for CI.",
+      "h1": "Keep AGENTS.md up to date",
+      "lead": "An AGENTS.md written once drifts as dependencies, scripts and tools change. Automate the parts that can be detected and keep the human parts by hand.",
+      "sections": [
+        {
+          "h2": "Why files go stale",
+          "p": [
+            "Commands get renamed, test runners change and new frameworks arrive, but nobody edits the file that tells agents how the project works. Stale instructions are worse than none, because agents follow them."
+          ]
+        },
+        {
+          "h2": "Separate generated and hand written text",
+          "p": [
+            "Wrap the generated rules in comment markers and keep project specific notes outside them. A tool can then rewrite the block safely. The AGENTS.md generator uses agents-md-generator start and end comments for this."
+          ]
+        },
+        {
+          "h2": "Open a pull request on a schedule",
+          "p": [
+            "A weekly GitHub Actions workflow rescans manifests, lockfiles and file names, regenerates the block and opens a pull request only when something changed. You review the diff like any other change.",
+            "The generator produces this workflow for you, with permissions and an optional adopt switch for repositories that already have an AGENTS.md."
+          ]
+        },
+        {
+          "h2": "Fail pull requests that drift",
+          "p": [
+            "A second workflow runs the same scan in check mode. If a dependency change should have updated the file, the check fails and tells the author to run the updater."
+          ]
+        },
+        {
+          "h2": "Tune the result",
+          "p": [
+            "Add a small .agents-md.json to include or exclude packs and to override commands that detection cannot know. Review every update, because detection reads dependencies and file names and can miss technologies that live only in code."
+          ]
+        }
+      ]
+    }
+  ]
+}

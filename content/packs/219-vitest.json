@@ -1,0 +1,80 @@
+{
+  "id": "vitest",
+  "title": "Vitest",
+  "kind": "technology",
+  "order": 219,
+  "family": "javascript",
+  "description": "Conventions for Vitest.",
+  "sources": [
+    {
+      "name": "vitest-dev/vitest AGENTS.md",
+      "url": "https://github.com/vitest-dev/vitest/blob/main/AGENTS.md"
+    },
+    {
+      "name": "Vitest guide",
+      "url": "https://vitest.dev/guide/"
+    }
+  ],
+  "rules": [
+    {
+      "id": "vitest-run-once",
+      "title": "Run once in CI mode",
+      "text": "Run tests once with vitest run or CI=true. Plain vitest starts watch mode in an interactive terminal.",
+      "recommended": true
+    },
+    {
+      "id": "vitest-filter",
+      "title": "Run a subset",
+      "text": "Pass a file path or a -t name pattern to run a subset while developing.",
+      "recommended": true
+    },
+    {
+      "id": "vitest-each",
+      "title": "test.each for tables",
+      "text": "Use test.each with a title format to cover many cases without copy-pasted tests.",
+      "recommended": true
+    },
+    {
+      "id": "vitest-fake-timers",
+      "title": "Fake timers",
+      "text": "Control time with vi.useFakeTimers and vi.advanceTimersByTime, and restore real timers after the test.",
+      "recommended": true
+    },
+    {
+      "id": "vitest-isolation",
+      "title": "Keep isolation on",
+      "text": "Keep test isolation enabled. Disable it only for suites with no shared state, through a separate project."
+    },
+    {
+      "id": "vitest-restore-mocks",
+      "title": "Restore mocks",
+      "text": "Restore mocks between tests with restoreMocks in config or vi.restoreAllMocks so mocks never leak."
+    },
+    {
+      "id": "vitest-inline-snapshots",
+      "title": "Inline snapshots",
+      "text": "Prefer inline snapshots for small outputs and review them like code."
+    },
+    {
+      "id": "vitest-type-tests",
+      "title": "Type-level tests",
+      "text": "Test exported types with expectTypeOf in *.test-d.ts files."
+    },
+    {
+      "id": "vitest-browser-mode",
+      "title": "Browser mode",
+      "text": "Use browser mode with a real browser provider instead of jsdom when layout or event behavior matters."
+    },
+    {
+      "id": "vitest-colocate",
+      "title": "Colocate tests",
+      "text": "Place *.test.ts files next to the source they cover."
+    },
+    {
+      "id": "vitest-no-only",
+      "title": "No .only",
+      "text": "Remove .only before committing. The lint setup may not catch it."
+    }
+  ],
+  "reviewed": "2026-10"
+}

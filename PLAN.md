@@ -227,7 +227,7 @@ Szacunek: MVP w 3-4 tygodnie pracy jednej osoby, z czego większość to content
 3. Licencja: kod MIT, treść katalogu (oryginalne sformułowania) CC0. Treści na licencjach copyleft (np. OWASP CC BY-SA) tylko linkowane, nie kopiowane.
 4. Pierwsza fala technologii: lista z sekcji 6.2 (zaimplementowane 117 paczek, 817 reguł, 40 presetów).
 5. Eksport `CLAUDE.md`, `.mdc` i Copilot wchodzi do MVP (zaimplementowane).
-6. Domena: domyślna `grzmol.github.io/AGENTS.md-generator`.
+6. Domena: `agents-md.app` (plik `public/CNAME`).
 
 ## 12. Status wdrożenia
 

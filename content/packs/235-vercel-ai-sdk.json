@@ -1,0 +1,75 @@
+{
+  "id": "vercel-ai-sdk",
+  "title": "Vercel AI SDK",
+  "kind": "technology",
+  "order": 235,
+  "family": "ai",
+  "description": "Conventions for Vercel AI SDK.",
+  "sources": [
+    {
+      "name": "vercel/ai AGENTS.md",
+      "url": "https://github.com/vercel/ai/blob/main/AGENTS.md"
+    },
+    {
+      "name": "AI SDK structured data",
+      "url": "https://ai-sdk.dev/docs/ai-sdk-core/generating-structured-data"
+    }
+  ],
+  "rules": [
+    {
+      "id": "vercel-ai-sdk-core-functions",
+      "title": "Use the core functions",
+      "text": "Use generateText and streamText from the ai package as entry points, with the provider supplied as a model object.",
+      "recommended": true
+    },
+    {
+      "id": "vercel-ai-sdk-structured-output",
+      "title": "Schema-based output",
+      "text": "Request structured data with Output.object and a schema instead of parsing model text by hand.",
+      "recommended": true
+    },
+    {
+      "id": "vercel-ai-sdk-tool-schemas",
+      "title": "Typed tools",
+      "text": "Define tools with tool(), a description, an inputSchema and an execute function so arguments are validated.",
+      "recommended": true
+    },
+    {
+      "id": "vercel-ai-sdk-step-limit",
+      "title": "Bound tool loops",
+      "text": "Bound multi-step tool loops with stopWhen, for example isStepCount(5). Structured output counts as a step.",
+      "recommended": true
+    },
+    {
+      "id": "vercel-ai-sdk-object-errors",
+      "title": "Handle NoObjectGeneratedError",
+      "text": "Catch NoObjectGeneratedError and log its text, cause and usage so schema failures can be debugged."
+    },
+    {
+      "id": "vercel-ai-sdk-output-getter",
+      "title": "Output can throw",
+      "text": "Read result.output only when the final step finished normally. Otherwise the getter throws NoOutputGeneratedError."
+    },
+    {
+      "id": "vercel-ai-sdk-partial-stream",
+      "title": "Stream partial objects",
+      "text": "Stream structured data with partialOutputStream and render partial objects progressively."
+    },
+    {
+      "id": "vercel-ai-sdk-provider-packages",
+      "title": "Provider packages",
+      "text": "Install a provider package such as @ai-sdk/openai instead of calling vendor HTTP APIs directly."
+    },
+    {
+      "id": "vercel-ai-sdk-validate-urls",
+      "title": "Validate fetched URLs",
+      "text": "When fetching URLs that come from provider responses, set URL validation explicitly and withhold credentials off-origin."
+    },
+    {
+      "id": "vercel-ai-sdk-changeset",
+      "title": "Changeset per change",
+      "text": "In the AI SDK repo, add a patch changeset to every PR that changes published code."
+    }
+  ],
+  "reviewed": "2026-10"
+}

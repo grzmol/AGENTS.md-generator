@@ -1,0 +1,22 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      svelte-and-vite:
+        patterns:
+          - svelte
+          - svelte-check
+          - vite
+          - vitest
+          - "@sveltejs/*"
+      fonts:
+        patterns:
+          - "@fontsource*"
+    open-pull-requests-limit: 5
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

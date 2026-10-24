@@ -27,6 +27,16 @@
       "id": "storybook-a11y-addon",
       "title": "A11y addon",
       "text": "Keep the accessibility addon clean for every story."
+    },
+    {
+      "id": "storybook-stories-as-tests",
+      "title": "Stories as tests",
+      "text": "Where Storybook is the test setup, test components with stories and play functions instead of separate unit test files."
+    },
+    {
+      "id": "storybook-no-dev-server",
+      "title": "No dev server in agent runs",
+      "text": "Do not start Storybook dev servers from an agent session. Use one-shot build or test commands."
     }
   ],
   "reviewed": "2026-10",
@@ -34,6 +44,10 @@
     {
       "name": "Storybook documentation",
       "url": "https://storybook.js.org/docs"
+    },
+    {
+      "name": "storybookjs/storybook AGENTS.md",
+      "url": "https://github.com/storybookjs/storybook/blob/next/AGENTS.md"
     }
   ]
 }

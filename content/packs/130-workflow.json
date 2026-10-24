@@ -8,6 +8,22 @@
     {
       "name": "Patterns paraphrased from public AGENTS.md files of getsentry/sentry, apache/airflow and vercel/next.js",
       "url": "https://agents.md"
+    },
+    {
+      "name": "apache/spark AGENTS.md",
+      "url": "https://github.com/apache/spark/blob/master/AGENTS.md"
+    },
+    {
+      "name": "storybookjs/storybook AGENTS.md",
+      "url": "https://github.com/storybookjs/storybook/blob/next/AGENTS.md"
+    },
+    {
+      "name": "home-assistant/core AGENTS.md",
+      "url": "https://github.com/home-assistant/core/blob/dev/AGENTS.md"
+    },
+    {
+      "name": "vllm-project/vllm AGENTS.md",
+      "url": "https://github.com/vllm-project/vllm/blob/main/AGENTS.md"
     }
   ],
   "rules": [
@@ -96,6 +112,32 @@
       "title": "Use project skills",
       "text": "When the repository documents skills or runbooks for a task (migrations, releases, dependency bumps), follow them instead of improvising.",
       "recommended": true
+    },
+    {
+      "id": "workflow-pre-flight",
+      "title": "Pre-flight checks",
+      "text": "At the start of a session, check git remotes and the current branch, fetch when the base is stale, and ask before stashing or discarding changes."
+    },
+    {
+      "id": "workflow-no-dev-servers",
+      "title": "No foreground servers",
+      "text": "Never start long-running dev servers or watchers in the foreground. Use targeted one-shot commands.",
+      "recommended": true
+    },
+    {
+      "id": "workflow-setup-script",
+      "title": "Run the setup script",
+      "text": "In a fresh checkout or worktree, run the project setup script before committing so hooks and tools are installed."
+    },
+    {
+      "id": "workflow-final-hooks",
+      "title": "Run hooks at the end",
+      "text": "After a coding session, run the project hook set over the changed files to catch lint and format issues."
+    },
+    {
+      "id": "workflow-dedicated-python",
+      "title": "Project interpreter only",
+      "text": "Run Python through the project environment, never the system interpreter or a bare pip."
     }
   ]
 }

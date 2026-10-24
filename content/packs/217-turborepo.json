@@ -1,0 +1,73 @@
+{
+  "id": "turborepo",
+  "title": "Turborepo",
+  "kind": "technology",
+  "order": 217,
+  "family": "javascript",
+  "description": "Conventions for Turborepo.",
+  "sources": [
+    {
+      "name": "supabase/supabase AGENTS.md",
+      "url": "https://github.com/supabase/supabase/blob/master/AGENTS.md"
+    },
+    {
+      "name": "vercel/ai AGENTS.md",
+      "url": "https://github.com/vercel/ai/blob/main/AGENTS.md"
+    },
+    {
+      "name": "cloudflare/workers-sdk AGENTS.md",
+      "url": "https://github.com/cloudflare/workers-sdk/blob/main/AGENTS.md"
+    },
+    {
+      "name": "Turborepo configuration reference",
+      "url": "https://turborepo.dev/docs/reference/configuration"
+    }
+  ],
+  "rules": [
+    {
+      "id": "turborepo-run-through-turbo",
+      "title": "Run tasks through turbo",
+      "text": "Run build, test and lint through turbo so results are cached and ordered by the task graph.",
+      "recommended": true
+    },
+    {
+      "id": "turborepo-depends-on",
+      "title": "Declare dependsOn",
+      "text": "Declare dependsOn with ^task for tasks that need dependency packages built first.",
+      "recommended": true
+    },
+    {
+      "id": "turborepo-outputs",
+      "title": "List task outputs",
+      "text": "List outputs for every cacheable task so a cache hit restores its artifacts.",
+      "recommended": true
+    },
+    {
+      "id": "turborepo-env-hash",
+      "title": "Declare env that changes output",
+      "text": "Declare environment variables that change a task result in env, or in globalEnv for all tasks, so cache keys change with them.",
+      "recommended": true
+    },
+    {
+      "id": "turborepo-inputs",
+      "title": "Narrow inputs",
+      "text": "Narrow task inputs so unrelated file changes do not cause cache misses."
+    },
+    {
+      "id": "turborepo-filter",
+      "title": "Filter runs",
+      "text": "Use turbo run <task> --filter=<package> to limit work to the packages you touched and their dependents."
+    },
+    {
+      "id": "turborepo-persistent-dev",
+      "title": "Persistent dev tasks",
+      "text": "Mark dev and watch tasks persistent and not cached."
+    },
+    {
+      "id": "turborepo-no-root-bypass",
+      "title": "No root-script bypass",
+      "text": "Put tasks in packages and register them in turbo.json rather than in root scripts that bypass the graph."
+    }
+  ],
+  "reviewed": "2026-10"
+}

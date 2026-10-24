@@ -19,6 +19,8 @@
     "agent-behavior-backward",
     "agent-behavior-hardcode",
     "agent-behavior-time-box",
+    "agent-behavior-nearest-agents",
+    "agent-behavior-preserve-changes",
     "testing-add-tests",
     "testing-regression",
     "testing-pyramid",
@@ -56,6 +58,7 @@
     "security-ssrf",
     "security-password",
     "security-scan",
+    "security-untrusted-parsing",
     "workflow-project-scripts",
     "workflow-single-entry",
     "workflow-targeted-tests",
@@ -67,6 +70,12 @@
     "workflow-destructive",
     "workflow-reuse-tools",
     "workflow-docs-skills",
+    "workflow-no-dev-servers",
+    "verification-narrowest-first",
+    "verification-fmt-lint",
+    "verification-bug-repro",
+    "verification-no-unproven-done",
+    "verification-final-review",
     "cli-design-exit-codes",
     "cli-design-stdout-stderr",
     "cli-design-help",
@@ -76,6 +85,7 @@
     "go-context",
     "go-interfaces",
     "go-table-tests",
-    "go-goroutines"
+    "go-goroutines",
+    "go-generated"
   ]
 }

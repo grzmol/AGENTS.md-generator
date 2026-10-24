@@ -2,9 +2,11 @@ import { packs } from './content'
 import { EMPTY_PROJECT, filePathFor, generateFiles, generateScope } from './generator'
 import { normalizePath } from './paths'
 import { applyIds, applyPreset, decodeWorkbench, encodeWorkbench, newScope, recommendedIds, toggleRule } from './selection'
-import type { ExportFormat, Pack, Preset, Scope } from './types'
+import { selectionForScan } from './scan-apply'
+import type { ScanResult } from './scan'
+import type { ExportFormat, Pack, Preset, ProjectInfo, Scope } from './types'
 
-export type View = { kind: 'presets' } | { kind: 'project' } | { kind: 'pack'; id: string } | { kind: 'search' }
+export type View = { kind: 'presets' } | { kind: 'scan' } | { kind: 'automation' } | { kind: 'project' } | { kind: 'pack'; id: string } | { kind: 'search' }
 
 function initialScopes(): { scopes: Scope[]; format: ExportFormat } {
   const hash = typeof location === 'undefined' ? '' : location.hash
@@ -102,6 +104,29 @@ class Workbench {
     const scope = this.scopes.find((candidate) => candidate.id === id)
     if (scope && scope.path !== '') scope.path = path
     return null
+  }
+
+  applyScan(result: ScanResult, withFolders: boolean): { filled: number; folders: number } {
+    const nested = this.active.path !== ''
+    this.active.selected = selectionForScan(packs, result.packIds, result.monorepo, nested)
+    let filled = 0
+    for (const key of Object.keys(EMPTY_PROJECT) as Array<keyof ProjectInfo>) {
+      const value = result.project[key]
+      if (value && this.active.project[key].trim() === '' && (key !== 'name' || !nested)) {
+        this.active.project[key] = value
+        filled++
+      }
+    }
+    let folders = 0
+    if (withFolders && !nested) {
+      for (const folder of result.folders) {
+        if (this.scopes.some((scope) => scope.path === folder.path)) continue
+        const scope = newScope(this.counter++, folder.path, { ...EMPTY_PROJECT, ...folder.commands }, selectionForScan(packs, folder.packIds, false, true))
+        this.scopes = [...this.scopes, scope]
+        folders++
+      }
+    }
+    return { filled, folders }
   }
 
   removeScope(id: string) {

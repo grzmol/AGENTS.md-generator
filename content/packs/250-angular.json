@@ -29,12 +29,26 @@
       "title": "Clean up subscriptions",
       "text": "Avoid manual subscribe where possible; use the async pipe or takeUntilDestroyed, passing a DestroyRef when called outside an injection context.",
       "recommended": true
+    },
+    {
+      "id": "angular-zoneless-tests",
+      "title": "Zoneless test pattern",
+      "text": "In zoneless tests, update state, await fixture.whenStable and then assert. Do not call fixture.detectChanges by hand."
+    },
+    {
+      "id": "angular-no-new-ngmodules",
+      "title": "No new NgModules",
+      "text": "Create standalone components and directives. Do not introduce new NgModules even if nearby code uses them."
     }
   ],
   "sources": [
     {
       "name": "Angular documentation",
       "url": "https://angular.dev"
+    },
+    {
+      "name": "angular/angular AGENTS.md",
+      "url": "https://github.com/angular/angular/blob/main/AGENTS.md"
     }
   ],
   "reviewed": "2026-10"

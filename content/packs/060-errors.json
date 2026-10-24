@@ -67,6 +67,35 @@
       "title": "Explicit absence",
       "text": "Model absence explicitly (Option, nullable, Maybe) and avoid returning magic values like -1 or empty strings.",
       "recommended": true
+    },
+    {
+      "id": "errors-small-try",
+      "title": "Small try blocks",
+      "text": "Keep try blocks as small as possible and catch only exceptions the wrapped call can raise."
+    },
+    {
+      "id": "errors-direct-access",
+      "title": "Direct access after validation",
+      "text": "When validation guarantees a key exists, access it directly so contract violations fail loudly instead of being masked by defaults."
+    },
+    {
+      "id": "errors-exhaustive-switch",
+      "title": "Exhaustive switches",
+      "text": "Handle every expected case explicitly in switch and match statements. Reserve default for unexpected values and make it fail."
+    }
+  ],
+  "sources": [
+    {
+      "name": "home-assistant/core AGENTS.md",
+      "url": "https://github.com/home-assistant/core/blob/dev/AGENTS.md"
+    },
+    {
+      "name": "elastic/elasticsearch AGENTS.md",
+      "url": "https://github.com/elastic/elasticsearch/blob/main/AGENTS.md"
+    },
+    {
+      "name": "astral-sh/uv AGENTS.md",
+      "url": "https://github.com/astral-sh/uv/blob/main/AGENTS.md"
     }
   ]
 }
